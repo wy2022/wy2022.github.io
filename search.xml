@@ -227,7 +227,7 @@
 <p><a href="https://blog.wy1991.cn/">官网博客</a></p>
 <h2 id="删除线xx"><a href="#删除线xx" class="headerlink" title="删除线xx"></a>删除线<del>xx</del></h2><p><del>删除线</del></p>
 <h2 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h2><p>Markdown 语法会忽略首行开头的空格，如果要体现出首行开头空两个的效果，可以使用 全角符号下的空格 ，windows 下使用 shift+空格 切换。</p>
-<h2 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h2><p><span class="exturl" data-url="bWFpbHRvOiYjeDYxOyYjeDY0OyYjeDZkOyYjMTA1OyYjeDZlOyYjNjQ7JiMxMTk7JiMxMjE7JiM0OTsmIzU3OyYjNTc7JiM0OTsmI3gyZTsmI3g2MzsmIzExMDs=">&#x61;&#x64;&#x6d;&#105;&#x6e;&#64;&#119;&#121;&#49;&#57;&#57;&#49;&#x2e;&#x63;&#110;<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h2><p><span class="exturl" data-url="bWFpbHRvOiYjeDYxOyYjMTAwOyYjMTA5OyYjMTA1OyYjeDZlOyYjNjQ7JiN4Nzc7JiN4Nzk7JiN4MzE7JiN4Mzk7JiN4Mzk7JiN4MzE7JiM0NjsmI3g2MzsmI3g2ZTs=">&#x61;&#100;&#109;&#105;&#x6e;&#64;&#x77;&#x79;&#x31;&#x39;&#x39;&#x31;&#46;&#x63;&#x6e;<i class="fa fa-external-link-alt"></i></span></p>
 <h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>我们可以设置表格的对齐方式：</p>
 <ul>
 <li><p>-: 设置内容和标题栏居右对齐。</p>
@@ -512,6 +512,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Vue props传入一个函数</title>
+    <url>/20210628/Vue-props%E4%BC%A0%E5%85%A5%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h2 id="prop"><a href="#prop" class="headerlink" title="prop"></a>prop</h2><blockquote>
+<p>自定义组件中，可能需要传入一个回调函数<br>注意 PropTyep apply 用法</p>
+</blockquote>
+<h4 id="定义-props"><a href="#定义-props" class="headerlink" title="定义 props"></a>定义 props</h4><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineComponent, PropType, onMounted &#125; <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">interface</span> Book &#123;</span><br><span class="line">  <span class="attr">title</span>: <span class="built_in">string</span>;</span><br><span class="line">  desc: <span class="built_in">string</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> defineComponent(&#123;</span><br><span class="line">  <span class="attr">props</span>: &#123;</span><br><span class="line">    <span class="attr">id</span>: <span class="built_in">Number</span>,</span><br><span class="line">    <span class="attr">auther</span>: &#123;</span><br><span class="line">      <span class="attr">type</span>: <span class="built_in">String</span>,</span><br><span class="line">      <span class="attr">require</span>: <span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">callback</span>: &#123;</span><br><span class="line">      <span class="attr">type</span>: <span class="built_in">Function</span> <span class="keyword">as</span> PropType&lt;<span class="function">() =&gt;</span> <span class="built_in">void</span>&gt;,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">book</span>: &#123;</span><br><span class="line">      <span class="attr">type</span>: <span class="built_in">Object</span> <span class="keyword">as</span> PropType&lt;Book&gt;,</span><br><span class="line">      <span class="built_in">require</span>: <span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="title">setup</span>(<span class="params">props, context</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> callbackFunc = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="keyword">typeof</span> props.callback);</span><br><span class="line"></span><br><span class="line">      props.callback?.apply(<span class="literal">null</span>);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123; callbackFunc &#125;;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">   &lt;wy-article :id=<span class="string">&quot;123&quot;</span></span><br><span class="line">                :callback=<span class="string">&quot;articleCallback&quot;</span></span><br><span class="line">                :book=<span class="string">&quot;book&quot;</span>&gt; &lt;/wy-article&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wyArticle, &#123; Book &#125; <span class="keyword">from</span> <span class="string">&quot;@/components/base/wyArticle.vue&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; ElMessage &#125; <span class="keyword">from</span> <span class="string">&quot;element-plus&quot;</span>;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="title">setup</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> book = reactive(&#123;</span><br><span class="line">      <span class="attr">title</span>: <span class="string">&quot;张三的书&quot;</span>,</span><br><span class="line">      <span class="attr">desc</span>: <span class="string">&quot;历史书籍&quot;</span>,</span><br><span class="line">    &#125; <span class="keyword">as</span> Book);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> articleCallback = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&quot;article call back&quot;</span>);</span><br><span class="line">      ElMessage.success(<span class="string">&quot;article call back&quot;</span>);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      book,</span><br><span class="line">      articleCallback,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vue provide inject使用</title>
     <url>/20210628/Vue-provide-inject%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h2 id="provide-inject"><a href="#provide-inject" class="headerlink" title="provide inject"></a>provide inject</h2><p>正常的父子组件传递信息 <code>props</code> 就行了</p>
@@ -523,23 +540,6 @@
 <h3 id="provide"><a href="#provide" class="headerlink" title="provide"></a>provide</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">父组件中</span><br><span class="line">  <span class="function"><span class="title">setup</span>(<span class="params">props,context</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> token = ref(<span class="string">&#x27;abcde&#x27;</span>)</span><br><span class="line">    <span class="keyword">const</span> updateToken = <span class="function">(<span class="params">val:string</span>)=&gt;</span>&#123;</span><br><span class="line">        token.value = val</span><br><span class="line">    &#125;</span><br><span class="line">    provide(<span class="string">&#x27;token&#x27;</span>,readonly(token));</span><br><span class="line">    provide(<span class="string">&#x27;updateToken&#x27;</span>,updateToken)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="inject"><a href="#inject" class="headerlink" title="inject"></a>inject</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    &#123;&#123; token &#125;&#125;</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;editToken&quot;</span>&gt;</span>更改token<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;updateTokenFunc(123)&quot;</span>&gt;</span>更改token123<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="title">setup</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> token = inject(<span class="string">&quot;token&quot;</span>);</span><br><span class="line">    <span class="keyword">const</span> updateTokenFunc = inject(<span class="string">&quot;updateToken&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      token,</span><br><span class="line">      updateTokenFunc</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">methods</span>: &#123;</span><br><span class="line">    <span class="function"><span class="title">editToken</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&quot;editToken&quot;</span>);</span><br><span class="line">      <span class="built_in">this</span>.token = <span class="number">123</span>;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="built_in">this</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue props传入一个函数</title>
-    <url>/20210628/Vue-props%E4%BC%A0%E5%85%A5%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<h2 id="prop"><a href="#prop" class="headerlink" title="prop"></a>prop</h2><blockquote>
-<p>自定义组件中，可能需要传入一个回调函数<br>注意 PropTyep apply 用法</p>
-</blockquote>
-<h4 id="定义-props"><a href="#定义-props" class="headerlink" title="定义 props"></a>定义 props</h4><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineComponent, PropType, onMounted &#125; <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">interface</span> Book &#123;</span><br><span class="line">  <span class="attr">title</span>: <span class="built_in">string</span>;</span><br><span class="line">  desc: <span class="built_in">string</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> defineComponent(&#123;</span><br><span class="line">  <span class="attr">props</span>: &#123;</span><br><span class="line">    <span class="attr">id</span>: <span class="built_in">Number</span>,</span><br><span class="line">    <span class="attr">auther</span>: &#123;</span><br><span class="line">      <span class="attr">type</span>: <span class="built_in">String</span>,</span><br><span class="line">      <span class="attr">require</span>: <span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">callback</span>: &#123;</span><br><span class="line">      <span class="attr">type</span>: <span class="built_in">Function</span> <span class="keyword">as</span> PropType&lt;<span class="function">() =&gt;</span> <span class="built_in">void</span>&gt;,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">book</span>: &#123;</span><br><span class="line">      <span class="attr">type</span>: <span class="built_in">Object</span> <span class="keyword">as</span> PropType&lt;Book&gt;,</span><br><span class="line">      <span class="built_in">require</span>: <span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="title">setup</span>(<span class="params">props, context</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> callbackFunc = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="keyword">typeof</span> props.callback);</span><br><span class="line"></span><br><span class="line">      props.callback?.apply(<span class="literal">null</span>);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123; callbackFunc &#125;;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">   &lt;wy-article :id=<span class="string">&quot;123&quot;</span></span><br><span class="line">                :callback=<span class="string">&quot;articleCallback&quot;</span></span><br><span class="line">                :book=<span class="string">&quot;book&quot;</span>&gt; &lt;/wy-article&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wyArticle, &#123; Book &#125; <span class="keyword">from</span> <span class="string">&quot;@/components/base/wyArticle.vue&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; ElMessage &#125; <span class="keyword">from</span> <span class="string">&quot;element-plus&quot;</span>;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="title">setup</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> book = reactive(&#123;</span><br><span class="line">      <span class="attr">title</span>: <span class="string">&quot;张三的书&quot;</span>,</span><br><span class="line">      <span class="attr">desc</span>: <span class="string">&quot;历史书籍&quot;</span>,</span><br><span class="line">    &#125; <span class="keyword">as</span> Book);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> articleCallback = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&quot;article call back&quot;</span>);</span><br><span class="line">      ElMessage.success(<span class="string">&quot;article call back&quot;</span>);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      book,</span><br><span class="line">      articleCallback,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>Vue</category>
@@ -627,30 +627,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue setup巧用</title>
-    <url>/20210628/Vue-setup%E5%B7%A7%E7%94%A8/</url>
-    <content><![CDATA[<h3 id="巧用计算属性和-Vuex"><a href="#巧用计算属性和-Vuex" class="headerlink" title="巧用计算属性和 Vuex"></a>巧用计算属性和 Vuex</h3><figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line">&lt;button @click=<span class="string">&quot;onClick&quot;</span> &gt; click &lt;/button&gt;</span><br><span class="line"></span><br><span class="line">setup()&#123;</span><br><span class="line"></span><br><span class="line">  const store = useStore();</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span>&#123;</span><br><span class="line">  	  usernames: computed(<span class="function"><span class="params">()</span> =&gt;</span> store.getters[<span class="string">&quot;user/getUserInfo&quot;</span>]),</span><br><span class="line">      changes: <span class="function"><span class="params">()</span> =&gt;</span> store.dispatch(<span class="string">&quot;user/SET_NICKNAME&quot;</span>, <span class="string">&quot;李四&quot;</span>),</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue v-model用法</title>
-    <url>/20210628/Vue-v-model%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h2><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line">vue3和<span class="number">2</span>的vmodel不太一样，精简了一些</span><br><span class="line">可以多个v-model,默认是modelValue</span><br><span class="line">    &lt;wy-input v-model=<span class="string">&quot;inputVal&quot;</span></span><br><span class="line">              v-model:title=<span class="string">&quot;bookTitle&quot;</span>&gt;&lt;/wy-input&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">wyInput.vue</span><br><span class="line">  &lt;input <span class="keyword">type</span>=<span class="string">&quot;text&quot;</span></span><br><span class="line">           <span class="meta">@input</span>=<span class="string">&quot;inputVal&quot;</span></span><br><span class="line">           :value=<span class="string">&quot;modelValue&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">           <span class="attr">:value</span>=<span class="string">&quot;title&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">           @<span class="attr">input</span>=<span class="string">&quot;$emit(&#x27;update:title&#x27;,$event.target.value)&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">  props: &#123;</span></span><br><span class="line"><span class="xml">    modelValue: String,</span></span><br><span class="line"><span class="xml">    title: String,</span></span><br><span class="line"><span class="xml">  &#125;,</span></span><br><span class="line"><span class="xml">  emits: [&quot;update:modelValue&quot;, &quot;update:title&quot;],</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">  setup(props, context) &#123;</span></span><br><span class="line"><span class="xml">    const inputVal = (e: KeyboardEvent) =&gt; &#123;</span></span><br><span class="line"><span class="xml">      const targetVal = (e.target as HTMLInputElement).value;</span></span><br><span class="line"><span class="xml">      // console.log(targetVal);</span></span><br><span class="line"><span class="xml">      context.emit(&quot;update:modelValue&quot;, targetVal);</span></span><br><span class="line"><span class="xml">    &#125;;</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">    return &#123;</span></span><br><span class="line"><span class="xml">      inputVal,</span></span><br><span class="line"><span class="xml">    &#125;;</span></span><br><span class="line"><span class="xml">  &#125;,</span></span><br><span class="line"><span class="xml"></span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>vue</category>
-      </categories>
-      <tags>
-        <tag>vue</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vue router分模块</title>
     <url>/20210628/Vue-router%E5%88%86%E6%A8%A1%E5%9D%97/</url>
     <content><![CDATA[<h2 id="router"><a href="#router" class="headerlink" title="router"></a>router</h2><img title="Vue路由分类" src="https://blog.img.wy1991.cn/static/images/vue/vuerouter.png-blogImg">
@@ -666,6 +642,78 @@
         <tag>vue</tag>
         <tag>vueRouter</tag>
         <tag>router</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue setup巧用</title>
+    <url>/20210628/Vue-setup%E5%B7%A7%E7%94%A8/</url>
+    <content><![CDATA[<h3 id="巧用计算属性和-Vuex"><a href="#巧用计算属性和-Vuex" class="headerlink" title="巧用计算属性和 Vuex"></a>巧用计算属性和 Vuex</h3><figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line">&lt;button @click=<span class="string">&quot;onClick&quot;</span> &gt; click &lt;/button&gt;</span><br><span class="line"></span><br><span class="line">setup()&#123;</span><br><span class="line"></span><br><span class="line">  const store = useStore();</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span>&#123;</span><br><span class="line">  	  usernames: computed(<span class="function"><span class="params">()</span> =&gt;</span> store.getters[<span class="string">&quot;user/getUserInfo&quot;</span>]),</span><br><span class="line">      changes: <span class="function"><span class="params">()</span> =&gt;</span> store.dispatch(<span class="string">&quot;user/SET_NICKNAME&quot;</span>, <span class="string">&quot;李四&quot;</span>),</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue tailwind安装</title>
+    <url>/20210628/Vue-tailwind%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h2 id="tailwindcss"><a href="#tailwindcss" class="headerlink" title="tailwindcss"></a>tailwindcss</h2><blockquote>
+<p>安装 tailwindcss 最新的会报错 安装兼容版本</p>
+</blockquote>
+<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line">npm install -D tailwindcss<span class="symbol">@npm</span>:<span class="symbol">@tailwindcss</span>/postcss7-compat <span class="symbol">@tailwindcss</span>/postcss7-compat postcss<span class="symbol">@^7</span> autoprefixer<span class="symbol">@^9</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">npx</span> <span class="string">tailwindcss</span> <span class="string">init</span> <span class="string">-full</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="string">//</span> <span class="string">tailwind.config.js</span></span><br><span class="line">  <span class="string">module.exports</span> <span class="string">=</span> &#123;</span><br><span class="line">   <span class="attr">purge:</span> [],</span><br><span class="line">   <span class="attr">purge:</span> [<span class="string">&#x27;./index.html&#x27;</span>, <span class="string">&#x27;./src/**/*.&#123;vue,js,ts,jsx,tsx&#125;&#x27;</span>],</span><br><span class="line">    <span class="attr">darkMode:</span> <span class="literal">false</span>, <span class="string">//</span> <span class="string">or</span> <span class="string">&#x27;media&#x27;</span> <span class="string">or</span> <span class="string">&#x27;class&#x27;</span></span><br><span class="line">    <span class="attr">theme:</span> &#123;</span><br><span class="line">      <span class="attr">extend:</span> &#123;&#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">variants:</span> &#123;</span><br><span class="line">      <span class="attr">extend:</span> &#123;&#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">plugins:</span> [],</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>tailwind</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>tailwind</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue v-model用法</title>
+    <url>/20210628/Vue-v-model%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h2><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line">vue3和<span class="number">2</span>的vmodel不太一样，精简了一些</span><br><span class="line">可以多个v-model,默认是modelValue</span><br><span class="line">    &lt;wy-input v-model=<span class="string">&quot;inputVal&quot;</span></span><br><span class="line">              v-model:title=<span class="string">&quot;bookTitle&quot;</span>&gt;&lt;/wy-input&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">wyInput.vue</span><br><span class="line">  &lt;input <span class="keyword">type</span>=<span class="string">&quot;text&quot;</span></span><br><span class="line">           <span class="meta">@input</span>=<span class="string">&quot;inputVal&quot;</span></span><br><span class="line">           :value=<span class="string">&quot;modelValue&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">           <span class="attr">:value</span>=<span class="string">&quot;title&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">           @<span class="attr">input</span>=<span class="string">&quot;$emit(&#x27;update:title&#x27;,$event.target.value)&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">  props: &#123;</span></span><br><span class="line"><span class="xml">    modelValue: String,</span></span><br><span class="line"><span class="xml">    title: String,</span></span><br><span class="line"><span class="xml">  &#125;,</span></span><br><span class="line"><span class="xml">  emits: [&quot;update:modelValue&quot;, &quot;update:title&quot;],</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">  setup(props, context) &#123;</span></span><br><span class="line"><span class="xml">    const inputVal = (e: KeyboardEvent) =&gt; &#123;</span></span><br><span class="line"><span class="xml">      const targetVal = (e.target as HTMLInputElement).value;</span></span><br><span class="line"><span class="xml">      // console.log(targetVal);</span></span><br><span class="line"><span class="xml">      context.emit(&quot;update:modelValue&quot;, targetVal);</span></span><br><span class="line"><span class="xml">    &#125;;</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">    return &#123;</span></span><br><span class="line"><span class="xml">      inputVal,</span></span><br><span class="line"><span class="xml">    &#125;;</span></span><br><span class="line"><span class="xml">  &#125;,</span></span><br><span class="line"><span class="xml"></span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue vuex分模块</title>
+    <url>/20210628/Vue-vuex%E5%88%86%E6%A8%A1%E5%9D%97/</url>
+    <content><![CDATA[<h3 id="vuex-分模块"><a href="#vuex-分模块" class="headerlink" title="vuex 分模块"></a>vuex 分模块</h3><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line">vuex 模块分成，namespaced 防止全局污染</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//store/index.ts</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; createStore &#125; <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"><span class="keyword">import</span> menu <span class="keyword">from</span> <span class="string">&#x27;./modules/menu&#x27;</span></span><br><span class="line"><span class="keyword">import</span> test <span class="keyword">from</span> <span class="string">&#x27;./modules/test&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> createStore(&#123;</span><br><span class="line"></span><br><span class="line">  <span class="attr">modules</span>: &#123;</span><br><span class="line">    menu,</span><br><span class="line">    test</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// store/modules/menu.ts</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> state = &#123;</span><br><span class="line">  <span class="attr">msg</span>: <span class="string">&#x27;hello aside&#x27;</span>,</span><br><span class="line">  <span class="attr">asideShow</span>: <span class="literal">true</span>,</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> actions = &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> getters = &#123;</span><br><span class="line">  isShow(state: <span class="built_in">any</span>): <span class="built_in">boolean</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> state.asideShow</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> mutations = &#123;</span><br><span class="line">  toggle(state: <span class="built_in">any</span>): <span class="built_in">void</span> &#123;</span><br><span class="line">    state.asideShow = !state.asideShow</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">namespaced</span>: <span class="literal">true</span>,</span><br><span class="line">  state,</span><br><span class="line">  mutations,</span><br><span class="line">  actions,</span><br><span class="line">  getters,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//通过 commit提交修改vuex state</span></span><br><span class="line"></span><br><span class="line">store.commit(<span class="string">&quot;menu/toggle&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//demo.vue</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//通过watch监听  注意watch的第一个函数，需要返回 return</span></span><br><span class="line"><span class="keyword">const</span> show = ref(<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">watch(</span><br><span class="line">      <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> store.getters[<span class="string">&quot;menu/isShow&quot;</span>];</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="function">(<span class="params">oldVal, newVal</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// console.log(oldVal, newVal);</span></span><br><span class="line">        show.value = newVal;</span><br><span class="line">      &#125;</span><br><span class="line">    );</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>vuex</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue 保存vuex到sessionStorage</title>
+    <url>/20210629/Vue-%E4%BF%9D%E5%AD%98vuex%E5%88%B0sessionStorage/</url>
+    <content><![CDATA[<blockquote>
+<p>Vuex 中刷新页面数据将丢失，所以可以在 app.vue 中搞这个</p>
+</blockquote>
+<h3 id="app-vue"><a href="#app-vue" class="headerlink" title="app.vue"></a>app.vue</h3><figure class="highlight pf"><table><tr><td class="code"><pre><span class="line">created () &#123;</span><br><span class="line">  //在页面加载时读取sessionStorage里的状态信息</span><br><span class="line">  if (sessionStorage.getItem(<span class="string">&quot;store&quot;</span>) ) &#123;</span><br><span class="line">    this.<span class="variable">$store</span>.replaceState(Object.assign(&#123;&#125;, this.<span class="variable">$store</span>.<span class="keyword">state</span>,JSON.parse(sessionStorage.getItem(<span class="string">&quot;store&quot;</span>))))</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  //在页面刷新时将vuex里的信息保存到sessionStorage里</span><br><span class="line">  window.addEventListener(<span class="string">&quot;beforeunload&quot;</span>,()=&gt;&#123;</span><br><span class="line">    sessionStorage.<span class="built_in">set</span>Item(<span class="string">&quot;store&quot;</span>,JSON.stringify(this.<span class="variable">$store</span>.<span class="keyword">state</span>))</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+        <tag>sessionStorage</tag>
+        <tag>Vuex</tag>
       </tags>
   </entry>
   <entry>
@@ -697,21 +745,8 @@
       <tags>
         <tag>js</tag>
         <tag>Vue</tag>
+        <tag>vuex</tag>
         <tag>websocket</tag>
-        <tag>vuex</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue vuex分模块</title>
-    <url>/20210628/Vue-vuex%E5%88%86%E6%A8%A1%E5%9D%97/</url>
-    <content><![CDATA[<h3 id="vuex-分模块"><a href="#vuex-分模块" class="headerlink" title="vuex 分模块"></a>vuex 分模块</h3><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line">vuex 模块分成，namespaced 防止全局污染</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//store/index.ts</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; createStore &#125; <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"><span class="keyword">import</span> menu <span class="keyword">from</span> <span class="string">&#x27;./modules/menu&#x27;</span></span><br><span class="line"><span class="keyword">import</span> test <span class="keyword">from</span> <span class="string">&#x27;./modules/test&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> createStore(&#123;</span><br><span class="line"></span><br><span class="line">  <span class="attr">modules</span>: &#123;</span><br><span class="line">    menu,</span><br><span class="line">    test</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// store/modules/menu.ts</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> state = &#123;</span><br><span class="line">  <span class="attr">msg</span>: <span class="string">&#x27;hello aside&#x27;</span>,</span><br><span class="line">  <span class="attr">asideShow</span>: <span class="literal">true</span>,</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> actions = &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> getters = &#123;</span><br><span class="line">  isShow(state: <span class="built_in">any</span>): <span class="built_in">boolean</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> state.asideShow</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> mutations = &#123;</span><br><span class="line">  toggle(state: <span class="built_in">any</span>): <span class="built_in">void</span> &#123;</span><br><span class="line">    state.asideShow = !state.asideShow</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">namespaced</span>: <span class="literal">true</span>,</span><br><span class="line">  state,</span><br><span class="line">  mutations,</span><br><span class="line">  actions,</span><br><span class="line">  getters,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//通过 commit提交修改vuex state</span></span><br><span class="line"></span><br><span class="line">store.commit(<span class="string">&quot;menu/toggle&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//demo.vue</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//通过watch监听  注意watch的第一个函数，需要返回 return</span></span><br><span class="line"><span class="keyword">const</span> show = ref(<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">watch(</span><br><span class="line">      <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> store.getters[<span class="string">&quot;menu/isShow&quot;</span>];</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="function">(<span class="params">oldVal, newVal</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// console.log(oldVal, newVal);</span></span><br><span class="line">        show.value = newVal;</span><br><span class="line">      &#125;</span><br><span class="line">    );</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>vue</category>
-      </categories>
-      <tags>
-        <tag>vue</tag>
-        <tag>vuex</tag>
       </tags>
   </entry>
   <entry>
@@ -727,24 +762,6 @@
       <tags>
         <tag>Vue</tag>
         <tag>文件下载</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue tailwind安装</title>
-    <url>/20210628/Vue-tailwind%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h2 id="tailwindcss"><a href="#tailwindcss" class="headerlink" title="tailwindcss"></a>tailwindcss</h2><blockquote>
-<p>安装 tailwindcss 最新的会报错 安装兼容版本</p>
-</blockquote>
-<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line">npm install -D tailwindcss<span class="symbol">@npm</span>:<span class="symbol">@tailwindcss</span>/postcss7-compat <span class="symbol">@tailwindcss</span>/postcss7-compat postcss<span class="symbol">@^7</span> autoprefixer<span class="symbol">@^9</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">npx</span> <span class="string">tailwindcss</span> <span class="string">init</span> <span class="string">-full</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="string">//</span> <span class="string">tailwind.config.js</span></span><br><span class="line">  <span class="string">module.exports</span> <span class="string">=</span> &#123;</span><br><span class="line">   <span class="attr">purge:</span> [],</span><br><span class="line">   <span class="attr">purge:</span> [<span class="string">&#x27;./index.html&#x27;</span>, <span class="string">&#x27;./src/**/*.&#123;vue,js,ts,jsx,tsx&#125;&#x27;</span>],</span><br><span class="line">    <span class="attr">darkMode:</span> <span class="literal">false</span>, <span class="string">//</span> <span class="string">or</span> <span class="string">&#x27;media&#x27;</span> <span class="string">or</span> <span class="string">&#x27;class&#x27;</span></span><br><span class="line">    <span class="attr">theme:</span> &#123;</span><br><span class="line">      <span class="attr">extend:</span> &#123;&#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">variants:</span> &#123;</span><br><span class="line">      <span class="attr">extend:</span> &#123;&#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">plugins:</span> [],</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>tailwind</category>
-      </categories>
-      <tags>
-        <tag>vue</tag>
-        <tag>tailwind</tag>
       </tags>
   </entry>
   <entry>
@@ -823,6 +840,190 @@
       </tags>
   </entry>
   <entry>
+    <title>Vue基础-Ref</title>
+    <url>/20210628/Vue%E5%9F%BA%E7%A1%80-Ref/</url>
+    <content><![CDATA[<h2 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref</h2><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">创建一个响应式数据，支持基础类型</span><br><span class="line"><span class="keyword">let</span> a = <span class="keyword">ref</span>(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">let</span> b = <span class="keyword">ref</span>(<span class="literal">null</span>)</span><br><span class="line"><span class="keyword">let</span> c = <span class="keyword">ref</span>(<span class="string">&#x27;1&#x27;</span>)</span><br><span class="line"><span class="keyword">let</span> d = <span class="keyword">ref</span>([])</span><br><span class="line"></span><br><span class="line">a.<span class="keyword">value</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="reactive"><a href="#reactive" class="headerlink" title="reactive"></a>reactive</h2><figure class="highlight xquery"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = reacitve(&#123;</span><br><span class="line"><span class="built_in">	name</span>:<span class="string">&#x27;zhangsan&#x27;</span>,</span><br><span class="line">  age:<span class="number">18</span></span><br><span class="line">&#125;)</span><br><span class="line">obj<span class="built_in">.name</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="toref"><a href="#toref" class="headerlink" title="toref"></a>toref</h2><figure class="highlight pf"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">state</span> = reactive(&#123;</span><br><span class="line">  count: <span class="number">0</span>,</span><br><span class="line">  foo: <span class="number">1</span>,</span><br><span class="line">  bar: <span class="number">1</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> foo = <span class="keyword">to</span>Ref(<span class="keyword">state</span>, <span class="string">&quot;foo&quot;</span>);</span><br><span class="line"></span><br><span class="line">console.<span class="keyword">log</span>(foo.value);</span><br><span class="line">foo.value++;</span><br><span class="line">console.<span class="keyword">log</span>(foo.value);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="torefs"><a href="#torefs" class="headerlink" title="torefs"></a>torefs</h2><figure class="highlight pf"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> states = reactive(&#123;</span><br><span class="line">   foo: <span class="number">1</span>,</span><br><span class="line">   bar: <span class="number">1</span>,</span><br><span class="line"> &#125;);</span><br><span class="line"></span><br><span class="line"> <span class="keyword">const</span> statsrefs = <span class="keyword">to</span>Refs(states);</span><br><span class="line"> console.<span class="keyword">log</span>(statsrefs.foo);</span><br><span class="line"> console.<span class="keyword">log</span>(statsrefs.bar);</span><br></pre></td></tr></table></figure>
+
+<h2 id="unref"><a href="#unref" class="headerlink" title="unref"></a>unref</h2><figure class="highlight nix"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">num1</span> = ref(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">a</span> = unref(num1)    //<span class="attr">a</span> == <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">b</span> =unref(<span class="number">100</span>)   //<span class="attr">b</span> == <span class="number">100</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="isRef"><a href="#isRef" class="headerlink" title="isRef"></a>isRef</h2><figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="built_in">ref</span>(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">let</span> b = unref(num)</span><br><span class="line"></span><br><span class="line">is<span class="constructor">Ref(<span class="params">num</span>)</span>  <span class="comment">//true</span></span><br><span class="line">is<span class="constructor">Ref(<span class="params">b</span>)</span>  <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+        <tag>ref</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue源码过程图解</title>
+    <url>/20210628/Vue%E6%BA%90%E7%A0%81%E8%BF%87%E7%A8%8B%E5%9B%BE%E8%A7%A3/</url>
+    <content><![CDATA[<h4 id="需看懂此图"><a href="#需看懂此图" class="headerlink" title="需看懂此图"></a>需看懂此图</h4><img title="Vue图解" src="https://blog.img.wy1991.cn/static/images/vue/vuequanguocheng.png-blogImg">
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git 命令大全</title>
+    <url>/20210706/git-%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</url>
+    <content><![CDATA[<h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><h3 id="仓库"><a href="#仓库" class="headerlink" title="仓库"></a>仓库</h3><pre><code>  # 在当前目录新建一个Git代码库
+  $ git init
+
+  # 新建一个目录，将其初始化为Git代码库
+  $ git init [project-name]
+
+  # 下载一个项目和它的整个代码历史
+  $ git clone [url]
+</code></pre>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><pre><code>  # 显示当前的Git配置
+  $ git config --list
+
+  # 编辑Git配置文件
+  $ git config -e [--global]
+
+  # 设置提交代码时的用户信息
+  $ git config [--global] user.name &quot;[name]&quot;
+  $ git config [--global] user.email &quot;[email address]&quot;
+</code></pre>
+<h3 id="增加-删除文件"><a href="#增加-删除文件" class="headerlink" title="增加/删除文件"></a>增加/删除文件</h3><pre><code>  # 添加指定文件到暂存区
+  $ git add [file1] [file2] ...
+
+  # 添加指定目录到暂存区，包括子目录
+  $ git add [dir]
+
+  # 添加当前目录的所有文件到暂存区
+  $ git add .
+
+  # 添加每个变化前，都会要求确认
+  # 对于同一个文件的多处变化，可以实现分次提交
+  $ git add -p
+
+  # 删除工作区文件，并且将这次删除放入暂存区
+  $ git rm [file1] [file2] ...
+
+  # 停止追踪指定文件，但该文件会保留在工作区
+  $ git rm --cached [file]
+
+  # 改名文件，并且将这个改名放入暂存区
+  $ git mv [file-original] [file-renamed]
+</code></pre>
+<h3 id="代码提交"><a href="#代码提交" class="headerlink" title="代码提交"></a>代码提交</h3><pre><code># 提交暂存区到仓库区
+$ git commit -m [message]
+
+# 提交暂存区的指定文件到仓库区
+$ git commit [file1] [file2] ... -m [message]
+
+# 提交工作区自上次commit之后的变化，直接到仓库区
+$ git commit -a
+
+# 提交时显示所有diff信息
+$ git commit -v
+
+# 使用一次新的commit，替代上一次提交
+# 如果代码没有任何新变化，则用来改写上一次commit的提交信息
+$ git commit --amend -m [message]
+
+# 重做上一次commit，并包括指定文件的新变化
+$ git commit --amend [file1] [file2] ...
+</code></pre>
+<h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><pre><code>  # 列出所有本地分支
+  $ git branch
+
+  # 列出所有远程分支
+  $ git branch -r
+
+  # 列出所有本地分支和远程分支
+  $ git branch -a
+
+  # 新建一个分支，但依然停留在当前分支
+  $ git branch [branch-name]
+
+  # 新建一个分支，并切换到该分支
+  $ git checkout -b [branch]
+
+  # 新建一个分支，指向指定commit
+  $ git branch [branch] [commit]
+
+  # 新建一个分支，与指定的远程分支建立追踪关系
+  $ git branch --track [branch] [remote-branch]
+
+  # 切换到指定分支，并更新工作区
+  $ git checkout [branch-name]
+
+  # 切换到上一个分支
+  $ git checkout -
+
+  # 建立追踪关系，在现有分支与指定的远程分支之间
+  $ git branch --set-upstream [branch] [remote-branch]
+
+  # 合并指定分支到当前分支
+  $ git merge [branch]
+
+  # 选择一个commit，合并进当前分支
+  $ git cherry-pick [commit]
+
+  # 删除分支
+  $ git branch -d [branch-name]
+
+  # 删除远程分支
+  $ git push origin --delete [branch-name]
+  $ git branch -dr [remote/branch]
+</code></pre>
+<h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><pre><code>  # 列出所有tag
+  $ git tag
+
+  # 新建一个tag在当前commit
+  $ git tag [tag]
+
+  # 新建一个tag在指定commit
+  $ git tag [tag] [commit]
+
+  # 删除本地tag
+  $ git tag -d [tag]
+
+  # 删除远程tag
+  $ git push origin :refs/tags/[tagName]
+
+  # 查看tag信息
+  $ git show [tag]
+
+  # 提交指定tag
+  $ git push [remote] [tag]
+
+  # 提交所有tag
+  $ git push [remote] --tags
+
+  # 新建一个分支，指向某个tag
+  $ git checkout -b [branch] [tag]
+</code></pre>
+<h3 id="查看信息"><a href="#查看信息" class="headerlink" title="查看信息"></a>查看信息</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 显示有变更的文件</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git status</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示当前分支的版本历史</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示commit历史，以及每次commit发生变更的文件</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> --<span class="built_in">stat</span></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 搜索提交历史，根据关键词</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> -S [keyword]</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示某个commit之后的所有变动，每个commit占据一行</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> [tag] HEAD --pretty=format:%s</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示某个commit之后的所有变动，其<span class="string">&quot;提交说明&quot;</span>必须符合搜索条件</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> [tag] HEAD --grep feature</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示某个文件的版本历史，包括文件改名</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> --follow [file]</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git whatchanged [file]</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示指定文件相关的每一次diff</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> -p [file]</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示过去5次提交</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> -5 --pretty --oneline</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示所有提交过的用户，按提交次数排序</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git shortlog -sn</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示指定文件是什么人在什么时间修改过</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git blame [file]</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示暂存区和工作区的差异</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git diff</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示暂存区和上一个commit的差异</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git diff --cached [file]</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示工作区与当前分支最新commit之间的差异</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git diff HEAD</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示两次提交之间的差异</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git diff [first-branch]...[second-branch]</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示今天你写了多少行代码</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git diff --shortstat <span class="string">&quot;@&#123;0 day ago&#125;&quot;</span></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示某次提交的元数据和内容变化</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git show [commit]</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示某次提交发生变化的文件</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git show --name-only [commit]</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示某次提交时，某个文件的内容</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git show [commit]:[filename]</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示当前分支的最近几次提交</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git reflog</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="远程同步"><a href="#远程同步" class="headerlink" title="远程同步"></a>远程同步</h3><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 下载远程仓库的所有变动</span></span><br><span class="line"><span class="variable">$ </span>git fetch [remote]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示所有远程仓库</span></span><br><span class="line"><span class="variable">$ </span>git remote -v</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示某个远程仓库的信息</span></span><br><span class="line"><span class="variable">$ </span>git remote show [remote]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 增加一个新的远程仓库，并命名</span></span><br><span class="line"><span class="variable">$ </span>git remote add [shortname] [url]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 取回远程仓库的变化，并与本地分支合并</span></span><br><span class="line"><span class="variable">$ </span>git pull [remote] [branch]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 上传本地指定分支到远程仓库</span></span><br><span class="line"><span class="variable">$ </span>git push [remote] [branch]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 强行推送当前分支到远程仓库，即使有冲突</span></span><br><span class="line"><span class="variable">$ </span>git push [remote] --force</span><br><span class="line"></span><br><span class="line"><span class="comment"># 推送所有分支到远程仓库</span></span><br><span class="line"><span class="variable">$ </span>git push [remote] --all</span><br></pre></td></tr></table></figure>
+
+<h3 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h3><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 恢复暂存区的指定文件到工作区</span></span><br><span class="line"><span class="variable">$ </span>git checkout [file]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 恢复某个commit的指定文件到暂存区和工作区</span></span><br><span class="line"><span class="variable">$ </span>git checkout [commit] [file]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 恢复暂存区的所有文件到工作区</span></span><br><span class="line"><span class="variable">$ </span>git checkout .</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重置暂存区的指定文件，与上一次commit保持一致，但工作区不变</span></span><br><span class="line"><span class="variable">$ </span>git reset [file]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重置暂存区与工作区，与上一次commit保持一致</span></span><br><span class="line"><span class="variable">$ </span>git reset --hard</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变</span></span><br><span class="line"><span class="variable">$ </span>git reset [commit]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致</span></span><br><span class="line"><span class="variable">$ </span>git reset --hard [commit]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重置当前HEAD为指定commit，但保持暂存区和工作区不变</span></span><br><span class="line"><span class="variable">$ </span>git reset --keep [commit]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建一个commit，用来撤销指定commit</span></span><br><span class="line"><span class="comment"># 后者的所有变化都将被前者抵消，并且应用到当前分支</span></span><br><span class="line"><span class="variable">$ </span>git revert [commit]</span><br><span class="line"></span><br><span class="line">暂时将未提交的变化移除，稍后再移入</span><br><span class="line"><span class="variable">$ </span>git stash</span><br><span class="line"><span class="variable">$ </span>git stash pop</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 生成一个可供发布的压缩包</span></span><br><span class="line"><span class="variable">$ </span>git archive</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>js ArryaBuffer</title>
     <url>/20210629/js-ArryaBuffer/</url>
     <content><![CDATA[<h2 id="ArryaBuffer"><a href="#ArryaBuffer" class="headerlink" title="ArryaBuffer"></a>ArryaBuffer</h2><pre><code>  概念 arrayBuffer
@@ -850,23 +1051,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue 保存vuex到sessionStorage</title>
-    <url>/20210629/Vue-%E4%BF%9D%E5%AD%98vuex%E5%88%B0sessionStorage/</url>
-    <content><![CDATA[<blockquote>
-<p>Vuex 中刷新页面数据将丢失，所以可以在 app.vue 中搞这个</p>
-</blockquote>
-<h3 id="app-vue"><a href="#app-vue" class="headerlink" title="app.vue"></a>app.vue</h3><figure class="highlight pf"><table><tr><td class="code"><pre><span class="line">created () &#123;</span><br><span class="line">  //在页面加载时读取sessionStorage里的状态信息</span><br><span class="line">  if (sessionStorage.getItem(<span class="string">&quot;store&quot;</span>) ) &#123;</span><br><span class="line">    this.<span class="variable">$store</span>.replaceState(Object.assign(&#123;&#125;, this.<span class="variable">$store</span>.<span class="keyword">state</span>,JSON.parse(sessionStorage.getItem(<span class="string">&quot;store&quot;</span>))))</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  //在页面刷新时将vuex里的信息保存到sessionStorage里</span><br><span class="line">  window.addEventListener(<span class="string">&quot;beforeunload&quot;</span>,()=&gt;&#123;</span><br><span class="line">    sessionStorage.<span class="built_in">set</span>Item(<span class="string">&quot;store&quot;</span>,JSON.stringify(this.<span class="variable">$store</span>.<span class="keyword">state</span>))</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-        <tag>sessionStorage</tag>
-        <tag>Vuex</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>js-call/apply/bind区别</title>
     <url>/20210629/js-call-apply-bind%E5%8C%BA%E5%88%AB/</url>
     <content><![CDATA[<h3 id="apply-bind-call"><a href="#apply-bind-call" class="headerlink" title="apply bind call"></a>apply bind call</h3><pre><code>    call 和apply 功能一样，都是改变this指向，都是立即执行
@@ -889,80 +1073,6 @@
         <tag>apply</tag>
         <tag>bind</tag>
         <tag>call</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue源码过程图解</title>
-    <url>/20210628/Vue%E6%BA%90%E7%A0%81%E8%BF%87%E7%A8%8B%E5%9B%BE%E8%A7%A3/</url>
-    <content><![CDATA[<h4 id="需看懂此图"><a href="#需看懂此图" class="headerlink" title="需看懂此图"></a>需看懂此图</h4><img title="Vue图解" src="https://blog.img.wy1991.cn/static/images/vue/vuequanguocheng.png-blogImg">
-]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-        <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js 中的堆与栈</title>
-    <url>/20210628/js-%E4%B8%AD%E7%9A%84%E5%A0%86%E4%B8%8E%E6%A0%88/</url>
-    <content><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>js 分类基本类型和引用类型</p>
-<p>比如 string number boolean null Undefined 属于基本类型</p>
-<p>object array function 属于引用类型</p>
-<p>基本类型存到栈里面，直接根据值取寻找，</p>
-<p>引用类型 把内存指针放到 栈里面，然后值放到 堆里面， 查找到时候，先去栈里面找到内存地址，然后去堆里面取</p>
-<figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line">这里先说两个概念：<span class="number">1</span>、堆（heap）<span class="number">2</span>、栈（stack）</span><br><span class="line">堆 是堆内存的简称。</span><br><span class="line">栈 是栈内存的简称。</span><br><span class="line">说到堆栈，我们讲的就是内存的使用和分配了，没有寄存器的事，也没有硬盘的事。</span><br><span class="line">各种语言在处理堆栈的原理上都大同小异。堆是动态分配内存，内存大小不一，也不会自动释放。栈是自动分配相对固定大小的内存空间，并由系统自动释放。</span><br><span class="line"></span><br><span class="line">javascript的基本类型就<span class="number">5</span>种:Undefined、Null、<span class="built_in">Boolean</span>、<span class="built_in">Number</span>和<span class="built_in">String</span>，它们都是直接按值存储在栈中的，每种类型的数据占用的内存空间的大小是确定的，并由系统自动分配和自动释放。这样带来的好处就是，内存可以及时得到回收，相对于堆来说，更加容易管理内存空间。</span><br><span class="line"></span><br><span class="line">javascript中其他类型的数据被称为引用类型的数据 : 如对象(<span class="built_in">Object</span>)、数组(<span class="built_in">Array</span>)、函数(<span class="built_in">Function</span>) …，它们是通过拷贝和<span class="keyword">new</span>出来的，这样的数据存储于堆中。其实，说存储于堆中，也不太准确，因为，引用类型的数据的地址指针是存储于栈中的，当我们想要访问引用类型的值的时候，需要先从栈中获得对象的地址指针，然后，在通过地址指针找到堆中的所需要的数据。</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue基础-Ref</title>
-    <url>/20210628/Vue%E5%9F%BA%E7%A1%80-Ref/</url>
-    <content><![CDATA[<h2 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref</h2><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">创建一个响应式数据，支持基础类型</span><br><span class="line"><span class="keyword">let</span> a = <span class="keyword">ref</span>(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">let</span> b = <span class="keyword">ref</span>(<span class="literal">null</span>)</span><br><span class="line"><span class="keyword">let</span> c = <span class="keyword">ref</span>(<span class="string">&#x27;1&#x27;</span>)</span><br><span class="line"><span class="keyword">let</span> d = <span class="keyword">ref</span>([])</span><br><span class="line"></span><br><span class="line">a.<span class="keyword">value</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="reactive"><a href="#reactive" class="headerlink" title="reactive"></a>reactive</h2><figure class="highlight xquery"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = reacitve(&#123;</span><br><span class="line"><span class="built_in">	name</span>:<span class="string">&#x27;zhangsan&#x27;</span>,</span><br><span class="line">  age:<span class="number">18</span></span><br><span class="line">&#125;)</span><br><span class="line">obj<span class="built_in">.name</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="toref"><a href="#toref" class="headerlink" title="toref"></a>toref</h2><figure class="highlight pf"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">state</span> = reactive(&#123;</span><br><span class="line">  count: <span class="number">0</span>,</span><br><span class="line">  foo: <span class="number">1</span>,</span><br><span class="line">  bar: <span class="number">1</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> foo = <span class="keyword">to</span>Ref(<span class="keyword">state</span>, <span class="string">&quot;foo&quot;</span>);</span><br><span class="line"></span><br><span class="line">console.<span class="keyword">log</span>(foo.value);</span><br><span class="line">foo.value++;</span><br><span class="line">console.<span class="keyword">log</span>(foo.value);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="torefs"><a href="#torefs" class="headerlink" title="torefs"></a>torefs</h2><figure class="highlight pf"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> states = reactive(&#123;</span><br><span class="line">   foo: <span class="number">1</span>,</span><br><span class="line">   bar: <span class="number">1</span>,</span><br><span class="line"> &#125;);</span><br><span class="line"></span><br><span class="line"> <span class="keyword">const</span> statsrefs = <span class="keyword">to</span>Refs(states);</span><br><span class="line"> console.<span class="keyword">log</span>(statsrefs.foo);</span><br><span class="line"> console.<span class="keyword">log</span>(statsrefs.bar);</span><br></pre></td></tr></table></figure>
-
-<h2 id="unref"><a href="#unref" class="headerlink" title="unref"></a>unref</h2><figure class="highlight nix"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">num1</span> = ref(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">a</span> = unref(num1)    //<span class="attr">a</span> == <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">b</span> =unref(<span class="number">100</span>)   //<span class="attr">b</span> == <span class="number">100</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="isRef"><a href="#isRef" class="headerlink" title="isRef"></a>isRef</h2><figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="built_in">ref</span>(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">let</span> b = unref(num)</span><br><span class="line"></span><br><span class="line">is<span class="constructor">Ref(<span class="params">num</span>)</span>  <span class="comment">//true</span></span><br><span class="line">is<span class="constructor">Ref(<span class="params">b</span>)</span>  <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-        <tag>ref</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js 原型与原型链</title>
-    <url>/20210629/js-%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/</url>
-    <content><![CDATA[<h2 id="原型与原型链"><a href="#原型与原型链" class="headerlink" title="原型与原型链"></a>原型与原型链</h2><blockquote>
-<p>总结：实例对象都有一个 <strong>proto</strong>属性 ，指向 构造函数的 prototype 构造函数有一个 prototype 下有一个 constructor 指向构造函数本身</p>
-</blockquote>
-<p>看代码：</p>
-<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> Person = <span class="keyword">function</span>(name,age)&#123;</span><br><span class="line">	this.name = name</span><br><span class="line">  this.age = age</span><br><span class="line">  this.say = <span class="keyword">function</span><span class="literal">()</span>&#123;</span><br><span class="line">  	console.log(<span class="string">&quot;hello &quot;</span> + this.name)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> p1 = <span class="keyword">new</span> <span class="constructor">Person(&#x27;<span class="params">zhangsan</span>&#x27;,18)</span></span><br><span class="line"><span class="keyword">let</span> p2 = <span class="keyword">new</span> <span class="constructor">Person(&#x27;<span class="params">lisi</span>&#x27;,20)</span></span><br><span class="line"></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Person</span>.</span></span>prototype.eat = <span class="keyword">function</span><span class="literal">()</span>&#123;</span><br><span class="line">	console.log(<span class="string">&quot;chichichi&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">p1.__proto__<span class="operator"> === </span><span class="module-access"><span class="module"><span class="identifier">Person</span>.</span></span>prototye   <span class="comment">// true  仔细理解下，实例对象的__proto__指向 构造函数的 prototype</span></span><br><span class="line"></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Person</span>.</span></span>prototype.constructor<span class="operator"> == </span>Person <span class="comment">//true  构造函数的原型上有一个constructor 指向构造函数，形成循环引用</span></span><br><span class="line"><span class="comment">//意味这</span></span><br><span class="line">p1.__proto__constructor<span class="operator"> === </span>Person <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//正常的原型链 到Object结束，Object的原形是null</span></span><br><span class="line"></span><br><span class="line">console.log(<span class="module-access"><span class="module"><span class="identifier">Person</span>.</span></span>prototype.__proto__<span class="operator"> === </span><span class="module-access"><span class="module"><span class="identifier">Object</span>.</span></span>prototype); <span class="comment">// true</span></span><br><span class="line">console.log(<span class="module-access"><span class="module"><span class="identifier">Person</span>.</span></span>prototype.<span class="module-access"><span class="module"><span class="identifier">__proto__</span>.</span></span>constructor<span class="operator"> === </span>Object); <span class="comment">// true</span></span><br><span class="line">console.log(<span class="module-access"><span class="module"><span class="identifier">Person</span>.</span></span>prototype.<span class="module-access"><span class="module"><span class="identifier">__proto__</span>.</span><span class="module"><span class="identifier">__proto__</span> </span><span class="operator">==</span></span>= null); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-
-<img title="原型与原型链" src="https://blog.img.wy1991.cn/static/images/js/prototype.png-blogImg">
-
-<img title="原型与原型链" src="https://blog.img.wy1991.cn/static/images/js/原型与原型链.png-blogImg">
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-        <tag>原型与原型链</tag>
       </tags>
   </entry>
   <entry>
@@ -1118,6 +1228,44 @@
       <tags>
         <tag>js</tag>
         <tag>promise</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>js 中的堆与栈</title>
+    <url>/20210628/js-%E4%B8%AD%E7%9A%84%E5%A0%86%E4%B8%8E%E6%A0%88/</url>
+    <content><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>js 分类基本类型和引用类型</p>
+<p>比如 string number boolean null Undefined 属于基本类型</p>
+<p>object array function 属于引用类型</p>
+<p>基本类型存到栈里面，直接根据值取寻找，</p>
+<p>引用类型 把内存指针放到 栈里面，然后值放到 堆里面， 查找到时候，先去栈里面找到内存地址，然后去堆里面取</p>
+<figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line">这里先说两个概念：<span class="number">1</span>、堆（heap）<span class="number">2</span>、栈（stack）</span><br><span class="line">堆 是堆内存的简称。</span><br><span class="line">栈 是栈内存的简称。</span><br><span class="line">说到堆栈，我们讲的就是内存的使用和分配了，没有寄存器的事，也没有硬盘的事。</span><br><span class="line">各种语言在处理堆栈的原理上都大同小异。堆是动态分配内存，内存大小不一，也不会自动释放。栈是自动分配相对固定大小的内存空间，并由系统自动释放。</span><br><span class="line"></span><br><span class="line">javascript的基本类型就<span class="number">5</span>种:Undefined、Null、<span class="built_in">Boolean</span>、<span class="built_in">Number</span>和<span class="built_in">String</span>，它们都是直接按值存储在栈中的，每种类型的数据占用的内存空间的大小是确定的，并由系统自动分配和自动释放。这样带来的好处就是，内存可以及时得到回收，相对于堆来说，更加容易管理内存空间。</span><br><span class="line"></span><br><span class="line">javascript中其他类型的数据被称为引用类型的数据 : 如对象(<span class="built_in">Object</span>)、数组(<span class="built_in">Array</span>)、函数(<span class="built_in">Function</span>) …，它们是通过拷贝和<span class="keyword">new</span>出来的，这样的数据存储于堆中。其实，说存储于堆中，也不太准确，因为，引用类型的数据的地址指针是存储于栈中的，当我们想要访问引用类型的值的时候，需要先从栈中获得对象的地址指针，然后，在通过地址指针找到堆中的所需要的数据。</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>js 原型与原型链</title>
+    <url>/20210629/js-%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/</url>
+    <content><![CDATA[<h2 id="原型与原型链"><a href="#原型与原型链" class="headerlink" title="原型与原型链"></a>原型与原型链</h2><blockquote>
+<p>总结：实例对象都有一个 <strong>proto</strong>属性 ，指向 构造函数的 prototype 构造函数有一个 prototype 下有一个 constructor 指向构造函数本身</p>
+</blockquote>
+<p>看代码：</p>
+<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> Person = <span class="keyword">function</span>(name,age)&#123;</span><br><span class="line">	this.name = name</span><br><span class="line">  this.age = age</span><br><span class="line">  this.say = <span class="keyword">function</span><span class="literal">()</span>&#123;</span><br><span class="line">  	console.log(<span class="string">&quot;hello &quot;</span> + this.name)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> p1 = <span class="keyword">new</span> <span class="constructor">Person(&#x27;<span class="params">zhangsan</span>&#x27;,18)</span></span><br><span class="line"><span class="keyword">let</span> p2 = <span class="keyword">new</span> <span class="constructor">Person(&#x27;<span class="params">lisi</span>&#x27;,20)</span></span><br><span class="line"></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Person</span>.</span></span>prototype.eat = <span class="keyword">function</span><span class="literal">()</span>&#123;</span><br><span class="line">	console.log(<span class="string">&quot;chichichi&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">p1.__proto__<span class="operator"> === </span><span class="module-access"><span class="module"><span class="identifier">Person</span>.</span></span>prototye   <span class="comment">// true  仔细理解下，实例对象的__proto__指向 构造函数的 prototype</span></span><br><span class="line"></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Person</span>.</span></span>prototype.constructor<span class="operator"> == </span>Person <span class="comment">//true  构造函数的原型上有一个constructor 指向构造函数，形成循环引用</span></span><br><span class="line"><span class="comment">//意味这</span></span><br><span class="line">p1.__proto__constructor<span class="operator"> === </span>Person <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//正常的原型链 到Object结束，Object的原形是null</span></span><br><span class="line"></span><br><span class="line">console.log(<span class="module-access"><span class="module"><span class="identifier">Person</span>.</span></span>prototype.__proto__<span class="operator"> === </span><span class="module-access"><span class="module"><span class="identifier">Object</span>.</span></span>prototype); <span class="comment">// true</span></span><br><span class="line">console.log(<span class="module-access"><span class="module"><span class="identifier">Person</span>.</span></span>prototype.<span class="module-access"><span class="module"><span class="identifier">__proto__</span>.</span></span>constructor<span class="operator"> === </span>Object); <span class="comment">// true</span></span><br><span class="line">console.log(<span class="module-access"><span class="module"><span class="identifier">Person</span>.</span></span>prototype.<span class="module-access"><span class="module"><span class="identifier">__proto__</span>.</span><span class="module"><span class="identifier">__proto__</span> </span><span class="operator">==</span></span>= null); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<img title="原型与原型链" src="https://blog.img.wy1991.cn/static/images/js/prototype.png-blogImg">
+
+<img title="原型与原型链" src="https://blog.img.wy1991.cn/static/images/js/原型与原型链.png-blogImg">
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>原型与原型链</tag>
       </tags>
   </entry>
   <entry>
@@ -1413,56 +1561,6 @@ console.log(`Files count: $&#123;count&#125;`)
       </tags>
   </entry>
   <entry>
-    <title>uniapp 封装请求promise</title>
-    <url>/20210630/uniapp-%E5%B0%81%E8%A3%85%E8%AF%B7%E6%B1%82promise/</url>
-    <content><![CDATA[<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><pre><code>  项目目录下创建common/api   或者common/http 都可以，看自己
-
-  mian.js中，import api from &#39;@/common/http/&#39;
-
-  注意最后http/ ，如果加斜杠 就是找http/index.js 如果不加，就是找 http.js 注意
-
-  然后挂在到vue
-
-  Vue.prototype.$api = api;
-
-  这样在页面中就可以用
-
-  this.$api.goods.getGoods().then().catch()
-</code></pre>
-<h4 id="request-js"><a href="#request-js" class="headerlink" title="request.js"></a>request.js</h4><blockquote>
-<p>基础封装库</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 通用uni-app网络请求</span></span><br><span class="line"><span class="comment"> * 基于 Promise 对象实现更简单的 request 使用方式，支持请求和响应拦截</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; baseUrl &#125; <span class="keyword">from</span> <span class="string">&#x27;../config.js&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">config</span>: &#123;</span><br><span class="line">    <span class="attr">baseUrl</span>: baseUrl,</span><br><span class="line">    <span class="attr">header</span>: &#123;</span><br><span class="line">      <span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/json;charset=UTF-8&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">data</span>: &#123;&#125;,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;GET&#x27;</span>,</span><br><span class="line">    <span class="attr">dataType</span>: <span class="string">&#x27;json&#x27;</span> <span class="comment">/* 如设为json，会对返回的数据做一次 JSON.parse */</span>,</span><br><span class="line">    <span class="attr">responseType</span>: <span class="string">&#x27;text&#x27;</span>,</span><br><span class="line">    <span class="function"><span class="title">success</span>(<span class="params"></span>)</span> &#123;&#125;,</span><br><span class="line">    <span class="function"><span class="title">fail</span>(<span class="params"></span>)</span> &#123;&#125;,</span><br><span class="line">    <span class="function"><span class="title">complete</span>(<span class="params"></span>)</span> &#123;&#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">interceptor</span>: &#123;</span><br><span class="line">    <span class="attr">request</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">response</span>: <span class="literal">null</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="title">request</span>(<span class="params">options</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (!options) &#123;</span><br><span class="line">      options = &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    options.baseUrl = options.baseUrl || <span class="built_in">this</span>.config.baseUrl</span><br><span class="line">    options.dataType = options.dataType || <span class="built_in">this</span>.config.dataType</span><br><span class="line">    options.url = options.baseUrl + options.url</span><br><span class="line">    options.data = options.data || &#123;&#125;</span><br><span class="line">    options.method = options.method || <span class="built_in">this</span>.config.method</span><br><span class="line">    <span class="comment">//TODO 加密数据</span></span><br><span class="line">    <span class="keyword">let</span> _token = &#123; <span class="attr">authorization</span>: uni.getStorageSync(<span class="string">&#x27;userinfo&#x27;</span>).token || <span class="literal">null</span> &#125;</span><br><span class="line">    options.header = <span class="built_in">Object</span>.assign(&#123;&#125;, options.header, _token)</span><br><span class="line">    <span class="comment">//TODO 数据签名</span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">		_token = &#123;&#x27;token&#x27;: getStorage(STOREKEY_LOGIN).token || &#x27;undefined&#x27;&#125;,</span></span><br><span class="line"><span class="comment">		_sign = &#123;&#x27;sign&#x27;: sign(JSON.stringify(options.data))&#125;</span></span><br><span class="line"><span class="comment">		options.header = Object.assign(&#123;&#125;, options.header, _token,_sign)</span></span><br><span class="line"><span class="comment">		*/</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">let</span> _config = <span class="literal">null</span></span><br><span class="line"></span><br><span class="line">      options.complete = <span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> statusCode = response.statusCode</span><br><span class="line">        response.config = _config</span><br><span class="line">        <span class="comment">// if (process.env.NODE_ENV === &#x27;development&#x27;) &#123;</span></span><br><span class="line">        <span class="comment">// 	if (statusCode === 200) &#123;</span></span><br><span class="line">        <span class="comment">// 		console.log(&quot;【&quot; + _config.requestId + &quot;】 结果：&quot; + JSON.stringify(response.data))</span></span><br><span class="line">        <span class="comment">// 	&#125;</span></span><br><span class="line">        <span class="comment">// &#125;</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">this</span>.interceptor.response) &#123;</span><br><span class="line">          <span class="keyword">let</span> newResponse = <span class="built_in">this</span>.interceptor.response(response)</span><br><span class="line">          <span class="keyword">if</span> (newResponse) &#123;</span><br><span class="line">            response = newResponse</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 统一的响应日志记录</span></span><br><span class="line">        _reslog(response)</span><br><span class="line">        uni.stopPullDownRefresh()</span><br><span class="line">        <span class="keyword">if</span> (statusCode === <span class="number">200</span>) &#123;</span><br><span class="line">          <span class="comment">//成功</span></span><br><span class="line">          <span class="comment">//token 不存在</span></span><br><span class="line">          <span class="keyword">if</span> (response.data.code === <span class="string">&#x27;0x0401&#x27;</span>) &#123;</span><br><span class="line">            <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">              uni.redirectTo(&#123;</span><br><span class="line">                <span class="attr">url</span>: <span class="string">&#x27;/pages/login/index&#x27;</span>,</span><br><span class="line">                <span class="attr">fail</span>: <span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">                  <span class="built_in">console</span>.log(err)</span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="attr">complete</span>: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">                  <span class="built_in">console</span>.log(res)</span><br><span class="line">                &#125;,</span><br><span class="line">              &#125;)</span><br><span class="line">            &#125;, <span class="number">1000</span>)</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="comment">//自己定义如果返回状态码不是200 一律进入reject  token 不存在直接跳出登录</span></span><br><span class="line">          <span class="keyword">if</span> (response.data.code !== <span class="number">200</span>) &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(response)</span><br><span class="line">            <span class="keyword">let</span> title = response.data.msg</span><br><span class="line">            <span class="keyword">if</span> (process.env.NODE_ENV === <span class="string">&#x27;development&#x27;</span>) &#123;</span><br><span class="line">              title += response.config.url</span><br><span class="line">            &#125;</span><br><span class="line">            uni.showToast(&#123;</span><br><span class="line">              <span class="attr">icon</span>: <span class="string">&#x27;none&#x27;</span>,</span><br><span class="line">              <span class="attr">title</span>: title,</span><br><span class="line">            &#125;)</span><br><span class="line">            reject(response.data)</span><br><span class="line">          &#125;</span><br><span class="line"></span><br><span class="line">          resolve(response.data)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          reject(response.data)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      _config = <span class="built_in">Object</span>.assign(&#123;&#125;, <span class="built_in">this</span>.config, options)</span><br><span class="line">      _config.requestId = <span class="keyword">new</span> <span class="built_in">Date</span>().getTime()</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">this</span>.interceptor.request) &#123;</span><br><span class="line">        <span class="built_in">this</span>.interceptor.request(_config)</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 统一的请求日志记录</span></span><br><span class="line">      <span class="comment">// _reqlog(_config)</span></span><br><span class="line"></span><br><span class="line">      uni.stopPullDownRefresh()</span><br><span class="line"></span><br><span class="line">      uni.request(_config)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 请求接口日志记录</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">_reqlog</span>(<span class="params">req</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (process.env.NODE_ENV === <span class="string">&#x27;development&#x27;</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;【&#x27;</span> + req.requestId + <span class="string">&#x27;】 地址：&#x27;</span> + req.url)</span><br><span class="line">    <span class="keyword">if</span> (req.data) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(</span><br><span class="line">        <span class="string">&#x27;【&#x27;</span> + req.requestId + <span class="string">&#x27;】 请求参数：&#x27;</span> + <span class="built_in">JSON</span>.stringify(req.data)</span><br><span class="line">      )</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//TODO 调接口异步写入日志数据库</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 响应接口日志记录</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">_reslog</span>(<span class="params">res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> _statusCode = res.statusCode</span><br><span class="line">  <span class="keyword">if</span> (process.env.NODE_ENV === <span class="string">&#x27;development&#x27;</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;【&#x27;</span> + res.config.requestId + <span class="string">&#x27;】 地址：&#x27;</span> + res.config.url)</span><br><span class="line">    <span class="keyword">if</span> (res.config.data) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(</span><br><span class="line">        <span class="string">&#x27;【&#x27;</span> +</span><br><span class="line">          res.config.requestId +</span><br><span class="line">          <span class="string">&#x27;】 请求参数：&#x27;</span> +</span><br><span class="line">          <span class="built_in">JSON</span>.stringify(res.config.data)</span><br><span class="line">      )</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;【&#x27;</span> + res.config.requestId + <span class="string">&#x27;】 响应结果：&#x27;</span>) <span class="comment">//JSON.stringify(res)</span></span><br><span class="line">    <span class="built_in">console</span>.log(res.data)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//TODO 除了接口服务错误外，其他日志调接口异步写入日志数据库</span></span><br><span class="line">  <span class="keyword">switch</span> (_statusCode) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">200</span>:</span><br><span class="line">      <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">401</span>:</span><br><span class="line">      <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">404</span>:</span><br><span class="line">      <span class="keyword">break</span></span><br><span class="line">    <span class="attr">default</span>:</span><br><span class="line">      <span class="keyword">break</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="common-http-index-js"><a href="#common-http-index-js" class="headerlink" title="/common/http/index.js"></a>/common/http/index.js</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// import http from &#x27;./interface&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> login <span class="keyword">from</span> <span class="string">&#x27;./login.js&#x27;</span></span><br><span class="line"><span class="keyword">import</span> user <span class="keyword">from</span> <span class="string">&#x27;./user.js&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  user,</span><br><span class="line">  login,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="common-http-login-js"><a href="#common-http-login-js" class="headerlink" title="/common/http/login.js"></a>/common/http/login.js</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> http <span class="keyword">from</span> <span class="string">&#x27;../../util/request.js&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">login</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> http.request(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;auth/login&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">    data,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">editpassword</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> http.request(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;user/password&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;PUT&#x27;</span>,</span><br><span class="line">    data,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123; login, editpassword &#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="main-js"><a href="#main-js" class="headerlink" title="main.js"></a>main.js</h3><blockquote>
-<p>引入 api</p>
-</blockquote>
-<figure class="highlight elm"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> api from &#x27;common/http/index.js&#x27;</span><br><span class="line">  <span class="type">Vue</span>.proto<span class="keyword">type</span>.$api = api</span><br></pre></td></tr></table></figure>
-
-<h3 id="baseUrl-config-js"><a href="#baseUrl-config-js" class="headerlink" title="baseUrl(config.js)"></a>baseUrl(config.js)</h3><blockquote>
-<p>这里把基础请求地址单独配置个地方，方便根据环境切换切换</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> baseUrl = <span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">let</span> wsUrl = <span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">let</span> screenWsUrl = <span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">if</span> (process.env.NODE_ENV === <span class="string">&#x27;development&#x27;</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;开发环境&#x27;</span>)</span><br><span class="line">  baseUrl = <span class="string">&#x27;http://10.117.18.168/&#x27;</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;生产环境&#x27;</span>)</span><br><span class="line">  baseUrl = <span class="string">&#x27;http://xxxxxxx/&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> &#123; baseUrl, wsUrl, screenWsUrl &#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><blockquote>
-<p>总结： 项目中直接<br><code> this.$api.login.editpassword(&#123;name:&#39;sss&#39;&#125;)</code></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>uniapp</category>
-      </categories>
-      <tags>
-        <tag>axios</tag>
-        <tag>promise</tag>
-        <tag>uniapp</tag>
-        <tag>封装请求</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>postcss-px-to-viewport px转vw</title>
     <url>/20210628/postcss-px-to-viewport-px%E8%BD%ACvw/</url>
     <content><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NoYXJpc3NhMjAxNy9hcnRpY2xlL2RldGFpbHMvMTA1NDIwOTcxLw==">原文地址<i class="fa fa-external-link-alt"></i></span></p>
@@ -1530,6 +1628,56 @@ console.log(`Files count: $&#123;count&#125;`)
         <tag>css</tag>
         <tag>自适应</tag>
         <tag>vw</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>uniapp 封装请求promise</title>
+    <url>/20210630/uniapp-%E5%B0%81%E8%A3%85%E8%AF%B7%E6%B1%82promise/</url>
+    <content><![CDATA[<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><pre><code>  项目目录下创建common/api   或者common/http 都可以，看自己
+
+  mian.js中，import api from &#39;@/common/http/&#39;
+
+  注意最后http/ ，如果加斜杠 就是找http/index.js 如果不加，就是找 http.js 注意
+
+  然后挂在到vue
+
+  Vue.prototype.$api = api;
+
+  这样在页面中就可以用
+
+  this.$api.goods.getGoods().then().catch()
+</code></pre>
+<h4 id="request-js"><a href="#request-js" class="headerlink" title="request.js"></a>request.js</h4><blockquote>
+<p>基础封装库</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 通用uni-app网络请求</span></span><br><span class="line"><span class="comment"> * 基于 Promise 对象实现更简单的 request 使用方式，支持请求和响应拦截</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; baseUrl &#125; <span class="keyword">from</span> <span class="string">&#x27;../config.js&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">config</span>: &#123;</span><br><span class="line">    <span class="attr">baseUrl</span>: baseUrl,</span><br><span class="line">    <span class="attr">header</span>: &#123;</span><br><span class="line">      <span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/json;charset=UTF-8&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">data</span>: &#123;&#125;,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;GET&#x27;</span>,</span><br><span class="line">    <span class="attr">dataType</span>: <span class="string">&#x27;json&#x27;</span> <span class="comment">/* 如设为json，会对返回的数据做一次 JSON.parse */</span>,</span><br><span class="line">    <span class="attr">responseType</span>: <span class="string">&#x27;text&#x27;</span>,</span><br><span class="line">    <span class="function"><span class="title">success</span>(<span class="params"></span>)</span> &#123;&#125;,</span><br><span class="line">    <span class="function"><span class="title">fail</span>(<span class="params"></span>)</span> &#123;&#125;,</span><br><span class="line">    <span class="function"><span class="title">complete</span>(<span class="params"></span>)</span> &#123;&#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">interceptor</span>: &#123;</span><br><span class="line">    <span class="attr">request</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">response</span>: <span class="literal">null</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="title">request</span>(<span class="params">options</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (!options) &#123;</span><br><span class="line">      options = &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    options.baseUrl = options.baseUrl || <span class="built_in">this</span>.config.baseUrl</span><br><span class="line">    options.dataType = options.dataType || <span class="built_in">this</span>.config.dataType</span><br><span class="line">    options.url = options.baseUrl + options.url</span><br><span class="line">    options.data = options.data || &#123;&#125;</span><br><span class="line">    options.method = options.method || <span class="built_in">this</span>.config.method</span><br><span class="line">    <span class="comment">//TODO 加密数据</span></span><br><span class="line">    <span class="keyword">let</span> _token = &#123; <span class="attr">authorization</span>: uni.getStorageSync(<span class="string">&#x27;userinfo&#x27;</span>).token || <span class="literal">null</span> &#125;</span><br><span class="line">    options.header = <span class="built_in">Object</span>.assign(&#123;&#125;, options.header, _token)</span><br><span class="line">    <span class="comment">//TODO 数据签名</span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">		_token = &#123;&#x27;token&#x27;: getStorage(STOREKEY_LOGIN).token || &#x27;undefined&#x27;&#125;,</span></span><br><span class="line"><span class="comment">		_sign = &#123;&#x27;sign&#x27;: sign(JSON.stringify(options.data))&#125;</span></span><br><span class="line"><span class="comment">		options.header = Object.assign(&#123;&#125;, options.header, _token,_sign)</span></span><br><span class="line"><span class="comment">		*/</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">let</span> _config = <span class="literal">null</span></span><br><span class="line"></span><br><span class="line">      options.complete = <span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> statusCode = response.statusCode</span><br><span class="line">        response.config = _config</span><br><span class="line">        <span class="comment">// if (process.env.NODE_ENV === &#x27;development&#x27;) &#123;</span></span><br><span class="line">        <span class="comment">// 	if (statusCode === 200) &#123;</span></span><br><span class="line">        <span class="comment">// 		console.log(&quot;【&quot; + _config.requestId + &quot;】 结果：&quot; + JSON.stringify(response.data))</span></span><br><span class="line">        <span class="comment">// 	&#125;</span></span><br><span class="line">        <span class="comment">// &#125;</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">this</span>.interceptor.response) &#123;</span><br><span class="line">          <span class="keyword">let</span> newResponse = <span class="built_in">this</span>.interceptor.response(response)</span><br><span class="line">          <span class="keyword">if</span> (newResponse) &#123;</span><br><span class="line">            response = newResponse</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 统一的响应日志记录</span></span><br><span class="line">        _reslog(response)</span><br><span class="line">        uni.stopPullDownRefresh()</span><br><span class="line">        <span class="keyword">if</span> (statusCode === <span class="number">200</span>) &#123;</span><br><span class="line">          <span class="comment">//成功</span></span><br><span class="line">          <span class="comment">//token 不存在</span></span><br><span class="line">          <span class="keyword">if</span> (response.data.code === <span class="string">&#x27;0x0401&#x27;</span>) &#123;</span><br><span class="line">            <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">              uni.redirectTo(&#123;</span><br><span class="line">                <span class="attr">url</span>: <span class="string">&#x27;/pages/login/index&#x27;</span>,</span><br><span class="line">                <span class="attr">fail</span>: <span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">                  <span class="built_in">console</span>.log(err)</span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="attr">complete</span>: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">                  <span class="built_in">console</span>.log(res)</span><br><span class="line">                &#125;,</span><br><span class="line">              &#125;)</span><br><span class="line">            &#125;, <span class="number">1000</span>)</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="comment">//自己定义如果返回状态码不是200 一律进入reject  token 不存在直接跳出登录</span></span><br><span class="line">          <span class="keyword">if</span> (response.data.code !== <span class="number">200</span>) &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(response)</span><br><span class="line">            <span class="keyword">let</span> title = response.data.msg</span><br><span class="line">            <span class="keyword">if</span> (process.env.NODE_ENV === <span class="string">&#x27;development&#x27;</span>) &#123;</span><br><span class="line">              title += response.config.url</span><br><span class="line">            &#125;</span><br><span class="line">            uni.showToast(&#123;</span><br><span class="line">              <span class="attr">icon</span>: <span class="string">&#x27;none&#x27;</span>,</span><br><span class="line">              <span class="attr">title</span>: title,</span><br><span class="line">            &#125;)</span><br><span class="line">            reject(response.data)</span><br><span class="line">          &#125;</span><br><span class="line"></span><br><span class="line">          resolve(response.data)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          reject(response.data)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      _config = <span class="built_in">Object</span>.assign(&#123;&#125;, <span class="built_in">this</span>.config, options)</span><br><span class="line">      _config.requestId = <span class="keyword">new</span> <span class="built_in">Date</span>().getTime()</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">this</span>.interceptor.request) &#123;</span><br><span class="line">        <span class="built_in">this</span>.interceptor.request(_config)</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 统一的请求日志记录</span></span><br><span class="line">      <span class="comment">// _reqlog(_config)</span></span><br><span class="line"></span><br><span class="line">      uni.stopPullDownRefresh()</span><br><span class="line"></span><br><span class="line">      uni.request(_config)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 请求接口日志记录</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">_reqlog</span>(<span class="params">req</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (process.env.NODE_ENV === <span class="string">&#x27;development&#x27;</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;【&#x27;</span> + req.requestId + <span class="string">&#x27;】 地址：&#x27;</span> + req.url)</span><br><span class="line">    <span class="keyword">if</span> (req.data) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(</span><br><span class="line">        <span class="string">&#x27;【&#x27;</span> + req.requestId + <span class="string">&#x27;】 请求参数：&#x27;</span> + <span class="built_in">JSON</span>.stringify(req.data)</span><br><span class="line">      )</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//TODO 调接口异步写入日志数据库</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 响应接口日志记录</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">_reslog</span>(<span class="params">res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> _statusCode = res.statusCode</span><br><span class="line">  <span class="keyword">if</span> (process.env.NODE_ENV === <span class="string">&#x27;development&#x27;</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;【&#x27;</span> + res.config.requestId + <span class="string">&#x27;】 地址：&#x27;</span> + res.config.url)</span><br><span class="line">    <span class="keyword">if</span> (res.config.data) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(</span><br><span class="line">        <span class="string">&#x27;【&#x27;</span> +</span><br><span class="line">          res.config.requestId +</span><br><span class="line">          <span class="string">&#x27;】 请求参数：&#x27;</span> +</span><br><span class="line">          <span class="built_in">JSON</span>.stringify(res.config.data)</span><br><span class="line">      )</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;【&#x27;</span> + res.config.requestId + <span class="string">&#x27;】 响应结果：&#x27;</span>) <span class="comment">//JSON.stringify(res)</span></span><br><span class="line">    <span class="built_in">console</span>.log(res.data)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//TODO 除了接口服务错误外，其他日志调接口异步写入日志数据库</span></span><br><span class="line">  <span class="keyword">switch</span> (_statusCode) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">200</span>:</span><br><span class="line">      <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">401</span>:</span><br><span class="line">      <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">404</span>:</span><br><span class="line">      <span class="keyword">break</span></span><br><span class="line">    <span class="attr">default</span>:</span><br><span class="line">      <span class="keyword">break</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="common-http-index-js"><a href="#common-http-index-js" class="headerlink" title="/common/http/index.js"></a>/common/http/index.js</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// import http from &#x27;./interface&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> login <span class="keyword">from</span> <span class="string">&#x27;./login.js&#x27;</span></span><br><span class="line"><span class="keyword">import</span> user <span class="keyword">from</span> <span class="string">&#x27;./user.js&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  user,</span><br><span class="line">  login,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="common-http-login-js"><a href="#common-http-login-js" class="headerlink" title="/common/http/login.js"></a>/common/http/login.js</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> http <span class="keyword">from</span> <span class="string">&#x27;../../util/request.js&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">login</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> http.request(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;auth/login&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">    data,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">editpassword</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> http.request(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;user/password&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;PUT&#x27;</span>,</span><br><span class="line">    data,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123; login, editpassword &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="main-js"><a href="#main-js" class="headerlink" title="main.js"></a>main.js</h3><blockquote>
+<p>引入 api</p>
+</blockquote>
+<figure class="highlight elm"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> api from &#x27;common/http/index.js&#x27;</span><br><span class="line">  <span class="type">Vue</span>.proto<span class="keyword">type</span>.$api = api</span><br></pre></td></tr></table></figure>
+
+<h3 id="baseUrl-config-js"><a href="#baseUrl-config-js" class="headerlink" title="baseUrl(config.js)"></a>baseUrl(config.js)</h3><blockquote>
+<p>这里把基础请求地址单独配置个地方，方便根据环境切换切换</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> baseUrl = <span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">let</span> wsUrl = <span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">let</span> screenWsUrl = <span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">if</span> (process.env.NODE_ENV === <span class="string">&#x27;development&#x27;</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;开发环境&#x27;</span>)</span><br><span class="line">  baseUrl = <span class="string">&#x27;http://10.117.18.168/&#x27;</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;生产环境&#x27;</span>)</span><br><span class="line">  baseUrl = <span class="string">&#x27;http://xxxxxxx/&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> &#123; baseUrl, wsUrl, screenWsUrl &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><blockquote>
+<p>总结： 项目中直接<br><code> this.$api.login.editpassword(&#123;name:&#39;sss&#39;&#125;)</code></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>uniapp</category>
+      </categories>
+      <tags>
+        <tag>axios</tag>
+        <tag>promise</tag>
+        <tag>uniapp</tag>
+        <tag>封装请求</tag>
       </tags>
   </entry>
   <entry>
@@ -1647,6 +1795,19 @@ console.log(`Files count: $&#123;count&#125;`)
       </tags>
   </entry>
   <entry>
+    <title>一句话解释闭包</title>
+    <url>/20210628/%E4%B8%80%E5%8F%A5%E8%AF%9D%E8%A7%A3%E9%87%8A%E9%97%AD%E5%8C%85/</url>
+    <content><![CDATA[<h2 id="一句话闭包"><a href="#一句话闭包" class="headerlink" title="一句话闭包"></a>一句话闭包</h2><p>当函数可以记住并且访问到所在的词法作用域，即使函数在词法作用域外执行<br>不一定非要 retrun 才叫闭包，那样太片面了</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">awit</span>(<span class="params">msg</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  	<span class="built_in">console</span>.log(msg)</span><br><span class="line">  &#125;,<span class="number">500</span>)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">awit(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>利用require.context批量导入</title>
     <url>/20210706/%E5%88%A9%E7%94%A8require-context%E6%89%B9%E9%87%8F%E5%AF%BC%E5%85%A5/</url>
     <content><![CDATA[<h2 id="require-context"><a href="#require-context" class="headerlink" title="require.context"></a>require.context</h2><blockquote>
@@ -1665,19 +1826,6 @@ console.log(`Files count: $&#123;count&#125;`)
         <tag>js</tag>
         <tag>webpack</tag>
         <tag>require.context</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一句话解释闭包</title>
-    <url>/20210628/%E4%B8%80%E5%8F%A5%E8%AF%9D%E8%A7%A3%E9%87%8A%E9%97%AD%E5%8C%85/</url>
-    <content><![CDATA[<h2 id="一句话闭包"><a href="#一句话闭包" class="headerlink" title="一句话闭包"></a>一句话闭包</h2><p>当函数可以记住并且访问到所在的词法作用域，即使函数在词法作用域外执行<br>不一定非要 retrun 才叫闭包，那样太片面了</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">awit</span>(<span class="params">msg</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  	<span class="built_in">console</span>.log(msg)</span><br><span class="line">  &#125;,<span class="number">500</span>)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">awit(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
       </tags>
   </entry>
   <entry>
@@ -1707,41 +1855,6 @@ console.log(`Files count: $&#123;count&#125;`)
         <tag>css3</tag>
         <tag>可视化</tag>
         <tag>大屏</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>小程序 API集中管理</title>
-    <url>/20210701/%E5%B0%8F%E7%A8%8B%E5%BA%8F-API%E9%9B%86%E4%B8%AD%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><blockquote>
-<p>因为小程序好像不支持 es6 的 export 所以导出用 es5 的 cmd 的 module.exports</p>
-</blockquote>
-<ol>
-<li>根目录下创建文件夹 http</li>
-<li>创建基础请求文件 request.js</li>
-<li>创建集中导出接口 api.js</li>
-<li>创建测试接口模块 login.js goods.js</li>
-</ol>
-<h3 id="request-js"><a href="#request-js" class="headerlink" title="request.js"></a>request.js</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> app = getApp()</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(app)</span><br><span class="line"><span class="keyword">const</span> baseUrl = <span class="string">&#x27;https://www.wy1991.cn/&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建统一调用函数</span></span><br><span class="line"><span class="comment">// lodingTime 请求时间超过后显示 loding</span></span><br><span class="line"><span class="keyword">const</span> request = <span class="function">(<span class="params">&#123; url, data = &#123;&#125;, method = <span class="string">&#x27;get&#x27;</span>, loadingTime = <span class="number">500</span> &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    wx.showLoading(&#123;</span><br><span class="line">      <span class="attr">title</span>: <span class="string">&#x27;请求中...&#x27;</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;, loadingTime)</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    wx.request(&#123;</span><br><span class="line">      <span class="attr">url</span>: baseUrl + url,</span><br><span class="line">      data,</span><br><span class="line">      <span class="attr">method</span>: method,</span><br><span class="line">      <span class="attr">header</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;content-type&#x27;</span>: <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>,</span><br><span class="line">        <span class="attr">authorization</span>: app?.globalData.token ?? <span class="string">&#x27;token&#x27;</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">timeout</span>: <span class="number">15000</span>,</span><br><span class="line">      <span class="attr">success</span>: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">//在这里写自己的逻辑，比如code 401 代表需要重新登录</span></span><br><span class="line">        <span class="comment">//演示代码</span></span><br><span class="line">        <span class="keyword">if</span> (res.data.code === <span class="number">401</span>) &#123;</span><br><span class="line">          wx.redirectTo(&#123;</span><br><span class="line">            <span class="attr">url</span>: <span class="string">&#x27;/pages/logs/logs&#x27;</span>,</span><br><span class="line">          &#125;)</span><br><span class="line">          <span class="keyword">return</span></span><br><span class="line">        &#125;</span><br><span class="line">        resolve(res.data)</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">fail</span>: <span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">//失败的时候，可以</span></span><br><span class="line">        reject(err)</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">complete</span>: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">clearTimeout</span>(timer)</span><br><span class="line">        timer = <span class="literal">null</span></span><br><span class="line">        wx.hideLoading(&#123;&#125;)</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = request</span><br></pre></td></tr></table></figure>
-
-<h3 id="api-js"><a href="#api-js" class="headerlink" title="api.js"></a>api.js</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> login = <span class="built_in">require</span>(<span class="string">&#x27;./login&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> goods = <span class="built_in">require</span>(<span class="string">&#x27;./goods&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  login,</span><br><span class="line">  goods,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="goods-js"><a href="#goods-js" class="headerlink" title="goods.js"></a>goods.js</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> request = <span class="built_in">require</span>(<span class="string">&#x27;./request&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getGoodsList</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> request(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;api/index/index&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;post&#x27;</span>,</span><br><span class="line">    data,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getGoodsInfo</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> request(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;api/index/sleep3&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;post&#x27;</span>,</span><br><span class="line">    data,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  getGoodsList,</span><br><span class="line">  getGoodsInfo,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="login-js"><a href="#login-js" class="headerlink" title="login.js"></a>login.js</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> request = <span class="built_in">require</span>(<span class="string">&#x27;./request.js&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">userlogin</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> request(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;api/index/index&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">    data,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">usersleep</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> request(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;api/index/sleep3&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  userlogin,</span><br><span class="line">  usersleep,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="试用方法"><a href="#试用方法" class="headerlink" title="试用方法:"></a>试用方法:</h3><p>可以挂载到 app.js globalData 中了，当然你可以不挂载直接引用</p>
-<p>例如：pages/index/index.js</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> $api = <span class="built_in">require</span>(<span class="string">&#x27;../../http/api&#x27;</span>)</span><br><span class="line"></span><br><span class="line">Page(&#123;</span><br><span class="line">  <span class="function"><span class="title">onLoad</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">//例子1:</span></span><br><span class="line">    $api.login</span><br><span class="line">      .userlogin(&#123; <span class="attr">name</span>: <span class="string">&#x27;123&#x27;</span> &#125;)</span><br><span class="line">      .then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(res)</span><br><span class="line">      &#125;)</span><br><span class="line">      .catch(<span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(err)</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 也可以用async await</span></span><br><span class="line">  <span class="keyword">async</span> <span class="function"><span class="title">click</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> result = <span class="keyword">await</span> $api.login()</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结:"></a>总结:</h3><p>统一请求处理，可以在 request 中写一个函数，请求 api 接口报错可以给远程日志服务器发数据<br>具体好处自己摸索。也可以根据环境动态请求 baseUrl,还可以接口高度复用,还封装了一个请求 1 秒后加载 loding</p>
-]]></content>
-      <categories>
-        <category>小程序</category>
-      </categories>
-      <tags>
-        <tag>小程序</tag>
-        <tag>reuqest</tag>
-        <tag>api集中管理</tag>
       </tags>
   </entry>
   <entry>
@@ -1780,19 +1893,38 @@ console.log(`Files count: $&#123;count&#125;`)
       </tags>
   </entry>
   <entry>
-    <title>手把手教你制作一个Vue插件</title>
-    <url>/20210628/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AAVue%E6%8F%92%E4%BB%B6/</url>
-    <content><![CDATA[<h2 id="Vue-插件"><a href="#Vue-插件" class="headerlink" title="Vue 插件"></a>Vue 插件</h2><p>制作一个 Vue 插件非常简单，只需要包含一个 install 函数或者方法即可</p>
-<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">plugin/index.js</span><br><span class="line"><span class="comment">//app是Vue实例，options是传递得参数</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">install</span>: <span class="function">(<span class="params">app, options</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(app, options);</span><br><span class="line">    app.directive(<span class="string">&#x27;print&#x27;</span>, &#123;</span><br><span class="line">      mounted (el, binding) &#123;</span><br><span class="line">        el.innerHTML = <span class="string">&quot;我是Vue插件修改的&quot;</span> + <span class="built_in">JSON</span>.stringify(options)</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    app.config.globalProperties.$show = <span class="function"><span class="keyword">function</span> (<span class="params">msg = <span class="string">&quot;hello&quot;</span></span>) </span>&#123;</span><br><span class="line">      alert(msg)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">main.js</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> TestPlugin <span class="keyword">from</span> <span class="string">&#x27;./plugin/index&#x27;</span>;</span><br><span class="line"><span class="comment">//要在createApp之后</span></span><br><span class="line">app.use(TestPlugin, &#123; <span class="attr">name</span>: <span class="string">&#x27;zhangsan&#x27;</span> &#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//App.vue</span></span><br><span class="line"><span class="comment">//可以使用自定义指令，也可以调用全局方法</span></span><br><span class="line"><span class="comment">//setup中没有this，所以需要通过getCurrentInstance获取当前实例</span></span><br><span class="line">&lt;div v-print&gt;我是原始值&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; getCurrentInstance &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line"></span><br><span class="line">  setup (props, context) &#123;</span><br><span class="line">    <span class="comment">//打包后有可能获取不到，这里需要谨慎</span></span><br><span class="line">    <span class="keyword">const</span> &#123; ctx &#125; = getCurrentInstance()</span><br><span class="line">    ctx.$show(<span class="string">&quot;我擦，这么牛皮&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      clickHandle</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <title>小程序 API集中管理</title>
+    <url>/20210701/%E5%B0%8F%E7%A8%8B%E5%BA%8F-API%E9%9B%86%E4%B8%AD%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><blockquote>
+<p>因为小程序好像不支持 es6 的 export 所以导出用 es5 的 cmd 的 module.exports</p>
+</blockquote>
+<ol>
+<li>根目录下创建文件夹 http</li>
+<li>创建基础请求文件 request.js</li>
+<li>创建集中导出接口 api.js</li>
+<li>创建测试接口模块 login.js goods.js</li>
+</ol>
+<h3 id="request-js"><a href="#request-js" class="headerlink" title="request.js"></a>request.js</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> app = getApp()</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(app)</span><br><span class="line"><span class="keyword">const</span> baseUrl = <span class="string">&#x27;https://www.wy1991.cn/&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建统一调用函数</span></span><br><span class="line"><span class="comment">// lodingTime 请求时间超过后显示 loding</span></span><br><span class="line"><span class="keyword">const</span> request = <span class="function">(<span class="params">&#123; url, data = &#123;&#125;, method = <span class="string">&#x27;get&#x27;</span>, loadingTime = <span class="number">500</span> &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    wx.showLoading(&#123;</span><br><span class="line">      <span class="attr">title</span>: <span class="string">&#x27;请求中...&#x27;</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;, loadingTime)</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    wx.request(&#123;</span><br><span class="line">      <span class="attr">url</span>: baseUrl + url,</span><br><span class="line">      data,</span><br><span class="line">      <span class="attr">method</span>: method,</span><br><span class="line">      <span class="attr">header</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;content-type&#x27;</span>: <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>,</span><br><span class="line">        <span class="attr">authorization</span>: app?.globalData.token ?? <span class="string">&#x27;token&#x27;</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">timeout</span>: <span class="number">15000</span>,</span><br><span class="line">      <span class="attr">success</span>: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">//在这里写自己的逻辑，比如code 401 代表需要重新登录</span></span><br><span class="line">        <span class="comment">//演示代码</span></span><br><span class="line">        <span class="keyword">if</span> (res.data.code === <span class="number">401</span>) &#123;</span><br><span class="line">          wx.redirectTo(&#123;</span><br><span class="line">            <span class="attr">url</span>: <span class="string">&#x27;/pages/logs/logs&#x27;</span>,</span><br><span class="line">          &#125;)</span><br><span class="line">          <span class="keyword">return</span></span><br><span class="line">        &#125;</span><br><span class="line">        resolve(res.data)</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">fail</span>: <span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">//失败的时候，可以</span></span><br><span class="line">        reject(err)</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">complete</span>: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">clearTimeout</span>(timer)</span><br><span class="line">        timer = <span class="literal">null</span></span><br><span class="line">        wx.hideLoading(&#123;&#125;)</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = request</span><br></pre></td></tr></table></figure>
 
-<h3 id="函数方式"><a href="#函数方式" class="headerlink" title="函数方式"></a>函数方式</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> (<span class="params">app, options</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(app, options);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="api-js"><a href="#api-js" class="headerlink" title="api.js"></a>api.js</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> login = <span class="built_in">require</span>(<span class="string">&#x27;./login&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> goods = <span class="built_in">require</span>(<span class="string">&#x27;./goods&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  login,</span><br><span class="line">  goods,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="goods-js"><a href="#goods-js" class="headerlink" title="goods.js"></a>goods.js</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> request = <span class="built_in">require</span>(<span class="string">&#x27;./request&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getGoodsList</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> request(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;api/index/index&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;post&#x27;</span>,</span><br><span class="line">    data,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getGoodsInfo</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> request(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;api/index/sleep3&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;post&#x27;</span>,</span><br><span class="line">    data,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  getGoodsList,</span><br><span class="line">  getGoodsInfo,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="login-js"><a href="#login-js" class="headerlink" title="login.js"></a>login.js</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> request = <span class="built_in">require</span>(<span class="string">&#x27;./request.js&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">userlogin</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> request(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;api/index/index&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">    data,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">usersleep</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> request(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;api/index/sleep3&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  userlogin,</span><br><span class="line">  usersleep,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="试用方法"><a href="#试用方法" class="headerlink" title="试用方法:"></a>试用方法:</h3><p>可以挂载到 app.js globalData 中了，当然你可以不挂载直接引用</p>
+<p>例如：pages/index/index.js</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> $api = <span class="built_in">require</span>(<span class="string">&#x27;../../http/api&#x27;</span>)</span><br><span class="line"></span><br><span class="line">Page(&#123;</span><br><span class="line">  <span class="function"><span class="title">onLoad</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">//例子1:</span></span><br><span class="line">    $api.login</span><br><span class="line">      .userlogin(&#123; <span class="attr">name</span>: <span class="string">&#x27;123&#x27;</span> &#125;)</span><br><span class="line">      .then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(res)</span><br><span class="line">      &#125;)</span><br><span class="line">      .catch(<span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(err)</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 也可以用async await</span></span><br><span class="line">  <span class="keyword">async</span> <span class="function"><span class="title">click</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> result = <span class="keyword">await</span> $api.login()</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结:"></a>总结:</h3><p>统一请求处理，可以在 request 中写一个函数，请求 api 接口报错可以给远程日志服务器发数据<br>具体好处自己摸索。也可以根据环境动态请求 baseUrl,还可以接口高度复用,还封装了一个请求 1 秒后加载 loding</p>
 ]]></content>
       <categories>
-        <category>Vue</category>
+        <category>小程序</category>
       </categories>
       <tags>
-        <tag>js</tag>
-        <tag>Vue</tag>
+        <tag>小程序</tag>
+        <tag>reuqest</tag>
+        <tag>api集中管理</tag>
       </tags>
   </entry>
   <entry>
@@ -1877,6 +2009,22 @@ catchtouchmove
       </categories>
       <tags>
         <tag>移动端常见问题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>手把手教你制作一个Vue插件</title>
+    <url>/20210628/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AAVue%E6%8F%92%E4%BB%B6/</url>
+    <content><![CDATA[<h2 id="Vue-插件"><a href="#Vue-插件" class="headerlink" title="Vue 插件"></a>Vue 插件</h2><p>制作一个 Vue 插件非常简单，只需要包含一个 install 函数或者方法即可</p>
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">plugin/index.js</span><br><span class="line"><span class="comment">//app是Vue实例，options是传递得参数</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">install</span>: <span class="function">(<span class="params">app, options</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(app, options);</span><br><span class="line">    app.directive(<span class="string">&#x27;print&#x27;</span>, &#123;</span><br><span class="line">      mounted (el, binding) &#123;</span><br><span class="line">        el.innerHTML = <span class="string">&quot;我是Vue插件修改的&quot;</span> + <span class="built_in">JSON</span>.stringify(options)</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    app.config.globalProperties.$show = <span class="function"><span class="keyword">function</span> (<span class="params">msg = <span class="string">&quot;hello&quot;</span></span>) </span>&#123;</span><br><span class="line">      alert(msg)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">main.js</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> TestPlugin <span class="keyword">from</span> <span class="string">&#x27;./plugin/index&#x27;</span>;</span><br><span class="line"><span class="comment">//要在createApp之后</span></span><br><span class="line">app.use(TestPlugin, &#123; <span class="attr">name</span>: <span class="string">&#x27;zhangsan&#x27;</span> &#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//App.vue</span></span><br><span class="line"><span class="comment">//可以使用自定义指令，也可以调用全局方法</span></span><br><span class="line"><span class="comment">//setup中没有this，所以需要通过getCurrentInstance获取当前实例</span></span><br><span class="line">&lt;div v-print&gt;我是原始值&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; getCurrentInstance &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line"></span><br><span class="line">  setup (props, context) &#123;</span><br><span class="line">    <span class="comment">//打包后有可能获取不到，这里需要谨慎</span></span><br><span class="line">    <span class="keyword">const</span> &#123; ctx &#125; = getCurrentInstance()</span><br><span class="line">    ctx.$show(<span class="string">&quot;我擦，这么牛皮&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      clickHandle</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="函数方式"><a href="#函数方式" class="headerlink" title="函数方式"></a>函数方式</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> (<span class="params">app, options</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(app, options);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>Vue</tag>
       </tags>
   </entry>
   <entry>
