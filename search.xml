@@ -2198,7 +2198,8 @@ catchtouchmove
   <entry>
     <title>阿里云自动同步github仓库</title>
     <url>/20210708/%E9%98%BF%E9%87%8C%E4%BA%91%E8%87%AA%E5%8A%A8%E5%90%8C%E6%AD%A5github%E4%BB%93%E5%BA%93/</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>2222<br>原本博客是放在github page的，但是因为最近一直不稳定，和限流，所以不能忍，正好手里有闲置的阿里云服务器，直接开搞。</p>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>AA</p>
+<p>原本博客是放在github page的，但是因为最近一直不稳定，和限流，所以不能忍，正好手里有闲置的阿里云服务器，直接开搞。</p>
 <ol>
 <li><p>先直接安装宝塔（省事，一步到”胃”）</p>
 </li>
