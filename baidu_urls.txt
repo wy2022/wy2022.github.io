@@ -1,3 +1,4 @@
+https://blog.wy1991.cn/20210708/vuex-mapState%E4%BD%BF%E7%94%A8/
 https://blog.wy1991.cn/20210708/%E9%98%BF%E9%87%8C%E4%BA%91%E8%87%AA%E5%8A%A8%E5%90%8C%E6%AD%A5github%E4%BB%93%E5%BA%93/
 https://blog.wy1991.cn/20210708/%E9%A1%B9%E7%9B%AE-%E6%99%BA%E8%83%BD%E7%94%B5%E5%8E%8B%E7%9B%91%E6%B5%8B/
 https://blog.wy1991.cn/20210708/%E9%A1%B9%E7%9B%AE-%E6%99%BA%E6%85%A7%E6%B6%88%E9%98%B2/
@@ -12,4 +13,3 @@ https://blog.wy1991.cn/20210703/js-promise%E7%B2%BE%E7%AE%80%E7%89%88/
 https://blog.wy1991.cn/20210702/Vue-router%E4%BD%BF%E7%94%A8/
 https://blog.wy1991.cn/20210702/nodejs-%E7%BC%96%E5%86%99bash%E8%84%9A%E6%9C%AC/
 https://blog.wy1991.cn/20210701/TS-%E6%B3%9B%E5%9E%8B-%E7%89%9B%E5%88%80%E5%88%9D%E8%AF%95/
-https://blog.wy1991.cn/20210701/Vue-2%E6%94%B6%E9%9B%86%E4%BE%9D%E8%B5%96/
