@@ -12,3 +12,4 @@ Disallow: /vendors/
 Disallow: /fancybox/
 
 Sitemap: https://blog.wy1991.cn/sitemap.xml
+Sitemap: https://blog.wy1991.cn/baidu_urls.txt

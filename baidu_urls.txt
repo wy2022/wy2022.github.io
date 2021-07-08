@@ -8,3 +8,8 @@ https://blog.wy1991.cn/20210706/V8-%E4%B8%BA%E4%BD%95%E8%A6%81%E9%99%90%E5%88%B6
 https://blog.wy1991.cn/20210705/Vue3-setup%E5%B0%9D%E5%B0%9D%E9%B2%9C/
 https://blog.wy1991.cn/20210704/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/
 https://blog.wy1991.cn/20210703/js-promise%E7%B2%BE%E7%AE%80%E7%89%88/
+https://blog.wy1991.cn/20210702/Vue-router%E4%BD%BF%E7%94%A8/
+https://blog.wy1991.cn/20210702/nodejs-%E7%BC%96%E5%86%99bash%E8%84%9A%E6%9C%AC/
+https://blog.wy1991.cn/20210701/TS-%E6%B3%9B%E5%9E%8B-%E7%89%9B%E5%88%80%E5%88%9D%E8%AF%95/
+https://blog.wy1991.cn/20210701/Vue-2%E6%94%B6%E9%9B%86%E4%BE%9D%E8%B5%96/
+https://blog.wy1991.cn/20210701/%E5%B0%8F%E7%A8%8B%E5%BA%8F-API%E9%9B%86%E4%B8%AD%E7%AE%A1%E7%90%86/
