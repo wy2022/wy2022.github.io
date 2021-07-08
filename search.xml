@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>2021年，你还不知道的CSS选择器</title>
+    <url>/20210628/2021%E5%B9%B4%EF%BC%8C%E4%BD%A0%E8%BF%98%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84CSS%E9%80%89%E6%8B%A9%E5%99%A8/</url>
+    <content><![CDATA[<h4 id="2021-年了，你还不知道的-CSS-选择器"><a href="#2021-年了，你还不知道的-CSS-选择器" class="headerlink" title="2021 年了，你还不知道的 CSS 选择器"></a>2021 年了，你还不知道的 CSS 选择器</h4><img title="css选择器" src="https://blog.img.wy1991.cn/static/images/css/cssSelector.png-blogImg">
+]]></content>
+      <categories>
+        <category>css</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML media 媒体查询</title>
     <url>/20210630/HTML-media-%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/</url>
     <content><![CDATA[<h3 id="media"><a href="#media" class="headerlink" title="media"></a>media</h3><ol>
@@ -109,15 +121,23 @@
       </tags>
   </entry>
   <entry>
-    <title>2021年，你还不知道的CSS选择器</title>
-    <url>/20210628/2021%E5%B9%B4%EF%BC%8C%E4%BD%A0%E8%BF%98%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84CSS%E9%80%89%E6%8B%A9%E5%99%A8/</url>
-    <content><![CDATA[<h4 id="2021-年了，你还不知道的-CSS-选择器"><a href="#2021-年了，你还不知道的-CSS-选择器" class="headerlink" title="2021 年了，你还不知道的 CSS 选择器"></a>2021 年了，你还不知道的 CSS 选择器</h4><img title="css选择器" src="https://blog.img.wy1991.cn/static/images/css/cssSelector.png-blogImg">
+    <title>前端截图系列</title>
+    <url>/20210628/HTML%E6%88%AA%E5%9B%BE%E7%B3%BB%E5%88%97/</url>
+    <content><![CDATA[<h3 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h3><img title="原型链" alt="图解原型和原型链" src="https://blog.img.wy1991.cn/static/images/js/prototype.png-blogImg">
+
+<h3 id="animation-动画"><a href="#animation-动画" class="headerlink" title="animation 动画"></a>animation 动画</h3><img title="动画" src="https://blog.img.wy1991.cn/static/images/css/animation.png-blogImg">
+
+<h3 id="浏览器窗口"><a href="#浏览器窗口" class="headerlink" title="浏览器窗口"></a>浏览器窗口</h3><img title="窗口" src="https://blog.img.wy1991.cn/static/images/css/screen.png-blogImg">
+
+<p><a href="https://juejin.cn/post/6884042902587047943#heading-1"></a></p>
+<figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">• <span class="built_in">window</span>.innerHeight：获取浏览器视觉视口高度（包括垂直滚动条）。</span><br><span class="line">• <span class="built_in">window</span>.outerHeight：获取浏览器窗口外部的高度。表示整个浏览器窗口的高度，包括侧边栏、窗口镶边和调正窗口大小的边框。</span><br><span class="line">• <span class="built_in">window</span>.screen.Height：获取获屏幕取理想视口高度，这个数值是固定的，设备的分辨率/设备像素比</span><br><span class="line">• <span class="built_in">window</span>.screen.availHeight：浏览器窗口可用的高度。</span><br><span class="line">• <span class="built_in">document</span>.documentElement.clientHeight：获取浏览器布局视口高度，包括内边距，但不包括垂直滚动条、边框和外边距。</span><br><span class="line">• <span class="built_in">document</span>.documentElement.offsetHeight：包括内边距、滚动条、边框和外边距。</span><br><span class="line">• <span class="built_in">document</span>.documentElement.scrollHeight：在不使用滚动条的情况下适合视口中的所有内容所需的最小宽度。测量方式与clientHeight相同：它包含元素的内边距，但不包括边框，外边距或垂直滚动条。</span><br><span class="line">响应式设计与自适应设计的区别：响应式开发一套界面，通过检测视口分辨率，针对不同客户端在客户端做代码处理，来展现不同的布局和内容；自适应需要开发多套界面，通过检测视口分辨率，来判断当前访问的设备是pc端、平板、手机，从而请求服务层，返回不同的页面。</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>css</category>
+        <category>js</category>
       </categories>
       <tags>
         <tag>css</tag>
+        <tag>js</tag>
       </tags>
   </entry>
   <entry>
@@ -143,26 +163,6 @@
       </categories>
       <tags>
         <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端截图系列</title>
-    <url>/20210628/HTML%E6%88%AA%E5%9B%BE%E7%B3%BB%E5%88%97/</url>
-    <content><![CDATA[<h3 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h3><img title="原型链" alt="图解原型和原型链" src="https://blog.img.wy1991.cn/static/images/js/prototype.png-blogImg">
-
-<h3 id="animation-动画"><a href="#animation-动画" class="headerlink" title="animation 动画"></a>animation 动画</h3><img title="动画" src="https://blog.img.wy1991.cn/static/images/css/animation.png-blogImg">
-
-<h3 id="浏览器窗口"><a href="#浏览器窗口" class="headerlink" title="浏览器窗口"></a>浏览器窗口</h3><img title="窗口" src="https://blog.img.wy1991.cn/static/images/css/screen.png-blogImg">
-
-<p><a href="https://juejin.cn/post/6884042902587047943#heading-1"></a></p>
-<figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">• <span class="built_in">window</span>.innerHeight：获取浏览器视觉视口高度（包括垂直滚动条）。</span><br><span class="line">• <span class="built_in">window</span>.outerHeight：获取浏览器窗口外部的高度。表示整个浏览器窗口的高度，包括侧边栏、窗口镶边和调正窗口大小的边框。</span><br><span class="line">• <span class="built_in">window</span>.screen.Height：获取获屏幕取理想视口高度，这个数值是固定的，设备的分辨率/设备像素比</span><br><span class="line">• <span class="built_in">window</span>.screen.availHeight：浏览器窗口可用的高度。</span><br><span class="line">• <span class="built_in">document</span>.documentElement.clientHeight：获取浏览器布局视口高度，包括内边距，但不包括垂直滚动条、边框和外边距。</span><br><span class="line">• <span class="built_in">document</span>.documentElement.offsetHeight：包括内边距、滚动条、边框和外边距。</span><br><span class="line">• <span class="built_in">document</span>.documentElement.scrollHeight：在不使用滚动条的情况下适合视口中的所有内容所需的最小宽度。测量方式与clientHeight相同：它包含元素的内边距，但不包括边框，外边距或垂直滚动条。</span><br><span class="line">响应式设计与自适应设计的区别：响应式开发一套界面，通过检测视口分辨率，针对不同客户端在客户端做代码处理，来展现不同的布局和内容；自适应需要开发多套界面，通过检测视口分辨率，来判断当前访问的设备是pc端、平板、手机，从而请求服务层，返回不同的页面。</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -227,7 +227,7 @@
 <p><a href="https://blog.wy1991.cn/">官网博客</a></p>
 <h2 id="删除线xx"><a href="#删除线xx" class="headerlink" title="删除线xx"></a>删除线<del>xx</del></h2><p><del>删除线</del></p>
 <h2 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h2><p>Markdown 语法会忽略首行开头的空格，如果要体现出首行开头空两个的效果，可以使用 全角符号下的空格 ，windows 下使用 shift+空格 切换。</p>
-<h2 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h2><p><span class="exturl" data-url="bWFpbHRvOiYjOTc7JiN4NjQ7JiMxMDk7JiMxMDU7JiMxMTA7JiM2NDsmI3g3NzsmI3g3OTsmIzQ5OyYjNTc7JiM1NzsmIzQ5OyYjeDJlOyYjeDYzOyYjeDZlOw==">&#97;&#x64;&#109;&#105;&#110;&#64;&#x77;&#x79;&#49;&#57;&#57;&#49;&#x2e;&#x63;&#x6e;<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h2><p><span class="exturl" data-url="bWFpbHRvOiYjeDYxOyYjeDY0OyYjMTA5OyYjeDY5OyYjMTEwOyYjNjQ7JiN4Nzc7JiMxMjE7JiM0OTsmI3gzOTsmIzU3OyYjeDMxOyYjNDY7JiN4NjM7JiN4NmU7">&#x61;&#x64;&#109;&#x69;&#110;&#64;&#x77;&#121;&#49;&#x39;&#57;&#x31;&#46;&#x63;&#x6e;<i class="fa fa-external-link-alt"></i></span></p>
 <h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>我们可以设置表格的对齐方式：</p>
 <ul>
 <li><p>-: 设置内容和标题栏居右对齐。</p>
@@ -442,22 +442,19 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue mitt</title>
-    <url>/20210628/Vue-mitt/</url>
-    <content><![CDATA[<h2 id="mitt"><a href="#mitt" class="headerlink" title="mitt"></a>mitt</h2><blockquote>
-<p>vue2 中有 @on @once @off 等方法($bus 事件总线)<br>但是 vue3 中取消了，官网推荐用 mitt</p>
+    <title>Vue filter访问data中数据</title>
+    <url>/20210630/Vue-filter%E8%AE%BF%E9%97%AEdata%E4%B8%AD%E6%95%B0%E6%8D%AE/</url>
+    <content><![CDATA[<h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h3><blockquote>
+<p>因为 this 作用域问题，直接在过滤器中访问 this.XX 是访问不到的<br>思路，可以在 data 中保存个 that，然后过滤器中第二个参数传入</p>
 </blockquote>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p><span class="exturl" data-url="aHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2UvbWl0dA==">mitt<i class="fa fa-external-link-alt"></i></span></p>
-<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line">npm install --save mitt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//utils/mitt.ts</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> mitt, &#123; Emitter &#125; <span class="keyword">from</span> <span class="string">&#x27;mitt&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> emitter: Emitter = mitt();</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> emitter</span><br></pre></td></tr></table></figure>
-
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">A.vue</span><br><span class="line"><span class="keyword">import</span> emitter <span class="keyword">from</span> <span class="string">&#x27;@/utils/mitt&#x27;</span></span><br><span class="line">emitter.emit(<span class="string">&#x27;test&#x27;</span>, <span class="string">&#x27;HelloWorld&#x27;</span>)</span><br><span class="line"></span><br><span class="line">b.vue</span><br><span class="line"><span class="keyword">import</span> emitter <span class="keyword">from</span> <span class="string">&#x27;@/utils/mitt&#x27;</span></span><br><span class="line"></span><br><span class="line">emitter.on(<span class="string">&#x27;test&#x27;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;test&#x27;</span> + e)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//注意卸载的时候，清除掉</span></span><br><span class="line">onUnmounted(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  emitter.off(<span class="string">&#x27;test&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;clear emit test&#x27;</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"> <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">that</span>: <span class="built_in">this</span>,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#123;&#123;scope.row.device_type | dType(that)&#125;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="attr">filters</span>:&#123;</span><br><span class="line">    <span class="comment">//过滤查询类型</span></span><br><span class="line">    <span class="function"><span class="title">dType</span>(<span class="params">id,that</span>)</span>&#123;</span><br><span class="line">     <span class="keyword">let</span> obj =  that.deviceType.find(<span class="function"><span class="params">item</span> =&gt;</span> item.type_id == id)</span><br><span class="line">      <span class="keyword">return</span> obj.type_name;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>vue</category>
+        <category>Vue</category>
       </categories>
       <tags>
-        <tag>vue</tag>
-        <tag>mitt</tag>
+        <tag>Vue</tag>
+        <tag>filter</tag>
       </tags>
   </entry>
   <entry>
@@ -496,19 +493,22 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue filter访问data中数据</title>
-    <url>/20210630/Vue-filter%E8%AE%BF%E9%97%AEdata%E4%B8%AD%E6%95%B0%E6%8D%AE/</url>
-    <content><![CDATA[<h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h3><blockquote>
-<p>因为 this 作用域问题，直接在过滤器中访问 this.XX 是访问不到的<br>思路，可以在 data 中保存个 that，然后过滤器中第二个参数传入</p>
+    <title>Vue mitt</title>
+    <url>/20210628/Vue-mitt/</url>
+    <content><![CDATA[<h2 id="mitt"><a href="#mitt" class="headerlink" title="mitt"></a>mitt</h2><blockquote>
+<p>vue2 中有 @on @once @off 等方法($bus 事件总线)<br>但是 vue3 中取消了，官网推荐用 mitt</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"> <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">that</span>: <span class="built_in">this</span>,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#123;&#123;scope.row.device_type | dType(that)&#125;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="attr">filters</span>:&#123;</span><br><span class="line">    <span class="comment">//过滤查询类型</span></span><br><span class="line">    <span class="function"><span class="title">dType</span>(<span class="params">id,that</span>)</span>&#123;</span><br><span class="line">     <span class="keyword">let</span> obj =  that.deviceType.find(<span class="function"><span class="params">item</span> =&gt;</span> item.type_id == id)</span><br><span class="line">      <span class="keyword">return</span> obj.type_name;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p><span class="exturl" data-url="aHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2UvbWl0dA==">mitt<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line">npm install --save mitt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//utils/mitt.ts</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> mitt, &#123; Emitter &#125; <span class="keyword">from</span> <span class="string">&#x27;mitt&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> emitter: Emitter = mitt();</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> emitter</span><br></pre></td></tr></table></figure>
+
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">A.vue</span><br><span class="line"><span class="keyword">import</span> emitter <span class="keyword">from</span> <span class="string">&#x27;@/utils/mitt&#x27;</span></span><br><span class="line">emitter.emit(<span class="string">&#x27;test&#x27;</span>, <span class="string">&#x27;HelloWorld&#x27;</span>)</span><br><span class="line"></span><br><span class="line">b.vue</span><br><span class="line"><span class="keyword">import</span> emitter <span class="keyword">from</span> <span class="string">&#x27;@/utils/mitt&#x27;</span></span><br><span class="line"></span><br><span class="line">emitter.on(<span class="string">&#x27;test&#x27;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;test&#x27;</span> + e)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//注意卸载的时候，清除掉</span></span><br><span class="line">onUnmounted(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  emitter.off(<span class="string">&#x27;test&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;clear emit test&#x27;</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Vue</category>
+        <category>vue</category>
       </categories>
       <tags>
-        <tag>Vue</tag>
-        <tag>filter</tag>
+        <tag>vue</tag>
+        <tag>mitt</tag>
       </tags>
   </entry>
   <entry>
@@ -520,6 +520,26 @@
 <h4 id="定义-props"><a href="#定义-props" class="headerlink" title="定义 props"></a>定义 props</h4><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineComponent, PropType, onMounted &#125; <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">interface</span> Book &#123;</span><br><span class="line">  <span class="attr">title</span>: <span class="built_in">string</span>;</span><br><span class="line">  desc: <span class="built_in">string</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> defineComponent(&#123;</span><br><span class="line">  <span class="attr">props</span>: &#123;</span><br><span class="line">    <span class="attr">id</span>: <span class="built_in">Number</span>,</span><br><span class="line">    <span class="attr">auther</span>: &#123;</span><br><span class="line">      <span class="attr">type</span>: <span class="built_in">String</span>,</span><br><span class="line">      <span class="attr">require</span>: <span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">callback</span>: &#123;</span><br><span class="line">      <span class="attr">type</span>: <span class="built_in">Function</span> <span class="keyword">as</span> PropType&lt;<span class="function">() =&gt;</span> <span class="built_in">void</span>&gt;,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">book</span>: &#123;</span><br><span class="line">      <span class="attr">type</span>: <span class="built_in">Object</span> <span class="keyword">as</span> PropType&lt;Book&gt;,</span><br><span class="line">      <span class="built_in">require</span>: <span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="title">setup</span>(<span class="params">props, context</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> callbackFunc = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="keyword">typeof</span> props.callback);</span><br><span class="line"></span><br><span class="line">      props.callback?.apply(<span class="literal">null</span>);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123; callbackFunc &#125;;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">   &lt;wy-article :id=<span class="string">&quot;123&quot;</span></span><br><span class="line">                :callback=<span class="string">&quot;articleCallback&quot;</span></span><br><span class="line">                :book=<span class="string">&quot;book&quot;</span>&gt; &lt;/wy-article&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wyArticle, &#123; Book &#125; <span class="keyword">from</span> <span class="string">&quot;@/components/base/wyArticle.vue&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; ElMessage &#125; <span class="keyword">from</span> <span class="string">&quot;element-plus&quot;</span>;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="title">setup</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> book = reactive(&#123;</span><br><span class="line">      <span class="attr">title</span>: <span class="string">&quot;张三的书&quot;</span>,</span><br><span class="line">      <span class="attr">desc</span>: <span class="string">&quot;历史书籍&quot;</span>,</span><br><span class="line">    &#125; <span class="keyword">as</span> Book);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> articleCallback = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&quot;article call back&quot;</span>);</span><br><span class="line">      ElMessage.success(<span class="string">&quot;article call back&quot;</span>);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      book,</span><br><span class="line">      articleCallback,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue provide inject使用</title>
+    <url>/20210628/Vue-provide-inject%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="provide-inject"><a href="#provide-inject" class="headerlink" title="provide inject"></a>provide inject</h2><p>正常的父子组件传递信息 <code>props</code> 就行了</p>
+<p>跨组件(子孙)需要用到 <code>provide inject</code></p>
+<p>兄弟组件需要用到 <code>mitt</code>(<code>Vue</code> 推荐)</p>
+<blockquote>
+<p>不要在子组件修改值，可以在父组件传递一个修改方法，子组件可以调用来修改，比如 updateToken<br>下例中：readonly 就是为了防止子组件随意修改，导致不可维护（保证单一源）</p>
+</blockquote>
+<h3 id="provide"><a href="#provide" class="headerlink" title="provide"></a>provide</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">父组件中</span><br><span class="line">  <span class="function"><span class="title">setup</span>(<span class="params">props,context</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> token = ref(<span class="string">&#x27;abcde&#x27;</span>)</span><br><span class="line">    <span class="keyword">const</span> updateToken = <span class="function">(<span class="params">val:string</span>)=&gt;</span>&#123;</span><br><span class="line">        token.value = val</span><br><span class="line">    &#125;</span><br><span class="line">    provide(<span class="string">&#x27;token&#x27;</span>,readonly(token));</span><br><span class="line">    provide(<span class="string">&#x27;updateToken&#x27;</span>,updateToken)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="inject"><a href="#inject" class="headerlink" title="inject"></a>inject</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    &#123;&#123; token &#125;&#125;</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;editToken&quot;</span>&gt;</span>更改token<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;updateTokenFunc(123)&quot;</span>&gt;</span>更改token123<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="title">setup</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> token = inject(<span class="string">&quot;token&quot;</span>);</span><br><span class="line">    <span class="keyword">const</span> updateTokenFunc = inject(<span class="string">&quot;updateToken&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      token,</span><br><span class="line">      updateTokenFunc</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">methods</span>: &#123;</span><br><span class="line">    <span class="function"><span class="title">editToken</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&quot;editToken&quot;</span>);</span><br><span class="line">      <span class="built_in">this</span>.token = <span class="number">123</span>;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="built_in">this</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>Vue</category>
@@ -655,6 +675,18 @@
       </tags>
   </entry>
   <entry>
+    <title>Vue v-model用法</title>
+    <url>/20210628/Vue-v-model%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h2><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line">vue3和<span class="number">2</span>的vmodel不太一样，精简了一些</span><br><span class="line">可以多个v-model,默认是modelValue</span><br><span class="line">    &lt;wy-input v-model=<span class="string">&quot;inputVal&quot;</span></span><br><span class="line">              v-model:title=<span class="string">&quot;bookTitle&quot;</span>&gt;&lt;/wy-input&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">wyInput.vue</span><br><span class="line">  &lt;input <span class="keyword">type</span>=<span class="string">&quot;text&quot;</span></span><br><span class="line">           <span class="meta">@input</span>=<span class="string">&quot;inputVal&quot;</span></span><br><span class="line">           :value=<span class="string">&quot;modelValue&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">           <span class="attr">:value</span>=<span class="string">&quot;title&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">           @<span class="attr">input</span>=<span class="string">&quot;$emit(&#x27;update:title&#x27;,$event.target.value)&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">  props: &#123;</span></span><br><span class="line"><span class="xml">    modelValue: String,</span></span><br><span class="line"><span class="xml">    title: String,</span></span><br><span class="line"><span class="xml">  &#125;,</span></span><br><span class="line"><span class="xml">  emits: [&quot;update:modelValue&quot;, &quot;update:title&quot;],</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">  setup(props, context) &#123;</span></span><br><span class="line"><span class="xml">    const inputVal = (e: KeyboardEvent) =&gt; &#123;</span></span><br><span class="line"><span class="xml">      const targetVal = (e.target as HTMLInputElement).value;</span></span><br><span class="line"><span class="xml">      // console.log(targetVal);</span></span><br><span class="line"><span class="xml">      context.emit(&quot;update:modelValue&quot;, targetVal);</span></span><br><span class="line"><span class="xml">    &#125;;</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">    return &#123;</span></span><br><span class="line"><span class="xml">      inputVal,</span></span><br><span class="line"><span class="xml">    &#125;;</span></span><br><span class="line"><span class="xml">  &#125;,</span></span><br><span class="line"><span class="xml"></span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vue vuex分模块</title>
     <url>/20210628/Vue-vuex%E5%88%86%E6%A8%A1%E5%9D%97/</url>
     <content><![CDATA[<h3 id="vuex-分模块"><a href="#vuex-分模块" class="headerlink" title="vuex 分模块"></a>vuex 分模块</h3><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line">vuex 模块分成，namespaced 防止全局污染</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//store/index.ts</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; createStore &#125; <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"><span class="keyword">import</span> menu <span class="keyword">from</span> <span class="string">&#x27;./modules/menu&#x27;</span></span><br><span class="line"><span class="keyword">import</span> test <span class="keyword">from</span> <span class="string">&#x27;./modules/test&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> createStore(&#123;</span><br><span class="line"></span><br><span class="line">  <span class="attr">modules</span>: &#123;</span><br><span class="line">    menu,</span><br><span class="line">    test</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// store/modules/menu.ts</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> state = &#123;</span><br><span class="line">  <span class="attr">msg</span>: <span class="string">&#x27;hello aside&#x27;</span>,</span><br><span class="line">  <span class="attr">asideShow</span>: <span class="literal">true</span>,</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> actions = &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> getters = &#123;</span><br><span class="line">  isShow(state: <span class="built_in">any</span>): <span class="built_in">boolean</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> state.asideShow</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> mutations = &#123;</span><br><span class="line">  toggle(state: <span class="built_in">any</span>): <span class="built_in">void</span> &#123;</span><br><span class="line">    state.asideShow = !state.asideShow</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">namespaced</span>: <span class="literal">true</span>,</span><br><span class="line">  state,</span><br><span class="line">  mutations,</span><br><span class="line">  actions,</span><br><span class="line">  getters,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//通过 commit提交修改vuex state</span></span><br><span class="line"></span><br><span class="line">store.commit(<span class="string">&quot;menu/toggle&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//demo.vue</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//通过watch监听  注意watch的第一个函数，需要返回 return</span></span><br><span class="line"><span class="keyword">const</span> show = ref(<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">watch(</span><br><span class="line">      <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> store.getters[<span class="string">&quot;menu/isShow&quot;</span>];</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="function">(<span class="params">oldVal, newVal</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// console.log(oldVal, newVal);</span></span><br><span class="line">        show.value = newVal;</span><br><span class="line">      &#125;</span><br><span class="line">    );</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -665,18 +697,6 @@
       <tags>
         <tag>vue</tag>
         <tag>vuex</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue v-model用法</title>
-    <url>/20210628/Vue-v-model%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h2><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line">vue3和<span class="number">2</span>的vmodel不太一样，精简了一些</span><br><span class="line">可以多个v-model,默认是modelValue</span><br><span class="line">    &lt;wy-input v-model=<span class="string">&quot;inputVal&quot;</span></span><br><span class="line">              v-model:title=<span class="string">&quot;bookTitle&quot;</span>&gt;&lt;/wy-input&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">wyInput.vue</span><br><span class="line">  &lt;input <span class="keyword">type</span>=<span class="string">&quot;text&quot;</span></span><br><span class="line">           <span class="meta">@input</span>=<span class="string">&quot;inputVal&quot;</span></span><br><span class="line">           :value=<span class="string">&quot;modelValue&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">           <span class="attr">:value</span>=<span class="string">&quot;title&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">           @<span class="attr">input</span>=<span class="string">&quot;$emit(&#x27;update:title&#x27;,$event.target.value)&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">  props: &#123;</span></span><br><span class="line"><span class="xml">    modelValue: String,</span></span><br><span class="line"><span class="xml">    title: String,</span></span><br><span class="line"><span class="xml">  &#125;,</span></span><br><span class="line"><span class="xml">  emits: [&quot;update:modelValue&quot;, &quot;update:title&quot;],</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">  setup(props, context) &#123;</span></span><br><span class="line"><span class="xml">    const inputVal = (e: KeyboardEvent) =&gt; &#123;</span></span><br><span class="line"><span class="xml">      const targetVal = (e.target as HTMLInputElement).value;</span></span><br><span class="line"><span class="xml">      // console.log(targetVal);</span></span><br><span class="line"><span class="xml">      context.emit(&quot;update:modelValue&quot;, targetVal);</span></span><br><span class="line"><span class="xml">    &#125;;</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">    return &#123;</span></span><br><span class="line"><span class="xml">      inputVal,</span></span><br><span class="line"><span class="xml">    &#125;;</span></span><br><span class="line"><span class="xml">  &#125;,</span></span><br><span class="line"><span class="xml"></span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>vue</category>
-      </categories>
-      <tags>
-        <tag>vue</tag>
       </tags>
   </entry>
   <entry>
@@ -730,23 +750,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue 自定义指令</title>
-    <url>/20210628/Vue-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</url>
-    <content><![CDATA[<h2 id="directives"><a href="#directives" class="headerlink" title="directives"></a>directives</h2><blockquote>
-<p>Vue3 得自定义指令和 2 有所不同，所以需要注意下</p>
-</blockquote>
-<h3 id="demo-ts"><a href="#demo-ts" class="headerlink" title="demo.ts"></a>demo.ts</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">目录结构    <span class="number">3</span>个自定义指令</span><br><span class="line"><span class="comment">//   /src/directives/index.ts</span></span><br><span class="line"><span class="comment">// /src/directives/focus/index.ts</span></span><br><span class="line"><span class="comment">// /src/directives/permission/index.ts</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//index.ts  只需要导出各个指令就行</span></span><br><span class="line"><span class="keyword">export</span> * <span class="keyword">from</span> <span class="string">&#x27;./focus&#x27;</span></span><br><span class="line"><span class="keyword">export</span> * <span class="keyword">from</span> <span class="string">&#x27;./permission&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//focus</span></span><br><span class="line"><span class="keyword">import</span> &#123; Directive &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> focus: Directive = &#123;</span><br><span class="line">  <span class="function"><span class="title">mounted</span>(<span class="params">el: HTMLElement, binding</span>)</span> &#123;</span><br><span class="line">    el.focus()</span><br><span class="line">    <span class="built_in">console</span>.log(binding.value);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//permission</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; Directive &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> permission: Directive = &#123;</span><br><span class="line">  <span class="function"><span class="title">mounted</span>(<span class="params">el: HTMLElement, binding</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; value &#125; = binding</span><br><span class="line">    <span class="keyword">if</span> (value &amp;&amp; value <span class="keyword">instanceof</span> <span class="built_in">Array</span> &amp;&amp; value.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">const</span> arr = [<span class="string">&#x27;admin&#x27;</span>, <span class="string">&#x27;user&#x27;</span>];</span><br><span class="line">      <span class="keyword">const</span> hasPermission = arr.some(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> value.includes(item)</span><br><span class="line">      &#125;)</span><br><span class="line">      <span class="built_in">console</span>.log(hasPermission);</span><br><span class="line">      <span class="keyword">if</span> (!hasPermission) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;没权限permission&quot;</span>);</span><br><span class="line">        el.style.display = <span class="string">&#x27;none&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">throw</span> <span class="built_in">Error</span>(<span class="string">&#x27;this is permission [\&#x27;admin\&#x27;,\&#x27;user\&#x27;]&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="main-ts"><a href="#main-ts" class="headerlink" title="main.ts"></a>main.ts</h3><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createApp, Directive &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">&#x27;./router&#x27;</span></span><br><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">&#x27;./store&#x27;</span></span><br><span class="line"><span class="keyword">import</span> ElementPlus <span class="keyword">from</span> <span class="string">&#x27;element-plus&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;element-plus/lib/theme-chalk/index.css&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;@/assets/tailwind.css&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> directives <span class="keyword">from</span> <span class="string">&#x27;@/directives&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = createApp(App)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 自定义指令</span></span><br><span class="line"><span class="built_in">Object</span>.keys(directives).forEach(<span class="function"><span class="params">key</span> =&gt;</span> &#123;</span><br><span class="line">  app.directive(key, (directives <span class="keyword">as</span> &#123; [key: <span class="built_in">string</span>]: Directive &#125;)[key])</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.use(store).use(ElementPlus, &#123; <span class="attr">size</span>: <span class="string">&#x27;small&#x27;</span>, <span class="attr">zIndex</span>: <span class="number">3000</span> &#125;).use(router).mount(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vue 文件下载</title>
     <url>/20210628/Vue-%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/</url>
     <content><![CDATA[<h2 id="Vue-blog"><a href="#Vue-blog" class="headerlink" title="Vue blog"></a>Vue blog</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">       <span class="function"><span class="keyword">function</span> <span class="title">down</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">           <span class="keyword">const</span> msg = &#123;</span><br><span class="line">               <span class="attr">name</span>: <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">           &#125;;</span><br><span class="line">              <span class="comment">//注意要是数组</span></span><br><span class="line">           <span class="keyword">const</span> blob = <span class="keyword">new</span> Blob([<span class="built_in">JSON</span>.stringify(msg, <span class="literal">null</span>, <span class="number">2</span>)], &#123;</span><br><span class="line">               <span class="attr">type</span>: <span class="string">&#x27;application/json&#x27;</span></span><br><span class="line">           &#125;);</span><br><span class="line"></span><br><span class="line">           <span class="keyword">const</span> link = <span class="built_in">document</span>.createElement(<span class="string">&#x27;a&#x27;</span>);</span><br><span class="line"></span><br><span class="line">           <span class="comment">// link.style.display = &#x27;none&#x27;;</span></span><br><span class="line"></span><br><span class="line">           link.href = URL.createObjectURL(blob);</span><br><span class="line">           <span class="comment">//利用html5 a标签的down 属性，如果未指定后缀名则有类型决定(json)</span></span><br><span class="line">           link.download = <span class="string">&#x27;下载文件&#x27;</span> + (<span class="keyword">new</span> <span class="built_in">Date</span>().getTime()) + <span class="string">&quot;.txt&quot;</span>;</span><br><span class="line"></span><br><span class="line">           <span class="built_in">document</span>.body.appendChild(link);</span><br><span class="line">           link.click()</span><br><span class="line">           <span class="comment">//移除掉a链接</span></span><br><span class="line">           <span class="built_in">document</span>.removeChild(link)</span><br><span class="line">           <span class="comment">//不用的时候需要释放掉</span></span><br><span class="line">           URL.revokeObjectURL(link.href)</span><br><span class="line">       &#125;</span><br><span class="line">   &lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -762,75 +765,14 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue3 setup尝尝鲜</title>
-    <url>/20210705/Vue3-setup%E5%B0%9D%E5%B0%9D%E9%B2%9C/</url>
-    <content><![CDATA[<h2 id="一-setup函数的特性以及作用"><a href="#一-setup函数的特性以及作用" class="headerlink" title="一. setup函数的特性以及作用"></a>一. setup函数的特性以及作用</h2><p> 可以确定的是 Vue3.0 是兼容 Vue2.x 版本的 也就是说我们再日常工作中 可以在 Vue3 中使用 Vue2.x 的相关语法 但是当你真正开始使用 Vue3 写项目时 你会发现他比 Vue2.x 方便的多</p>
-<p>vue 2.0 生命周期对比 3.0 生命周期</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">| <span class="number">2.0</span> 周期名称   | <span class="number">3.0</span> 周期名称     | 说明 |</span><br><span class="line">| beforeCreate  | setup          | 组件创建之前 |</span><br><span class="line">| created       | setup          | 组件创建完成 |</span><br><span class="line">| beforeMount   | onBeforeMount  | 组件挂载之前 |</span><br><span class="line">| mounted       | onMounted      | 组件挂载完成 |</span><br><span class="line">| beforeUpdate  | onBeforeUpdate | 数据更新，虚拟 DOM 打补丁之前 |</span><br><span class="line">| updated       | onUpdated      | 数据更新，虚拟 DOM 渲染完成 |</span><br><span class="line">| beforeDestroy | onBeforeUnmount| 组件销毁之前 |</span><br><span class="line">| destroyed     | onUnmounted    | 组件销毁后 |</span><br></pre></td></tr></table></figure>
-<h3 id="Vue3-的一大特性函数-—-setup"><a href="#Vue3-的一大特性函数-—-setup" class="headerlink" title="Vue3 的一大特性函数 —- setup"></a>Vue3 的一大特性函数 —- setup</h3><ol>
-<li><figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">beforeCreate</span>：表示组件刚刚被创建出来，组件的<span class="class"><span class="keyword">data</span>和methods还没有初始化好</span></span><br><span class="line"><span class="title">setup</span></span><br><span class="line"><span class="type">Created</span>： 表示组件刚刚被创建出来，并且组件的<span class="class"><span class="keyword">data</span>和methods已经初始化好</span></span><br></pre></td></tr></table></figure></li>
-<li><p>setup函数是 Composition API（组合API）的入口</p>
-</li>
-<li><p>在setup函数中定义的变量和方法最后都是需要 return 出去的 不然无法再模板中使用</p>
-</li>
-</ol>
-<h2 id="二、setup函数的注意点："><a href="#二、setup函数的注意点：" class="headerlink" title="二、setup函数的注意点："></a>二、setup函数的注意点：</h2><ol>
-<li>由于在执行 setup函数的时候，还没有执行 Created 生命周期方法，所以在 setup 函数中，无法使用 data 和 methods 的变量和方法</li>
-<li>由于我们不能在 setup函数中使用 data 和 methods，所以 Vue 为了避免我们错误的使用，直接将 setup函数中的this修改成了 undefined</li>
-<li>setup函数只能是同步的不能是异步的</li>
-</ol>
-<p>用法1:结合ref使用</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &#123;&#123;name&#125;&#125;</span><br><span class="line">    &lt;p&gt;&#123;&#123;age&#125;&#125;&lt;/p&gt;</span><br><span class="line">    &lt;button @click=&quot;plusOne()&quot;&gt;+&lt;/button&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"> </span><br><span class="line">&lt;script&gt;</span><br><span class="line">import &#123;ref&#125; from &#x27;vue&#x27;</span><br><span class="line">export default &#123;</span><br><span class="line">  name:&#x27;app&#x27;,</span><br><span class="line">  data()&#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      name:&#x27;北京&#x27;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  setup()&#123;</span><br><span class="line">    //名字</span><br><span class="line">    const name =ref(&#x27;小李&#x27;)</span><br><span class="line">    //年纪</span><br><span class="line">    const age=ref(18)</span><br><span class="line">    // 方法</span><br><span class="line">    function plusOne()&#123;</span><br><span class="line">      age.value++ //想改变值或获取值 必须.value</span><br><span class="line">    &#125;</span><br><span class="line">    //必须返回 模板中才能使用</span><br><span class="line">    return &#123;</span><br><span class="line">      name,age,plusOne</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-
-<p>用法2：代码分割<br>Options API 和 Composition API<br>Options API 约定：<br>我们需要在 props 里面设置接收参数  在setup中没有this<br>我们需要在 data 里面设置变量<br>我们需要在 computed 里面设置计算属性<br>我们需要在 watch 里面设置监听属性<br>我们需要在 methods 里面设置事件方法<br>你会发现 Options APi 都约定了我们该在哪个位置做什么事，这反倒在一定程度上也强制我们进行了代码分割。<br>现在用 Composition API，不再这么约定了，于是乎，代码组织非常灵活，我们的控制代码写在 setup 里面即可。<br>setup函数提供了两个参数 props和context,重要的是在setup函数里没有了this,在 vue3.0 中，访问他们变成以下形式： this.xxx=》context.xxx<br>我们没有了 this 上下文，没有了 Options API 的强制代码分离。Composition API 给了我们更加广阔的天地，那么我们更加需要慎重自约起来。<br>对于复杂的逻辑代码，我们要更加重视起 Composition API 的初心，不要吝啬使用 Composition API 来分离代码，用来切割成各种模块导出。<br>我们期望是这样的：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> importuseAfrom&#x27;./a&#x27;</span><br><span class="line">importuseBfrom&#x27;./b&#x27;</span><br><span class="line">importuseCfrom&#x27;./c&#x27;</span><br><span class="line">exportdefault&#123;</span><br><span class="line">    setup (props) &#123;</span><br><span class="line">      let&#123; a, methodsA &#125; = useA()</span><br><span class="line">      let&#123; b, methodsB &#125; = useA()</span><br><span class="line">      let&#123; c, methodsC &#125; = useC()</span><br><span class="line">      return&#123; a, methodsA, b, methodsB, c, methodsC &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="data-变为-setUp"><a href="#data-变为-setUp" class="headerlink" title="data() 变为 setUp()"></a>data() 变为 setUp()</h2><ol>
-<li><p>生命周期的函数只能写在setUp中</p>
-</li>
-<li><p>provide/inject 只能写在setUp</p>
-</li>
-</ol>
-<p>就算 setup 内容代码量越来越大，但是始终围绕着大而不乱，代码结构清晰的路子前进。</p>
-<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>首先，在 vue 3.0 中，生命周期是从 vue 中导出的，我们需要用到哪些，就导出哪些。<br>vue 提供这么多的生命周期，有几个是我们常用的？  在大多数的组件中，我们用不到生命周期。即便是页面级别的应用，可能用到最多的是 onMounted 即可。<br>当然，那些绑定时间的操作会用到解绑，因此会用到 onUnmounted。其它的生命周期，正常情况下是基本用不到的。<br>所以，通过引入使用的这种设定，可以减少我们的最终编译的项目的体积。而且，这样的引入使用，更加的逻辑清晰。<br>其次，除 setup 之外，其他的生命周期函数，都是在 setup 里面直接书写函数即可。</p>
-<h2 id="ref函数"><a href="#ref函数" class="headerlink" title="ref函数"></a>ref函数</h2><p>ref 是一个函数，它接受一个参数，返回的就是一个神奇的 响应式对象 。我们初始化的这个 0 作为参数包裹到这个对象中去，在未来可以检测到改变并作出对应的相应。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;h1&gt;&#123;&#123;count&#125;&#125;&lt;/h1&gt;</span><br><span class="line">  &lt;h1&gt;&#123;&#123;double&#125;&#125;&lt;/h1&gt;</span><br><span class="line">  &lt;button @click=&quot;increase&quot;&gt;+1&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script lang=&quot;ts&quot;&gt;</span><br><span class="line">import &#123; computed, ref, reactive, toRefs &#125; from &#x27;vue&#x27;</span><br><span class="line">interface DataProps &#123;</span><br><span class="line">  count: number</span><br><span class="line">  double: number</span><br><span class="line">  increase: () =&gt; void</span><br><span class="line">&#125;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#x27;App&#x27;,</span><br><span class="line">  setup() &#123;</span><br><span class="line">    const data:DataProps = reactive(&#123;</span><br><span class="line">      count: 0,</span><br><span class="line">      increase: () =&gt; &#123; data.count++ &#125;,</span><br><span class="line">      double: computed(() =&gt; data.count * 2)</span><br><span class="line">    &#125;)</span><br><span class="line">    const refData = toRefs(data)</span><br><span class="line">    return &#123;</span><br><span class="line">      ...refData</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">  &lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="reactive函数"><a href="#reactive函数" class="headerlink" title="reactive函数"></a>reactive函数</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import &#123; ref, computed, reactive, toRefs &#125; from &#x27;vue&#x27;</span><br><span class="line"></span><br><span class="line">interface DataProps &#123;</span><br><span class="line">  count: number;</span><br><span class="line">  double: number;</span><br><span class="line">  increase: () =&gt; void;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">setup() &#123;</span><br><span class="line">  const data: DataProps  = reactive(&#123;</span><br><span class="line">    count: 0,</span><br><span class="line">    increase: () =&gt; &#123; data.count++&#125;,</span><br><span class="line">    double: computed(() =&gt; data.count * 2)</span><br><span class="line">  &#125;)</span><br><span class="line">  const refData = toRefs(data)</span><br><span class="line">  return &#123;</span><br><span class="line">    ...refData</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>使用 ref 还是 reactive 可以选择这样的准则</p>
+    <title>Vue 自定义指令</title>
+    <url>/20210628/Vue-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</url>
+    <content><![CDATA[<h2 id="directives"><a href="#directives" class="headerlink" title="directives"></a>directives</h2><blockquote>
+<p>Vue3 得自定义指令和 2 有所不同，所以需要注意下</p>
 </blockquote>
-<blockquote>
-<p>第一，就像刚才的原生 javascript 的代码一样，像你平常写普通的 js 代码选择原始类型和对象类型一样来选&gt; 择是使用 ref 还是 reactive。</p>
-</blockquote>
-<blockquote>
-<p>第二，所有场景都使用 reactive，但是要记得使用 toRefs 保证 reactive 对象属性保持响应性。</p>
-</blockquote>
-<h2 id="侦测变化-watch函数"><a href="#侦测变化-watch函数" class="headerlink" title="侦测变化 - watch函数"></a>侦测变化 - watch函数</h2> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> &lt;template&gt;</span><br><span class="line">	&lt;h1&gt;&#123;&#123; count &#125;&#125;&lt;/h1&gt;</span><br><span class="line">	&lt;h1&gt;&#123;&#123; double &#125;&#125;&lt;/h1&gt;</span><br><span class="line">	&lt;button @click=&quot;increase&quot;&gt;+1&lt;/button&gt;</span><br><span class="line">	&lt;button @click=&quot;updateGreeting&quot;&gt;updateGreeting&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script lang=&quot;ts&quot;&gt;</span><br><span class="line">import &#123; computed, ref, reactive, toRefs, watch &#125; from &#x27;vue&#x27;</span><br><span class="line">interface DataProps &#123;</span><br><span class="line">	count: number</span><br><span class="line">	double: number</span><br><span class="line">	increase: () =&gt; void</span><br><span class="line">&#125;</span><br><span class="line">export default&#123;</span><br><span class="line">	name: &#x27;app&#x27;,</span><br><span class="line">	setup() &#123;</span><br><span class="line">		const data: DataProps = reactive(&#123;</span><br><span class="line">			count: 0,</span><br><span class="line">			increase: () =&gt; &#123; data.count++ &#125;,</span><br><span class="line">			double: computed(() =&gt; data.count * 2)</span><br><span class="line">		&#125;)</span><br><span class="line">		const greetings = ref(&#x27;&#x27;)</span><br><span class="line">		const updateGreeting = () =&gt; &#123;</span><br><span class="line">			greetings.value += &#x27;Hello&#x27;</span><br><span class="line">		&#125;</span><br><span class="line">		watch([greetings, () =&gt; data.count ], ( newValue, oldValue ) =&gt; &#123;</span><br><span class="line">			console.log(newValue)</span><br><span class="line">			console.log(oldValue)</span><br><span class="line">			document.title += &#x27;updated&#x27; + greetings.value</span><br><span class="line">		&#125;)</span><br><span class="line">		const refData = toRefs(data)</span><br><span class="line">		return &#123;</span><br><span class="line">			...refData,</span><br><span class="line">			greetings,</span><br><span class="line">			updateGreeting</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="demo-ts"><a href="#demo-ts" class="headerlink" title="demo.ts"></a>demo.ts</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">目录结构    <span class="number">3</span>个自定义指令</span><br><span class="line"><span class="comment">//   /src/directives/index.ts</span></span><br><span class="line"><span class="comment">// /src/directives/focus/index.ts</span></span><br><span class="line"><span class="comment">// /src/directives/permission/index.ts</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//index.ts  只需要导出各个指令就行</span></span><br><span class="line"><span class="keyword">export</span> * <span class="keyword">from</span> <span class="string">&#x27;./focus&#x27;</span></span><br><span class="line"><span class="keyword">export</span> * <span class="keyword">from</span> <span class="string">&#x27;./permission&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//focus</span></span><br><span class="line"><span class="keyword">import</span> &#123; Directive &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> focus: Directive = &#123;</span><br><span class="line">  <span class="function"><span class="title">mounted</span>(<span class="params">el: HTMLElement, binding</span>)</span> &#123;</span><br><span class="line">    el.focus()</span><br><span class="line">    <span class="built_in">console</span>.log(binding.value);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//permission</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; Directive &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> permission: Directive = &#123;</span><br><span class="line">  <span class="function"><span class="title">mounted</span>(<span class="params">el: HTMLElement, binding</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; value &#125; = binding</span><br><span class="line">    <span class="keyword">if</span> (value &amp;&amp; value <span class="keyword">instanceof</span> <span class="built_in">Array</span> &amp;&amp; value.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">const</span> arr = [<span class="string">&#x27;admin&#x27;</span>, <span class="string">&#x27;user&#x27;</span>];</span><br><span class="line">      <span class="keyword">const</span> hasPermission = arr.some(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> value.includes(item)</span><br><span class="line">      &#125;)</span><br><span class="line">      <span class="built_in">console</span>.log(hasPermission);</span><br><span class="line">      <span class="keyword">if</span> (!hasPermission) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;没权限permission&quot;</span>);</span><br><span class="line">        el.style.display = <span class="string">&#x27;none&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">throw</span> <span class="built_in">Error</span>(<span class="string">&#x27;this is permission [\&#x27;admin\&#x27;,\&#x27;user\&#x27;]&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h2 id="watch-简单应用"><a href="#watch-简单应用" class="headerlink" title="watch 简单应用"></a>watch 简单应用</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">watch(data, () =&gt; &#123;</span><br><span class="line">  document.title = &#x27;updated &#x27; + data.count</span><br><span class="line">&#125;)</span><br><span class="line">// watch 的两个参数，代表新的值和旧的值</span><br><span class="line">watch(refData.count, (newValue, oldValue) =&gt; &#123;</span><br><span class="line">  console.log(&#x27;old&#x27;, oldValue)</span><br><span class="line">  console.log(&#x27;new&#x27;, newValue)</span><br><span class="line">  document.title = &#x27;updated &#x27; + data.count</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// watch 多个值，返回的也是多个值的数组</span><br><span class="line">watch([greetings, data], (newValue, oldValue) =&gt; &#123;</span><br><span class="line">  console.log(&#x27;old&#x27;, oldValue)</span><br><span class="line">  console.log(&#x27;new&#x27;, newValue)</span><br><span class="line">  document.title = &#x27;updated&#x27; + greetings.value + data.count</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// 使用 getter 的写法 watch reactive 对象中的一项</span><br><span class="line">watch([greetings, () =&gt; data.count], (newValue, oldValue) =&gt; &#123;</span><br><span class="line">  console.log(&#x27;old&#x27;, oldValue)</span><br><span class="line">  console.log(&#x27;new&#x27;, newValue)</span><br><span class="line">  document.title = &#x27;updated&#x27; + greetings.value + data.count</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue provide inject使用</title>
-    <url>/20210628/Vue-provide-inject%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h2 id="provide-inject"><a href="#provide-inject" class="headerlink" title="provide inject"></a>provide inject</h2><p>正常的父子组件传递信息 <code>props</code> 就行了</p>
-<p>跨组件(子孙)需要用到 <code>provide inject</code></p>
-<p>兄弟组件需要用到 <code>mitt</code>(<code>Vue</code> 推荐)</p>
-<blockquote>
-<p>不要在子组件修改值，可以在父组件传递一个修改方法，子组件可以调用来修改，比如 updateToken<br>下例中：readonly 就是为了防止子组件随意修改，导致不可维护（保证单一源）</p>
-</blockquote>
-<h3 id="provide"><a href="#provide" class="headerlink" title="provide"></a>provide</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">父组件中</span><br><span class="line">  <span class="function"><span class="title">setup</span>(<span class="params">props,context</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> token = ref(<span class="string">&#x27;abcde&#x27;</span>)</span><br><span class="line">    <span class="keyword">const</span> updateToken = <span class="function">(<span class="params">val:string</span>)=&gt;</span>&#123;</span><br><span class="line">        token.value = val</span><br><span class="line">    &#125;</span><br><span class="line">    provide(<span class="string">&#x27;token&#x27;</span>,readonly(token));</span><br><span class="line">    provide(<span class="string">&#x27;updateToken&#x27;</span>,updateToken)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="inject"><a href="#inject" class="headerlink" title="inject"></a>inject</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    &#123;&#123; token &#125;&#125;</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;editToken&quot;</span>&gt;</span>更改token<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;updateTokenFunc(123)&quot;</span>&gt;</span>更改token123<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="title">setup</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> token = inject(<span class="string">&quot;token&quot;</span>);</span><br><span class="line">    <span class="keyword">const</span> updateTokenFunc = inject(<span class="string">&quot;updateToken&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      token,</span><br><span class="line">      updateTokenFunc</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">methods</span>: &#123;</span><br><span class="line">    <span class="function"><span class="title">editToken</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&quot;editToken&quot;</span>);</span><br><span class="line">      <span class="built_in">this</span>.token = <span class="number">123</span>;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="built_in">this</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+<h3 id="main-ts"><a href="#main-ts" class="headerlink" title="main.ts"></a>main.ts</h3><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createApp, Directive &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">&#x27;./router&#x27;</span></span><br><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">&#x27;./store&#x27;</span></span><br><span class="line"><span class="keyword">import</span> ElementPlus <span class="keyword">from</span> <span class="string">&#x27;element-plus&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;element-plus/lib/theme-chalk/index.css&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;@/assets/tailwind.css&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> directives <span class="keyword">from</span> <span class="string">&#x27;@/directives&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = createApp(App)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 自定义指令</span></span><br><span class="line"><span class="built_in">Object</span>.keys(directives).forEach(<span class="function"><span class="params">key</span> =&gt;</span> &#123;</span><br><span class="line">  app.directive(key, (directives <span class="keyword">as</span> &#123; [key: <span class="built_in">string</span>]: Directive &#125;)[key])</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.use(store).use(ElementPlus, &#123; <span class="attr">size</span>: <span class="string">&#x27;small&#x27;</span>, <span class="attr">zIndex</span>: <span class="number">3000</span> &#125;).use(router).mount(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>Vue</category>
@@ -1099,6 +1041,64 @@ $ git commit --amend [file1] [file2] ...
         <tag>apply</tag>
         <tag>bind</tag>
         <tag>call</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue3 setup尝尝鲜</title>
+    <url>/20210705/Vue3-setup%E5%B0%9D%E5%B0%9D%E9%B2%9C/</url>
+    <content><![CDATA[<h2 id="一-setup函数的特性以及作用"><a href="#一-setup函数的特性以及作用" class="headerlink" title="一. setup函数的特性以及作用"></a>一. setup函数的特性以及作用</h2><p> 可以确定的是 Vue3.0 是兼容 Vue2.x 版本的 也就是说我们再日常工作中 可以在 Vue3 中使用 Vue2.x 的相关语法 但是当你真正开始使用 Vue3 写项目时 你会发现他比 Vue2.x 方便的多</p>
+<p>vue 2.0 生命周期对比 3.0 生命周期</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">| <span class="number">2.0</span> 周期名称   | <span class="number">3.0</span> 周期名称     | 说明 |</span><br><span class="line">| beforeCreate  | setup          | 组件创建之前 |</span><br><span class="line">| created       | setup          | 组件创建完成 |</span><br><span class="line">| beforeMount   | onBeforeMount  | 组件挂载之前 |</span><br><span class="line">| mounted       | onMounted      | 组件挂载完成 |</span><br><span class="line">| beforeUpdate  | onBeforeUpdate | 数据更新，虚拟 DOM 打补丁之前 |</span><br><span class="line">| updated       | onUpdated      | 数据更新，虚拟 DOM 渲染完成 |</span><br><span class="line">| beforeDestroy | onBeforeUnmount| 组件销毁之前 |</span><br><span class="line">| destroyed     | onUnmounted    | 组件销毁后 |</span><br></pre></td></tr></table></figure>
+<h3 id="Vue3-的一大特性函数-—-setup"><a href="#Vue3-的一大特性函数-—-setup" class="headerlink" title="Vue3 的一大特性函数 —- setup"></a>Vue3 的一大特性函数 —- setup</h3><ol>
+<li><figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">beforeCreate</span>：表示组件刚刚被创建出来，组件的<span class="class"><span class="keyword">data</span>和methods还没有初始化好</span></span><br><span class="line"><span class="title">setup</span></span><br><span class="line"><span class="type">Created</span>： 表示组件刚刚被创建出来，并且组件的<span class="class"><span class="keyword">data</span>和methods已经初始化好</span></span><br></pre></td></tr></table></figure></li>
+<li><p>setup函数是 Composition API（组合API）的入口</p>
+</li>
+<li><p>在setup函数中定义的变量和方法最后都是需要 return 出去的 不然无法再模板中使用</p>
+</li>
+</ol>
+<h2 id="二、setup函数的注意点："><a href="#二、setup函数的注意点：" class="headerlink" title="二、setup函数的注意点："></a>二、setup函数的注意点：</h2><ol>
+<li>由于在执行 setup函数的时候，还没有执行 Created 生命周期方法，所以在 setup 函数中，无法使用 data 和 methods 的变量和方法</li>
+<li>由于我们不能在 setup函数中使用 data 和 methods，所以 Vue 为了避免我们错误的使用，直接将 setup函数中的this修改成了 undefined</li>
+<li>setup函数只能是同步的不能是异步的</li>
+</ol>
+<p>用法1:结合ref使用</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &#123;&#123;name&#125;&#125;</span><br><span class="line">    &lt;p&gt;&#123;&#123;age&#125;&#125;&lt;/p&gt;</span><br><span class="line">    &lt;button @click=&quot;plusOne()&quot;&gt;+&lt;/button&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"> </span><br><span class="line">&lt;script&gt;</span><br><span class="line">import &#123;ref&#125; from &#x27;vue&#x27;</span><br><span class="line">export default &#123;</span><br><span class="line">  name:&#x27;app&#x27;,</span><br><span class="line">  data()&#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      name:&#x27;北京&#x27;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  setup()&#123;</span><br><span class="line">    //名字</span><br><span class="line">    const name =ref(&#x27;小李&#x27;)</span><br><span class="line">    //年纪</span><br><span class="line">    const age=ref(18)</span><br><span class="line">    // 方法</span><br><span class="line">    function plusOne()&#123;</span><br><span class="line">      age.value++ //想改变值或获取值 必须.value</span><br><span class="line">    &#125;</span><br><span class="line">    //必须返回 模板中才能使用</span><br><span class="line">    return &#123;</span><br><span class="line">      name,age,plusOne</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+<p>用法2：代码分割<br>Options API 和 Composition API<br>Options API 约定：<br>我们需要在 props 里面设置接收参数  在setup中没有this<br>我们需要在 data 里面设置变量<br>我们需要在 computed 里面设置计算属性<br>我们需要在 watch 里面设置监听属性<br>我们需要在 methods 里面设置事件方法<br>你会发现 Options APi 都约定了我们该在哪个位置做什么事，这反倒在一定程度上也强制我们进行了代码分割。<br>现在用 Composition API，不再这么约定了，于是乎，代码组织非常灵活，我们的控制代码写在 setup 里面即可。<br>setup函数提供了两个参数 props和context,重要的是在setup函数里没有了this,在 vue3.0 中，访问他们变成以下形式： this.xxx=》context.xxx<br>我们没有了 this 上下文，没有了 Options API 的强制代码分离。Composition API 给了我们更加广阔的天地，那么我们更加需要慎重自约起来。<br>对于复杂的逻辑代码，我们要更加重视起 Composition API 的初心，不要吝啬使用 Composition API 来分离代码，用来切割成各种模块导出。<br>我们期望是这样的：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> importuseAfrom&#x27;./a&#x27;</span><br><span class="line">importuseBfrom&#x27;./b&#x27;</span><br><span class="line">importuseCfrom&#x27;./c&#x27;</span><br><span class="line">exportdefault&#123;</span><br><span class="line">    setup (props) &#123;</span><br><span class="line">      let&#123; a, methodsA &#125; = useA()</span><br><span class="line">      let&#123; b, methodsB &#125; = useA()</span><br><span class="line">      let&#123; c, methodsC &#125; = useC()</span><br><span class="line">      return&#123; a, methodsA, b, methodsB, c, methodsC &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="data-变为-setUp"><a href="#data-变为-setUp" class="headerlink" title="data() 变为 setUp()"></a>data() 变为 setUp()</h2><ol>
+<li><p>生命周期的函数只能写在setUp中</p>
+</li>
+<li><p>provide/inject 只能写在setUp</p>
+</li>
+</ol>
+<p>就算 setup 内容代码量越来越大，但是始终围绕着大而不乱，代码结构清晰的路子前进。</p>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>首先，在 vue 3.0 中，生命周期是从 vue 中导出的，我们需要用到哪些，就导出哪些。<br>vue 提供这么多的生命周期，有几个是我们常用的？  在大多数的组件中，我们用不到生命周期。即便是页面级别的应用，可能用到最多的是 onMounted 即可。<br>当然，那些绑定时间的操作会用到解绑，因此会用到 onUnmounted。其它的生命周期，正常情况下是基本用不到的。<br>所以，通过引入使用的这种设定，可以减少我们的最终编译的项目的体积。而且，这样的引入使用，更加的逻辑清晰。<br>其次，除 setup 之外，其他的生命周期函数，都是在 setup 里面直接书写函数即可。</p>
+<h2 id="ref函数"><a href="#ref函数" class="headerlink" title="ref函数"></a>ref函数</h2><p>ref 是一个函数，它接受一个参数，返回的就是一个神奇的 响应式对象 。我们初始化的这个 0 作为参数包裹到这个对象中去，在未来可以检测到改变并作出对应的相应。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;h1&gt;&#123;&#123;count&#125;&#125;&lt;/h1&gt;</span><br><span class="line">  &lt;h1&gt;&#123;&#123;double&#125;&#125;&lt;/h1&gt;</span><br><span class="line">  &lt;button @click=&quot;increase&quot;&gt;+1&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script lang=&quot;ts&quot;&gt;</span><br><span class="line">import &#123; computed, ref, reactive, toRefs &#125; from &#x27;vue&#x27;</span><br><span class="line">interface DataProps &#123;</span><br><span class="line">  count: number</span><br><span class="line">  double: number</span><br><span class="line">  increase: () =&gt; void</span><br><span class="line">&#125;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#x27;App&#x27;,</span><br><span class="line">  setup() &#123;</span><br><span class="line">    const data:DataProps = reactive(&#123;</span><br><span class="line">      count: 0,</span><br><span class="line">      increase: () =&gt; &#123; data.count++ &#125;,</span><br><span class="line">      double: computed(() =&gt; data.count * 2)</span><br><span class="line">    &#125;)</span><br><span class="line">    const refData = toRefs(data)</span><br><span class="line">    return &#123;</span><br><span class="line">      ...refData</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">  &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="reactive函数"><a href="#reactive函数" class="headerlink" title="reactive函数"></a>reactive函数</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import &#123; ref, computed, reactive, toRefs &#125; from &#x27;vue&#x27;</span><br><span class="line"></span><br><span class="line">interface DataProps &#123;</span><br><span class="line">  count: number;</span><br><span class="line">  double: number;</span><br><span class="line">  increase: () =&gt; void;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">setup() &#123;</span><br><span class="line">  const data: DataProps  = reactive(&#123;</span><br><span class="line">    count: 0,</span><br><span class="line">    increase: () =&gt; &#123; data.count++&#125;,</span><br><span class="line">    double: computed(() =&gt; data.count * 2)</span><br><span class="line">  &#125;)</span><br><span class="line">  const refData = toRefs(data)</span><br><span class="line">  return &#123;</span><br><span class="line">    ...refData</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>使用 ref 还是 reactive 可以选择这样的准则</p>
+</blockquote>
+<blockquote>
+<p>第一，就像刚才的原生 javascript 的代码一样，像你平常写普通的 js 代码选择原始类型和对象类型一样来选&gt; 择是使用 ref 还是 reactive。</p>
+</blockquote>
+<blockquote>
+<p>第二，所有场景都使用 reactive，但是要记得使用 toRefs 保证 reactive 对象属性保持响应性。</p>
+</blockquote>
+<h2 id="侦测变化-watch函数"><a href="#侦测变化-watch函数" class="headerlink" title="侦测变化 - watch函数"></a>侦测变化 - watch函数</h2> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> &lt;template&gt;</span><br><span class="line">	&lt;h1&gt;&#123;&#123; count &#125;&#125;&lt;/h1&gt;</span><br><span class="line">	&lt;h1&gt;&#123;&#123; double &#125;&#125;&lt;/h1&gt;</span><br><span class="line">	&lt;button @click=&quot;increase&quot;&gt;+1&lt;/button&gt;</span><br><span class="line">	&lt;button @click=&quot;updateGreeting&quot;&gt;updateGreeting&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script lang=&quot;ts&quot;&gt;</span><br><span class="line">import &#123; computed, ref, reactive, toRefs, watch &#125; from &#x27;vue&#x27;</span><br><span class="line">interface DataProps &#123;</span><br><span class="line">	count: number</span><br><span class="line">	double: number</span><br><span class="line">	increase: () =&gt; void</span><br><span class="line">&#125;</span><br><span class="line">export default&#123;</span><br><span class="line">	name: &#x27;app&#x27;,</span><br><span class="line">	setup() &#123;</span><br><span class="line">		const data: DataProps = reactive(&#123;</span><br><span class="line">			count: 0,</span><br><span class="line">			increase: () =&gt; &#123; data.count++ &#125;,</span><br><span class="line">			double: computed(() =&gt; data.count * 2)</span><br><span class="line">		&#125;)</span><br><span class="line">		const greetings = ref(&#x27;&#x27;)</span><br><span class="line">		const updateGreeting = () =&gt; &#123;</span><br><span class="line">			greetings.value += &#x27;Hello&#x27;</span><br><span class="line">		&#125;</span><br><span class="line">		watch([greetings, () =&gt; data.count ], ( newValue, oldValue ) =&gt; &#123;</span><br><span class="line">			console.log(newValue)</span><br><span class="line">			console.log(oldValue)</span><br><span class="line">			document.title += &#x27;updated&#x27; + greetings.value</span><br><span class="line">		&#125;)</span><br><span class="line">		const refData = toRefs(data)</span><br><span class="line">		return &#123;</span><br><span class="line">			...refData,</span><br><span class="line">			greetings,</span><br><span class="line">			updateGreeting</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="watch-简单应用"><a href="#watch-简单应用" class="headerlink" title="watch 简单应用"></a>watch 简单应用</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">watch(data, () =&gt; &#123;</span><br><span class="line">  document.title = &#x27;updated &#x27; + data.count</span><br><span class="line">&#125;)</span><br><span class="line">// watch 的两个参数，代表新的值和旧的值</span><br><span class="line">watch(refData.count, (newValue, oldValue) =&gt; &#123;</span><br><span class="line">  console.log(&#x27;old&#x27;, oldValue)</span><br><span class="line">  console.log(&#x27;new&#x27;, newValue)</span><br><span class="line">  document.title = &#x27;updated &#x27; + data.count</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// watch 多个值，返回的也是多个值的数组</span><br><span class="line">watch([greetings, data], (newValue, oldValue) =&gt; &#123;</span><br><span class="line">  console.log(&#x27;old&#x27;, oldValue)</span><br><span class="line">  console.log(&#x27;new&#x27;, newValue)</span><br><span class="line">  document.title = &#x27;updated&#x27; + greetings.value + data.count</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// 使用 getter 的写法 watch reactive 对象中的一项</span><br><span class="line">watch([greetings, () =&gt; data.count], (newValue, oldValue) =&gt; &#123;</span><br><span class="line">  console.log(&#x27;old&#x27;, oldValue)</span><br><span class="line">  console.log(&#x27;new&#x27;, newValue)</span><br><span class="line">  document.title = &#x27;updated&#x27; + greetings.value + data.count</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
       </tags>
   </entry>
   <entry>
@@ -1821,6 +1821,40 @@ console.log(`Files count: $&#123;count&#125;`)
       </tags>
   </entry>
   <entry>
+    <title>利用require.context批量导入</title>
+    <url>/20210706/%E5%88%A9%E7%94%A8require-context%E6%89%B9%E9%87%8F%E5%AF%BC%E5%85%A5/</url>
+    <content><![CDATA[<h2 id="require-context"><a href="#require-context" class="headerlink" title="require.context"></a>require.context</h2><blockquote>
+<p>在我们项目开发中，经常需要import或者export各种模块，那么有没有什么办法可以简化这种引入或者导出操作呢？答案是肯定的，下面就为大家介绍一下require.context</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> constantFiles = <span class="built_in">require</span>.context(<span class="string">&#x27;./modules&#x27;</span>,<span class="literal">true</span>,<span class="regexp">/\.js$/</span>);</span><br><span class="line"><span class="keyword">let</span> constModules = [];</span><br><span class="line">constantFiles.keys().forEach(<span class="function"><span class="params">key</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">if</span> ( key === <span class="string">&#x27;./base.js&#x27;</span>) <span class="keyword">return</span></span><br><span class="line">  constModules = constModules.concat(constantFiles(key).default)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>代码很简单，require.context执行后，返回一个方法webpackContext，这个方法又返回一个__webpack_require__，这个__webpack_require__就相当于require或者import。同时webpackContext还有二个静态方法keys与resolve，一个id属性。</p>
+<p>keys: 返回匹配成功模块的名字组成的数组<br>resolve: 接受一个参数request，request为test文件夹下面匹配文件的相对路径，返回这个匹配文件相对于整个工程的相对路径<br>id: 执行环境的id，返回的是一个字符串，主要用在module.hot.accept，应该是热加载</p>
+<p>总结:<br>  在VueRouter和Vuex分模块中都可以用到，自动加载省事，另外自己写的库中零散文件太多也可以用</p>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>webpack</tag>
+        <tag>require.context</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一句话解释闭包</title>
+    <url>/20210628/%E4%B8%80%E5%8F%A5%E8%AF%9D%E8%A7%A3%E9%87%8A%E9%97%AD%E5%8C%85/</url>
+    <content><![CDATA[<h2 id="一句话闭包"><a href="#一句话闭包" class="headerlink" title="一句话闭包"></a>一句话闭包</h2><p>当函数可以记住并且访问到所在的词法作用域，即使函数在词法作用域外执行<br>不一定非要 retrun 才叫闭包，那样太片面了</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">awit</span>(<span class="params">msg</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  	<span class="built_in">console</span>.log(msg)</span><br><span class="line">  &#125;,<span class="number">500</span>)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">awit(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>大屏可视化利用scale实现自适应</title>
     <url>/20210628/%E5%A4%A7%E5%B1%8F%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%A9%E7%94%A8scale%E5%AE%9E%E7%8E%B0%E8%87%AA%E9%80%82%E5%BA%94/</url>
     <content><![CDATA[<p>在高分屏中，修改浏览器的缩放比例，其实就是修改浏览器的 DPI，即单位面积内可用的像素点数，从而在屏幕尺寸保持不变的情况下，达到了改变视窗宽高的效果(用像素计量)，简单来说，放大比例会减少 DPI，宽高变小，减少比例会增加 DPI，宽高变大。</p>
@@ -1847,19 +1881,6 @@ console.log(`Files count: $&#123;count&#125;`)
         <tag>css3</tag>
         <tag>可视化</tag>
         <tag>大屏</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一句话解释闭包</title>
-    <url>/20210628/%E4%B8%80%E5%8F%A5%E8%AF%9D%E8%A7%A3%E9%87%8A%E9%97%AD%E5%8C%85/</url>
-    <content><![CDATA[<h2 id="一句话闭包"><a href="#一句话闭包" class="headerlink" title="一句话闭包"></a>一句话闭包</h2><p>当函数可以记住并且访问到所在的词法作用域，即使函数在词法作用域外执行<br>不一定非要 retrun 才叫闭包，那样太片面了</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">awit</span>(<span class="params">msg</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  	<span class="built_in">console</span>.log(msg)</span><br><span class="line">  &#125;,<span class="number">500</span>)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">awit(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
       </tags>
   </entry>
   <entry>
@@ -1895,27 +1916,6 @@ console.log(`Files count: $&#123;count&#125;`)
         <tag>小程序</tag>
         <tag>reuqest</tag>
         <tag>api集中管理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>利用require.context批量导入</title>
-    <url>/20210706/%E5%88%A9%E7%94%A8require-context%E6%89%B9%E9%87%8F%E5%AF%BC%E5%85%A5/</url>
-    <content><![CDATA[<h2 id="require-context"><a href="#require-context" class="headerlink" title="require.context"></a>require.context</h2><blockquote>
-<p>在我们项目开发中，经常需要import或者export各种模块，那么有没有什么办法可以简化这种引入或者导出操作呢？答案是肯定的，下面就为大家介绍一下require.context</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> constantFiles = <span class="built_in">require</span>.context(<span class="string">&#x27;./modules&#x27;</span>,<span class="literal">true</span>,<span class="regexp">/\.js$/</span>);</span><br><span class="line"><span class="keyword">let</span> constModules = [];</span><br><span class="line">constantFiles.keys().forEach(<span class="function"><span class="params">key</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">if</span> ( key === <span class="string">&#x27;./base.js&#x27;</span>) <span class="keyword">return</span></span><br><span class="line">  constModules = constModules.concat(constantFiles(key).default)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>代码很简单，require.context执行后，返回一个方法webpackContext，这个方法又返回一个__webpack_require__，这个__webpack_require__就相当于require或者import。同时webpackContext还有二个静态方法keys与resolve，一个id属性。</p>
-<p>keys: 返回匹配成功模块的名字组成的数组<br>resolve: 接受一个参数request，request为test文件夹下面匹配文件的相对路径，返回这个匹配文件相对于整个工程的相对路径<br>id: 执行环境的id，返回的是一个字符串，主要用在module.hot.accept，应该是热加载</p>
-<p>总结:<br>  在VueRouter和Vuex分模块中都可以用到，自动加载省事，另外自己写的库中零散文件太多也可以用</p>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-        <tag>webpack</tag>
-        <tag>require.context</tag>
       </tags>
   </entry>
   <entry>
@@ -1979,27 +1979,6 @@ console.log(`Files count: $&#123;count&#125;`)
       </categories>
       <tags>
         <tag>杂谈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>箭头函数的this</title>
-    <url>/20210627/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E7%9A%84this/</url>
-    <content><![CDATA[<h3 id="箭头函数的-this"><a href="#箭头函数的-this" class="headerlink" title="箭头函数的 this"></a>箭头函数的 this</h3><p>1：箭头函数中 this 是在定义函数时候绑定的，而不是在执行的时候绑定</p>
-<p>2：箭头函数没有自己的 this，，，导致内部 this 就是外部代码块的 this,this 指向是很固定化的。</p>
-<span id="more"></span>
-
-<p>2-1：所以，箭头函数不能用来构造函数</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">11</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">x</span>: <span class="number">22</span>,</span><br><span class="line">  <span class="attr">say</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>.x) <span class="comment">//11</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// say中箭头函数和say是兄弟，和x：22;是兄弟，所以，外部代码块指的是x=11，在此可看作window.x</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 箭头函数所在的大括号是个窝，与这个窝平级的就是上层代码块</span></span><br></pre></td></tr></table></figure>
-
-<p>再来谈一个例子</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">birth</span>: <span class="number">1996</span>, <span class="comment">//1996</span></span><br><span class="line">  <span class="attr">getAge</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> b = <span class="built_in">this</span>.birth <span class="comment">//这个var b。。没啥用，迷惑人用的，底下的箭头函数的this和这个this指向的一毛一样</span></span><br><span class="line">    <span class="keyword">var</span> fn = <span class="function">() =&gt;</span> <span class="keyword">new</span> <span class="built_in">Date</span>().getFullYear() - <span class="built_in">this</span>.birth <span class="comment">//this指向obj的对象</span></span><br><span class="line">    <span class="keyword">return</span> fn()</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line">obj.getAge()</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-        <tag>this</tag>
       </tags>
   </entry>
   <entry>
@@ -2087,6 +2066,27 @@ catchtouchmove
       </tags>
   </entry>
   <entry>
+    <title>箭头函数的this</title>
+    <url>/20210627/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E7%9A%84this/</url>
+    <content><![CDATA[<h3 id="箭头函数的-this"><a href="#箭头函数的-this" class="headerlink" title="箭头函数的 this"></a>箭头函数的 this</h3><p>1：箭头函数中 this 是在定义函数时候绑定的，而不是在执行的时候绑定</p>
+<p>2：箭头函数没有自己的 this，，，导致内部 this 就是外部代码块的 this,this 指向是很固定化的。</p>
+<span id="more"></span>
+
+<p>2-1：所以，箭头函数不能用来构造函数</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">11</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">x</span>: <span class="number">22</span>,</span><br><span class="line">  <span class="attr">say</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>.x) <span class="comment">//11</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// say中箭头函数和say是兄弟，和x：22;是兄弟，所以，外部代码块指的是x=11，在此可看作window.x</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 箭头函数所在的大括号是个窝，与这个窝平级的就是上层代码块</span></span><br></pre></td></tr></table></figure>
+
+<p>再来谈一个例子</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">birth</span>: <span class="number">1996</span>, <span class="comment">//1996</span></span><br><span class="line">  <span class="attr">getAge</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> b = <span class="built_in">this</span>.birth <span class="comment">//这个var b。。没啥用，迷惑人用的，底下的箭头函数的this和这个this指向的一毛一样</span></span><br><span class="line">    <span class="keyword">var</span> fn = <span class="function">() =&gt;</span> <span class="keyword">new</span> <span class="built_in">Date</span>().getFullYear() - <span class="built_in">this</span>.birth <span class="comment">//this指向obj的对象</span></span><br><span class="line">    <span class="keyword">return</span> fn()</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line">obj.getAge()</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>this</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>防抖与节流</title>
     <url>/20210627/%E9%98%B2%E6%8A%96%E4%B8%8E%E8%8A%82%E6%B5%81/</url>
     <content><![CDATA[<h4 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h4><p>总结： 防抖就是防止抖动，一直触发的时候，利用清除定时器 只执行最后一次 （scroll）</p>
@@ -2147,22 +2147,6 @@ catchtouchmove
       </categories>
       <tags>
         <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>项目-智能电压监测</title>
-    <url>/20210708/%E9%A1%B9%E7%9B%AE-%E6%99%BA%E8%83%BD%E7%94%B5%E5%8E%8B%E7%9B%91%E6%B5%8B/</url>
-    <content><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>2021年初，朋友接了一个活，给客户做一个电流监测系统，如果电流高或者低 触发报警，客户为了节省成本，<br>不用显示屏，用app界面来代替显示屏，用来设置界面，报警，查看参数等~~</p>
-<h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><p>app不用多说 ，必须uniapp一把梭。因为项目不大，后端我用nodejs的egg框架写，因为没多少个接口，业务也不复杂<br>用eggjs是最好的选择~。</p>
-<h2 id="界面部分截图"><a href="#界面部分截图" class="headerlink" title="界面部分截图"></a>界面部分截图</h2><img src="https://blog.img.wy1991.cn/static/images/project/power/1.jpg-blogImg">
-<img src="https://blog.img.wy1991.cn/static/images/project/power/2.jpg-blogImg">
-<img src="https://blog.img.wy1991.cn/static/images/project/power/3.jpg-blogImg">
-<img src="https://blog.img.wy1991.cn/static/images/project/power/4.jpg-blogImg">]]></content>
-      <categories>
-        <category>项目</category>
-      </categories>
-      <tags>
-        <tag>项目</tag>
       </tags>
   </entry>
   <entry>
@@ -2227,6 +2211,22 @@ catchtouchmove
 <img src="https://blog.img.wy1991.cn/static/images/project/zhxf/app/25.jpg-blogImg">
 <img src="https://blog.img.wy1991.cn/static/images/project/zhxf/app/26.jpg-blogImg">
 ]]></content>
+      <categories>
+        <category>项目</category>
+      </categories>
+      <tags>
+        <tag>项目</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>项目-智能电压监测</title>
+    <url>/20210708/%E9%A1%B9%E7%9B%AE-%E6%99%BA%E8%83%BD%E7%94%B5%E5%8E%8B%E7%9B%91%E6%B5%8B/</url>
+    <content><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>2021年初，朋友接了一个活，给客户做一个电流监测系统，如果电流高或者低 触发报警，客户为了节省成本，<br>不用显示屏，用app界面来代替显示屏，用来设置界面，报警，查看参数等~~</p>
+<h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><p>app不用多说 ，必须uniapp一把梭。因为项目不大，后端我用nodejs的egg框架写，因为没多少个接口，业务也不复杂<br>用eggjs是最好的选择~。</p>
+<h2 id="界面部分截图"><a href="#界面部分截图" class="headerlink" title="界面部分截图"></a>界面部分截图</h2><img src="https://blog.img.wy1991.cn/static/images/project/power/1.jpg-blogImg">
+<img src="https://blog.img.wy1991.cn/static/images/project/power/2.jpg-blogImg">
+<img src="https://blog.img.wy1991.cn/static/images/project/power/3.jpg-blogImg">
+<img src="https://blog.img.wy1991.cn/static/images/project/power/4.jpg-blogImg">]]></content>
       <categories>
         <category>项目</category>
       </categories>
