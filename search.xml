@@ -56,26 +56,6 @@
       </tags>
   </entry>
   <entry>
-    <title>前端截图系列</title>
-    <url>/20210628/HTML%E6%88%AA%E5%9B%BE%E7%B3%BB%E5%88%97/</url>
-    <content><![CDATA[<h3 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h3><img title="原型链" alt="图解原型和原型链" src="https://blog.img.wy1991.cn/static/images/js/prototype.png-blogImg">
-
-<h3 id="animation-动画"><a href="#animation-动画" class="headerlink" title="animation 动画"></a>animation 动画</h3><img title="动画" src="https://blog.img.wy1991.cn/static/images/css/animation.png-blogImg">
-
-<h3 id="浏览器窗口"><a href="#浏览器窗口" class="headerlink" title="浏览器窗口"></a>浏览器窗口</h3><img title="窗口" src="https://blog.img.wy1991.cn/static/images/css/screen.png-blogImg">
-
-<p><a href="https://juejin.cn/post/6884042902587047943#heading-1"></a></p>
-<figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">• <span class="built_in">window</span>.innerHeight：获取浏览器视觉视口高度（包括垂直滚动条）。</span><br><span class="line">• <span class="built_in">window</span>.outerHeight：获取浏览器窗口外部的高度。表示整个浏览器窗口的高度，包括侧边栏、窗口镶边和调正窗口大小的边框。</span><br><span class="line">• <span class="built_in">window</span>.screen.Height：获取获屏幕取理想视口高度，这个数值是固定的，设备的分辨率/设备像素比</span><br><span class="line">• <span class="built_in">window</span>.screen.availHeight：浏览器窗口可用的高度。</span><br><span class="line">• <span class="built_in">document</span>.documentElement.clientHeight：获取浏览器布局视口高度，包括内边距，但不包括垂直滚动条、边框和外边距。</span><br><span class="line">• <span class="built_in">document</span>.documentElement.offsetHeight：包括内边距、滚动条、边框和外边距。</span><br><span class="line">• <span class="built_in">document</span>.documentElement.scrollHeight：在不使用滚动条的情况下适合视口中的所有内容所需的最小宽度。测量方式与clientHeight相同：它包含元素的内边距，但不包括边框，外边距或垂直滚动条。</span><br><span class="line">响应式设计与自适应设计的区别：响应式开发一套界面，通过检测视口分辨率，针对不同客户端在客户端做代码处理，来展现不同的布局和内容；自适应需要开发多套界面，通过检测视口分辨率，来判断当前访问的设备是pc端、平板、手机，从而请求服务层，返回不同的页面。</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>HTML5 drag拖拽</title>
     <url>/20210630/HTML5-drag%E6%8B%96%E6%8B%BD/</url>
     <content><![CDATA[<h2 id="HTML5-Drag-amp-Drop"><a href="#HTML5-Drag-amp-Drop" class="headerlink" title="HTML5 : Drag &amp; Drop"></a>HTML5 : Drag &amp; Drop</h2><blockquote>
@@ -134,10 +114,30 @@
         <category>html</category>
       </categories>
       <tags>
-        <tag>js</tag>
         <tag>html5</tag>
         <tag>drag</tag>
         <tag>拖拽</tag>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端截图系列</title>
+    <url>/20210628/HTML%E6%88%AA%E5%9B%BE%E7%B3%BB%E5%88%97/</url>
+    <content><![CDATA[<h3 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h3><img title="原型链" alt="图解原型和原型链" src="https://blog.img.wy1991.cn/static/images/js/prototype.png-blogImg">
+
+<h3 id="animation-动画"><a href="#animation-动画" class="headerlink" title="animation 动画"></a>animation 动画</h3><img title="动画" src="https://blog.img.wy1991.cn/static/images/css/animation.png-blogImg">
+
+<h3 id="浏览器窗口"><a href="#浏览器窗口" class="headerlink" title="浏览器窗口"></a>浏览器窗口</h3><img title="窗口" src="https://blog.img.wy1991.cn/static/images/css/screen.png-blogImg">
+
+<p><a href="https://juejin.cn/post/6884042902587047943#heading-1"></a></p>
+<figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">• <span class="built_in">window</span>.innerHeight：获取浏览器视觉视口高度（包括垂直滚动条）。</span><br><span class="line">• <span class="built_in">window</span>.outerHeight：获取浏览器窗口外部的高度。表示整个浏览器窗口的高度，包括侧边栏、窗口镶边和调正窗口大小的边框。</span><br><span class="line">• <span class="built_in">window</span>.screen.Height：获取获屏幕取理想视口高度，这个数值是固定的，设备的分辨率/设备像素比</span><br><span class="line">• <span class="built_in">window</span>.screen.availHeight：浏览器窗口可用的高度。</span><br><span class="line">• <span class="built_in">document</span>.documentElement.clientHeight：获取浏览器布局视口高度，包括内边距，但不包括垂直滚动条、边框和外边距。</span><br><span class="line">• <span class="built_in">document</span>.documentElement.offsetHeight：包括内边距、滚动条、边框和外边距。</span><br><span class="line">• <span class="built_in">document</span>.documentElement.scrollHeight：在不使用滚动条的情况下适合视口中的所有内容所需的最小宽度。测量方式与clientHeight相同：它包含元素的内边距，但不包括边框，外边距或垂直滚动条。</span><br><span class="line">响应式设计与自适应设计的区别：响应式开发一套界面，通过检测视口分辨率，针对不同客户端在客户端做代码处理，来展现不同的布局和内容；自适应需要开发多套界面，通过检测视口分辨率，来判断当前访问的设备是pc端、平板、手机，从而请求服务层，返回不同的页面。</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>js</tag>
       </tags>
   </entry>
   <entry>
@@ -300,7 +300,7 @@
 <p><a href="https://blog.wy1991.cn/">官网博客</a></p>
 <h2 id="删除线xx"><a href="#删除线xx" class="headerlink" title="删除线xx"></a>删除线<del>xx</del></h2><p><del>删除线</del></p>
 <h2 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h2><p>Markdown 语法会忽略首行开头的空格，如果要体现出首行开头空两个的效果，可以使用 全角符号下的空格 ，windows 下使用 shift+空格 切换。</p>
-<h2 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h2><p><span class="exturl" data-url="bWFpbHRvOiYjeDYxOyYjeDY0OyYjMTA5OyYjeDY5OyYjMTEwOyYjeDQwOyYjeDc3OyYjeDc5OyYjeDMxOyYjeDM5OyYjeDM5OyYjeDMxOyYjNDY7JiN4NjM7JiN4NmU7">&#x61;&#x64;&#109;&#x69;&#110;&#x40;&#x77;&#x79;&#x31;&#x39;&#x39;&#x31;&#46;&#x63;&#x6e;<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h2><p><span class="exturl" data-url="bWFpbHRvOiYjeDYxOyYjeDY0OyYjMTA5OyYjMTA1OyYjeDZlOyYjeDQwOyYjeDc3OyYjeDc5OyYjNDk7JiN4Mzk7JiN4Mzk7JiM0OTsmI3gyZTsmIzk5OyYjeDZlOw==">&#x61;&#x64;&#109;&#105;&#x6e;&#x40;&#x77;&#x79;&#49;&#x39;&#x39;&#49;&#x2e;&#99;&#x6e;<i class="fa fa-external-link-alt"></i></span></p>
 <h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>我们可以设置表格的对齐方式：</p>
 <ul>
 <li><p>-: 设置内容和标题栏居右对齐。</p>
@@ -384,29 +384,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue axios使用</title>
-    <url>/20210628/Vue-axios%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h2 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h2><blockquote>
-<p>npm install axios</p>
-</blockquote>
-<h3 id="axios-d-ts"><a href="#axios-d-ts" class="headerlink" title="axios.d.ts"></a>axios.d.ts</h3><p>需要写一个 axios 的声明文件 <code>axios.d.ts</code></p>
-<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> axios <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">declare</span> <span class="built_in">module</span> <span class="string">&#x27;axios&#x27;</span> &#123;</span><br><span class="line">  <span class="keyword">interface</span> AxiosInstance &#123;</span><br><span class="line">    (config: AxiosRequestConfig): <span class="built_in">Promise</span>&lt;<span class="built_in">any</span>&gt;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="request-ts"><a href="#request-ts" class="headerlink" title="request.ts"></a>request.ts</h3><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//request.ts</span></span><br><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; AxiosRequestConfig, AxiosResponse &#125; <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"><span class="keyword">import</span> nprogress <span class="keyword">from</span> <span class="string">&#x27;nprogress&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">request</span>(<span class="params">config: <span class="built_in">any</span></span>) </span>&#123;</span><br><span class="line">  <span class="comment">//创建实例</span></span><br><span class="line">  <span class="keyword">const</span> instance = axios.create(&#123;</span><br><span class="line">    <span class="comment">// baseURL: &#x27;http://admin.wy1991.cn/index.php/app/&#x27;,</span></span><br><span class="line">    <span class="attr">baseURL</span>: process.env.VUE_APP_BASEURL,</span><br><span class="line">    <span class="attr">timeout</span>: <span class="number">30000</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="comment">//拦截请求</span></span><br><span class="line">  instance.interceptors.request.use(</span><br><span class="line">    <span class="function">(<span class="params">config: AxiosRequestConfig</span>) =&gt;</span> &#123;</span><br><span class="line">      config.headers.authorization = <span class="string">&#x27;abcdefg&#x27;</span></span><br><span class="line">      nprogress.start()</span><br><span class="line">      <span class="keyword">return</span> config</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">//请求失败</span></span><br><span class="line">      <span class="comment">// console.log(err);</span></span><br><span class="line">      nprogress.done()</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(err)</span><br><span class="line">    &#125;</span><br><span class="line">  )</span><br><span class="line">  instance.interceptors.response.use(</span><br><span class="line">    <span class="function">(<span class="params">res: AxiosResponse</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (res.data.code !== <span class="number">200</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(res.data)</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> res.data</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(err)</span><br><span class="line">    &#125;</span><br><span class="line">  )</span><br><span class="line">  nprogress.done()</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> instance(config)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="封装接口"><a href="#封装接口" class="headerlink" title="封装接口"></a>封装接口</h3><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//network/login.ts</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; request &#125; <span class="keyword">from</span> <span class="string">&#x27;@/utils/request&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">interface</span> loginProps &#123;</span><br><span class="line">  <span class="attr">username</span>: <span class="built_in">any</span></span><br><span class="line">  <span class="attr">password</span>: <span class="built_in">any</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">login</span>(<span class="params">datas: loginProps</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> request(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;/admin/login&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;post&#x27;</span>,</span><br><span class="line">    <span class="attr">data</span>: datas,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//view/Login.vue</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="title">setup</span>(<span class="params">context</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> username = ref(<span class="string">&quot;admin&quot;</span>);</span><br><span class="line">    <span class="keyword">const</span> passwrod = ref(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> loginBtn = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> obj: loginProps = &#123;</span><br><span class="line">        <span class="attr">username</span>: username.value,</span><br><span class="line">        <span class="attr">password</span>: passwrod.value,</span><br><span class="line">      &#125;;</span><br><span class="line"></span><br><span class="line">      login(obj)</span><br><span class="line">        .then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="comment">// debugger;</span></span><br><span class="line">          <span class="built_in">console</span>.log(res);</span><br><span class="line"></span><br><span class="line">          router.push(&#123; <span class="attr">name</span>: <span class="string">&quot;Home&quot;</span> &#125;);</span><br><span class="line">        &#125;)</span><br><span class="line">        .catch(<span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">          alert(err.msg);</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">&quot;error&quot;</span>);</span><br><span class="line"></span><br><span class="line">          <span class="built_in">console</span>.log(err);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      loginBtn,</span><br><span class="line">      username,</span><br><span class="line">      passwrod,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>axios</category>
-      </categories>
-      <tags>
-        <tag>axios</tag>
-        <tag>ts</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vue-2收集依赖</title>
     <url>/20210701/Vue-2%E6%94%B6%E9%9B%86%E4%BE%9D%E8%B5%96/</url>
     <content><![CDATA[<h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><blockquote>
@@ -439,6 +416,48 @@
       </categories>
       <tags>
         <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue axios使用</title>
+    <url>/20210628/Vue-axios%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h2><blockquote>
+<p>npm install axios</p>
+</blockquote>
+<h3 id="axios-d-ts"><a href="#axios-d-ts" class="headerlink" title="axios.d.ts"></a>axios.d.ts</h3><p>需要写一个 axios 的声明文件 <code>axios.d.ts</code></p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> axios <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">declare</span> <span class="built_in">module</span> <span class="string">&#x27;axios&#x27;</span> &#123;</span><br><span class="line">  <span class="keyword">interface</span> AxiosInstance &#123;</span><br><span class="line">    (config: AxiosRequestConfig): <span class="built_in">Promise</span>&lt;<span class="built_in">any</span>&gt;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="request-ts"><a href="#request-ts" class="headerlink" title="request.ts"></a>request.ts</h3><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//request.ts</span></span><br><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; AxiosRequestConfig, AxiosResponse &#125; <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"><span class="keyword">import</span> nprogress <span class="keyword">from</span> <span class="string">&#x27;nprogress&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">request</span>(<span class="params">config: <span class="built_in">any</span></span>) </span>&#123;</span><br><span class="line">  <span class="comment">//创建实例</span></span><br><span class="line">  <span class="keyword">const</span> instance = axios.create(&#123;</span><br><span class="line">    <span class="comment">// baseURL: &#x27;http://admin.wy1991.cn/index.php/app/&#x27;,</span></span><br><span class="line">    <span class="attr">baseURL</span>: process.env.VUE_APP_BASEURL,</span><br><span class="line">    <span class="attr">timeout</span>: <span class="number">30000</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="comment">//拦截请求</span></span><br><span class="line">  instance.interceptors.request.use(</span><br><span class="line">    <span class="function">(<span class="params">config: AxiosRequestConfig</span>) =&gt;</span> &#123;</span><br><span class="line">      config.headers.authorization = <span class="string">&#x27;abcdefg&#x27;</span></span><br><span class="line">      nprogress.start()</span><br><span class="line">      <span class="keyword">return</span> config</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">//请求失败</span></span><br><span class="line">      <span class="comment">// console.log(err);</span></span><br><span class="line">      nprogress.done()</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(err)</span><br><span class="line">    &#125;</span><br><span class="line">  )</span><br><span class="line">  instance.interceptors.response.use(</span><br><span class="line">    <span class="function">(<span class="params">res: AxiosResponse</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (res.data.code !== <span class="number">200</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(res.data)</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> res.data</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(err)</span><br><span class="line">    &#125;</span><br><span class="line">  )</span><br><span class="line">  nprogress.done()</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> instance(config)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="封装接口"><a href="#封装接口" class="headerlink" title="封装接口"></a>封装接口</h3><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//network/login.ts</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; request &#125; <span class="keyword">from</span> <span class="string">&#x27;@/utils/request&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">interface</span> loginProps &#123;</span><br><span class="line">  <span class="attr">username</span>: <span class="built_in">any</span></span><br><span class="line">  <span class="attr">password</span>: <span class="built_in">any</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">login</span>(<span class="params">datas: loginProps</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> request(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;/admin/login&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;post&#x27;</span>,</span><br><span class="line">    <span class="attr">data</span>: datas,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//view/Login.vue</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="title">setup</span>(<span class="params">context</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> username = ref(<span class="string">&quot;admin&quot;</span>);</span><br><span class="line">    <span class="keyword">const</span> passwrod = ref(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> loginBtn = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> obj: loginProps = &#123;</span><br><span class="line">        <span class="attr">username</span>: username.value,</span><br><span class="line">        <span class="attr">password</span>: passwrod.value,</span><br><span class="line">      &#125;;</span><br><span class="line"></span><br><span class="line">      login(obj)</span><br><span class="line">        .then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="comment">// debugger;</span></span><br><span class="line">          <span class="built_in">console</span>.log(res);</span><br><span class="line"></span><br><span class="line">          router.push(&#123; <span class="attr">name</span>: <span class="string">&quot;Home&quot;</span> &#125;);</span><br><span class="line">        &#125;)</span><br><span class="line">        .catch(<span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">          alert(err.msg);</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">&quot;error&quot;</span>);</span><br><span class="line"></span><br><span class="line">          <span class="built_in">console</span>.log(err);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      loginBtn,</span><br><span class="line">      username,</span><br><span class="line">      passwrod,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>axios</category>
+      </categories>
+      <tags>
+        <tag>axios</tag>
+        <tag>ts</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue mitt</title>
+    <url>/20210628/Vue-mitt/</url>
+    <content><![CDATA[<h2 id="mitt"><a href="#mitt" class="headerlink" title="mitt"></a>mitt</h2><blockquote>
+<p>vue2 中有 @on @once @off 等方法($bus 事件总线)<br>但是 vue3 中取消了，官网推荐用 mitt</p>
+</blockquote>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p><span class="exturl" data-url="aHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2UvbWl0dA==">mitt<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line">npm install --save mitt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//utils/mitt.ts</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> mitt, &#123; Emitter &#125; <span class="keyword">from</span> <span class="string">&#x27;mitt&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> emitter: Emitter = mitt();</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> emitter</span><br></pre></td></tr></table></figure>
+
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">A.vue</span><br><span class="line"><span class="keyword">import</span> emitter <span class="keyword">from</span> <span class="string">&#x27;@/utils/mitt&#x27;</span></span><br><span class="line">emitter.emit(<span class="string">&#x27;test&#x27;</span>, <span class="string">&#x27;HelloWorld&#x27;</span>)</span><br><span class="line"></span><br><span class="line">b.vue</span><br><span class="line"><span class="keyword">import</span> emitter <span class="keyword">from</span> <span class="string">&#x27;@/utils/mitt&#x27;</span></span><br><span class="line"></span><br><span class="line">emitter.on(<span class="string">&#x27;test&#x27;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;test&#x27;</span> + e)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//注意卸载的时候，清除掉</span></span><br><span class="line">onUnmounted(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  emitter.off(<span class="string">&#x27;test&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;clear emit test&#x27;</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>mitt</tag>
       </tags>
   </entry>
   <entry>
@@ -510,25 +529,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue mitt</title>
-    <url>/20210628/Vue-mitt/</url>
-    <content><![CDATA[<h2 id="mitt"><a href="#mitt" class="headerlink" title="mitt"></a>mitt</h2><blockquote>
-<p>vue2 中有 @on @once @off 等方法($bus 事件总线)<br>但是 vue3 中取消了，官网推荐用 mitt</p>
-</blockquote>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p><span class="exturl" data-url="aHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2UvbWl0dA==">mitt<i class="fa fa-external-link-alt"></i></span></p>
-<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line">npm install --save mitt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//utils/mitt.ts</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> mitt, &#123; Emitter &#125; <span class="keyword">from</span> <span class="string">&#x27;mitt&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> emitter: Emitter = mitt();</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> emitter</span><br></pre></td></tr></table></figure>
-
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">A.vue</span><br><span class="line"><span class="keyword">import</span> emitter <span class="keyword">from</span> <span class="string">&#x27;@/utils/mitt&#x27;</span></span><br><span class="line">emitter.emit(<span class="string">&#x27;test&#x27;</span>, <span class="string">&#x27;HelloWorld&#x27;</span>)</span><br><span class="line"></span><br><span class="line">b.vue</span><br><span class="line"><span class="keyword">import</span> emitter <span class="keyword">from</span> <span class="string">&#x27;@/utils/mitt&#x27;</span></span><br><span class="line"></span><br><span class="line">emitter.on(<span class="string">&#x27;test&#x27;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;test&#x27;</span> + e)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//注意卸载的时候，清除掉</span></span><br><span class="line">onUnmounted(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  emitter.off(<span class="string">&#x27;test&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;clear emit test&#x27;</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>vue</category>
-      </categories>
-      <tags>
-        <tag>vue</tag>
-        <tag>mitt</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vue provide inject使用</title>
     <url>/20210628/Vue-provide-inject%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h2 id="provide-inject"><a href="#provide-inject" class="headerlink" title="provide inject"></a>provide inject</h2><p>正常的父子组件传递信息 <code>props</code> 就行了</p>
@@ -577,18 +577,6 @@
       <tags>
         <tag>vue</tag>
         <tag>rem</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue setup巧用</title>
-    <url>/20210628/Vue-setup%E5%B7%A7%E7%94%A8/</url>
-    <content><![CDATA[<h3 id="巧用计算属性和-Vuex"><a href="#巧用计算属性和-Vuex" class="headerlink" title="巧用计算属性和 Vuex"></a>巧用计算属性和 Vuex</h3><figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line">&lt;button @click=<span class="string">&quot;onClick&quot;</span> &gt; click &lt;/button&gt;</span><br><span class="line"></span><br><span class="line">setup()&#123;</span><br><span class="line"></span><br><span class="line">  const store = useStore();</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span>&#123;</span><br><span class="line">  	  usernames: computed(<span class="function"><span class="params">()</span> =&gt;</span> store.getters[<span class="string">&quot;user/getUserInfo&quot;</span>]),</span><br><span class="line">      changes: <span class="function"><span class="params">()</span> =&gt;</span> store.dispatch(<span class="string">&quot;user/SET_NICKNAME&quot;</span>, <span class="string">&quot;李四&quot;</span>),</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
       </tags>
   </entry>
   <entry>
@@ -657,6 +645,18 @@
       </tags>
   </entry>
   <entry>
+    <title>Vue setup巧用</title>
+    <url>/20210628/Vue-setup%E5%B7%A7%E7%94%A8/</url>
+    <content><![CDATA[<h3 id="巧用计算属性和-Vuex"><a href="#巧用计算属性和-Vuex" class="headerlink" title="巧用计算属性和 Vuex"></a>巧用计算属性和 Vuex</h3><figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line">&lt;button @click=<span class="string">&quot;onClick&quot;</span> &gt; click &lt;/button&gt;</span><br><span class="line"></span><br><span class="line">setup()&#123;</span><br><span class="line"></span><br><span class="line">  const store = useStore();</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span>&#123;</span><br><span class="line">  	  usernames: computed(<span class="function"><span class="params">()</span> =&gt;</span> store.getters[<span class="string">&quot;user/getUserInfo&quot;</span>]),</span><br><span class="line">      changes: <span class="function"><span class="params">()</span> =&gt;</span> store.dispatch(<span class="string">&quot;user/SET_NICKNAME&quot;</span>, <span class="string">&quot;李四&quot;</span>),</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vue tailwind安装</title>
     <url>/20210628/Vue-tailwind%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h2 id="tailwindcss"><a href="#tailwindcss" class="headerlink" title="tailwindcss"></a>tailwindcss</h2><blockquote>
@@ -700,6 +700,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Vue 保存vuex到sessionStorage</title>
+    <url>/20210629/Vue-%E4%BF%9D%E5%AD%98vuex%E5%88%B0sessionStorage/</url>
+    <content><![CDATA[<blockquote>
+<p>Vuex 中刷新页面数据将丢失，所以可以在 app.vue 中搞这个</p>
+</blockquote>
+<h3 id="app-vue"><a href="#app-vue" class="headerlink" title="app.vue"></a>app.vue</h3><figure class="highlight pf"><table><tr><td class="code"><pre><span class="line">created () &#123;</span><br><span class="line">  //在页面加载时读取sessionStorage里的状态信息</span><br><span class="line">  if (sessionStorage.getItem(<span class="string">&quot;store&quot;</span>) ) &#123;</span><br><span class="line">    this.<span class="variable">$store</span>.replaceState(Object.assign(&#123;&#125;, this.<span class="variable">$store</span>.<span class="keyword">state</span>,JSON.parse(sessionStorage.getItem(<span class="string">&quot;store&quot;</span>))))</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  //在页面刷新时将vuex里的信息保存到sessionStorage里</span><br><span class="line">  window.addEventListener(<span class="string">&quot;beforeunload&quot;</span>,()=&gt;&#123;</span><br><span class="line">    sessionStorage.<span class="built_in">set</span>Item(<span class="string">&quot;store&quot;</span>,JSON.stringify(this.<span class="variable">$store</span>.<span class="keyword">state</span>))</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+        <tag>sessionStorage</tag>
+        <tag>Vuex</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vue 利用Vuex实现全局socket</title>
     <url>/20210628/Vue-%E5%88%A9%E7%94%A8Vuex%E5%AE%9E%E7%8E%B0%E5%85%A8%E5%B1%80socket/</url>
     <content><![CDATA[<h2 id="为什么这样做？"><a href="#为什么这样做？" class="headerlink" title="为什么这样做？"></a>为什么这样做？</h2><h5 id="业务中，多个地方需要用到-websocket，重复的断开重连，有几个弊端"><a href="#业务中，多个地方需要用到-websocket，重复的断开重连，有几个弊端" class="headerlink" title="业务中，多个地方需要用到 websocket，重复的断开重连，有几个弊端"></a>业务中，多个地方需要用到 websocket，重复的断开重连，有几个弊端</h5><ol>
@@ -733,20 +750,18 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue 保存vuex到sessionStorage</title>
-    <url>/20210629/Vue-%E4%BF%9D%E5%AD%98vuex%E5%88%B0sessionStorage/</url>
-    <content><![CDATA[<blockquote>
-<p>Vuex 中刷新页面数据将丢失，所以可以在 app.vue 中搞这个</p>
-</blockquote>
-<h3 id="app-vue"><a href="#app-vue" class="headerlink" title="app.vue"></a>app.vue</h3><figure class="highlight pf"><table><tr><td class="code"><pre><span class="line">created () &#123;</span><br><span class="line">  //在页面加载时读取sessionStorage里的状态信息</span><br><span class="line">  if (sessionStorage.getItem(<span class="string">&quot;store&quot;</span>) ) &#123;</span><br><span class="line">    this.<span class="variable">$store</span>.replaceState(Object.assign(&#123;&#125;, this.<span class="variable">$store</span>.<span class="keyword">state</span>,JSON.parse(sessionStorage.getItem(<span class="string">&quot;store&quot;</span>))))</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  //在页面刷新时将vuex里的信息保存到sessionStorage里</span><br><span class="line">  window.addEventListener(<span class="string">&quot;beforeunload&quot;</span>,()=&gt;&#123;</span><br><span class="line">    sessionStorage.<span class="built_in">set</span>Item(<span class="string">&quot;store&quot;</span>,JSON.stringify(this.<span class="variable">$store</span>.<span class="keyword">state</span>))</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>Vue 文件下载</title>
+    <url>/20210628/Vue-%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<h2 id="Vue-blog"><a href="#Vue-blog" class="headerlink" title="Vue blog"></a>Vue blog</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">       <span class="function"><span class="keyword">function</span> <span class="title">down</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">           <span class="keyword">const</span> msg = &#123;</span><br><span class="line">               <span class="attr">name</span>: <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">           &#125;;</span><br><span class="line">              <span class="comment">//注意要是数组</span></span><br><span class="line">           <span class="keyword">const</span> blob = <span class="keyword">new</span> Blob([<span class="built_in">JSON</span>.stringify(msg, <span class="literal">null</span>, <span class="number">2</span>)], &#123;</span><br><span class="line">               <span class="attr">type</span>: <span class="string">&#x27;application/json&#x27;</span></span><br><span class="line">           &#125;);</span><br><span class="line"></span><br><span class="line">           <span class="keyword">const</span> link = <span class="built_in">document</span>.createElement(<span class="string">&#x27;a&#x27;</span>);</span><br><span class="line"></span><br><span class="line">           <span class="comment">// link.style.display = &#x27;none&#x27;;</span></span><br><span class="line"></span><br><span class="line">           link.href = URL.createObjectURL(blob);</span><br><span class="line">           <span class="comment">//利用html5 a标签的down 属性，如果未指定后缀名则有类型决定(json)</span></span><br><span class="line">           link.download = <span class="string">&#x27;下载文件&#x27;</span> + (<span class="keyword">new</span> <span class="built_in">Date</span>().getTime()) + <span class="string">&quot;.txt&quot;</span>;</span><br><span class="line"></span><br><span class="line">           <span class="built_in">document</span>.body.appendChild(link);</span><br><span class="line">           link.click()</span><br><span class="line">           <span class="comment">//移除掉a链接</span></span><br><span class="line">           <span class="built_in">document</span>.removeChild(link)</span><br><span class="line">           <span class="comment">//不用的时候需要释放掉</span></span><br><span class="line">           URL.revokeObjectURL(link.href)</span><br><span class="line">       &#125;</span><br><span class="line">   &lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//保存文件</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">download</span>(<span class="params">filename, text</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> pom = <span class="built_in">document</span>.createElement(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line">  pom.setAttribute(</span><br><span class="line">    <span class="string">&#x27;href&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;data:text/plain;charset=utf-8,&#x27;</span> + <span class="built_in">encodeURIComponent</span>(text)</span><br><span class="line">  )</span><br><span class="line">  pom.setAttribute(<span class="string">&#x27;download&#x27;</span>, filename)</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">document</span>.createEvent) &#123;</span><br><span class="line">    <span class="keyword">var</span> event = <span class="built_in">document</span>.createEvent(<span class="string">&#x27;MouseEvents&#x27;</span>)</span><br><span class="line">    event.initEvent(<span class="string">&#x27;click&#x27;</span>, <span class="literal">true</span>, <span class="literal">true</span>)</span><br><span class="line">    pom.dispatchEvent(event)</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    pom.click()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>js</category>
+        <category>Vue</category>
       </categories>
       <tags>
         <tag>Vue</tag>
-        <tag>sessionStorage</tag>
-        <tag>Vuex</tag>
+        <tag>文件下载</tag>
       </tags>
   </entry>
   <entry>
@@ -764,21 +779,6 @@
       </categories>
       <tags>
         <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue 文件下载</title>
-    <url>/20210628/Vue-%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/</url>
-    <content><![CDATA[<h2 id="Vue-blog"><a href="#Vue-blog" class="headerlink" title="Vue blog"></a>Vue blog</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">       <span class="function"><span class="keyword">function</span> <span class="title">down</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">           <span class="keyword">const</span> msg = &#123;</span><br><span class="line">               <span class="attr">name</span>: <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">           &#125;;</span><br><span class="line">              <span class="comment">//注意要是数组</span></span><br><span class="line">           <span class="keyword">const</span> blob = <span class="keyword">new</span> Blob([<span class="built_in">JSON</span>.stringify(msg, <span class="literal">null</span>, <span class="number">2</span>)], &#123;</span><br><span class="line">               <span class="attr">type</span>: <span class="string">&#x27;application/json&#x27;</span></span><br><span class="line">           &#125;);</span><br><span class="line"></span><br><span class="line">           <span class="keyword">const</span> link = <span class="built_in">document</span>.createElement(<span class="string">&#x27;a&#x27;</span>);</span><br><span class="line"></span><br><span class="line">           <span class="comment">// link.style.display = &#x27;none&#x27;;</span></span><br><span class="line"></span><br><span class="line">           link.href = URL.createObjectURL(blob);</span><br><span class="line">           <span class="comment">//利用html5 a标签的down 属性，如果未指定后缀名则有类型决定(json)</span></span><br><span class="line">           link.download = <span class="string">&#x27;下载文件&#x27;</span> + (<span class="keyword">new</span> <span class="built_in">Date</span>().getTime()) + <span class="string">&quot;.txt&quot;</span>;</span><br><span class="line"></span><br><span class="line">           <span class="built_in">document</span>.body.appendChild(link);</span><br><span class="line">           link.click()</span><br><span class="line">           <span class="comment">//移除掉a链接</span></span><br><span class="line">           <span class="built_in">document</span>.removeChild(link)</span><br><span class="line">           <span class="comment">//不用的时候需要释放掉</span></span><br><span class="line">           URL.revokeObjectURL(link.href)</span><br><span class="line">       &#125;</span><br><span class="line">   &lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//保存文件</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">download</span>(<span class="params">filename, text</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> pom = <span class="built_in">document</span>.createElement(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line">  pom.setAttribute(</span><br><span class="line">    <span class="string">&#x27;href&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;data:text/plain;charset=utf-8,&#x27;</span> + <span class="built_in">encodeURIComponent</span>(text)</span><br><span class="line">  )</span><br><span class="line">  pom.setAttribute(<span class="string">&#x27;download&#x27;</span>, filename)</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">document</span>.createEvent) &#123;</span><br><span class="line">    <span class="keyword">var</span> event = <span class="built_in">document</span>.createEvent(<span class="string">&#x27;MouseEvents&#x27;</span>)</span><br><span class="line">    event.initEvent(<span class="string">&#x27;click&#x27;</span>, <span class="literal">true</span>, <span class="literal">true</span>)</span><br><span class="line">    pom.dispatchEvent(event)</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    pom.click()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-        <tag>文件下载</tag>
       </tags>
   </entry>
   <entry>
@@ -837,6 +837,55 @@
       </categories>
       <tags>
         <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vuex-getters传递参数</title>
+    <url>/20210707/Vuex-getters%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0/</url>
+    <content><![CDATA[<h2 id="getters"><a href="#getters" class="headerlink" title="getters"></a>getters</h2><blockquote>
+<p>实际业务中，避免不要使用Vuex对state数据进行筛选过滤，所以就用到了getters</p>
+</blockquote>
+<p>传统写法：</p>
+<figure class="highlight pf"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> getters = &#123;</span><br><span class="line"> getListFilter (<span class="keyword">state</span>) &#123;</span><br><span class="line">    return (age) =&gt; &#123;</span><br><span class="line">      return <span class="keyword">state</span>.<span class="keyword">user</span>List.filter(item =&gt; item.age &gt;= age)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>精简写法:</p>
+<figure class="highlight pf"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> getters = &#123;</span><br><span class="line">getTodoById: (<span class="keyword">state</span>) =&gt; (id) =&gt; &#123;</span><br><span class="line">    return <span class="keyword">state</span>.todos.find(todo =&gt; todo.id === id)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>  Getter 也可以接受其他 getter 作为第二个参数：</p>
+<p>  state,     // 如果在模块中定义则为模块的局部状态</p>
+<p>  getters,   // 等同于 store.getters</p>
+<p>  如果需要传递参数，可以用闭包处理</p>
+]]></content>
+      <categories>
+        <category>vuex</category>
+      </categories>
+      <tags>
+        <tag>vuex</tag>
+        <tag>getters</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue基础-Ref</title>
+    <url>/20210628/Vue%E5%9F%BA%E7%A1%80-Ref/</url>
+    <content><![CDATA[<h2 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref</h2><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">创建一个响应式数据，支持基础类型</span><br><span class="line"><span class="keyword">let</span> a = <span class="keyword">ref</span>(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">let</span> b = <span class="keyword">ref</span>(<span class="literal">null</span>)</span><br><span class="line"><span class="keyword">let</span> c = <span class="keyword">ref</span>(<span class="string">&#x27;1&#x27;</span>)</span><br><span class="line"><span class="keyword">let</span> d = <span class="keyword">ref</span>([])</span><br><span class="line"></span><br><span class="line">a.<span class="keyword">value</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="reactive"><a href="#reactive" class="headerlink" title="reactive"></a>reactive</h2><figure class="highlight xquery"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = reacitve(&#123;</span><br><span class="line"><span class="built_in">	name</span>:<span class="string">&#x27;zhangsan&#x27;</span>,</span><br><span class="line">  age:<span class="number">18</span></span><br><span class="line">&#125;)</span><br><span class="line">obj<span class="built_in">.name</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="toref"><a href="#toref" class="headerlink" title="toref"></a>toref</h2><figure class="highlight pf"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">state</span> = reactive(&#123;</span><br><span class="line">  count: <span class="number">0</span>,</span><br><span class="line">  foo: <span class="number">1</span>,</span><br><span class="line">  bar: <span class="number">1</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> foo = <span class="keyword">to</span>Ref(<span class="keyword">state</span>, <span class="string">&quot;foo&quot;</span>);</span><br><span class="line"></span><br><span class="line">console.<span class="keyword">log</span>(foo.value);</span><br><span class="line">foo.value++;</span><br><span class="line">console.<span class="keyword">log</span>(foo.value);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="torefs"><a href="#torefs" class="headerlink" title="torefs"></a>torefs</h2><figure class="highlight pf"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> states = reactive(&#123;</span><br><span class="line">   foo: <span class="number">1</span>,</span><br><span class="line">   bar: <span class="number">1</span>,</span><br><span class="line"> &#125;);</span><br><span class="line"></span><br><span class="line"> <span class="keyword">const</span> statsrefs = <span class="keyword">to</span>Refs(states);</span><br><span class="line"> console.<span class="keyword">log</span>(statsrefs.foo);</span><br><span class="line"> console.<span class="keyword">log</span>(statsrefs.bar);</span><br></pre></td></tr></table></figure>
+
+<h2 id="unref"><a href="#unref" class="headerlink" title="unref"></a>unref</h2><figure class="highlight nix"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">num1</span> = ref(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">a</span> = unref(num1)    //<span class="attr">a</span> == <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">b</span> =unref(<span class="number">100</span>)   //<span class="attr">b</span> == <span class="number">100</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="isRef"><a href="#isRef" class="headerlink" title="isRef"></a>isRef</h2><figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="built_in">ref</span>(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">let</span> b = unref(num)</span><br><span class="line"></span><br><span class="line">is<span class="constructor">Ref(<span class="params">num</span>)</span>  <span class="comment">//true</span></span><br><span class="line">is<span class="constructor">Ref(<span class="params">b</span>)</span>  <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+        <tag>ref</tag>
       </tags>
   </entry>
   <entry>
@@ -1028,6 +1077,24 @@ $ git commit --amend [file1] [file2] ...
       </tags>
   </entry>
   <entry>
+    <title>js html5录音RecorderJs</title>
+    <url>/20210629/js-html5%E5%BD%95%E9%9F%B3RecorderJs/</url>
+    <content><![CDATA[<blockquote>
+<p>实际业务中需要用浏览器录音</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2NocmlzLXJ1ZG1pbi9vcHVzLXJlY29yZGVy">https://github.com/chris-rudmin/opus-recorder<i class="fa fa-external-link-alt"></i></span><br>具体从看实例 npm 安装<br>引入所需的 recorder.min.js ， 和 waveWorker.min.js，</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./js/recorder.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">&quot;start&quot;</span>&gt;</span> start<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">&quot;stopButton&quot;</span>&gt;</span> stop<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pre</span> <span class="attr">id</span>=<span class="string">&quot;log&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">&quot;recordingslist&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">screenLogger</span>(<span class="params">text, data</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            log.innerHTML += <span class="string">&quot;\n&quot;</span> + text + <span class="string">&quot; &quot;</span> + (data || <span class="string">&#x27;&#x27;</span>);</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> rec = <span class="keyword">new</span> Recorder(&#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">monitorGain</span>: <span class="number">0</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">recordingGain</span>: <span class="number">1</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">numberOfChannels</span>: <span class="number">1</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">wavBitDepth</span>: <span class="number">16</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">encoderPath</span>: <span class="string">&quot;./js/waveWorker.min.js&quot;</span></span></span><br><span class="line"><span class="javascript">        &#125;);</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">        start.addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            rec.start()</span></span><br><span class="line"><span class="javascript">        &#125;)</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">        stopButton.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            rec.stop();</span></span><br><span class="line"><span class="javascript">        &#125;);</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">        rec.onstart = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            screenLogger(<span class="string">&#x27;Recorder is started&#x27;</span>)</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">        rec.onstop = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            screenLogger(<span class="string">&#x27;Recorder is stop&#x27;</span>)</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">        rec.ondataavailable = <span class="function"><span class="keyword">function</span> (<span class="params">typedArray</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> dataBlob = <span class="keyword">new</span> Blob([typedArray], &#123;</span></span><br><span class="line"><span class="javascript">                <span class="attr">type</span>: <span class="string">&#x27;audio/wav&#x27;</span></span></span><br><span class="line"><span class="javascript">            &#125;);</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> fileName = <span class="keyword">new</span> <span class="built_in">Date</span>().toISOString() + <span class="string">&quot;.wav&quot;</span>;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> url = URL.createObjectURL(dataBlob);</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> audio = <span class="built_in">document</span>.createElement(<span class="string">&#x27;audio&#x27;</span>);</span></span><br><span class="line"><span class="javascript">            audio.controls = <span class="literal">true</span>;</span></span><br><span class="line"><span class="javascript">            audio.src = url;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> link = <span class="built_in">document</span>.createElement(<span class="string">&#x27;a&#x27;</span>);</span></span><br><span class="line"><span class="javascript">            link.href = url;</span></span><br><span class="line"><span class="javascript">            link.download = fileName;</span></span><br><span class="line"><span class="javascript">            link.innerHTML = link.download;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> li = <span class="built_in">document</span>.createElement(<span class="string">&#x27;li&#x27;</span>);</span></span><br><span class="line"><span class="javascript">            li.appendChild(link);</span></span><br><span class="line"><span class="javascript">            li.appendChild(audio);</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">            recordingslist.appendChild(li);</span></span><br><span class="line"><span class="javascript">        &#125;;</span></span><br><span class="line"><span class="javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>html5</tag>
+        <tag>js</tag>
+        <tag>Recorder</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>js-call/apply/bind区别</title>
     <url>/20210629/js-call-apply-bind%E5%8C%BA%E5%88%AB/</url>
     <content><![CDATA[<h3 id="apply-bind-call"><a href="#apply-bind-call" class="headerlink" title="apply bind call"></a>apply bind call</h3><pre><code>    call 和apply 功能一样，都是改变this指向，都是立即执行
@@ -1050,24 +1117,6 @@ $ git commit --amend [file1] [file2] ...
         <tag>apply</tag>
         <tag>bind</tag>
         <tag>call</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js html5录音RecorderJs</title>
-    <url>/20210629/js-html5%E5%BD%95%E9%9F%B3RecorderJs/</url>
-    <content><![CDATA[<blockquote>
-<p>实际业务中需要用浏览器录音</p>
-</blockquote>
-<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2NocmlzLXJ1ZG1pbi9vcHVzLXJlY29yZGVy">https://github.com/chris-rudmin/opus-recorder<i class="fa fa-external-link-alt"></i></span><br>具体从看实例 npm 安装<br>引入所需的 recorder.min.js ， 和 waveWorker.min.js，</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./js/recorder.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">&quot;start&quot;</span>&gt;</span> start<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">&quot;stopButton&quot;</span>&gt;</span> stop<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pre</span> <span class="attr">id</span>=<span class="string">&quot;log&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">&quot;recordingslist&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">screenLogger</span>(<span class="params">text, data</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            log.innerHTML += <span class="string">&quot;\n&quot;</span> + text + <span class="string">&quot; &quot;</span> + (data || <span class="string">&#x27;&#x27;</span>);</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> rec = <span class="keyword">new</span> Recorder(&#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">monitorGain</span>: <span class="number">0</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">recordingGain</span>: <span class="number">1</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">numberOfChannels</span>: <span class="number">1</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">wavBitDepth</span>: <span class="number">16</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">encoderPath</span>: <span class="string">&quot;./js/waveWorker.min.js&quot;</span></span></span><br><span class="line"><span class="javascript">        &#125;);</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">        start.addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            rec.start()</span></span><br><span class="line"><span class="javascript">        &#125;)</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">        stopButton.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            rec.stop();</span></span><br><span class="line"><span class="javascript">        &#125;);</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">        rec.onstart = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            screenLogger(<span class="string">&#x27;Recorder is started&#x27;</span>)</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">        rec.onstop = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            screenLogger(<span class="string">&#x27;Recorder is stop&#x27;</span>)</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">        rec.ondataavailable = <span class="function"><span class="keyword">function</span> (<span class="params">typedArray</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> dataBlob = <span class="keyword">new</span> Blob([typedArray], &#123;</span></span><br><span class="line"><span class="javascript">                <span class="attr">type</span>: <span class="string">&#x27;audio/wav&#x27;</span></span></span><br><span class="line"><span class="javascript">            &#125;);</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> fileName = <span class="keyword">new</span> <span class="built_in">Date</span>().toISOString() + <span class="string">&quot;.wav&quot;</span>;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> url = URL.createObjectURL(dataBlob);</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> audio = <span class="built_in">document</span>.createElement(<span class="string">&#x27;audio&#x27;</span>);</span></span><br><span class="line"><span class="javascript">            audio.controls = <span class="literal">true</span>;</span></span><br><span class="line"><span class="javascript">            audio.src = url;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> link = <span class="built_in">document</span>.createElement(<span class="string">&#x27;a&#x27;</span>);</span></span><br><span class="line"><span class="javascript">            link.href = url;</span></span><br><span class="line"><span class="javascript">            link.download = fileName;</span></span><br><span class="line"><span class="javascript">            link.innerHTML = link.download;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> li = <span class="built_in">document</span>.createElement(<span class="string">&#x27;li&#x27;</span>);</span></span><br><span class="line"><span class="javascript">            li.appendChild(link);</span></span><br><span class="line"><span class="javascript">            li.appendChild(audio);</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">            recordingslist.appendChild(li);</span></span><br><span class="line"><span class="javascript">        &#125;;</span></span><br><span class="line"><span class="javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-        <tag>html5</tag>
-        <tag>Recorder</tag>
       </tags>
   </entry>
   <entry>
@@ -1208,46 +1257,6 @@ $ git commit --amend [file1] [file2] ...
       </tags>
   </entry>
   <entry>
-    <title>Vue基础-Ref</title>
-    <url>/20210628/Vue%E5%9F%BA%E7%A1%80-Ref/</url>
-    <content><![CDATA[<h2 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref</h2><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">创建一个响应式数据，支持基础类型</span><br><span class="line"><span class="keyword">let</span> a = <span class="keyword">ref</span>(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">let</span> b = <span class="keyword">ref</span>(<span class="literal">null</span>)</span><br><span class="line"><span class="keyword">let</span> c = <span class="keyword">ref</span>(<span class="string">&#x27;1&#x27;</span>)</span><br><span class="line"><span class="keyword">let</span> d = <span class="keyword">ref</span>([])</span><br><span class="line"></span><br><span class="line">a.<span class="keyword">value</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="reactive"><a href="#reactive" class="headerlink" title="reactive"></a>reactive</h2><figure class="highlight xquery"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = reacitve(&#123;</span><br><span class="line"><span class="built_in">	name</span>:<span class="string">&#x27;zhangsan&#x27;</span>,</span><br><span class="line">  age:<span class="number">18</span></span><br><span class="line">&#125;)</span><br><span class="line">obj<span class="built_in">.name</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="toref"><a href="#toref" class="headerlink" title="toref"></a>toref</h2><figure class="highlight pf"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">state</span> = reactive(&#123;</span><br><span class="line">  count: <span class="number">0</span>,</span><br><span class="line">  foo: <span class="number">1</span>,</span><br><span class="line">  bar: <span class="number">1</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> foo = <span class="keyword">to</span>Ref(<span class="keyword">state</span>, <span class="string">&quot;foo&quot;</span>);</span><br><span class="line"></span><br><span class="line">console.<span class="keyword">log</span>(foo.value);</span><br><span class="line">foo.value++;</span><br><span class="line">console.<span class="keyword">log</span>(foo.value);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="torefs"><a href="#torefs" class="headerlink" title="torefs"></a>torefs</h2><figure class="highlight pf"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> states = reactive(&#123;</span><br><span class="line">   foo: <span class="number">1</span>,</span><br><span class="line">   bar: <span class="number">1</span>,</span><br><span class="line"> &#125;);</span><br><span class="line"></span><br><span class="line"> <span class="keyword">const</span> statsrefs = <span class="keyword">to</span>Refs(states);</span><br><span class="line"> console.<span class="keyword">log</span>(statsrefs.foo);</span><br><span class="line"> console.<span class="keyword">log</span>(statsrefs.bar);</span><br></pre></td></tr></table></figure>
-
-<h2 id="unref"><a href="#unref" class="headerlink" title="unref"></a>unref</h2><figure class="highlight nix"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">num1</span> = ref(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">a</span> = unref(num1)    //<span class="attr">a</span> == <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">b</span> =unref(<span class="number">100</span>)   //<span class="attr">b</span> == <span class="number">100</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="isRef"><a href="#isRef" class="headerlink" title="isRef"></a>isRef</h2><figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="built_in">ref</span>(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">let</span> b = unref(num)</span><br><span class="line"></span><br><span class="line">is<span class="constructor">Ref(<span class="params">num</span>)</span>  <span class="comment">//true</span></span><br><span class="line">is<span class="constructor">Ref(<span class="params">b</span>)</span>  <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-        <tag>ref</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js 中的堆与栈</title>
-    <url>/20210628/js-%E4%B8%AD%E7%9A%84%E5%A0%86%E4%B8%8E%E6%A0%88/</url>
-    <content><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>js 分类基本类型和引用类型</p>
-<p>比如 string number boolean null Undefined 属于基本类型</p>
-<p>object array function 属于引用类型</p>
-<p>基本类型存到栈里面，直接根据值取寻找，</p>
-<p>引用类型 把内存指针放到 栈里面，然后值放到 堆里面， 查找到时候，先去栈里面找到内存地址，然后去堆里面取</p>
-<figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line">这里先说两个概念：<span class="number">1</span>、堆（heap）<span class="number">2</span>、栈（stack）</span><br><span class="line">堆 是堆内存的简称。</span><br><span class="line">栈 是栈内存的简称。</span><br><span class="line">说到堆栈，我们讲的就是内存的使用和分配了，没有寄存器的事，也没有硬盘的事。</span><br><span class="line">各种语言在处理堆栈的原理上都大同小异。堆是动态分配内存，内存大小不一，也不会自动释放。栈是自动分配相对固定大小的内存空间，并由系统自动释放。</span><br><span class="line"></span><br><span class="line">javascript的基本类型就<span class="number">5</span>种:Undefined、Null、<span class="built_in">Boolean</span>、<span class="built_in">Number</span>和<span class="built_in">String</span>，它们都是直接按值存储在栈中的，每种类型的数据占用的内存空间的大小是确定的，并由系统自动分配和自动释放。这样带来的好处就是，内存可以及时得到回收，相对于堆来说，更加容易管理内存空间。</span><br><span class="line"></span><br><span class="line">javascript中其他类型的数据被称为引用类型的数据 : 如对象(<span class="built_in">Object</span>)、数组(<span class="built_in">Array</span>)、函数(<span class="built_in">Function</span>) …，它们是通过拷贝和<span class="keyword">new</span>出来的，这样的数据存储于堆中。其实，说存储于堆中，也不太准确，因为，引用类型的数据的地址指针是存储于栈中的，当我们想要访问引用类型的值的时候，需要先从栈中获得对象的地址指针，然后，在通过地址指针找到堆中的所需要的数据。</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>js 原型与原型链</title>
     <url>/20210629/js-%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/</url>
     <content><![CDATA[<h2 id="原型与原型链"><a href="#原型与原型链" class="headerlink" title="原型与原型链"></a>原型与原型链</h2><blockquote>
@@ -1266,6 +1275,23 @@ $ git commit --amend [file1] [file2] ...
       <tags>
         <tag>js</tag>
         <tag>原型与原型链</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>js 中的堆与栈</title>
+    <url>/20210628/js-%E4%B8%AD%E7%9A%84%E5%A0%86%E4%B8%8E%E6%A0%88/</url>
+    <content><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>js 分类基本类型和引用类型</p>
+<p>比如 string number boolean null Undefined 属于基本类型</p>
+<p>object array function 属于引用类型</p>
+<p>基本类型存到栈里面，直接根据值取寻找，</p>
+<p>引用类型 把内存指针放到 栈里面，然后值放到 堆里面， 查找到时候，先去栈里面找到内存地址，然后去堆里面取</p>
+<figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line">这里先说两个概念：<span class="number">1</span>、堆（heap）<span class="number">2</span>、栈（stack）</span><br><span class="line">堆 是堆内存的简称。</span><br><span class="line">栈 是栈内存的简称。</span><br><span class="line">说到堆栈，我们讲的就是内存的使用和分配了，没有寄存器的事，也没有硬盘的事。</span><br><span class="line">各种语言在处理堆栈的原理上都大同小异。堆是动态分配内存，内存大小不一，也不会自动释放。栈是自动分配相对固定大小的内存空间，并由系统自动释放。</span><br><span class="line"></span><br><span class="line">javascript的基本类型就<span class="number">5</span>种:Undefined、Null、<span class="built_in">Boolean</span>、<span class="built_in">Number</span>和<span class="built_in">String</span>，它们都是直接按值存储在栈中的，每种类型的数据占用的内存空间的大小是确定的，并由系统自动分配和自动释放。这样带来的好处就是，内存可以及时得到回收，相对于堆来说，更加容易管理内存空间。</span><br><span class="line"></span><br><span class="line">javascript中其他类型的数据被称为引用类型的数据 : 如对象(<span class="built_in">Object</span>)、数组(<span class="built_in">Array</span>)、函数(<span class="built_in">Function</span>) …，它们是通过拷贝和<span class="keyword">new</span>出来的，这样的数据存储于堆中。其实，说存储于堆中，也不太准确，因为，引用类型的数据的地址指针是存储于栈中的，当我们想要访问引用类型的值的时候，需要先从栈中获得对象的地址指针，然后，在通过地址指针找到堆中的所需要的数据。</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
       </tags>
   </entry>
   <entry>
@@ -1631,18 +1657,6 @@ console.log(`Files count: $&#123;count&#125;`)
       </tags>
   </entry>
   <entry>
-    <title>test 测试demo</title>
-    <url>/20210708/test-%E6%B5%8B%E8%AF%95demo/</url>
-    <content><![CDATA[<h1 id="cedemo"><a href="#cedemo" class="headerlink" title="cedemo"></a>cedemo</h1><p> asdfasdf</p>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>uniapp 封装请求promise</title>
     <url>/20210630/uniapp-%E5%B0%81%E8%A3%85%E8%AF%B7%E6%B1%82promise/</url>
     <content><![CDATA[<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><pre><code>  项目目录下创建common/api   或者common/http 都可以，看自己
@@ -1690,6 +1704,18 @@ console.log(`Files count: $&#123;count&#125;`)
         <tag>promise</tag>
         <tag>uniapp</tag>
         <tag>封装请求</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>test 测试demo</title>
+    <url>/20210708/test-%E6%B5%8B%E8%AF%95demo/</url>
+    <content><![CDATA[<h1 id="cedemo"><a href="#cedemo" class="headerlink" title="cedemo"></a>cedemo</h1><p> sdddddddddd</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"> </span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;&quot;</span></span><br><span class="line"><span class="comment">#输出当前时间</span></span><br><span class="line">date --date=<span class="string">&#x27;0 days ago&#x27;</span> <span class="string">&quot;+%Y-%m-%d %H:%M:%S&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;Start&quot;</span></span><br><span class="line"><span class="comment">#判断宝塔WebHook参数是否存在</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#git项目路径</span></span><br><span class="line">gitPath=<span class="string">&quot;/www/wwwroot/blog.wy1991.cn&quot;</span></span><br><span class="line"><span class="comment">#git 网址</span></span><br><span class="line">gitHttp=<span class="string">&quot;https://gitee.com/wy2020/blog&quot;</span> //自己仓库的链接</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;Web站点路径：<span class="variable">$gitPath</span>&quot;</span></span><br><span class="line"><span class="comment">#判断项目路径是否存在</span></span><br><span class="line"><span class="keyword">if</span> [ -d <span class="string">&quot;<span class="variable">$gitPath</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="built_in">cd</span> <span class="variable">$gitPath</span></span><br><span class="line">        <span class="comment">#判断是否存在git目录</span></span><br><span class="line">        <span class="keyword">if</span> [ ! -d <span class="string">&quot;.git&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">                <span class="built_in">echo</span> <span class="string">&quot;在该目录下克隆 git&quot;</span></span><br><span class="line">                sudo git <span class="built_in">clone</span> <span class="variable">$gitHttp</span> gittemp</span><br><span class="line">                sudo mv gittemp/.git .</span><br><span class="line">                sudo rm -rf gittemp</span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;拉取最新的项目文件&quot;</span></span><br><span class="line">        <span class="comment">#sudo git reset --hard origin/master</span></span><br><span class="line">        sudo git pull        </span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;设置目录权限&quot;</span></span><br><span class="line">        sudo chown -R www:www <span class="variable">$gitPath</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;End&quot;</span></span><br><span class="line">        <span class="built_in">exit</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;该项目路径不存在&quot;</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;新建项目目录&quot;</span></span><br><span class="line">        mkdir <span class="variable">$gitPath</span></span><br><span class="line">        <span class="built_in">cd</span> <span class="variable">$gitPath</span></span><br><span class="line">        <span class="comment">#判断是否存在git目录</span></span><br><span class="line">        <span class="keyword">if</span> [ ! -d <span class="string">&quot;.git&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">                <span class="built_in">echo</span> <span class="string">&quot;在该目录下克隆 git&quot;</span></span><br><span class="line">                sudo git <span class="built_in">clone</span> <span class="variable">$gitHttp</span> gittemp</span><br><span class="line">                sudo mv gittemp/.git .</span><br><span class="line">                sudo rm -rf gittemp</span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;拉取最新的项目文件&quot;</span></span><br><span class="line">        <span class="comment">#sudo git reset --hard origin/master</span></span><br><span class="line">        sudo git pull</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;设置目录权限&quot;</span></span><br><span class="line">        sudo chown -R www:www <span class="variable">$gitPath</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;End&quot;</span></span><br><span class="line">        <span class="built_in">exit</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
       </tags>
   </entry>
   <entry>
@@ -2215,32 +2241,6 @@ catchtouchmove
       </categories>
       <tags>
         <tag>项目</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vuex-getters传递参数</title>
-    <url>/20210707/Vuex-getters%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0/</url>
-    <content><![CDATA[<h2 id="getters"><a href="#getters" class="headerlink" title="getters"></a>getters</h2><blockquote>
-<p>实际业务中，避免不要使用Vuex对state数据进行筛选过滤，所以就用到了getters</p>
-</blockquote>
-<p>传统写法：</p>
-<figure class="highlight pf"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> getters = &#123;</span><br><span class="line"> getListFilter (<span class="keyword">state</span>) &#123;</span><br><span class="line">    return (age) =&gt; &#123;</span><br><span class="line">      return <span class="keyword">state</span>.<span class="keyword">user</span>List.filter(item =&gt; item.age &gt;= age)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>精简写法:</p>
-<figure class="highlight pf"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> getters = &#123;</span><br><span class="line">getTodoById: (<span class="keyword">state</span>) =&gt; (id) =&gt; &#123;</span><br><span class="line">    return <span class="keyword">state</span>.todos.find(todo =&gt; todo.id === id)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>  Getter 也可以接受其他 getter 作为第二个参数：</p>
-<p>  state,     // 如果在模块中定义则为模块的局部状态</p>
-<p>  getters,   // 等同于 store.getters</p>
-<p>  如果需要传递参数，可以用闭包处理</p>
-]]></content>
-      <categories>
-        <category>vuex</category>
-      </categories>
-      <tags>
-        <tag>vuex</tag>
-        <tag>getters</tag>
       </tags>
   </entry>
   <entry>
