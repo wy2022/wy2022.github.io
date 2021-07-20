@@ -835,7 +835,7 @@
 <p><a href="https://blog.wy1991.cn/">官网博客</a></p>
 <h2 id="删除线xx"><a href="#删除线xx" class="headerlink" title="删除线xx"></a>删除线<del>xx</del></h2><p><del>删除线</del></p>
 <h2 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h2><p>Markdown 语法会忽略首行开头的空格，如果要体现出首行开头空两个的效果，可以使用 全角符号下的空格 ，windows 下使用 shift+空格 切换。</p>
-<h2 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h2><p><span class="exturl" data-url="bWFpbHRvOiYjOTc7JiN4NjQ7JiN4NmQ7JiN4Njk7JiN4NmU7JiN4NDA7JiN4Nzc7JiMxMjE7JiN4MzE7JiN4Mzk7JiM1NzsmI3gzMTsmI3gyZTsmIzk5OyYjeDZlOw==">&#97;&#x64;&#x6d;&#x69;&#x6e;&#x40;&#x77;&#121;&#x31;&#x39;&#57;&#x31;&#x2e;&#99;&#x6e;<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h2><p><span class="exturl" data-url="bWFpbHRvOiYjOTc7JiMxMDA7JiN4NmQ7JiN4Njk7JiMxMTA7JiN4NDA7JiN4Nzc7JiMxMjE7JiN4MzE7JiM1NzsmI3gzOTsmI3gzMTsmI3gyZTsmIzk5OyYjMTEwOw==">&#97;&#100;&#x6d;&#x69;&#110;&#x40;&#x77;&#121;&#x31;&#57;&#x39;&#x31;&#x2e;&#99;&#110;<i class="fa fa-external-link-alt"></i></span></p>
 <h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>我们可以设置表格的对齐方式：</p>
 <ul>
 <li><p>-: 设置内容和标题栏居右对齐。</p>
