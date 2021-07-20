@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>前端截图系列</title>
+    <url>/20210628/10-HTML%E6%88%AA%E5%9B%BE%E7%B3%BB%E5%88%97/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h3><img title="原型链" alt="图解原型和原型链" src="https://blog.img.wy1991.cn/static/images/js/prototype.png-blogImg">
+
+<h3 id="animation-动画"><a href="#animation-动画" class="headerlink" title="animation 动画"></a>animation 动画</h3><img title="动画" src="https://blog.img.wy1991.cn/static/images/css/animation.png-blogImg">
+
+<h3 id="浏览器窗口"><a href="#浏览器窗口" class="headerlink" title="浏览器窗口"></a>浏览器窗口</h3><img title="窗口" src="https://blog.img.wy1991.cn/static/images/css/screen.png-blogImg">
+
+<p><a href="https://juejin.cn/post/6884042902587047943#heading-1"></a></p>
+<figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">• <span class="built_in">window</span>.innerHeight：获取浏览器视觉视口高度（包括垂直滚动条）。</span><br><span class="line">• <span class="built_in">window</span>.outerHeight：获取浏览器窗口外部的高度。表示整个浏览器窗口的高度，包括侧边栏、窗口镶边和调正窗口大小的边框。</span><br><span class="line">• <span class="built_in">window</span>.screen.Height：获取获屏幕取理想视口高度，这个数值是固定的，设备的分辨率/设备像素比</span><br><span class="line">• <span class="built_in">window</span>.screen.availHeight：浏览器窗口可用的高度。</span><br><span class="line">• <span class="built_in">document</span>.documentElement.clientHeight：获取浏览器布局视口高度，包括内边距，但不包括垂直滚动条、边框和外边距。</span><br><span class="line">• <span class="built_in">document</span>.documentElement.offsetHeight：包括内边距、滚动条、边框和外边距。</span><br><span class="line">• <span class="built_in">document</span>.documentElement.scrollHeight：在不使用滚动条的情况下适合视口中的所有内容所需的最小宽度。测量方式与clientHeight相同：它包含元素的内边距，但不包括边框，外边距或垂直滚动条。</span><br><span class="line">响应式设计与自适应设计的区别：响应式开发一套界面，通过检测视口分辨率，针对不同客户端在客户端做代码处理，来展现不同的布局和内容；自适应需要开发多套界面，通过检测视口分辨率，来判断当前访问的设备是pc端、平板、手机，从而请求服务层，返回不同的页面。</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我为什么又搞一个博客？</title>
     <url>/20210626/1-%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8F%88%E6%90%9E%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%EF%BC%9F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="为什么重建？"><a href="#为什么重建？" class="headerlink" title="为什么重建？"></a>为什么重建？</h2><p>之前的博客总结了有一下几个不方便之处</p>
@@ -36,23 +56,28 @@
       </tags>
   </entry>
   <entry>
-    <title>前端截图系列</title>
-    <url>/20210628/10-HTML%E6%88%AA%E5%9B%BE%E7%B3%BB%E5%88%97/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h3><img title="原型链" alt="图解原型和原型链" src="https://blog.img.wy1991.cn/static/images/js/prototype.png-blogImg">
+    <title>js-call/apply/bind区别</title>
+    <url>/20210629/12-js-call-apply-bind%E5%8C%BA%E5%88%AB/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="apply-bind-call"><a href="#apply-bind-call" class="headerlink" title="apply bind call"></a>apply bind call</h3><pre><code>    call 和apply 功能一样，都是改变this指向，都是立即执行
+    还可以借用别的方法
+    不同的是参数不一样， call后面可以一直跟参数
+    apply 后面则是数组
+    bind  返回一个函数，主要作用改变this固定参数
+</code></pre>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(a)</span><br><span class="line">  <span class="built_in">console</span>.log(b)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> bf = fn.bind(<span class="string">&#x27;this is bind&#x27;</span>, <span class="number">11</span>)</span><br><span class="line"><span class="built_in">console</span>.log(bf()) <span class="comment">// this is bind  a = 11</span></span><br><span class="line"><span class="built_in">console</span>.log(bf(<span class="number">22</span>)) <span class="comment">// this is bind a = 11 b =22</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="animation-动画"><a href="#animation-动画" class="headerlink" title="animation 动画"></a>animation 动画</h3><img title="动画" src="https://blog.img.wy1991.cn/static/images/css/animation.png-blogImg">
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>.a + x + y)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">a</span>: <span class="number">20</span>,</span><br><span class="line">&#125;</span><br><span class="line">sum(<span class="number">10</span>, <span class="number">10</span>) <span class="comment">//30</span></span><br><span class="line"></span><br><span class="line">sum.call(obj, <span class="number">10</span>, <span class="number">10</span>) <span class="comment">//40</span></span><br><span class="line"></span><br><span class="line">sum.apply(obj, [<span class="number">10</span>, <span class="number">10</span>]) <span class="comment">//40</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"><span class="comment">//因为arr是数组，所以不能用call，需要用apply</span></span><br><span class="line"><span class="comment">//数组没有max 方法，所以通过apply 用null原型链的</span></span><br><span class="line"><span class="keyword">let</span> maxNum = <span class="built_in">Math</span>.max.apply(<span class="literal">null</span>, arr)</span><br><span class="line"><span class="built_in">console</span>.log(maxNum)</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">                bind 主要是绑定this和固定参数</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(a)</span><br><span class="line">  <span class="built_in">console</span>.log(b)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> bf = fn.bind(<span class="string">&#x27;this is bind&#x27;</span>, <span class="number">11</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(bf()) <span class="comment">// this is bind  a = 11</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(bf(<span class="number">22</span>)) <span class="comment">// this is bind a = 11 b =22</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="浏览器窗口"><a href="#浏览器窗口" class="headerlink" title="浏览器窗口"></a>浏览器窗口</h3><img title="窗口" src="https://blog.img.wy1991.cn/static/images/css/screen.png-blogImg">
-
-<p><a href="https://juejin.cn/post/6884042902587047943#heading-1"></a></p>
-<figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">• <span class="built_in">window</span>.innerHeight：获取浏览器视觉视口高度（包括垂直滚动条）。</span><br><span class="line">• <span class="built_in">window</span>.outerHeight：获取浏览器窗口外部的高度。表示整个浏览器窗口的高度，包括侧边栏、窗口镶边和调正窗口大小的边框。</span><br><span class="line">• <span class="built_in">window</span>.screen.Height：获取获屏幕取理想视口高度，这个数值是固定的，设备的分辨率/设备像素比</span><br><span class="line">• <span class="built_in">window</span>.screen.availHeight：浏览器窗口可用的高度。</span><br><span class="line">• <span class="built_in">document</span>.documentElement.clientHeight：获取浏览器布局视口高度，包括内边距，但不包括垂直滚动条、边框和外边距。</span><br><span class="line">• <span class="built_in">document</span>.documentElement.offsetHeight：包括内边距、滚动条、边框和外边距。</span><br><span class="line">• <span class="built_in">document</span>.documentElement.scrollHeight：在不使用滚动条的情况下适合视口中的所有内容所需的最小宽度。测量方式与clientHeight相同：它包含元素的内边距，但不包括边框，外边距或垂直滚动条。</span><br><span class="line">响应式设计与自适应设计的区别：响应式开发一套界面，通过检测视口分辨率，针对不同客户端在客户端做代码处理，来展现不同的布局和内容；自适应需要开发多套界面，通过检测视口分辨率，来判断当前访问的设备是pc端、平板、手机，从而请求服务层，返回不同的页面。</span><br></pre></td></tr></table></figure>
+<h3 id="手动实现"><a href="#手动实现" class="headerlink" title="手动实现"></a>手动实现</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = &#123;</span><br><span class="line">  <span class="attr">value</span>: <span class="number">1</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>.value)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">bar.call(foo) <span class="comment">//1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Function</span>.prototype.call2 = <span class="function"><span class="keyword">function</span> (<span class="params">context</span>) </span>&#123;</span><br><span class="line">  context.fn = <span class="built_in">this</span></span><br><span class="line">  context.fn()</span><br><span class="line">  <span class="keyword">delete</span> context.fn</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">bar.call2(foo) <span class="comment">//1</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>js</category>
       </categories>
       <tags>
         <tag>js</tag>
-        <tag>css</tag>
+        <tag>apply</tag>
+        <tag>bind</tag>
+        <tag>call</tag>
       </tags>
   </entry>
   <entry>
@@ -80,31 +105,6 @@
         <tag>js</tag>
         <tag>ArryaBuffer</tag>
         <tag>字节序</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js-call/apply/bind区别</title>
-    <url>/20210629/12-js-call-apply-bind%E5%8C%BA%E5%88%AB/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="apply-bind-call"><a href="#apply-bind-call" class="headerlink" title="apply bind call"></a>apply bind call</h3><pre><code>    call 和apply 功能一样，都是改变this指向，都是立即执行
-    还可以借用别的方法
-    不同的是参数不一样， call后面可以一直跟参数
-    apply 后面则是数组
-    bind  返回一个函数，主要作用改变this固定参数
-</code></pre>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(a)</span><br><span class="line">  <span class="built_in">console</span>.log(b)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> bf = fn.bind(<span class="string">&#x27;this is bind&#x27;</span>, <span class="number">11</span>)</span><br><span class="line"><span class="built_in">console</span>.log(bf()) <span class="comment">// this is bind  a = 11</span></span><br><span class="line"><span class="built_in">console</span>.log(bf(<span class="number">22</span>)) <span class="comment">// this is bind a = 11 b =22</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>.a + x + y)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">a</span>: <span class="number">20</span>,</span><br><span class="line">&#125;</span><br><span class="line">sum(<span class="number">10</span>, <span class="number">10</span>) <span class="comment">//30</span></span><br><span class="line"></span><br><span class="line">sum.call(obj, <span class="number">10</span>, <span class="number">10</span>) <span class="comment">//40</span></span><br><span class="line"></span><br><span class="line">sum.apply(obj, [<span class="number">10</span>, <span class="number">10</span>]) <span class="comment">//40</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"><span class="comment">//因为arr是数组，所以不能用call，需要用apply</span></span><br><span class="line"><span class="comment">//数组没有max 方法，所以通过apply 用null原型链的</span></span><br><span class="line"><span class="keyword">let</span> maxNum = <span class="built_in">Math</span>.max.apply(<span class="literal">null</span>, arr)</span><br><span class="line"><span class="built_in">console</span>.log(maxNum)</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">                bind 主要是绑定this和固定参数</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(a)</span><br><span class="line">  <span class="built_in">console</span>.log(b)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> bf = fn.bind(<span class="string">&#x27;this is bind&#x27;</span>, <span class="number">11</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(bf()) <span class="comment">// this is bind  a = 11</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(bf(<span class="number">22</span>)) <span class="comment">// this is bind a = 11 b =22</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="手动实现"><a href="#手动实现" class="headerlink" title="手动实现"></a>手动实现</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = &#123;</span><br><span class="line">  <span class="attr">value</span>: <span class="number">1</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>.value)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">bar.call(foo) <span class="comment">//1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Function</span>.prototype.call2 = <span class="function"><span class="keyword">function</span> (<span class="params">context</span>) </span>&#123;</span><br><span class="line">  context.fn = <span class="built_in">this</span></span><br><span class="line">  context.fn()</span><br><span class="line">  <span class="keyword">delete</span> context.fn</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">bar.call2(foo) <span class="comment">//1</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-        <tag>apply</tag>
-        <tag>bind</tag>
-        <tag>call</tag>
       </tags>
   </entry>
   <entry>
@@ -835,7 +835,7 @@
 <p><a href="https://blog.wy1991.cn/">官网博客</a></p>
 <h2 id="删除线xx"><a href="#删除线xx" class="headerlink" title="删除线xx"></a>删除线<del>xx</del></h2><p><del>删除线</del></p>
 <h2 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h2><p>Markdown 语法会忽略首行开头的空格，如果要体现出首行开头空两个的效果，可以使用 全角符号下的空格 ，windows 下使用 shift+空格 切换。</p>
-<h2 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h2><p><span class="exturl" data-url="bWFpbHRvOiYjeDYxOyYjMTAwOyYjeDZkOyYjMTA1OyYjMTEwOyYjNjQ7JiMxMTk7JiMxMjE7JiM0OTsmIzU3OyYjNTc7JiM0OTsmIzQ2OyYjOTk7JiN4NmU7">&#x61;&#100;&#x6d;&#105;&#110;&#64;&#119;&#121;&#49;&#57;&#57;&#49;&#46;&#99;&#x6e;<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h2><p><span class="exturl" data-url="bWFpbHRvOiYjeDYxOyYjMTAwOyYjeDZkOyYjMTA1OyYjeDZlOyYjeDQwOyYjeDc3OyYjMTIxOyYjNDk7JiN4Mzk7JiM1NzsmI3gzMTsmI3gyZTsmIzk5OyYjeDZlOw==">&#x61;&#100;&#x6d;&#105;&#x6e;&#x40;&#x77;&#121;&#49;&#x39;&#57;&#x31;&#x2e;&#99;&#x6e;<i class="fa fa-external-link-alt"></i></span></p>
 <h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>我们可以设置表格的对齐方式：</p>
 <ul>
 <li><p>-: 设置内容和标题栏居右对齐。</p>
@@ -1257,6 +1257,47 @@ console.log(`Files count: $&#123;count&#125;`)
       </tags>
   </entry>
   <entry>
+    <title>V8 为何要限制堆的大小？</title>
+    <url>/20210706/30-V8-%E4%B8%BA%E4%BD%95%E8%A6%81%E9%99%90%E5%88%B6%E5%A0%86%E7%9A%84%E5%A4%A7%E5%B0%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="V8为何要限制堆的大小？"><a href="#V8为何要限制堆的大小？" class="headerlink" title="V8为何要限制堆的大小？"></a>V8为何要限制堆的大小？</h2><blockquote>
+<p>在V8中，所有的JavaScript对象都是通过堆来进行分配的。Node提供了V8中内存使用量的查看方式，执行下面的代码，将得到输出的内存信息：</p>
+</blockquote>
+<p>process.memoryUsage();<br>{<br>  rss: 14958592,<br>  heapTotal: 7195904,<br>  heapUsed: 2821496<br>}</p>
+<p> 在上述代码中，在memoryUsage()方法返回的3个属性中，heapTotal和heapUsed是V8的堆内存使用情况，前者是已申请到的堆内存，后者是当前使用的量。</p>
+<img title="V8堆示意图" src="https://blog.img.wy1991.cn/static/images/node/V8dui.png-blogImg">
+
+<p>当我们在代码中声明变量并赋值时，所使用对象的内存就分配在堆中。如果已申请的堆空闲内存不够分配新的对象，将继续申请堆内存，直到堆的大小超过V8的限制为止。</p>
+<h3 id="表层原因"><a href="#表层原因" class="headerlink" title="表层原因"></a>表层原因</h3><blockquote>
+<p>V8原本是为了浏览器设计的，所以不太可能遇到使用大量内存的情况。对于网页来说，V8的限制值已经绰绰有余了。</p>
+</blockquote>
+<h3 id="深层原因"><a href="#深层原因" class="headerlink" title="深层原因"></a>深层原因</h3><blockquote>
+<p>深层原因是V8的垃圾回收机制的限制。按官方的说法，以1.5 GB的垃圾回收堆内存为例，V8做一次小的垃圾回收需要50毫秒以上，做一次非增量式的垃圾回收甚至要1秒以上。这是垃圾回收中引起JavaScript线程暂停执行的时间，在这样的时间花销下，应用的性能和响应能力都会直线下降。这样的情况不仅仅后端服务无法接受，前端浏览器也无法接受。因此，在当时的考虑下直接限制堆内存是一个好的选择。</p>
+</blockquote>
+<h3 id="垃圾回收机制的策略是什么吗？"><a href="#垃圾回收机制的策略是什么吗？" class="headerlink" title="垃圾回收机制的策略是什么吗？"></a>垃圾回收机制的策略是什么吗？</h3><blockquote>
+<p>V8的垃圾回收策略主要基于分代式垃圾回收机制。</p>
+</blockquote>
+<h3 id="为什么要分代呢？"><a href="#为什么要分代呢？" class="headerlink" title="为什么要分代呢？"></a>为什么要分代呢？</h3><blockquote>
+<p>因为在实际的应用中，对象的生存周期长短不一，不同的算法只能针对特定情况具有最好的效果。为此，现代的垃圾回收算法中按对象的存活时间将内存的垃圾回收进行不同的分代，然后分别对不同分代的内存施以更高效的算法。</p>
+</blockquote>
+<h3 id="怎么分代的？"><a href="#怎么分代的？" class="headerlink" title="怎么分代的？"></a>怎么分代的？</h3><blockquote>
+<p>在V8中，主要将内存分为新生代和老生代两代。新生代中的对象为存活时间较短的对象，老生代中的对象为存活时间较长或常驻内存的对象。图为V8的分代示意图。</p>
+</blockquote>
+<img title="分代示意图" src="https://blog.img.wy1991.cn/static/images/node/v8shengdai.png-blogImg">
+
+<h3 id="新生代是怎么回收的？"><a href="#新生代是怎么回收的？" class="headerlink" title="新生代是怎么回收的？"></a>新生代是怎么回收的？</h3><p>在分代的基础上，新生代中的对象主要通过Scavenge算法进行垃圾回收。是一种采用复制的方式实现的垃圾回收算法。</p>
+<p>它将堆内存一分为二，每一部分空间称为semispace。在这两个semispace空间中，只有一个处于使用中，另一个处于闲置状态。处于使用状态的semispace空间称为From空间，处于闲置状态的空间称为To空间。当我们分配对象时，先是在From空间中进行分配。当开始进行垃圾回收时，会检查From空间中的存活对象，这些存活对象将被复制到To空间中，而非存活对象占用的空间将会被释放。完成复制后，From空间和To空间的角色发生对换。</p>
+<p>简而言之，在垃圾回收的过程中，就是通过将存活对象在两个semispace空间之间进行复制。</p>
+<p>Scavenge的缺点是只能使用堆内存中的一半，这是由划分空间和复制机制所决定的。但Scavenge由于只复制存活的对象，并且对于生命周期短的场景存活对象只占少部分，所以它在时间效率上有优异的表现。</p>
+<p>由于Scavenge是典型的牺牲空间换取时间的算法，所以无法大规模地应用到所有的垃圾回收中。但可以发现，Scavenge非常适合应用在新生代中，因为新生代中对象的生命周期较短，恰恰适合这个算法。</p>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>V8</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>uniapp 封装请求promise</title>
     <url>/20210630/29-uniapp-%E5%B0%81%E8%A3%85%E8%AF%B7%E6%B1%82promise/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><pre><code>  项目目录下创建common/api   或者common/http 都可以，看自己
@@ -1343,47 +1384,6 @@ console.log(`Files count: $&#123;count&#125;`)
       </categories>
       <tags>
         <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>V8 为何要限制堆的大小？</title>
-    <url>/20210706/30-V8-%E4%B8%BA%E4%BD%95%E8%A6%81%E9%99%90%E5%88%B6%E5%A0%86%E7%9A%84%E5%A4%A7%E5%B0%8F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="V8为何要限制堆的大小？"><a href="#V8为何要限制堆的大小？" class="headerlink" title="V8为何要限制堆的大小？"></a>V8为何要限制堆的大小？</h2><blockquote>
-<p>在V8中，所有的JavaScript对象都是通过堆来进行分配的。Node提供了V8中内存使用量的查看方式，执行下面的代码，将得到输出的内存信息：</p>
-</blockquote>
-<p>process.memoryUsage();<br>{<br>  rss: 14958592,<br>  heapTotal: 7195904,<br>  heapUsed: 2821496<br>}</p>
-<p> 在上述代码中，在memoryUsage()方法返回的3个属性中，heapTotal和heapUsed是V8的堆内存使用情况，前者是已申请到的堆内存，后者是当前使用的量。</p>
-<img title="V8堆示意图" src="https://blog.img.wy1991.cn/static/images/node/V8dui.png-blogImg">
-
-<p>当我们在代码中声明变量并赋值时，所使用对象的内存就分配在堆中。如果已申请的堆空闲内存不够分配新的对象，将继续申请堆内存，直到堆的大小超过V8的限制为止。</p>
-<h3 id="表层原因"><a href="#表层原因" class="headerlink" title="表层原因"></a>表层原因</h3><blockquote>
-<p>V8原本是为了浏览器设计的，所以不太可能遇到使用大量内存的情况。对于网页来说，V8的限制值已经绰绰有余了。</p>
-</blockquote>
-<h3 id="深层原因"><a href="#深层原因" class="headerlink" title="深层原因"></a>深层原因</h3><blockquote>
-<p>深层原因是V8的垃圾回收机制的限制。按官方的说法，以1.5 GB的垃圾回收堆内存为例，V8做一次小的垃圾回收需要50毫秒以上，做一次非增量式的垃圾回收甚至要1秒以上。这是垃圾回收中引起JavaScript线程暂停执行的时间，在这样的时间花销下，应用的性能和响应能力都会直线下降。这样的情况不仅仅后端服务无法接受，前端浏览器也无法接受。因此，在当时的考虑下直接限制堆内存是一个好的选择。</p>
-</blockquote>
-<h3 id="垃圾回收机制的策略是什么吗？"><a href="#垃圾回收机制的策略是什么吗？" class="headerlink" title="垃圾回收机制的策略是什么吗？"></a>垃圾回收机制的策略是什么吗？</h3><blockquote>
-<p>V8的垃圾回收策略主要基于分代式垃圾回收机制。</p>
-</blockquote>
-<h3 id="为什么要分代呢？"><a href="#为什么要分代呢？" class="headerlink" title="为什么要分代呢？"></a>为什么要分代呢？</h3><blockquote>
-<p>因为在实际的应用中，对象的生存周期长短不一，不同的算法只能针对特定情况具有最好的效果。为此，现代的垃圾回收算法中按对象的存活时间将内存的垃圾回收进行不同的分代，然后分别对不同分代的内存施以更高效的算法。</p>
-</blockquote>
-<h3 id="怎么分代的？"><a href="#怎么分代的？" class="headerlink" title="怎么分代的？"></a>怎么分代的？</h3><blockquote>
-<p>在V8中，主要将内存分为新生代和老生代两代。新生代中的对象为存活时间较短的对象，老生代中的对象为存活时间较长或常驻内存的对象。图为V8的分代示意图。</p>
-</blockquote>
-<img title="分代示意图" src="https://blog.img.wy1991.cn/static/images/node/v8shengdai.png-blogImg">
-
-<h3 id="新生代是怎么回收的？"><a href="#新生代是怎么回收的？" class="headerlink" title="新生代是怎么回收的？"></a>新生代是怎么回收的？</h3><p>在分代的基础上，新生代中的对象主要通过Scavenge算法进行垃圾回收。是一种采用复制的方式实现的垃圾回收算法。</p>
-<p>它将堆内存一分为二，每一部分空间称为semispace。在这两个semispace空间中，只有一个处于使用中，另一个处于闲置状态。处于使用状态的semispace空间称为From空间，处于闲置状态的空间称为To空间。当我们分配对象时，先是在From空间中进行分配。当开始进行垃圾回收时，会检查From空间中的存活对象，这些存活对象将被复制到To空间中，而非存活对象占用的空间将会被释放。完成复制后，From空间和To空间的角色发生对换。</p>
-<p>简而言之，在垃圾回收的过程中，就是通过将存活对象在两个semispace空间之间进行复制。</p>
-<p>Scavenge的缺点是只能使用堆内存中的一半，这是由划分空间和复制机制所决定的。但Scavenge由于只复制存活的对象，并且对于生命周期短的场景存活对象只占少部分，所以它在时间效率上有优异的表现。</p>
-<p>由于Scavenge是典型的牺牲空间换取时间的算法，所以无法大规模地应用到所有的垃圾回收中。但可以发现，Scavenge非常适合应用在新生代中，因为新生代中对象的生命周期较短，恰恰适合这个算法。</p>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>V8</tag>
       </tags>
   </entry>
   <entry>
@@ -1914,6 +1914,24 @@ console.log(`Files count: $&#123;count&#125;`)
       </tags>
   </entry>
   <entry>
+    <title>Vue tailwind安装</title>
+    <url>/20210628/46-Vue-tailwind%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="tailwindcss"><a href="#tailwindcss" class="headerlink" title="tailwindcss"></a>tailwindcss</h2><blockquote>
+<p>安装 tailwindcss 最新的会报错 安装兼容版本</p>
+</blockquote>
+<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line">npm install -D tailwindcss<span class="symbol">@npm</span>:<span class="symbol">@tailwindcss</span>/postcss7-compat <span class="symbol">@tailwindcss</span>/postcss7-compat postcss<span class="symbol">@^7</span> autoprefixer<span class="symbol">@^9</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">npx</span> <span class="string">tailwindcss</span> <span class="string">init</span> <span class="string">-full</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="string">//</span> <span class="string">tailwind.config.js</span></span><br><span class="line">  <span class="string">module.exports</span> <span class="string">=</span> &#123;</span><br><span class="line">   <span class="attr">purge:</span> [],</span><br><span class="line">   <span class="attr">purge:</span> [<span class="string">&#x27;./index.html&#x27;</span>, <span class="string">&#x27;./src/**/*.&#123;vue,js,ts,jsx,tsx&#125;&#x27;</span>],</span><br><span class="line">    <span class="attr">darkMode:</span> <span class="literal">false</span>, <span class="string">//</span> <span class="string">or</span> <span class="string">&#x27;media&#x27;</span> <span class="string">or</span> <span class="string">&#x27;class&#x27;</span></span><br><span class="line">    <span class="attr">theme:</span> &#123;</span><br><span class="line">      <span class="attr">extend:</span> &#123;&#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">variants:</span> &#123;</span><br><span class="line">      <span class="attr">extend:</span> &#123;&#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">plugins:</span> [],</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>tailwind</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>tailwind</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vue Suspense 异步组件</title>
     <url>/20210628/45-Vue-Suspense-%E5%BC%82%E6%AD%A5%E7%BB%84%E4%BB%B6/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="Suspense"><a href="#Suspense" class="headerlink" title="Suspense"></a>Suspense</h2><p><strong>总结如下:</strong><br>async setup 是为了 解决开发中 请求服务器返回数据后在加载组件</p>
@@ -1931,24 +1949,6 @@ console.log(`Files count: $&#123;count&#125;`)
       </categories>
       <tags>
         <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue tailwind安装</title>
-    <url>/20210628/46-Vue-tailwind%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="tailwindcss"><a href="#tailwindcss" class="headerlink" title="tailwindcss"></a>tailwindcss</h2><blockquote>
-<p>安装 tailwindcss 最新的会报错 安装兼容版本</p>
-</blockquote>
-<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line">npm install -D tailwindcss<span class="symbol">@npm</span>:<span class="symbol">@tailwindcss</span>/postcss7-compat <span class="symbol">@tailwindcss</span>/postcss7-compat postcss<span class="symbol">@^7</span> autoprefixer<span class="symbol">@^9</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">npx</span> <span class="string">tailwindcss</span> <span class="string">init</span> <span class="string">-full</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="string">//</span> <span class="string">tailwind.config.js</span></span><br><span class="line">  <span class="string">module.exports</span> <span class="string">=</span> &#123;</span><br><span class="line">   <span class="attr">purge:</span> [],</span><br><span class="line">   <span class="attr">purge:</span> [<span class="string">&#x27;./index.html&#x27;</span>, <span class="string">&#x27;./src/**/*.&#123;vue,js,ts,jsx,tsx&#125;&#x27;</span>],</span><br><span class="line">    <span class="attr">darkMode:</span> <span class="literal">false</span>, <span class="string">//</span> <span class="string">or</span> <span class="string">&#x27;media&#x27;</span> <span class="string">or</span> <span class="string">&#x27;class&#x27;</span></span><br><span class="line">    <span class="attr">theme:</span> &#123;</span><br><span class="line">      <span class="attr">extend:</span> &#123;&#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">variants:</span> &#123;</span><br><span class="line">      <span class="attr">extend:</span> &#123;&#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">plugins:</span> [],</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>tailwind</category>
-      </categories>
-      <tags>
-        <tag>vue</tag>
-        <tag>tailwind</tag>
       </tags>
   </entry>
   <entry>
@@ -2024,6 +2024,34 @@ console.log(`Files count: $&#123;count&#125;`)
       </tags>
   </entry>
   <entry>
+    <title>Vuex-mapState在compositionApi使用</title>
+    <url>/20210709/51-Vuex-mapState%E5%9C%A8compositionApi%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>在compositionApi的setup中，我们发现mapState似乎并不好用，官网也没给出什么解决办法，今天这里分享一个小技巧~</p>
+</blockquote>
+<h2 id="setup"><a href="#setup" class="headerlink" title="setup"></a>setup</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line">import &#123; useStore, mapState &#125; from &#x27;vuex&#x27;;</span><br><span class="line">import &#123; computed &#125; from &#x27;vue&#x27;;</span><br><span class="line"></span><br><span class="line">  export default&#123;</span><br><span class="line">    setup()&#123;</span><br><span class="line">      const store = useStore();</span><br><span class="line">      const name = computed(()=&gt; store.state.name )</span><br><span class="line">      const age = computed(()=&gt; store.state.age )</span><br><span class="line"></span><br><span class="line">      return&#123;</span><br><span class="line">        age</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>上面的写法，如果属性多了太麻烦了，并且不能用到mapState</p>
+<h2 id="mapState"><a href="#mapState" class="headerlink" title="mapState"></a>mapState</h2><p> 我们要搞明白mapState返回的是函数(下例中，stateFunc是不能直接在template中使用的)，我们可以利用计算属性</p>
+<p> 但是要注意mapState返回的函数其实是this.$store.state.xxx。setup中没有this，所以可以通过bind绑定一个this</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">import &#123; useStore, mapState &#125; from &#x27;vuex&#x27;;</span><br><span class="line">import &#123; computed &#125; from &#x27;vue&#x27;;</span><br><span class="line">export default &#123;</span><br><span class="line">  setup () &#123;</span><br><span class="line">    const store = useStore();</span><br><span class="line">    const stateFunc = mapState([&#x27;name&#x27;, &#x27;age&#x27;]);</span><br><span class="line"></span><br><span class="line">    const storeState = &#123;&#125;</span><br><span class="line"></span><br><span class="line">    Object.keys(stateFunc).forEach(fnkey =&gt; &#123;</span><br><span class="line">      const fn = stateFunc[fnkey].bind(&#123; $store: store &#125;)</span><br><span class="line">      storeState[fnkey] = computed(fn)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    return &#123;</span><br><span class="line">      ...storeState</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="封装hooks"><a href="#封装hooks" class="headerlink" title="封装hooks"></a>封装hooks</h2><p>新建hooks文件夹，创建文件 useStore.js</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; mapState, useStore &#125; <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; computed &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">useState</span> (<span class="params">mapper</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> store = useStore();</span><br><span class="line">  <span class="keyword">const</span> stateFunc = mapState(mapper);</span><br><span class="line">  <span class="keyword">const</span> storeState = &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">Object</span>.keys(stateFunc).forEach(<span class="function"><span class="params">fnkey</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> fn = stateFunc[fnkey].bind(&#123; <span class="attr">$store</span>: store &#125;)</span><br><span class="line">    storeState[fnkey] = computed(fn)</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> storeState</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在项目中直接使用</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line">import &#123; useState &#125; from &#x27;./hooks/useState.js&#x27;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  setup () &#123;</span><br><span class="line">    //数组用法</span><br><span class="line">    // const storeState = useState([&#x27;name&#x27;, &#x27;age&#x27;]) ;</span><br><span class="line">    //对象用法</span><br><span class="line">    const storeState = useState(&#123;</span><br><span class="line">      sName: state =&gt; state.name,</span><br><span class="line">      sAge: state =&gt; state.age</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    return &#123;</span><br><span class="line">      ...storeState</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>遇事不能死脑筋，要懂得变通~~~，</p>
+]]></content>
+      <categories>
+        <category>Vuex</category>
+      </categories>
+      <tags>
+        <tag>Vuex</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vuex mapState使用</title>
     <url>/20210708/50-vuex-mapState%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -2056,34 +2084,6 @@ console.log(`Files count: $&#123;count&#125;`)
     &#125;
 </code></pre>
 <p>总结: mapState算是一个便捷函数，具体好处自己体会吧，具体详情看文档<span class="exturl" data-url="aHR0cHM6Ly9uZXh0LnZ1ZXgudnVlanMub3JnL3poL2d1aWRlL3N0YXRlLmh0bWwjbWFwc3RhdGUtJUU4JUJFJTg1JUU1JThBJUE5JUU1JTg3JUJEJUU2JTk1JUIw">mapState<i class="fa fa-external-link-alt"></i></span></p>
-]]></content>
-      <categories>
-        <category>Vuex</category>
-      </categories>
-      <tags>
-        <tag>Vuex</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vuex-mapState在compositionApi使用</title>
-    <url>/20210709/51-Vuex-mapState%E5%9C%A8compositionApi%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>在compositionApi的setup中，我们发现mapState似乎并不好用，官网也没给出什么解决办法，今天这里分享一个小技巧~</p>
-</blockquote>
-<h2 id="setup"><a href="#setup" class="headerlink" title="setup"></a>setup</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line">import &#123; useStore, mapState &#125; from &#x27;vuex&#x27;;</span><br><span class="line">import &#123; computed &#125; from &#x27;vue&#x27;;</span><br><span class="line"></span><br><span class="line">  export default&#123;</span><br><span class="line">    setup()&#123;</span><br><span class="line">      const store = useStore();</span><br><span class="line">      const name = computed(()=&gt; store.state.name )</span><br><span class="line">      const age = computed(()=&gt; store.state.age )</span><br><span class="line"></span><br><span class="line">      return&#123;</span><br><span class="line">        age</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>上面的写法，如果属性多了太麻烦了，并且不能用到mapState</p>
-<h2 id="mapState"><a href="#mapState" class="headerlink" title="mapState"></a>mapState</h2><p> 我们要搞明白mapState返回的是函数(下例中，stateFunc是不能直接在template中使用的)，我们可以利用计算属性</p>
-<p> 但是要注意mapState返回的函数其实是this.$store.state.xxx。setup中没有this，所以可以通过bind绑定一个this</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">import &#123; useStore, mapState &#125; from &#x27;vuex&#x27;;</span><br><span class="line">import &#123; computed &#125; from &#x27;vue&#x27;;</span><br><span class="line">export default &#123;</span><br><span class="line">  setup () &#123;</span><br><span class="line">    const store = useStore();</span><br><span class="line">    const stateFunc = mapState([&#x27;name&#x27;, &#x27;age&#x27;]);</span><br><span class="line"></span><br><span class="line">    const storeState = &#123;&#125;</span><br><span class="line"></span><br><span class="line">    Object.keys(stateFunc).forEach(fnkey =&gt; &#123;</span><br><span class="line">      const fn = stateFunc[fnkey].bind(&#123; $store: store &#125;)</span><br><span class="line">      storeState[fnkey] = computed(fn)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    return &#123;</span><br><span class="line">      ...storeState</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="封装hooks"><a href="#封装hooks" class="headerlink" title="封装hooks"></a>封装hooks</h2><p>新建hooks文件夹，创建文件 useStore.js</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; mapState, useStore &#125; <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; computed &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">useState</span> (<span class="params">mapper</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> store = useStore();</span><br><span class="line">  <span class="keyword">const</span> stateFunc = mapState(mapper);</span><br><span class="line">  <span class="keyword">const</span> storeState = &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">Object</span>.keys(stateFunc).forEach(<span class="function"><span class="params">fnkey</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> fn = stateFunc[fnkey].bind(&#123; <span class="attr">$store</span>: store &#125;)</span><br><span class="line">    storeState[fnkey] = computed(fn)</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> storeState</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在项目中直接使用</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line">import &#123; useState &#125; from &#x27;./hooks/useState.js&#x27;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  setup () &#123;</span><br><span class="line">    //数组用法</span><br><span class="line">    // const storeState = useState([&#x27;name&#x27;, &#x27;age&#x27;]) ;</span><br><span class="line">    //对象用法</span><br><span class="line">    const storeState = useState(&#123;</span><br><span class="line">      sName: state =&gt; state.name,</span><br><span class="line">      sAge: state =&gt; state.age</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    return &#123;</span><br><span class="line">      ...storeState</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>遇事不能死脑筋，要懂得变通~~~，</p>
 ]]></content>
       <categories>
         <category>Vuex</category>
@@ -2444,6 +2444,45 @@ console.log(`Files count: $&#123;count&#125;`)
       </tags>
   </entry>
   <entry>
+    <title>进程和线程的简单理解</title>
+    <url>/20210714/64-%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%AE%80%E5%8D%95%E7%90%86%E8%A7%A3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="进程和线程的简单理解"><a href="#进程和线程的简单理解" class="headerlink" title="进程和线程的简单理解"></a>进程和线程的简单理解</h2><p>进程，是指在系统中正在运行的一个应用程序，程序一旦运行就是进程。比如打开一个QQ音乐就是启动了一个QQ音乐进程，打开一个 Word 就启动了一个 Word 进程。进程是操作系统分配资源的最小单位。如下图，每一个进程都拥有独立的内存单元。</p>
+<img src="https://blog.img.wy1991.cn/static/images/js/neicun.png-blogImg"> 
+
+
+<p>在一个进程内部，可以同时运行多个“子任务”，也就是多个线程。如上所示，在一个进程中，而多个线程共享内存。线程是进程之内程序执行的最小单位。</p>
+<p>可以将进程理解为工厂中的一条流水线，其中的线程就是这个流水线上的工人。</p>
+<img src="https://blog.img.wy1991.cn/static/images/js/liushuixian.png-blogImg"> 
+
+
+<p>假如我们需要完成一批药品出厂前的一系列的认证检验，我们就可以开启一条流水线（进程），并分配需要的资源，如工作台、检验工具、药品等等，有了这些资源，就可以安排工人（线程），工人拿着这些资源进行产品检验，也就相当于线程执行程序。</p>
+<p>如上图所示，完成检验需要四个步骤：原料检验、生产过程检验、GMP认证、药品监督管理。当需要检验的药品数量较少时，可以由一个工人完成这四个步骤，也就是单线程处理。</p>
+<p>而当药品数量变得很多时，一个工人就太慢了，这时，可以为每一种检验安排一个工人，这四个工人在同一条生产线工作，共享工作台等资源，并行处理各自的任务，这就相当于多线程处理。</p>
+<p>简而言之，进程和线程之间的关系有以下几个特点：</p>
+<ol>
+<li>线程必须存在于进程中，一个进程至少有一个线程 —- 工人需要在流水线上处理工作，完成检验至少需要一个工人。</li>
+</ol>
+<ol start="2">
+<li>进程中的任意一线程执行出错，都会导致整个进程的崩溃 —- 流水线中任何一处电路短路，整个流水线就会停电。</li>
+</ol>
+<ol start="3">
+<li>线程之间共享进程中的数据 —- 工人共享流水线上的工具、资源等。</li>
+</ol>
+<ol start="4">
+<li>当一个进程关闭之后，操作系统会回收进程所占用的内存 —- 一次检验完成，工厂可以关闭这条流水线，将流水线的资源收回分配给其他流水线。</li>
+</ol>
+<ol start="5">
+<li>进程之间的内容相互隔离 —- 两条流水线的资源和任务是相互独立的。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>进程和线程</category>
+      </categories>
+      <tags>
+        <tag>进程和线程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>箭头函数的this</title>
     <url>/20210627/63-%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E7%9A%84this/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="箭头函数的-this"><a href="#箭头函数的-this" class="headerlink" title="箭头函数的 this"></a>箭头函数的 this</h3><p>1：箭头函数中 this 是在定义函数时候绑定的，而不是在执行的时候绑定</p>
@@ -2485,45 +2524,6 @@ console.log(`Files count: $&#123;count&#125;`)
       </categories>
       <tags>
         <tag>Promise</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>进程和线程的简单理解</title>
-    <url>/20210714/64-%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%AE%80%E5%8D%95%E7%90%86%E8%A7%A3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="进程和线程的简单理解"><a href="#进程和线程的简单理解" class="headerlink" title="进程和线程的简单理解"></a>进程和线程的简单理解</h2><p>进程，是指在系统中正在运行的一个应用程序，程序一旦运行就是进程。比如打开一个QQ音乐就是启动了一个QQ音乐进程，打开一个 Word 就启动了一个 Word 进程。进程是操作系统分配资源的最小单位。如下图，每一个进程都拥有独立的内存单元。</p>
-<img src="https://blog.img.wy1991.cn/static/images/js/neicun.png-blogImg"> 
-
-
-<p>在一个进程内部，可以同时运行多个“子任务”，也就是多个线程。如上所示，在一个进程中，而多个线程共享内存。线程是进程之内程序执行的最小单位。</p>
-<p>可以将进程理解为工厂中的一条流水线，其中的线程就是这个流水线上的工人。</p>
-<img src="https://blog.img.wy1991.cn/static/images/js/liushuixian.png-blogImg"> 
-
-
-<p>假如我们需要完成一批药品出厂前的一系列的认证检验，我们就可以开启一条流水线（进程），并分配需要的资源，如工作台、检验工具、药品等等，有了这些资源，就可以安排工人（线程），工人拿着这些资源进行产品检验，也就相当于线程执行程序。</p>
-<p>如上图所示，完成检验需要四个步骤：原料检验、生产过程检验、GMP认证、药品监督管理。当需要检验的药品数量较少时，可以由一个工人完成这四个步骤，也就是单线程处理。</p>
-<p>而当药品数量变得很多时，一个工人就太慢了，这时，可以为每一种检验安排一个工人，这四个工人在同一条生产线工作，共享工作台等资源，并行处理各自的任务，这就相当于多线程处理。</p>
-<p>简而言之，进程和线程之间的关系有以下几个特点：</p>
-<ol>
-<li>线程必须存在于进程中，一个进程至少有一个线程 —- 工人需要在流水线上处理工作，完成检验至少需要一个工人。</li>
-</ol>
-<ol start="2">
-<li>进程中的任意一线程执行出错，都会导致整个进程的崩溃 —- 流水线中任何一处电路短路，整个流水线就会停电。</li>
-</ol>
-<ol start="3">
-<li>线程之间共享进程中的数据 —- 工人共享流水线上的工具、资源等。</li>
-</ol>
-<ol start="4">
-<li>当一个进程关闭之后，操作系统会回收进程所占用的内存 —- 一次检验完成，工厂可以关闭这条流水线，将流水线的资源收回分配给其他流水线。</li>
-</ol>
-<ol start="5">
-<li>进程之间的内容相互隔离 —- 两条流水线的资源和任务是相互独立的。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>进程和线程</category>
-      </categories>
-      <tags>
-        <tag>进程和线程</tag>
       </tags>
   </entry>
   <entry>
@@ -2644,34 +2644,6 @@ console.log(`Files count: $&#123;count&#125;`)
       </categories>
       <tags>
         <tag>杂谈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>微信小程序登录的坑</title>
-    <url>/20210718/70-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%99%BB%E5%BD%95%E7%9A%84%E5%9D%91/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前情概要"><a href="#前情概要" class="headerlink" title="前情概要"></a>前情概要</h2><ol>
-<li>小程序端有 wx.login 获取 code，然后后端通过 code 换取 session_key；</li>
-<li>小程序端有 wx.getUserInfo 获取用户信息</li>
-</ol>
-<p>一开始处理登录的时候，前端通过 wx.login 获取到 code，然后通过 wx.getUserInfo 获取用户相关的信息，一起传递给后端，后端进行 sha1 验证，但是每次登录的时候，第一次验证不通过，导致登录不成功，需要第二次进行登录。</p>
-<p>本身接口的设计就是通过 code 获取到 session_key 和 unionid 进行验证，如果数据库存在就直接进行当前用户登录，不存在通过 sha1 验证用户信息成功后，解密用户信息获取用户数据并进行自动注册后登录。</p>
-<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>小程序的文档，我仔细看了下，没发现有说明这两个接口调用的先后顺序，多次测试不成功之后才发现：</p>
-<ol>
-<li>小程序调用 wx.login 的时候，并不会在微信小程序自己的服务器上生成 session_key；</li>
-<li>session_key 有过期时间，具体过期时间小程序文档的说明是，使用小程序越频繁过期时间越久；</li>
-<li>code 有过期时间，过期时间 5 分钟；</li>
-<li>每次调用 wx.login 获取到的 code 不一样，但是如果 session_key 没有过期，那么后端通过接口取到的 session_key 和上一次 code 取到的 session_key 一致；</li>
-<li>小程序端通过 wx.getUserInfo 获取到的信息，相关的 signature 依赖于 wx.login 所产生的 session_key 进行加密；</li>
-</ol>
-<p>以上是小程序的机制，从这里来看，按理来说，调用 wx.login 然后再调用 wx.getUserInfo 接口获取用户数据，传递到后端，再请求 session_key 然后验证用户数据进行自动注册应该来说是可行的，但实际上坑就再第一点。</p>
-<p>也就是说，小程序端调用 wx.getUserInfo 获取用户信息的时候，使用的是上一次服务端请求产生的 session_key，当数据一起传送到后端的时候，通过 code 获取数据，但是此时上次的 session_key 已经过期了，会返回新的 session_key，然后就会导致验证不通过。</p>
-<p>所以整体上来说，后端应该先通过 wx.login 接口的 code 在后端获取到 session_key 以及 unionid，如果 unionid 检测当前用户不存在，缓存 session_key 和 unionid，再告知前端通过 wx.getUserInfo 接口向后端请求并进行注册绑定。</p>
-]]></content>
-      <categories>
-        <category>微信小程序</category>
-      </categories>
-      <tags>
-        <tag>微信小程序</tag>
       </tags>
   </entry>
   <entry>
@@ -2820,6 +2792,34 @@ $ git commit --amend [file1] [file2] ...
       </categories>
       <tags>
         <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小程序登录的坑</title>
+    <url>/20210718/70-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%99%BB%E5%BD%95%E7%9A%84%E5%9D%91/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前情概要"><a href="#前情概要" class="headerlink" title="前情概要"></a>前情概要</h2><ol>
+<li>小程序端有 wx.login 获取 code，然后后端通过 code 换取 session_key；</li>
+<li>小程序端有 wx.getUserInfo 获取用户信息</li>
+</ol>
+<p>一开始处理登录的时候，前端通过 wx.login 获取到 code，然后通过 wx.getUserInfo 获取用户相关的信息，一起传递给后端，后端进行 sha1 验证，但是每次登录的时候，第一次验证不通过，导致登录不成功，需要第二次进行登录。</p>
+<p>本身接口的设计就是通过 code 获取到 session_key 和 unionid 进行验证，如果数据库存在就直接进行当前用户登录，不存在通过 sha1 验证用户信息成功后，解密用户信息获取用户数据并进行自动注册后登录。</p>
+<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>小程序的文档，我仔细看了下，没发现有说明这两个接口调用的先后顺序，多次测试不成功之后才发现：</p>
+<ol>
+<li>小程序调用 wx.login 的时候，并不会在微信小程序自己的服务器上生成 session_key；</li>
+<li>session_key 有过期时间，具体过期时间小程序文档的说明是，使用小程序越频繁过期时间越久；</li>
+<li>code 有过期时间，过期时间 5 分钟；</li>
+<li>每次调用 wx.login 获取到的 code 不一样，但是如果 session_key 没有过期，那么后端通过接口取到的 session_key 和上一次 code 取到的 session_key 一致；</li>
+<li>小程序端通过 wx.getUserInfo 获取到的信息，相关的 signature 依赖于 wx.login 所产生的 session_key 进行加密；</li>
+</ol>
+<p>以上是小程序的机制，从这里来看，按理来说，调用 wx.login 然后再调用 wx.getUserInfo 接口获取用户数据，传递到后端，再请求 session_key 然后验证用户数据进行自动注册应该来说是可行的，但实际上坑就再第一点。</p>
+<p>也就是说，小程序端调用 wx.getUserInfo 获取用户信息的时候，使用的是上一次服务端请求产生的 session_key，当数据一起传送到后端的时候，通过 code 获取数据，但是此时上次的 session_key 已经过期了，会返回新的 session_key，然后就会导致验证不通过。</p>
+<p>所以整体上来说，后端应该先通过 wx.login 接口的 code 在后端获取到 session_key 以及 unionid，如果 unionid 检测当前用户不存在，缓存 session_key 和 unionid，再告知前端通过 wx.getUserInfo 接口向后端请求并进行注册绑定。</p>
+]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
+      <tags>
+        <tag>微信小程序</tag>
       </tags>
   </entry>
   <entry>
@@ -3055,6 +3055,64 @@ catchtouchmove
       </tags>
   </entry>
   <entry>
+    <title>js 获取本周开始结束时间，本月开始结束时间等....</title>
+    <url>/20210720/77-js-%E8%8E%B7%E5%8F%96%E6%9C%AC%E5%91%A8%E5%BC%80%E5%A7%8B%E7%BB%93%E6%9D%9F%E6%97%B6%E9%97%B4%EF%BC%8C%E6%9C%AC%E6%9C%88%E5%BC%80%E5%A7%8B%E7%BB%93%E6%9D%9F%E6%97%B6%E9%97%B4%E7%AD%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="获取周，月开始结束时间"><a href="#获取周，月开始结束时间" class="headerlink" title="获取周，月开始结束时间"></a>获取周，月开始结束时间</h2> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">var</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>(); <span class="comment">// 当前日期</span></span><br><span class="line"><span class="keyword">var</span> nowDayOfWeek = now.getDay(); <span class="comment">// 今天本周的第几天</span></span><br><span class="line"><span class="keyword">var</span> nowDay = now.getDate(); <span class="comment">// 当前日</span></span><br><span class="line"><span class="keyword">var</span> nowMonth = now.getMonth(); <span class="comment">// 当前月</span></span><br><span class="line"><span class="keyword">var</span> nowYear = now.getYear(); <span class="comment">// 当前年</span></span><br><span class="line">nowYear += (nowYear &lt; <span class="number">2000</span>) ? <span class="number">1900</span> : <span class="number">0</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">var</span> DateUtil = &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获得当前日期</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@returns</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="title">getNowDay</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.formatDate(<span class="keyword">new</span> <span class="built_in">Date</span>());</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获得本周的开始时间</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@returns</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="title">getStartDayOfWeek</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> day = nowDayOfWeek || <span class="number">7</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.formatDate(<span class="keyword">new</span> <span class="built_in">Date</span>(now.getFullYear(), nowMonth, nowDay + <span class="number">1</span> - day));</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获得本周的结束时间</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@returns</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="title">getEndDayOfWeek</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> day = nowDayOfWeek || <span class="number">7</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.formatDate(<span class="keyword">new</span> <span class="built_in">Date</span>(now.getFullYear(), nowMonth, nowDay + <span class="number">7</span> - day));</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获得本月的开始时间</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@returns</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="title">getStartDayOfMonth</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> monthStartDate = <span class="keyword">new</span> <span class="built_in">Date</span>(nowYear, nowMonth, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.formatDate(monthStartDate);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获得本月的结束时间</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@returns</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="title">getEndDayOfMonth</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> monthEndDate = <span class="keyword">new</span> <span class="built_in">Date</span>(nowYear, nowMonth, <span class="built_in">this</span>.getMonthDays());</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.formatDate(monthEndDate);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获得本月天数</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@returns</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="title">getMonthDays</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> monthStartDate = <span class="keyword">new</span> <span class="built_in">Date</span>(nowYear, nowMonth, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">var</span> monthEndDate = <span class="keyword">new</span> <span class="built_in">Date</span>(nowYear, nowMonth + <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">var</span> days = (monthEndDate - monthStartDate) / (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span>);</span><br><span class="line">        <span class="keyword">return</span> days;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param </span>日期格式化</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@returns <span class="type">&#123;String&#125;</span></span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="title">formatDate</span>(<span class="params">date</span>)</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> myyear = date.getFullYear();</span><br><span class="line">        <span class="keyword">var</span> mymonth = date.getMonth() + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">var</span> myweekday = date.getDate();</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">if</span> (mymonth &lt; <span class="number">10</span>) &#123;</span><br><span class="line">            mymonth = <span class="string">&quot;0&quot;</span> + mymonth;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (myweekday &lt; <span class="number">10</span>) &#123;</span><br><span class="line">            myweekday = <span class="string">&quot;0&quot;</span> + myweekday;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (myyear + <span class="string">&quot;-&quot;</span> + mymonth + <span class="string">&quot;-&quot;</span> + myweekday);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">    DateUtil</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="获取最近7天"><a href="#获取最近7天" class="headerlink" title="获取最近7天"></a>获取最近7天</h2><figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"><span class="comment">//返回最近七天的日期   0当前日期，7 最近7天</span></span><br><span class="line"><span class="keyword">function</span> getday<span class="constructor">List(<span class="params">day</span> = 0)</span> &#123;</span><br><span class="line">	var today = <span class="keyword">new</span> <span class="constructor">Date()</span>;</span><br><span class="line">	var targetday_milliseconds = today.get<span class="constructor">Time()</span> + <span class="number">1000</span><span class="operator"> * </span><span class="number">60</span><span class="operator"> * </span><span class="number">60</span><span class="operator"> * </span><span class="number">24</span><span class="operator"> * </span>day;</span><br><span class="line">	today.set<span class="constructor">Time(<span class="params">targetday_milliseconds</span>)</span>; <span class="comment">//注意，这行是关键代码</span></span><br><span class="line">	var tYear = today.get<span class="constructor">FullYear()</span>;</span><br><span class="line">	var tMonth = today.get<span class="constructor">Month()</span>;</span><br><span class="line">	var tDate = today.get<span class="constructor">Date()</span>;</span><br><span class="line">	tMonth = <span class="keyword">do</span><span class="constructor">HandleMonth(<span class="params">tMonth</span> + 1)</span>;</span><br><span class="line">	tDate = <span class="keyword">do</span><span class="constructor">HandleMonth(<span class="params">tDate</span>)</span>;</span><br><span class="line">	return tYear + <span class="string">&quot;-&quot;</span> + tMonth + <span class="string">&quot;-&quot;</span> + tDate;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="keyword">do</span><span class="constructor">HandleMonth(<span class="params">month</span>)</span> &#123;</span><br><span class="line">	var m = month;</span><br><span class="line">	<span class="keyword">if</span> (month.<span class="keyword">to</span><span class="constructor">String()</span>.length<span class="operator"> == </span><span class="number">1</span>) &#123;</span><br><span class="line">		m = <span class="string">&quot;0&quot;</span> + month;</span><br><span class="line">	&#125;</span><br><span class="line">	return m;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="根据两个日期获取天数差"><a href="#根据两个日期获取天数差" class="headerlink" title="根据两个日期获取天数差"></a>根据两个日期获取天数差</h2><figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="constructor">GetNumberOfDays(<span class="params">date1</span>, <span class="params">date2</span>)</span> &#123; <span class="comment">//获得天数</span></span><br><span class="line">	<span class="comment">//date1：开始日期，date2结束日期</span></span><br><span class="line">	var a1 = <span class="module-access"><span class="module"><span class="identifier">Date</span>.</span></span>parse(<span class="keyword">new</span> <span class="constructor">Date(<span class="params">date1</span>)</span>);</span><br><span class="line">	var a2 = <span class="module-access"><span class="module"><span class="identifier">Date</span>.</span></span>parse(<span class="keyword">new</span> <span class="constructor">Date(<span class="params">date2</span>)</span>);</span><br><span class="line">	var day = parse<span class="constructor">Int((<span class="params">a2</span> - <span class="params">a1</span>)</span><span class="operator"> / </span>(<span class="number">1000</span><span class="operator"> * </span><span class="number">60</span><span class="operator"> * </span><span class="number">60</span><span class="operator"> * </span><span class="number">24</span>)); <span class="comment">//核心：时间戳相减，然后除以天数</span></span><br><span class="line">	return day</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="时间戳转换对象"><a href="#时间戳转换对象" class="headerlink" title="时间戳转换对象"></a>时间戳转换对象</h2><figure class="highlight qml"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getDayStrToArray</span>(<span class="params">dateStr</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">const</span> <span class="built_in">date</span> = <span class="keyword">new</span> <span class="built_in">Date</span>(dateStr)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">const</span> formatObj = &#123;</span><br><span class="line">		<span class="attribute">y</span>: <span class="built_in">date</span>.getFullYear(),</span><br><span class="line">		<span class="attribute">m</span>: <span class="built_in">date</span>.getMonth() + <span class="number">1</span>,</span><br><span class="line">		<span class="attribute">d</span>: <span class="built_in">date</span>.getDate(),</span><br><span class="line">		<span class="attribute">h</span>: <span class="built_in">date</span>.getHours(),</span><br><span class="line">		<span class="attribute">i</span>: <span class="built_in">date</span>.getMinutes(),</span><br><span class="line">		<span class="attribute">s</span>: <span class="built_in">date</span>.getSeconds(),</span><br><span class="line">		<span class="attribute">a</span>: <span class="built_in">date</span>.getDay()</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> formatObj</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="时间戳转换时间格式"><a href="#时间戳转换时间格式" class="headerlink" title="时间戳转换时间格式"></a>时间戳转换时间格式</h2><figure class="highlight excel"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">function getTimeStampToDate(second_time) &#123;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">var</span> <span class="built_in">time</span> = parseInt(second_time) + <span class="string">&quot;秒&quot;</span>;</span><br><span class="line">	<span class="built_in">if</span> (parseInt(second_time) &gt; <span class="number">60</span>) &#123;</span><br><span class="line"></span><br><span class="line">		<span class="built_in">var</span> <span class="built_in">second</span> = parseInt(second_time) % <span class="number">60</span>;</span><br><span class="line">		<span class="built_in">var</span> <span class="built_in">min</span> = parseInt(second_time / <span class="number">60</span>);</span><br><span class="line">		<span class="built_in">time</span> = <span class="built_in">min</span> + <span class="string">&quot;分&quot;</span> + <span class="built_in">second</span> + <span class="string">&quot;秒&quot;</span>;</span><br><span class="line"></span><br><span class="line">		<span class="built_in">if</span> (<span class="built_in">min</span> &gt; <span class="number">60</span>) &#123;</span><br><span class="line">			<span class="built_in">min</span> = parseInt(second_time / <span class="number">60</span>) % <span class="number">60</span>;</span><br><span class="line">			<span class="built_in">var</span> <span class="built_in">hour</span> = parseInt(parseInt(second_time / <span class="number">60</span>) / <span class="number">60</span>);</span><br><span class="line">			<span class="built_in">time</span> = <span class="built_in">hour</span> + <span class="string">&quot;小时&quot;</span> + <span class="built_in">min</span> + <span class="string">&quot;分&quot;</span> + <span class="built_in">second</span> + <span class="string">&quot;秒&quot;</span>;</span><br><span class="line"></span><br><span class="line">			<span class="built_in">if</span> (<span class="built_in">hour</span> &gt; <span class="number">24</span>) &#123;</span><br><span class="line">				<span class="built_in">hour</span> = parseInt(parseInt(second_time / <span class="number">60</span>) / <span class="number">60</span>) % <span class="number">24</span>;</span><br><span class="line">				<span class="built_in">var</span> <span class="built_in">day</span> = parseInt(parseInt(parseInt(second_time / <span class="number">60</span>) / <span class="number">60</span>) / <span class="number">24</span>);</span><br><span class="line">				<span class="built_in">time</span> = <span class="built_in">day</span> + <span class="string">&quot;天&quot;</span> + <span class="built_in">hour</span> + <span class="string">&quot;小时&quot;</span> + <span class="built_in">min</span> + <span class="string">&quot;分&quot;</span> + <span class="built_in">second</span> + <span class="string">&quot;秒&quot;</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	return <span class="built_in">time</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>web worker实测</title>
+    <url>/20210720/78-web-worker%E5%AE%9E%E6%B5%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="web-worker的好处"><a href="#web-worker的好处" class="headerlink" title="web worker的好处"></a>web worker的好处</h2><blockquote>
+<p>比如一些计算量大的，耗时的，任务，可以用web worker单独开线程去跑，不会影响到主线程的运行这样主线程（ui交互渲染等）就不会被阻塞，页面流畅,为js创造多线程环境</p>
+</blockquote>
+<h2 id="实际如何使用呢？"><a href="#实际如何使用呢？" class="headerlink" title="实际如何使用呢？"></a>实际如何使用呢？</h2><p>首先要理解一个区别，主线程和子线程是分别独立，不要混在一起去理解</p>
+<img src="https://blog.img.wy1991.cn/static/images/js/worker.png-blogImg">
+
+
+<p>上一段代码，方便理解：</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 文件的目录结构：</span></span><br><span class="line">├── index<span class="selector-class">.html</span></span><br><span class="line">└── poorWorker<span class="selector-class">.js</span> （穷人打工仔，worker，干活的人）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="这是主线程：index-html"><a href="#这是主线程：index-html" class="headerlink" title="这是主线程：index.html"></a>这是主线程：index.html</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> worker = <span class="keyword">new</span> Worker(<span class="string">&#x27;./poorWorker.js&#x27;</span>);</span></span><br><span class="line"><span class="javascript">worker.postMessage(<span class="string">&quot;我是主进程， 我是boss，我传给worker线程消息： 赶紧干活！！&quot;</span>);</span></span><br><span class="line"><span class="javascript">worker.onmessage = <span class="function"><span class="params">msg</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">  <span class="built_in">console</span>.log(msg)</span></span><br><span class="line"><span class="javascript">  <span class="built_in">console</span>.log(<span class="string">&quot;我是主进程，我是boss，接收的子线程的数据：&quot;</span>, msg.data);</span></span><br><span class="line"><span class="javascript">  worker.terminate(); <span class="comment">// 关闭主线程</span></span></span><br><span class="line"><span class="javascript">&#125;;</span></span><br><span class="line"><span class="javascript">worker.onerror = <span class="function"><span class="params">e</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">  <span class="built_in">console</span>.log(e)</span></span><br><span class="line"><span class="javascript">&#125;;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="这是子线程：poorWorker-js"><a href="#这是子线程：poorWorker-js" class="headerlink" title="这是子线程：poorWorker.js"></a>这是子线程：poorWorker.js</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="regexp">//</span> importScripts(<span class="string">&#x27;./hello2.js&#x27;</span>, <span class="string">&#x27;http://xxx/a.js&#x27;</span>); <span class="regexp">//</span> 此处可以指出多脚本， 加载的脚本不支持跨域!!</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span> self 代表子线程自身，即子线程的全局对象。</span><br><span class="line"><span class="regexp">//</span> self可以换成this或不写，也可以实现执行。此处用self用于区分子线程worker</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span> 监听主线程传过来的信息</span><br><span class="line">self.onmessage = e =&gt; &#123;</span><br><span class="line">  console.log(e)</span><br><span class="line">  console.log(<span class="string">&#x27;我是子线程， 我在工作， 我是worker， 我收到主线程传来的信息：&#x27;</span>, e.data)</span><br><span class="line">  <span class="regexp">//</span> <span class="keyword">do</span> something</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span> setTimeout非必须，此处模拟，worker干了个耗时的活，<span class="number">2</span>s后告诉主线程（老板）活已经干完ok了。</span><br><span class="line">setTimeout(() =&gt; &#123;</span><br><span class="line">  <span class="regexp">//</span> 发送信息给主线程</span><br><span class="line">  self.postMessage(<span class="string">&#x27;我是子线程， 我在工作， 我是worker， 工作已经完成 ok&#x27;</span>)</span><br><span class="line">  closeSon()</span><br><span class="line">&#125;, <span class="number">2000</span>)</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span> 关闭worker线程</span><br><span class="line"><span class="keyword">function</span> closeSon () &#123;</span><br><span class="line">  return self.close()</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="打印效果如下："><a href="#打印效果如下：" class="headerlink" title="打印效果如下："></a>打印效果如下：</h3><img src="https://blog.img.wy1991.cn/static/images/js/worker1.png-blogImg">
+
+
+<h2 id="骚操作写法介绍（更推荐上面的写法）"><a href="#骚操作写法介绍（更推荐上面的写法）" class="headerlink" title="骚操作写法介绍（更推荐上面的写法）"></a>骚操作写法介绍（更推荐上面的写法）</h2><p>正常情况，推荐上面的写法：把worker部分，单独分离成一个.js文件。</p>
+<p>但强行把worker部分，不分离成.js，强行写在index.html内，也可以做到</p>
+<p>这是 index.html</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="regexp">//</span> 此处把上面的poorWorker.js放到data中</span><br><span class="line">const data = `</span><br><span class="line">  <span class="regexp">//</span> importScripts(<span class="string">&#x27;./hello2.js&#x27;</span>, <span class="string">&#x27;http://xxx/a.js&#x27;</span>); <span class="regexp">//</span> 此处可以指出多脚本， 加载的脚本不支持跨域!!</span><br><span class="line"></span><br><span class="line">  <span class="regexp">//</span> self 代表子线程自身，即子线程的全局对象。</span><br><span class="line">  <span class="regexp">//</span> self可以换成this或不写，也可以实现执行。此处用self用于区分子线程worker</span><br><span class="line"></span><br><span class="line">  <span class="regexp">//</span> 监听主线程传过来的信息</span><br><span class="line">  self.onmessage = e =&gt; &#123;</span><br><span class="line">    console.log(e)</span><br><span class="line">    console.log(<span class="string">&#x27;我是子线程， 我在工作， 我是worker， 我收到主线程传来的信息：&#x27;</span>, e.data)</span><br><span class="line">    <span class="regexp">//</span> <span class="keyword">do</span> something</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="regexp">//</span> setTimeout非必须，此处模拟，worker干了个耗时的活，<span class="number">2</span>s后告诉主线程（老板）活已经干完ok了。</span><br><span class="line">  setTimeout(() =&gt; &#123;</span><br><span class="line">    <span class="regexp">//</span> 发送信息给主线程</span><br><span class="line">    self.postMessage(<span class="string">&#x27;我是子线程， 我在工作， 我是worker， 工作已经完成 ok&#x27;</span>)</span><br><span class="line">    closeSon()</span><br><span class="line">  &#125;, <span class="number">2000</span>)</span><br><span class="line"></span><br><span class="line">  <span class="regexp">//</span> 关闭worker线程</span><br><span class="line">  <span class="keyword">function</span> closeSon () &#123;</span><br><span class="line">    return self.close()</span><br><span class="line">  &#125;</span><br><span class="line">`;</span><br><span class="line">const blob = new Blob([data]); <span class="regexp">//</span> 把poorWorker.js的内容转成二进制</span><br><span class="line">const url = window.URL.createObjectURL(blob); <span class="regexp">//</span> 把二进制转成一个本地链接</span><br><span class="line">const worker = new Worker(url); <span class="regexp">//</span> 利用了new Worker()只接受url的特点</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span> ... 后面的代码同上</span><br><span class="line">worker.postMessage(<span class="string">&quot;我是主进程， 我是boss，我传给worker线程消息： 赶紧干活！！&quot;</span>); </span><br><span class="line">worker.onmessage = msg =&gt; &#123; </span><br><span class="line">    console.log(msg) </span><br><span class="line">    console.log(<span class="string">&quot;我是主进程，我是boss，接收的子线程的数据：&quot;</span>, msg.data); </span><br><span class="line">    worker.terminate(); <span class="regexp">//</span> 关闭主线程</span><br><span class="line">&#125;; </span><br><span class="line">worker.onerror = e =&gt; &#123; </span><br><span class="line">    console.log(e) </span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="最后（断开）"><a href="#最后（断开）" class="headerlink" title="最后（断开）"></a>最后（断开）</h2><p>Worker 线程一旦新建成功，就会始终运行，不会被主线程上的活动（比如用户点击按钮、提交表单）打断。这样有利于随时响应主线程的通信。</p>
+<p>但是，这也造成了 Worker 比较耗费资源，不应该过度使用，而且一旦使用完毕，就应该关闭。</p>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>worker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML5 drag拖拽</title>
     <url>/20210630/8-HTML5-drag%E6%8B%96%E6%8B%BD/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="HTML5-Drag-amp-Drop"><a href="#HTML5-Drag-amp-Drop" class="headerlink" title="HTML5 : Drag &amp; Drop"></a>HTML5 : Drag &amp; Drop</h2><blockquote>
@@ -3117,27 +3175,6 @@ catchtouchmove
         <tag>html5</tag>
         <tag>drag</tag>
         <tag>拖拽</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js 获取本周开始结束时间，本月开始结束时间等....</title>
-    <url>/20210720/77-js-%E8%8E%B7%E5%8F%96%E6%9C%AC%E5%91%A8%E5%BC%80%E5%A7%8B%E7%BB%93%E6%9D%9F%E6%97%B6%E9%97%B4%EF%BC%8C%E6%9C%AC%E6%9C%88%E5%BC%80%E5%A7%8B%E7%BB%93%E6%9D%9F%E6%97%B6%E9%97%B4%E7%AD%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="获取周，月开始结束时间"><a href="#获取周，月开始结束时间" class="headerlink" title="获取周，月开始结束时间"></a>获取周，月开始结束时间</h2> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">var</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>(); <span class="comment">// 当前日期</span></span><br><span class="line"><span class="keyword">var</span> nowDayOfWeek = now.getDay(); <span class="comment">// 今天本周的第几天</span></span><br><span class="line"><span class="keyword">var</span> nowDay = now.getDate(); <span class="comment">// 当前日</span></span><br><span class="line"><span class="keyword">var</span> nowMonth = now.getMonth(); <span class="comment">// 当前月</span></span><br><span class="line"><span class="keyword">var</span> nowYear = now.getYear(); <span class="comment">// 当前年</span></span><br><span class="line">nowYear += (nowYear &lt; <span class="number">2000</span>) ? <span class="number">1900</span> : <span class="number">0</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">var</span> DateUtil = &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获得当前日期</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@returns</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="title">getNowDay</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.formatDate(<span class="keyword">new</span> <span class="built_in">Date</span>());</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获得本周的开始时间</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@returns</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="title">getStartDayOfWeek</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> day = nowDayOfWeek || <span class="number">7</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.formatDate(<span class="keyword">new</span> <span class="built_in">Date</span>(now.getFullYear(), nowMonth, nowDay + <span class="number">1</span> - day));</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获得本周的结束时间</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@returns</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="title">getEndDayOfWeek</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> day = nowDayOfWeek || <span class="number">7</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.formatDate(<span class="keyword">new</span> <span class="built_in">Date</span>(now.getFullYear(), nowMonth, nowDay + <span class="number">7</span> - day));</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获得本月的开始时间</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@returns</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="title">getStartDayOfMonth</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> monthStartDate = <span class="keyword">new</span> <span class="built_in">Date</span>(nowYear, nowMonth, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.formatDate(monthStartDate);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获得本月的结束时间</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@returns</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="title">getEndDayOfMonth</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> monthEndDate = <span class="keyword">new</span> <span class="built_in">Date</span>(nowYear, nowMonth, <span class="built_in">this</span>.getMonthDays());</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.formatDate(monthEndDate);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获得本月天数</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@returns</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="title">getMonthDays</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> monthStartDate = <span class="keyword">new</span> <span class="built_in">Date</span>(nowYear, nowMonth, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">var</span> monthEndDate = <span class="keyword">new</span> <span class="built_in">Date</span>(nowYear, nowMonth + <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">var</span> days = (monthEndDate - monthStartDate) / (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span>);</span><br><span class="line">        <span class="keyword">return</span> days;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param </span>日期格式化</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@returns <span class="type">&#123;String&#125;</span></span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="title">formatDate</span>(<span class="params">date</span>)</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> myyear = date.getFullYear();</span><br><span class="line">        <span class="keyword">var</span> mymonth = date.getMonth() + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">var</span> myweekday = date.getDate();</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">if</span> (mymonth &lt; <span class="number">10</span>) &#123;</span><br><span class="line">            mymonth = <span class="string">&quot;0&quot;</span> + mymonth;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (myweekday &lt; <span class="number">10</span>) &#123;</span><br><span class="line">            myweekday = <span class="string">&quot;0&quot;</span> + myweekday;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (myyear + <span class="string">&quot;-&quot;</span> + mymonth + <span class="string">&quot;-&quot;</span> + myweekday);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">    DateUtil</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="获取最近7天"><a href="#获取最近7天" class="headerlink" title="获取最近7天"></a>获取最近7天</h2><figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"><span class="comment">//返回最近七天的日期   0当前日期，7 最近7天</span></span><br><span class="line"><span class="keyword">function</span> getday<span class="constructor">List(<span class="params">day</span> = 0)</span> &#123;</span><br><span class="line">	var today = <span class="keyword">new</span> <span class="constructor">Date()</span>;</span><br><span class="line">	var targetday_milliseconds = today.get<span class="constructor">Time()</span> + <span class="number">1000</span><span class="operator"> * </span><span class="number">60</span><span class="operator"> * </span><span class="number">60</span><span class="operator"> * </span><span class="number">24</span><span class="operator"> * </span>day;</span><br><span class="line">	today.set<span class="constructor">Time(<span class="params">targetday_milliseconds</span>)</span>; <span class="comment">//注意，这行是关键代码</span></span><br><span class="line">	var tYear = today.get<span class="constructor">FullYear()</span>;</span><br><span class="line">	var tMonth = today.get<span class="constructor">Month()</span>;</span><br><span class="line">	var tDate = today.get<span class="constructor">Date()</span>;</span><br><span class="line">	tMonth = <span class="keyword">do</span><span class="constructor">HandleMonth(<span class="params">tMonth</span> + 1)</span>;</span><br><span class="line">	tDate = <span class="keyword">do</span><span class="constructor">HandleMonth(<span class="params">tDate</span>)</span>;</span><br><span class="line">	return tYear + <span class="string">&quot;-&quot;</span> + tMonth + <span class="string">&quot;-&quot;</span> + tDate;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="keyword">do</span><span class="constructor">HandleMonth(<span class="params">month</span>)</span> &#123;</span><br><span class="line">	var m = month;</span><br><span class="line">	<span class="keyword">if</span> (month.<span class="keyword">to</span><span class="constructor">String()</span>.length<span class="operator"> == </span><span class="number">1</span>) &#123;</span><br><span class="line">		m = <span class="string">&quot;0&quot;</span> + month;</span><br><span class="line">	&#125;</span><br><span class="line">	return m;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="根据两个日期获取天数差"><a href="#根据两个日期获取天数差" class="headerlink" title="根据两个日期获取天数差"></a>根据两个日期获取天数差</h2><figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="constructor">GetNumberOfDays(<span class="params">date1</span>, <span class="params">date2</span>)</span> &#123; <span class="comment">//获得天数</span></span><br><span class="line">	<span class="comment">//date1：开始日期，date2结束日期</span></span><br><span class="line">	var a1 = <span class="module-access"><span class="module"><span class="identifier">Date</span>.</span></span>parse(<span class="keyword">new</span> <span class="constructor">Date(<span class="params">date1</span>)</span>);</span><br><span class="line">	var a2 = <span class="module-access"><span class="module"><span class="identifier">Date</span>.</span></span>parse(<span class="keyword">new</span> <span class="constructor">Date(<span class="params">date2</span>)</span>);</span><br><span class="line">	var day = parse<span class="constructor">Int((<span class="params">a2</span> - <span class="params">a1</span>)</span><span class="operator"> / </span>(<span class="number">1000</span><span class="operator"> * </span><span class="number">60</span><span class="operator"> * </span><span class="number">60</span><span class="operator"> * </span><span class="number">24</span>)); <span class="comment">//核心：时间戳相减，然后除以天数</span></span><br><span class="line">	return day</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h2 id="时间戳转换对象"><a href="#时间戳转换对象" class="headerlink" title="时间戳转换对象"></a>时间戳转换对象</h2><figure class="highlight qml"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getDayStrToArray</span>(<span class="params">dateStr</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">const</span> <span class="built_in">date</span> = <span class="keyword">new</span> <span class="built_in">Date</span>(dateStr)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">const</span> formatObj = &#123;</span><br><span class="line">		<span class="attribute">y</span>: <span class="built_in">date</span>.getFullYear(),</span><br><span class="line">		<span class="attribute">m</span>: <span class="built_in">date</span>.getMonth() + <span class="number">1</span>,</span><br><span class="line">		<span class="attribute">d</span>: <span class="built_in">date</span>.getDate(),</span><br><span class="line">		<span class="attribute">h</span>: <span class="built_in">date</span>.getHours(),</span><br><span class="line">		<span class="attribute">i</span>: <span class="built_in">date</span>.getMinutes(),</span><br><span class="line">		<span class="attribute">s</span>: <span class="built_in">date</span>.getSeconds(),</span><br><span class="line">		<span class="attribute">a</span>: <span class="built_in">date</span>.getDay()</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> formatObj</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="时间戳转换时间格式"><a href="#时间戳转换时间格式" class="headerlink" title="时间戳转换时间格式"></a>时间戳转换时间格式</h2><figure class="highlight excel"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">function getTimeStampToDate(second_time) &#123;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">var</span> <span class="built_in">time</span> = parseInt(second_time) + <span class="string">&quot;秒&quot;</span>;</span><br><span class="line">	<span class="built_in">if</span> (parseInt(second_time) &gt; <span class="number">60</span>) &#123;</span><br><span class="line"></span><br><span class="line">		<span class="built_in">var</span> <span class="built_in">second</span> = parseInt(second_time) % <span class="number">60</span>;</span><br><span class="line">		<span class="built_in">var</span> <span class="built_in">min</span> = parseInt(second_time / <span class="number">60</span>);</span><br><span class="line">		<span class="built_in">time</span> = <span class="built_in">min</span> + <span class="string">&quot;分&quot;</span> + <span class="built_in">second</span> + <span class="string">&quot;秒&quot;</span>;</span><br><span class="line"></span><br><span class="line">		<span class="built_in">if</span> (<span class="built_in">min</span> &gt; <span class="number">60</span>) &#123;</span><br><span class="line">			<span class="built_in">min</span> = parseInt(second_time / <span class="number">60</span>) % <span class="number">60</span>;</span><br><span class="line">			<span class="built_in">var</span> <span class="built_in">hour</span> = parseInt(parseInt(second_time / <span class="number">60</span>) / <span class="number">60</span>);</span><br><span class="line">			<span class="built_in">time</span> = <span class="built_in">hour</span> + <span class="string">&quot;小时&quot;</span> + <span class="built_in">min</span> + <span class="string">&quot;分&quot;</span> + <span class="built_in">second</span> + <span class="string">&quot;秒&quot;</span>;</span><br><span class="line"></span><br><span class="line">			<span class="built_in">if</span> (<span class="built_in">hour</span> &gt; <span class="number">24</span>) &#123;</span><br><span class="line">				<span class="built_in">hour</span> = parseInt(parseInt(second_time / <span class="number">60</span>) / <span class="number">60</span>) % <span class="number">24</span>;</span><br><span class="line">				<span class="built_in">var</span> <span class="built_in">day</span> = parseInt(parseInt(parseInt(second_time / <span class="number">60</span>) / <span class="number">60</span>) / <span class="number">24</span>);</span><br><span class="line">				<span class="built_in">time</span> = <span class="built_in">day</span> + <span class="string">&quot;天&quot;</span> + <span class="built_in">hour</span> + <span class="string">&quot;小时&quot;</span> + <span class="built_in">min</span> + <span class="string">&quot;分&quot;</span> + <span class="built_in">second</span> + <span class="string">&quot;秒&quot;</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	return <span class="built_in">time</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
       </tags>
   </entry>
   <entry>
@@ -4179,43 +4216,6 @@ catchtouchmove
       </categories>
       <tags>
         <tag>相册</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>web worker实测</title>
-    <url>/20210720/web-worker%E5%AE%9E%E6%B5%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="web-worker的好处"><a href="#web-worker的好处" class="headerlink" title="web worker的好处"></a>web worker的好处</h2><blockquote>
-<p>比如一些计算量大的，耗时的，任务，可以用web worker单独开线程去跑，不会影响到主线程的运行这样主线程（ui交互渲染等）就不会被阻塞，页面流畅,为js创造多线程环境</p>
-</blockquote>
-<h2 id="实际如何使用呢？"><a href="#实际如何使用呢？" class="headerlink" title="实际如何使用呢？"></a>实际如何使用呢？</h2><p>首先要理解一个区别，主线程和子线程是分别独立，不要混在一起去理解</p>
-<img src="https://blog.img.wy1991.cn/static/images/js/worker.png-blogImg">
-
-
-<p>上一段代码，方便理解：</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 文件的目录结构：</span></span><br><span class="line">├── index<span class="selector-class">.html</span></span><br><span class="line">└── poorWorker<span class="selector-class">.js</span> （穷人打工仔，worker，干活的人）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="这是主线程：index-html"><a href="#这是主线程：index-html" class="headerlink" title="这是主线程：index.html"></a>这是主线程：index.html</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> worker = <span class="keyword">new</span> Worker(<span class="string">&#x27;./poorWorker.js&#x27;</span>);</span></span><br><span class="line"><span class="javascript">worker.postMessage(<span class="string">&quot;我是主进程， 我是boss，我传给worker线程消息： 赶紧干活！！&quot;</span>);</span></span><br><span class="line"><span class="javascript">worker.onmessage = <span class="function"><span class="params">msg</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">  <span class="built_in">console</span>.log(msg)</span></span><br><span class="line"><span class="javascript">  <span class="built_in">console</span>.log(<span class="string">&quot;我是主进程，我是boss，接收的子线程的数据：&quot;</span>, msg.data);</span></span><br><span class="line"><span class="javascript">  worker.terminate(); <span class="comment">// 关闭主线程</span></span></span><br><span class="line"><span class="javascript">&#125;;</span></span><br><span class="line"><span class="javascript">worker.onerror = <span class="function"><span class="params">e</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">  <span class="built_in">console</span>.log(e)</span></span><br><span class="line"><span class="javascript">&#125;;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-<h3 id="这是子线程：poorWorker-js"><a href="#这是子线程：poorWorker-js" class="headerlink" title="这是子线程：poorWorker.js"></a>这是子线程：poorWorker.js</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="regexp">//</span> importScripts(<span class="string">&#x27;./hello2.js&#x27;</span>, <span class="string">&#x27;http://xxx/a.js&#x27;</span>); <span class="regexp">//</span> 此处可以指出多脚本， 加载的脚本不支持跨域!!</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span> self 代表子线程自身，即子线程的全局对象。</span><br><span class="line"><span class="regexp">//</span> self可以换成this或不写，也可以实现执行。此处用self用于区分子线程worker</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span> 监听主线程传过来的信息</span><br><span class="line">self.onmessage = e =&gt; &#123;</span><br><span class="line">  console.log(e)</span><br><span class="line">  console.log(<span class="string">&#x27;我是子线程， 我在工作， 我是worker， 我收到主线程传来的信息：&#x27;</span>, e.data)</span><br><span class="line">  <span class="regexp">//</span> <span class="keyword">do</span> something</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span> setTimeout非必须，此处模拟，worker干了个耗时的活，<span class="number">2</span>s后告诉主线程（老板）活已经干完ok了。</span><br><span class="line">setTimeout(() =&gt; &#123;</span><br><span class="line">  <span class="regexp">//</span> 发送信息给主线程</span><br><span class="line">  self.postMessage(<span class="string">&#x27;我是子线程， 我在工作， 我是worker， 工作已经完成 ok&#x27;</span>)</span><br><span class="line">  closeSon()</span><br><span class="line">&#125;, <span class="number">2000</span>)</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span> 关闭worker线程</span><br><span class="line"><span class="keyword">function</span> closeSon () &#123;</span><br><span class="line">  return self.close()</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="打印效果如下："><a href="#打印效果如下：" class="headerlink" title="打印效果如下："></a>打印效果如下：</h3><img src="https://blog.img.wy1991.cn/static/images/js/worker1.png-blogImg">
-
-
-<h2 id="骚操作写法介绍（更推荐上面的写法）"><a href="#骚操作写法介绍（更推荐上面的写法）" class="headerlink" title="骚操作写法介绍（更推荐上面的写法）"></a>骚操作写法介绍（更推荐上面的写法）</h2><p>正常情况，推荐上面的写法：把worker部分，单独分离成一个.js文件。</p>
-<p>但强行把worker部分，不分离成.js，强行写在index.html内，也可以做到</p>
-<p>这是 index.html</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="regexp">//</span> 此处把上面的poorWorker.js放到data中</span><br><span class="line">const data = `</span><br><span class="line">  <span class="regexp">//</span> importScripts(<span class="string">&#x27;./hello2.js&#x27;</span>, <span class="string">&#x27;http://xxx/a.js&#x27;</span>); <span class="regexp">//</span> 此处可以指出多脚本， 加载的脚本不支持跨域!!</span><br><span class="line"></span><br><span class="line">  <span class="regexp">//</span> self 代表子线程自身，即子线程的全局对象。</span><br><span class="line">  <span class="regexp">//</span> self可以换成this或不写，也可以实现执行。此处用self用于区分子线程worker</span><br><span class="line"></span><br><span class="line">  <span class="regexp">//</span> 监听主线程传过来的信息</span><br><span class="line">  self.onmessage = e =&gt; &#123;</span><br><span class="line">    console.log(e)</span><br><span class="line">    console.log(<span class="string">&#x27;我是子线程， 我在工作， 我是worker， 我收到主线程传来的信息：&#x27;</span>, e.data)</span><br><span class="line">    <span class="regexp">//</span> <span class="keyword">do</span> something</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="regexp">//</span> setTimeout非必须，此处模拟，worker干了个耗时的活，<span class="number">2</span>s后告诉主线程（老板）活已经干完ok了。</span><br><span class="line">  setTimeout(() =&gt; &#123;</span><br><span class="line">    <span class="regexp">//</span> 发送信息给主线程</span><br><span class="line">    self.postMessage(<span class="string">&#x27;我是子线程， 我在工作， 我是worker， 工作已经完成 ok&#x27;</span>)</span><br><span class="line">    closeSon()</span><br><span class="line">  &#125;, <span class="number">2000</span>)</span><br><span class="line"></span><br><span class="line">  <span class="regexp">//</span> 关闭worker线程</span><br><span class="line">  <span class="keyword">function</span> closeSon () &#123;</span><br><span class="line">    return self.close()</span><br><span class="line">  &#125;</span><br><span class="line">`;</span><br><span class="line">const blob = new Blob([data]); <span class="regexp">//</span> 把poorWorker.js的内容转成二进制</span><br><span class="line">const url = window.URL.createObjectURL(blob); <span class="regexp">//</span> 把二进制转成一个本地链接</span><br><span class="line">const worker = new Worker(url); <span class="regexp">//</span> 利用了new Worker()只接受url的特点</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span> ... 后面的代码同上</span><br><span class="line">worker.postMessage(<span class="string">&quot;我是主进程， 我是boss，我传给worker线程消息： 赶紧干活！！&quot;</span>); </span><br><span class="line">worker.onmessage = msg =&gt; &#123; </span><br><span class="line">    console.log(msg) </span><br><span class="line">    console.log(<span class="string">&quot;我是主进程，我是boss，接收的子线程的数据：&quot;</span>, msg.data); </span><br><span class="line">    worker.terminate(); <span class="regexp">//</span> 关闭主线程</span><br><span class="line">&#125;; </span><br><span class="line">worker.onerror = e =&gt; &#123; </span><br><span class="line">    console.log(e) </span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="最后（断开）"><a href="#最后（断开）" class="headerlink" title="最后（断开）"></a>最后（断开）</h2><p>Worker 线程一旦新建成功，就会始终运行，不会被主线程上的活动（比如用户点击按钮、提交表单）打断。这样有利于随时响应主线程的通信。</p>
-<p>但是，这也造成了 Worker 比较耗费资源，不应该过度使用，而且一旦使用完毕，就应该关闭。</p>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-        <tag>worker</tag>
       </tags>
   </entry>
 </search>
