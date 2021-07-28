@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.wy1991.cn/20210629/16-js-%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7utils/</loc>
+    
+    <lastmod>2021-07-28</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.wy1991.cn/20210728/86-js-%E8%A7%A3%E5%86%B3%E8%B6%85%E5%87%BA%E7%B2%BE%E5%BA%A6%E6%95%B0%E5%AD%97%E9%97%AE%E9%A2%98/</loc>
     
     <lastmod>2021-07-28</lastmod>
@@ -282,14 +289,14 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/20210627/62-%E9%98%B2%E6%8A%96%E4%B8%8E%E8%8A%82%E6%B5%81/</loc>
+    <loc>https://blog.wy1991.cn/20210627/63-%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E7%9A%84this/</loc>
     
     <lastmod>2021-07-05</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/20210627/63-%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E7%9A%84this/</loc>
+    <loc>https://blog.wy1991.cn/20210627/62-%E9%98%B2%E6%8A%96%E4%B8%8E%E8%8A%82%E6%B5%81/</loc>
     
     <lastmod>2021-07-05</lastmod>
     
@@ -317,14 +324,14 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/20210628/61-%E5%A4%A7%E5%B1%8F%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%A9%E7%94%A8scale%E5%AE%9E%E7%8E%B0%E8%87%AA%E9%80%82%E5%BA%94/</loc>
+    <loc>https://blog.wy1991.cn/20210629/60-web%E5%A4%9A%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/</loc>
     
     <lastmod>2021-07-05</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/20210629/60-web%E5%A4%9A%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/</loc>
+    <loc>https://blog.wy1991.cn/20210628/61-%E5%A4%A7%E5%B1%8F%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%A9%E7%94%A8scale%E5%AE%9E%E7%8E%B0%E8%87%AA%E9%80%82%E5%BA%94/</loc>
     
     <lastmod>2021-07-05</lastmod>
     
@@ -381,13 +388,6 @@
   
   <url>
     <loc>https://blog.wy1991.cn/20210701/20-js-%E6%89%8B%E5%86%99call-bind-apply/</loc>
-    
-    <lastmod>2021-07-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.wy1991.cn/20210629/16-js-%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7utils/</loc>
     
     <lastmod>2021-07-05</lastmod>
     
@@ -492,14 +492,14 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/20210628/47-Vue-v-model%E7%94%A8%E6%B3%95/</loc>
+    <loc>https://blog.wy1991.cn/20210628/46-Vue-tailwind%E5%AE%89%E8%A3%85/</loc>
     
     <lastmod>2021-07-05</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/20210628/46-Vue-tailwind%E5%AE%89%E8%A3%85/</loc>
+    <loc>https://blog.wy1991.cn/20210628/47-Vue-v-model%E7%94%A8%E6%B3%95/</loc>
     
     <lastmod>2021-07-05</lastmod>
     
@@ -641,14 +641,14 @@
 
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/%E5%88%9D%E5%BF%83/</loc>
+    <loc>https://blog.wy1991.cn/tags/js/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/js/</loc>
+    <loc>https://blog.wy1991.cn/tags/css/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -669,7 +669,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/css/</loc>
+    <loc>https://blog.wy1991.cn/tags/%E5%88%9D%E5%BF%83/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -725,13 +725,6 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/utils/</loc>
-    <lastmod>2021-07-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.wy1991.cn/tags/es6/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
@@ -753,13 +746,6 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/nodejs/</loc>
-    <lastmod>2021-07-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.wy1991.cn/tags/MarkDown/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
@@ -767,21 +753,14 @@
   </url>
   
   <url>
+    <loc>https://blog.wy1991.cn/tags/nodejs/</loc>
+    <lastmod>2021-07-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.wy1991.cn/tags/npm/</loc>
-    <lastmod>2021-07-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.wy1991.cn/tags/TS/</loc>
-    <lastmod>2021-07-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.wy1991.cn/tags/%E6%B3%9B%E5%9E%8B/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -796,6 +775,20 @@
   
   <url>
     <loc>https://blog.wy1991.cn/tags/vw/</loc>
+    <lastmod>2021-07-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.wy1991.cn/tags/TS/</loc>
+    <lastmod>2021-07-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.wy1991.cn/tags/%E6%B3%9B%E5%9E%8B/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -823,14 +816,14 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/vscode/</loc>
+    <loc>https://blog.wy1991.cn/tags/V8/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/V8/</loc>
+    <loc>https://blog.wy1991.cn/tags/vscode/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -844,6 +837,13 @@
   </url>
   
   <url>
+    <loc>https://blog.wy1991.cn/tags/ts/</loc>
+    <lastmod>2021-07-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.wy1991.cn/tags/filter/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
@@ -851,7 +851,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/ts/</loc>
+    <loc>https://blog.wy1991.cn/tags/miniVue/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -866,13 +866,6 @@
   
   <url>
     <loc>https://blog.wy1991.cn/tags/mitt/</loc>
-    <lastmod>2021-07-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.wy1991.cn/tags/miniVue/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -998,6 +991,20 @@
   </url>
   
   <url>
+    <loc>https://blog.wy1991.cn/tags/html/</loc>
+    <lastmod>2021-07-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.wy1991.cn/tags/%E5%A4%9A%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/</loc>
+    <lastmod>2021-07-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.wy1991.cn/tags/css3/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
@@ -1013,20 +1020,6 @@
   
   <url>
     <loc>https://blog.wy1991.cn/tags/%E5%A4%A7%E5%B1%8F/</loc>
-    <lastmod>2021-07-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.wy1991.cn/tags/html/</loc>
-    <lastmod>2021-07-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.wy1991.cn/tags/%E5%A4%9A%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1110,6 +1103,13 @@
   </url>
   
   <url>
+    <loc>https://blog.wy1991.cn/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2021-07-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.wy1991.cn/tags/print/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
@@ -1124,14 +1124,21 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</loc>
+    <loc>https://blog.wy1991.cn/tags/worker/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/worker/</loc>
+    <loc>https://blog.wy1991.cn/tags/drag/</loc>
+    <lastmod>2021-07-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.wy1991.cn/tags/%E6%8B%96%E6%8B%BD/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1159,20 +1166,6 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/drag/</loc>
-    <lastmod>2021-07-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.wy1991.cn/tags/%E6%8B%96%E6%8B%BD/</loc>
-    <lastmod>2021-07-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.wy1991.cn/tags/stackoverflow/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
@@ -1194,6 +1187,13 @@
   </url>
   
   <url>
+    <loc>https://blog.wy1991.cn/tags/%E8%84%9A%E6%89%8B%E6%9E%B6/</loc>
+    <lastmod>2021-07-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.wy1991.cn/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
@@ -1208,7 +1208,14 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/%E8%84%9A%E6%89%8B%E6%9E%B6/</loc>
+    <loc>https://blog.wy1991.cn/tags/media/</loc>
+    <lastmod>2021-07-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.wy1991.cn/tags/%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1222,14 +1229,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/media/</loc>
-    <lastmod>2021-07-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.wy1991.cn/tags/%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/</loc>
+    <loc>https://blog.wy1991.cn/tags/utils/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1252,14 +1252,14 @@
 
   
   <url>
-    <loc>https://blog.wy1991.cn/categories/%E6%9D%82%E8%B0%88/</loc>
+    <loc>https://blog.wy1991.cn/categories/js/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/categories/js/</loc>
+    <loc>https://blog.wy1991.cn/categories/%E6%9D%82%E8%B0%88/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1273,14 +1273,14 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/categories/nodejs/</loc>
+    <loc>https://blog.wy1991.cn/categories/MarkDown/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/categories/MarkDown/</loc>
+    <loc>https://blog.wy1991.cn/categories/nodejs/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1427,14 +1427,14 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/categories/node/</loc>
+    <loc>https://blog.wy1991.cn/categories/html/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/categories/html/</loc>
+    <loc>https://blog.wy1991.cn/categories/node/</loc>
     <lastmod>2021-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
