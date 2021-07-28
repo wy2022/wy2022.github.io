@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>我为什么又搞一个博客？</title>
+    <url>/20210626/1-%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8F%88%E6%90%9E%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%EF%BC%9F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="为什么重建？"><a href="#为什么重建？" class="headerlink" title="为什么重建？"></a>为什么重建？</h2><p>之前的博客总结了有一下几个不方便之处</p>
+<ol>
+<li>文章编写采用富文本，不是 markdown 语法，所以对于代码格式支持不太好。</li>
+<li>对于图片，未采用 7 牛之类图床，导致后期可能迁移困难。</li>
+<li>原来的用 php 写的，转前端很久了，php 都忘记了，也懒得拾起了，有那时间用 nodejs 重写不香吗。</li>
+<li>没有搜索功能……..</li>
+<li>…..</li>
+</ol>
+<h2 id="为什么选择-hexo"><a href="#为什么选择-hexo" class="headerlink" title="为什么选择 hexo"></a>为什么选择 hexo</h2><blockquote>
+<p>之前也用过有道云笔记，雨雀，折腾来折腾去，还是搞个公开的博客，让大家一切学习分享。</p>
+</blockquote>
+<ol>
+<li>ui 不用说了，很美很美，可以深度自定义。</li>
+<li>搜索功能真的强 👍。</li>
+<li>部署到<code>github page</code>，即使以后阿里云到期了，也可以一直用</li>
+<li>图片资源上传到 7 牛，流量走 CDN，不用担心迁移问题</li>
+<li>markdown 真的香，真的适合写博客</li>
+<li>之前都是自建，想试试别人的（结果：还是别人的香）。</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
+<p>新博客，新气象，给一个全新的自己</p>
+</blockquote>
+<p>有些人说，工作业务这么忙，哪有空写博客，我认为博客是对自己学习的一种总结，有时候我们会有一种错觉，看别人的代码<br>以为自己都懂，可结果让自己上手，却很傻眼，为啥？因为不是真的懂，学习知识应该要及时总结与分享~。</p>
+<p>所以 <code>2021</code> 给自己立下个 flag, 坚持日更~。</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>初心</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>前端截图系列</title>
     <url>/20210628/10-HTML%E6%88%AA%E5%9B%BE%E7%B3%BB%E5%88%97/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h3><img title="原型链" alt="图解原型和原型链" src="https://blog.img.wy1991.cn/static/images/js/prototype.png-blogImg">
@@ -45,41 +80,6 @@
         <tag>js</tag>
         <tag>ArryaBuffer</tag>
         <tag>字节序</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我为什么又搞一个博客？</title>
-    <url>/20210626/1-%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8F%88%E6%90%9E%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%EF%BC%9F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="为什么重建？"><a href="#为什么重建？" class="headerlink" title="为什么重建？"></a>为什么重建？</h2><p>之前的博客总结了有一下几个不方便之处</p>
-<ol>
-<li>文章编写采用富文本，不是 markdown 语法，所以对于代码格式支持不太好。</li>
-<li>对于图片，未采用 7 牛之类图床，导致后期可能迁移困难。</li>
-<li>原来的用 php 写的，转前端很久了，php 都忘记了，也懒得拾起了，有那时间用 nodejs 重写不香吗。</li>
-<li>没有搜索功能……..</li>
-<li>…..</li>
-</ol>
-<h2 id="为什么选择-hexo"><a href="#为什么选择-hexo" class="headerlink" title="为什么选择 hexo"></a>为什么选择 hexo</h2><blockquote>
-<p>之前也用过有道云笔记，雨雀，折腾来折腾去，还是搞个公开的博客，让大家一切学习分享。</p>
-</blockquote>
-<ol>
-<li>ui 不用说了，很美很美，可以深度自定义。</li>
-<li>搜索功能真的强 👍。</li>
-<li>部署到<code>github page</code>，即使以后阿里云到期了，也可以一直用</li>
-<li>图片资源上传到 7 牛，流量走 CDN，不用担心迁移问题</li>
-<li>markdown 真的香，真的适合写博客</li>
-<li>之前都是自建，想试试别人的（结果：还是别人的香）。</li>
-</ol>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
-<p>新博客，新气象，给一个全新的自己</p>
-</blockquote>
-<p>有些人说，工作业务这么忙，哪有空写博客，我认为博客是对自己学习的一种总结，有时候我们会有一种错觉，看别人的代码<br>以为自己都懂，可结果让自己上手，却很傻眼，为啥？因为不是真的懂，学习知识应该要及时总结与分享~。</p>
-<p>所以 <code>2021</code> 给自己立下个 flag, 坚持日更~。</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>初心</tag>
       </tags>
   </entry>
   <entry>
@@ -778,7 +778,7 @@
 <p><a href="https://blog.wy1991.cn/">官网博客</a></p>
 <h2 id="删除线xx"><a href="#删除线xx" class="headerlink" title="删除线xx"></a>删除线<del>xx</del></h2><p><del>删除线</del></p>
 <h2 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h2><p>Markdown 语法会忽略首行开头的空格，如果要体现出首行开头空两个的效果，可以使用 全角符号下的空格 ，windows 下使用 shift+空格 切换。</p>
-<h2 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h2><p><span class="exturl" data-url="bWFpbHRvOiYjeDYxOyYjMTAwOyYjMTA5OyYjMTA1OyYjeDZlOyYjNjQ7JiMxMTk7JiMxMjE7JiM0OTsmI3gzOTsmI3gzOTsmI3gzMTsmIzQ2OyYjeDYzOyYjeDZlOw==">&#x61;&#100;&#109;&#105;&#x6e;&#64;&#119;&#121;&#49;&#x39;&#x39;&#x31;&#46;&#x63;&#x6e;<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h2><p><span class="exturl" data-url="bWFpbHRvOiYjeDYxOyYjMTAwOyYjMTA5OyYjeDY5OyYjMTEwOyYjNjQ7JiMxMTk7JiMxMjE7JiM0OTsmI3gzOTsmI3gzOTsmIzQ5OyYjeDJlOyYjOTk7JiMxMTA7">&#x61;&#100;&#109;&#x69;&#110;&#64;&#119;&#121;&#49;&#x39;&#x39;&#49;&#x2e;&#99;&#110;<i class="fa fa-external-link-alt"></i></span></p>
 <h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>我们可以设置表格的对齐方式：</p>
 <ul>
 <li><p>-: 设置内容和标题栏居右对齐。</p>
@@ -1982,34 +1982,6 @@ console.log(`Files count: $&#123;count&#125;`)
       </tags>
   </entry>
   <entry>
-    <title>Vuex-mapState在compositionApi使用</title>
-    <url>/20210709/51-Vuex-mapState%E5%9C%A8compositionApi%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>在compositionApi的setup中，我们发现mapState似乎并不好用，官网也没给出什么解决办法，今天这里分享一个小技巧~</p>
-</blockquote>
-<h2 id="setup"><a href="#setup" class="headerlink" title="setup"></a>setup</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line">import &#123; useStore, mapState &#125; from &#x27;vuex&#x27;;</span><br><span class="line">import &#123; computed &#125; from &#x27;vue&#x27;;</span><br><span class="line"></span><br><span class="line">  export default&#123;</span><br><span class="line">    setup()&#123;</span><br><span class="line">      const store = useStore();</span><br><span class="line">      const name = computed(()=&gt; store.state.name )</span><br><span class="line">      const age = computed(()=&gt; store.state.age )</span><br><span class="line"></span><br><span class="line">      return&#123;</span><br><span class="line">        age</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>上面的写法，如果属性多了太麻烦了，并且不能用到mapState</p>
-<h2 id="mapState"><a href="#mapState" class="headerlink" title="mapState"></a>mapState</h2><p> 我们要搞明白mapState返回的是函数(下例中，stateFunc是不能直接在template中使用的)，我们可以利用计算属性</p>
-<p> 但是要注意mapState返回的函数其实是this.$store.state.xxx。setup中没有this，所以可以通过bind绑定一个this</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">import &#123; useStore, mapState &#125; from &#x27;vuex&#x27;;</span><br><span class="line">import &#123; computed &#125; from &#x27;vue&#x27;;</span><br><span class="line">export default &#123;</span><br><span class="line">  setup () &#123;</span><br><span class="line">    const store = useStore();</span><br><span class="line">    const stateFunc = mapState([&#x27;name&#x27;, &#x27;age&#x27;]);</span><br><span class="line"></span><br><span class="line">    const storeState = &#123;&#125;</span><br><span class="line"></span><br><span class="line">    Object.keys(stateFunc).forEach(fnkey =&gt; &#123;</span><br><span class="line">      const fn = stateFunc[fnkey].bind(&#123; $store: store &#125;)</span><br><span class="line">      storeState[fnkey] = computed(fn)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    return &#123;</span><br><span class="line">      ...storeState</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="封装hooks"><a href="#封装hooks" class="headerlink" title="封装hooks"></a>封装hooks</h2><p>新建hooks文件夹，创建文件 useStore.js</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; mapState, useStore &#125; <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; computed &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">useState</span> (<span class="params">mapper</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> store = useStore();</span><br><span class="line">  <span class="keyword">const</span> stateFunc = mapState(mapper);</span><br><span class="line">  <span class="keyword">const</span> storeState = &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">Object</span>.keys(stateFunc).forEach(<span class="function"><span class="params">fnkey</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> fn = stateFunc[fnkey].bind(&#123; <span class="attr">$store</span>: store &#125;)</span><br><span class="line">    storeState[fnkey] = computed(fn)</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> storeState</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在项目中直接使用</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line">import &#123; useState &#125; from &#x27;./hooks/useState.js&#x27;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  setup () &#123;</span><br><span class="line">    //数组用法</span><br><span class="line">    // const storeState = useState([&#x27;name&#x27;, &#x27;age&#x27;]) ;</span><br><span class="line">    //对象用法</span><br><span class="line">    const storeState = useState(&#123;</span><br><span class="line">      sName: state =&gt; state.name,</span><br><span class="line">      sAge: state =&gt; state.age</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    return &#123;</span><br><span class="line">      ...storeState</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>遇事不能死脑筋，要懂得变通~~~，</p>
-]]></content>
-      <categories>
-        <category>Vuex</category>
-      </categories>
-      <tags>
-        <tag>Vuex</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>vuex mapState使用</title>
     <url>/20210708/50-vuex-mapState%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -2042,6 +2014,34 @@ console.log(`Files count: $&#123;count&#125;`)
     &#125;
 </code></pre>
 <p>总结: mapState算是一个便捷函数，具体好处自己体会吧，具体详情看文档<span class="exturl" data-url="aHR0cHM6Ly9uZXh0LnZ1ZXgudnVlanMub3JnL3poL2d1aWRlL3N0YXRlLmh0bWwjbWFwc3RhdGUtJUU4JUJFJTg1JUU1JThBJUE5JUU1JTg3JUJEJUU2JTk1JUIw">mapState<i class="fa fa-external-link-alt"></i></span></p>
+]]></content>
+      <categories>
+        <category>Vuex</category>
+      </categories>
+      <tags>
+        <tag>Vuex</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vuex-mapState在compositionApi使用</title>
+    <url>/20210709/51-Vuex-mapState%E5%9C%A8compositionApi%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>在compositionApi的setup中，我们发现mapState似乎并不好用，官网也没给出什么解决办法，今天这里分享一个小技巧~</p>
+</blockquote>
+<h2 id="setup"><a href="#setup" class="headerlink" title="setup"></a>setup</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line">import &#123; useStore, mapState &#125; from &#x27;vuex&#x27;;</span><br><span class="line">import &#123; computed &#125; from &#x27;vue&#x27;;</span><br><span class="line"></span><br><span class="line">  export default&#123;</span><br><span class="line">    setup()&#123;</span><br><span class="line">      const store = useStore();</span><br><span class="line">      const name = computed(()=&gt; store.state.name )</span><br><span class="line">      const age = computed(()=&gt; store.state.age )</span><br><span class="line"></span><br><span class="line">      return&#123;</span><br><span class="line">        age</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>上面的写法，如果属性多了太麻烦了，并且不能用到mapState</p>
+<h2 id="mapState"><a href="#mapState" class="headerlink" title="mapState"></a>mapState</h2><p> 我们要搞明白mapState返回的是函数(下例中，stateFunc是不能直接在template中使用的)，我们可以利用计算属性</p>
+<p> 但是要注意mapState返回的函数其实是this.$store.state.xxx。setup中没有this，所以可以通过bind绑定一个this</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">import &#123; useStore, mapState &#125; from &#x27;vuex&#x27;;</span><br><span class="line">import &#123; computed &#125; from &#x27;vue&#x27;;</span><br><span class="line">export default &#123;</span><br><span class="line">  setup () &#123;</span><br><span class="line">    const store = useStore();</span><br><span class="line">    const stateFunc = mapState([&#x27;name&#x27;, &#x27;age&#x27;]);</span><br><span class="line"></span><br><span class="line">    const storeState = &#123;&#125;</span><br><span class="line"></span><br><span class="line">    Object.keys(stateFunc).forEach(fnkey =&gt; &#123;</span><br><span class="line">      const fn = stateFunc[fnkey].bind(&#123; $store: store &#125;)</span><br><span class="line">      storeState[fnkey] = computed(fn)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    return &#123;</span><br><span class="line">      ...storeState</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="封装hooks"><a href="#封装hooks" class="headerlink" title="封装hooks"></a>封装hooks</h2><p>新建hooks文件夹，创建文件 useStore.js</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; mapState, useStore &#125; <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; computed &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">useState</span> (<span class="params">mapper</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> store = useStore();</span><br><span class="line">  <span class="keyword">const</span> stateFunc = mapState(mapper);</span><br><span class="line">  <span class="keyword">const</span> storeState = &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">Object</span>.keys(stateFunc).forEach(<span class="function"><span class="params">fnkey</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> fn = stateFunc[fnkey].bind(&#123; <span class="attr">$store</span>: store &#125;)</span><br><span class="line">    storeState[fnkey] = computed(fn)</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> storeState</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在项目中直接使用</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line">import &#123; useState &#125; from &#x27;./hooks/useState.js&#x27;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  setup () &#123;</span><br><span class="line">    //数组用法</span><br><span class="line">    // const storeState = useState([&#x27;name&#x27;, &#x27;age&#x27;]) ;</span><br><span class="line">    //对象用法</span><br><span class="line">    const storeState = useState(&#123;</span><br><span class="line">      sName: state =&gt; state.name,</span><br><span class="line">      sAge: state =&gt; state.age</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    return &#123;</span><br><span class="line">      ...storeState</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>遇事不能死脑筋，要懂得变通~~~，</p>
 ]]></content>
       <categories>
         <category>Vuex</category>
@@ -2124,19 +2124,6 @@ console.log(`Files count: $&#123;count&#125;`)
       </tags>
   </entry>
   <entry>
-    <title>Vue源码过程图解</title>
-    <url>/20210628/56-Vue%E6%BA%90%E7%A0%81%E8%BF%87%E7%A8%8B%E5%9B%BE%E8%A7%A3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="需看懂此图"><a href="#需看懂此图" class="headerlink" title="需看懂此图"></a>需看懂此图</h4><img title="Vue图解" src="https://blog.img.wy1991.cn/static/images/vue/vuequanguocheng.png-blogImg">
-]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-        <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vue 文件下载</title>
     <url>/20210628/55-Vue-%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="Vue-blog"><a href="#Vue-blog" class="headerlink" title="Vue blog"></a>Vue blog</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">       <span class="function"><span class="keyword">function</span> <span class="title">down</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">           <span class="keyword">const</span> msg = &#123;</span><br><span class="line">               <span class="attr">name</span>: <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">           &#125;;</span><br><span class="line">              <span class="comment">//注意要是数组</span></span><br><span class="line">           <span class="keyword">const</span> blob = <span class="keyword">new</span> Blob([<span class="built_in">JSON</span>.stringify(msg, <span class="literal">null</span>, <span class="number">2</span>)], &#123;</span><br><span class="line">               <span class="attr">type</span>: <span class="string">&#x27;application/json&#x27;</span></span><br><span class="line">           &#125;);</span><br><span class="line"></span><br><span class="line">           <span class="keyword">const</span> link = <span class="built_in">document</span>.createElement(<span class="string">&#x27;a&#x27;</span>);</span><br><span class="line"></span><br><span class="line">           <span class="comment">// link.style.display = &#x27;none&#x27;;</span></span><br><span class="line"></span><br><span class="line">           link.href = URL.createObjectURL(blob);</span><br><span class="line">           <span class="comment">//利用html5 a标签的down 属性，如果未指定后缀名则有类型决定(json)</span></span><br><span class="line">           link.download = <span class="string">&#x27;下载文件&#x27;</span> + (<span class="keyword">new</span> <span class="built_in">Date</span>().getTime()) + <span class="string">&quot;.txt&quot;</span>;</span><br><span class="line"></span><br><span class="line">           <span class="built_in">document</span>.body.appendChild(link);</span><br><span class="line">           link.click()</span><br><span class="line">           <span class="comment">//移除掉a链接</span></span><br><span class="line">           <span class="built_in">document</span>.removeChild(link)</span><br><span class="line">           <span class="comment">//不用的时候需要释放掉</span></span><br><span class="line">           URL.revokeObjectURL(link.href)</span><br><span class="line">       &#125;</span><br><span class="line">   &lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -2149,6 +2136,19 @@ console.log(`Files count: $&#123;count&#125;`)
       <tags>
         <tag>Vue</tag>
         <tag>文件下载</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue源码过程图解</title>
+    <url>/20210628/56-Vue%E6%BA%90%E7%A0%81%E8%BF%87%E7%A8%8B%E5%9B%BE%E8%A7%A3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="需看懂此图"><a href="#需看懂此图" class="headerlink" title="需看懂此图"></a>需看懂此图</h4><img title="Vue图解" src="https://blog.img.wy1991.cn/static/images/vue/vuequanguocheng.png-blogImg">
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>Vue</tag>
       </tags>
   </entry>
   <entry>
@@ -2378,27 +2378,6 @@ console.log(`Files count: $&#123;count&#125;`)
       </tags>
   </entry>
   <entry>
-    <title>箭头函数的this</title>
-    <url>/20210627/63-%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E7%9A%84this/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="箭头函数的-this"><a href="#箭头函数的-this" class="headerlink" title="箭头函数的 this"></a>箭头函数的 this</h3><p>1：箭头函数中 this 是在定义函数时候绑定的，而不是在执行的时候绑定</p>
-<p>2：箭头函数没有自己的 this，，，导致内部 this 就是外部代码块的 this,this 指向是很固定化的。</p>
-<span id="more"></span>
-
-<p>2-1：所以，箭头函数不能用来构造函数</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">11</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">x</span>: <span class="number">22</span>,</span><br><span class="line">  <span class="attr">say</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>.x) <span class="comment">//11</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// say中箭头函数和say是兄弟，和x：22;是兄弟，所以，外部代码块指的是x=11，在此可看作window.x</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 箭头函数所在的大括号是个窝，与这个窝平级的就是上层代码块</span></span><br></pre></td></tr></table></figure>
-
-<p>再来谈一个例子</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">birth</span>: <span class="number">1996</span>, <span class="comment">//1996</span></span><br><span class="line">  <span class="attr">getAge</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> b = <span class="built_in">this</span>.birth <span class="comment">//这个var b。。没啥用，迷惑人用的，底下的箭头函数的this和这个this指向的一毛一样</span></span><br><span class="line">    <span class="keyword">var</span> fn = <span class="function">() =&gt;</span> <span class="keyword">new</span> <span class="built_in">Date</span>().getFullYear() - <span class="built_in">this</span>.birth <span class="comment">//this指向obj的对象</span></span><br><span class="line">    <span class="keyword">return</span> fn()</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line">obj.getAge()</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-        <tag>this</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>防抖与节流</title>
     <url>/20210627/62-%E9%98%B2%E6%8A%96%E4%B8%8E%E8%8A%82%E6%B5%81/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h4><p>总结： 防抖就是防止抖动，一直触发的时候，利用清除定时器 只执行最后一次 （scroll）</p>
@@ -2420,6 +2399,27 @@ console.log(`Files count: $&#123;count&#125;`)
       </categories>
       <tags>
         <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>箭头函数的this</title>
+    <url>/20210627/63-%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E7%9A%84this/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="箭头函数的-this"><a href="#箭头函数的-this" class="headerlink" title="箭头函数的 this"></a>箭头函数的 this</h3><p>1：箭头函数中 this 是在定义函数时候绑定的，而不是在执行的时候绑定</p>
+<p>2：箭头函数没有自己的 this，，，导致内部 this 就是外部代码块的 this,this 指向是很固定化的。</p>
+<span id="more"></span>
+
+<p>2-1：所以，箭头函数不能用来构造函数</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">11</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">x</span>: <span class="number">22</span>,</span><br><span class="line">  <span class="attr">say</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>.x) <span class="comment">//11</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// say中箭头函数和say是兄弟，和x：22;是兄弟，所以，外部代码块指的是x=11，在此可看作window.x</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 箭头函数所在的大括号是个窝，与这个窝平级的就是上层代码块</span></span><br></pre></td></tr></table></figure>
+
+<p>再来谈一个例子</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">birth</span>: <span class="number">1996</span>, <span class="comment">//1996</span></span><br><span class="line">  <span class="attr">getAge</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> b = <span class="built_in">this</span>.birth <span class="comment">//这个var b。。没啥用，迷惑人用的，底下的箭头函数的this和这个this指向的一毛一样</span></span><br><span class="line">    <span class="keyword">var</span> fn = <span class="function">() =&gt;</span> <span class="keyword">new</span> <span class="built_in">Date</span>().getFullYear() - <span class="built_in">this</span>.birth <span class="comment">//this指向obj的对象</span></span><br><span class="line">    <span class="keyword">return</span> fn()</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line">obj.getAge()</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>this</tag>
       </tags>
   </entry>
   <entry>
@@ -2506,22 +2506,6 @@ console.log(`Files count: $&#123;count&#125;`)
       </tags>
   </entry>
   <entry>
-    <title>手把手教你制作一个Vue插件</title>
-    <url>/20210628/68-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AAVue%E6%8F%92%E4%BB%B6/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="Vue-插件"><a href="#Vue-插件" class="headerlink" title="Vue 插件"></a>Vue 插件</h2><p>制作一个 Vue 插件非常简单，只需要包含一个 install 函数或者方法即可</p>
-<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">plugin/index.js</span><br><span class="line"><span class="comment">//app是Vue实例，options是传递得参数</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">install</span>: <span class="function">(<span class="params">app, options</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(app, options);</span><br><span class="line">    app.directive(<span class="string">&#x27;print&#x27;</span>, &#123;</span><br><span class="line">      mounted (el, binding) &#123;</span><br><span class="line">        el.innerHTML = <span class="string">&quot;我是Vue插件修改的&quot;</span> + <span class="built_in">JSON</span>.stringify(options)</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    app.config.globalProperties.$show = <span class="function"><span class="keyword">function</span> (<span class="params">msg = <span class="string">&quot;hello&quot;</span></span>) </span>&#123;</span><br><span class="line">      alert(msg)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">main.js</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> TestPlugin <span class="keyword">from</span> <span class="string">&#x27;./plugin/index&#x27;</span>;</span><br><span class="line"><span class="comment">//要在createApp之后</span></span><br><span class="line">app.use(TestPlugin, &#123; <span class="attr">name</span>: <span class="string">&#x27;zhangsan&#x27;</span> &#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//App.vue</span></span><br><span class="line"><span class="comment">//可以使用自定义指令，也可以调用全局方法</span></span><br><span class="line"><span class="comment">//setup中没有this，所以需要通过getCurrentInstance获取当前实例</span></span><br><span class="line">&lt;div v-print&gt;我是原始值&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; getCurrentInstance &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line"></span><br><span class="line">  setup (props, context) &#123;</span><br><span class="line">    <span class="comment">//打包后有可能获取不到，这里需要谨慎</span></span><br><span class="line">    <span class="keyword">const</span> &#123; ctx &#125; = getCurrentInstance()</span><br><span class="line">    ctx.$show(<span class="string">&quot;我擦，这么牛皮&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      clickHandle</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="函数方式"><a href="#函数方式" class="headerlink" title="函数方式"></a>函数方式</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> (<span class="params">app, options</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(app, options);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-        <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>最终能用CSS实现的就不用麻烦JavaScript</title>
     <url>/20210719/67-%E8%83%BD%E7%94%A8CSS%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%B0%B1%E4%B8%8D%E7%94%A8%E9%BA%BB%E7%83%A6JavaScript/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>凡是可以用 JavaScript 来写的应用，最终都会用 JavaScript 来写。——真香定律</p>
@@ -2593,6 +2577,22 @@ console.log(`Files count: $&#123;count&#125;`)
       </tags>
   </entry>
   <entry>
+    <title>手把手教你制作一个Vue插件</title>
+    <url>/20210628/68-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AAVue%E6%8F%92%E4%BB%B6/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="Vue-插件"><a href="#Vue-插件" class="headerlink" title="Vue 插件"></a>Vue 插件</h2><p>制作一个 Vue 插件非常简单，只需要包含一个 install 函数或者方法即可</p>
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">plugin/index.js</span><br><span class="line"><span class="comment">//app是Vue实例，options是传递得参数</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">install</span>: <span class="function">(<span class="params">app, options</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(app, options);</span><br><span class="line">    app.directive(<span class="string">&#x27;print&#x27;</span>, &#123;</span><br><span class="line">      mounted (el, binding) &#123;</span><br><span class="line">        el.innerHTML = <span class="string">&quot;我是Vue插件修改的&quot;</span> + <span class="built_in">JSON</span>.stringify(options)</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    app.config.globalProperties.$show = <span class="function"><span class="keyword">function</span> (<span class="params">msg = <span class="string">&quot;hello&quot;</span></span>) </span>&#123;</span><br><span class="line">      alert(msg)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">main.js</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> TestPlugin <span class="keyword">from</span> <span class="string">&#x27;./plugin/index&#x27;</span>;</span><br><span class="line"><span class="comment">//要在createApp之后</span></span><br><span class="line">app.use(TestPlugin, &#123; <span class="attr">name</span>: <span class="string">&#x27;zhangsan&#x27;</span> &#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//App.vue</span></span><br><span class="line"><span class="comment">//可以使用自定义指令，也可以调用全局方法</span></span><br><span class="line"><span class="comment">//setup中没有this，所以需要通过getCurrentInstance获取当前实例</span></span><br><span class="line">&lt;div v-print&gt;我是原始值&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; getCurrentInstance &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line"></span><br><span class="line">  setup (props, context) &#123;</span><br><span class="line">    <span class="comment">//打包后有可能获取不到，这里需要谨慎</span></span><br><span class="line">    <span class="keyword">const</span> &#123; ctx &#125; = getCurrentInstance()</span><br><span class="line">    ctx.$show(<span class="string">&quot;我擦，这么牛皮&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      clickHandle</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="函数方式"><a href="#函数方式" class="headerlink" title="函数方式"></a>函数方式</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> (<span class="params">app, options</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(app, options);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>瞬间感触~</title>
     <url>/20210707/69-%E7%9E%AC%E9%97%B4%E6%84%9F%E8%A7%A6/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="活到老学到老"><a href="#活到老学到老" class="headerlink" title="活到老学到老"></a>活到老学到老</h2><p>对于做技术的人来说，一定要树立终身学习的理念，技术更新很快，不多学习些新东西，很快会被淘汰。 另外做技术的人一般是能坐得住的人，如果你不太喜欢学习新东西，建议趁着年轻改行，总好过老了身不由己。</p>
@@ -2602,6 +2602,34 @@ console.log(`Files count: $&#123;count&#125;`)
       </categories>
       <tags>
         <tag>杂谈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小程序登录的坑</title>
+    <url>/20210718/70-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%99%BB%E5%BD%95%E7%9A%84%E5%9D%91/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前情概要"><a href="#前情概要" class="headerlink" title="前情概要"></a>前情概要</h2><ol>
+<li>小程序端有 wx.login 获取 code，然后后端通过 code 换取 session_key；</li>
+<li>小程序端有 wx.getUserInfo 获取用户信息</li>
+</ol>
+<p>一开始处理登录的时候，前端通过 wx.login 获取到 code，然后通过 wx.getUserInfo 获取用户相关的信息，一起传递给后端，后端进行 sha1 验证，但是每次登录的时候，第一次验证不通过，导致登录不成功，需要第二次进行登录。</p>
+<p>本身接口的设计就是通过 code 获取到 session_key 和 unionid 进行验证，如果数据库存在就直接进行当前用户登录，不存在通过 sha1 验证用户信息成功后，解密用户信息获取用户数据并进行自动注册后登录。</p>
+<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>小程序的文档，我仔细看了下，没发现有说明这两个接口调用的先后顺序，多次测试不成功之后才发现：</p>
+<ol>
+<li>小程序调用 wx.login 的时候，并不会在微信小程序自己的服务器上生成 session_key；</li>
+<li>session_key 有过期时间，具体过期时间小程序文档的说明是，使用小程序越频繁过期时间越久；</li>
+<li>code 有过期时间，过期时间 5 分钟；</li>
+<li>每次调用 wx.login 获取到的 code 不一样，但是如果 session_key 没有过期，那么后端通过接口取到的 session_key 和上一次 code 取到的 session_key 一致；</li>
+<li>小程序端通过 wx.getUserInfo 获取到的信息，相关的 signature 依赖于 wx.login 所产生的 session_key 进行加密；</li>
+</ol>
+<p>以上是小程序的机制，从这里来看，按理来说，调用 wx.login 然后再调用 wx.getUserInfo 接口获取用户数据，传递到后端，再请求 session_key 然后验证用户数据进行自动注册应该来说是可行的，但实际上坑就再第一点。</p>
+<p>也就是说，小程序端调用 wx.getUserInfo 获取用户信息的时候，使用的是上一次服务端请求产生的 session_key，当数据一起传送到后端的时候，通过 code 获取数据，但是此时上次的 session_key 已经过期了，会返回新的 session_key，然后就会导致验证不通过。</p>
+<p>所以整体上来说，后端应该先通过 wx.login 接口的 code 在后端获取到 session_key 以及 unionid，如果 unionid 检测当前用户不存在，缓存 session_key 和 unionid，再告知前端通过 wx.getUserInfo 接口向后端请求并进行注册绑定。</p>
+]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
+      <tags>
+        <tag>微信小程序</tag>
       </tags>
   </entry>
   <entry>
@@ -2753,34 +2781,6 @@ $ git commit --amend [file1] [file2] ...
       </tags>
   </entry>
   <entry>
-    <title>微信小程序登录的坑</title>
-    <url>/20210718/70-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%99%BB%E5%BD%95%E7%9A%84%E5%9D%91/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前情概要"><a href="#前情概要" class="headerlink" title="前情概要"></a>前情概要</h2><ol>
-<li>小程序端有 wx.login 获取 code，然后后端通过 code 换取 session_key；</li>
-<li>小程序端有 wx.getUserInfo 获取用户信息</li>
-</ol>
-<p>一开始处理登录的时候，前端通过 wx.login 获取到 code，然后通过 wx.getUserInfo 获取用户相关的信息，一起传递给后端，后端进行 sha1 验证，但是每次登录的时候，第一次验证不通过，导致登录不成功，需要第二次进行登录。</p>
-<p>本身接口的设计就是通过 code 获取到 session_key 和 unionid 进行验证，如果数据库存在就直接进行当前用户登录，不存在通过 sha1 验证用户信息成功后，解密用户信息获取用户数据并进行自动注册后登录。</p>
-<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>小程序的文档，我仔细看了下，没发现有说明这两个接口调用的先后顺序，多次测试不成功之后才发现：</p>
-<ol>
-<li>小程序调用 wx.login 的时候，并不会在微信小程序自己的服务器上生成 session_key；</li>
-<li>session_key 有过期时间，具体过期时间小程序文档的说明是，使用小程序越频繁过期时间越久；</li>
-<li>code 有过期时间，过期时间 5 分钟；</li>
-<li>每次调用 wx.login 获取到的 code 不一样，但是如果 session_key 没有过期，那么后端通过接口取到的 session_key 和上一次 code 取到的 session_key 一致；</li>
-<li>小程序端通过 wx.getUserInfo 获取到的信息，相关的 signature 依赖于 wx.login 所产生的 session_key 进行加密；</li>
-</ol>
-<p>以上是小程序的机制，从这里来看，按理来说，调用 wx.login 然后再调用 wx.getUserInfo 接口获取用户数据，传递到后端，再请求 session_key 然后验证用户数据进行自动注册应该来说是可行的，但实际上坑就再第一点。</p>
-<p>也就是说，小程序端调用 wx.getUserInfo 获取用户信息的时候，使用的是上一次服务端请求产生的 session_key，当数据一起传送到后端的时候，通过 code 获取数据，但是此时上次的 session_key 已经过期了，会返回新的 session_key，然后就会导致验证不通过。</p>
-<p>所以整体上来说，后端应该先通过 wx.login 接口的 code 在后端获取到 session_key 以及 unionid，如果 unionid 检测当前用户不存在，缓存 session_key 和 unionid，再告知前端通过 wx.getUserInfo 接口向后端请求并进行注册绑定。</p>
-]]></content>
-      <categories>
-        <category>微信小程序</category>
-      </categories>
-      <tags>
-        <tag>微信小程序</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>项目-智慧消防</title>
     <url>/20210708/71-%E9%A1%B9%E7%9B%AE-%E6%99%BA%E6%85%A7%E6%B6%88%E9%98%B2/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>结合物联网网关开发的一套后台，搭配app使用。PC端Vue+element 移动端uniapp + uview，给小区，学校，单位，管理部门提供一体化服务。包含（消防设备，灭火器，烟感，用电，积水，液位，监控，闸机，水压，燃气，地图报警，应急广播（实时喊话,FM,音乐播放,定时任务）,设备档案，隐患管理，安全巡检，通知公告，安全课堂(阿里云视频直传),车牌识别，环境监测，实时推送等。大数据中心，可视化大屏等</p>
@@ -2914,6 +2914,21 @@ $ git commit --amend [file1] [file2] ...
       </tags>
   </entry>
   <entry>
+    <title>一篇搞定【web打印】知识点</title>
+    <url>/20210717/75-%E4%B8%80%E7%AF%87%E6%90%9E%E5%AE%9A%E3%80%90web%E6%89%93%E5%8D%B0%E3%80%91%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一篇搞定【web打印】知识点"><a href="#一篇搞定【web打印】知识点" class="headerlink" title="一篇搞定【web打印】知识点"></a>一篇搞定【web打印】知识点</h2><p>日常开发中，避免不了各种前端打印，调用打印机等，具体可以查看下面文章</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82OTg1MDMwMTE4NzU4NDE2MzkxI2hlYWRpbmctMA==">一篇搞定【web打印】知识点<i class="fa fa-external-link-alt"></i></span></p>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>print</tag>
+        <tag>web打印</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>移动端常见问题</title>
     <url>/20210704/76-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="移动端问题"><a href="#移动端问题" class="headerlink" title="移动端问题"></a>移动端问题</h1><h2 id="移动端使用-rem-小图片变形"><a href="#移动端使用-rem-小图片变形" class="headerlink" title="移动端使用 rem 小图片变形"></a>移动端使用 rem 小图片变形</h2><blockquote>
@@ -2998,21 +3013,6 @@ catchtouchmove
       </tags>
   </entry>
   <entry>
-    <title>一篇搞定【web打印】知识点</title>
-    <url>/20210717/75-%E4%B8%80%E7%AF%87%E6%90%9E%E5%AE%9A%E3%80%90web%E6%89%93%E5%8D%B0%E3%80%91%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一篇搞定【web打印】知识点"><a href="#一篇搞定【web打印】知识点" class="headerlink" title="一篇搞定【web打印】知识点"></a>一篇搞定【web打印】知识点</h2><p>日常开发中，避免不了各种前端打印，调用打印机等，具体可以查看下面文章</p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82OTg1MDMwMTE4NzU4NDE2MzkxI2hlYWRpbmctMA==">一篇搞定【web打印】知识点<i class="fa fa-external-link-alt"></i></span></p>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-        <tag>print</tag>
-        <tag>web打印</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>js 获取本周开始结束时间，本月开始结束时间等....</title>
     <url>/20210720/77-js-%E8%8E%B7%E5%8F%96%E6%9C%AC%E5%91%A8%E5%BC%80%E5%A7%8B%E7%BB%93%E6%9D%9F%E6%97%B6%E9%97%B4%EF%BC%8C%E6%9C%AC%E6%9C%88%E5%BC%80%E5%A7%8B%E7%BB%93%E6%9D%9F%E6%97%B6%E9%97%B4%E7%AD%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="获取周，月开始结束时间"><a href="#获取周，月开始结束时间" class="headerlink" title="获取周，月开始结束时间"></a>获取周，月开始结束时间</h2> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">var</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>(); <span class="comment">// 当前日期</span></span><br><span class="line"><span class="keyword">var</span> nowDayOfWeek = now.getDay(); <span class="comment">// 今天本周的第几天</span></span><br><span class="line"><span class="keyword">var</span> nowDay = now.getDate(); <span class="comment">// 当前日</span></span><br><span class="line"><span class="keyword">var</span> nowMonth = now.getMonth(); <span class="comment">// 当前月</span></span><br><span class="line"><span class="keyword">var</span> nowYear = now.getYear(); <span class="comment">// 当前年</span></span><br><span class="line">nowYear += (nowYear &lt; <span class="number">2000</span>) ? <span class="number">1900</span> : <span class="number">0</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">var</span> DateUtil = &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获得当前日期</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@returns</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="title">getNowDay</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.formatDate(<span class="keyword">new</span> <span class="built_in">Date</span>());</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获得本周的开始时间</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@returns</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="title">getStartDayOfWeek</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> day = nowDayOfWeek || <span class="number">7</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.formatDate(<span class="keyword">new</span> <span class="built_in">Date</span>(now.getFullYear(), nowMonth, nowDay + <span class="number">1</span> - day));</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获得本周的结束时间</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@returns</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="title">getEndDayOfWeek</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> day = nowDayOfWeek || <span class="number">7</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.formatDate(<span class="keyword">new</span> <span class="built_in">Date</span>(now.getFullYear(), nowMonth, nowDay + <span class="number">7</span> - day));</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获得本月的开始时间</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@returns</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="title">getStartDayOfMonth</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> monthStartDate = <span class="keyword">new</span> <span class="built_in">Date</span>(nowYear, nowMonth, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.formatDate(monthStartDate);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获得本月的结束时间</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@returns</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="title">getEndDayOfMonth</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> monthEndDate = <span class="keyword">new</span> <span class="built_in">Date</span>(nowYear, nowMonth, <span class="built_in">this</span>.getMonthDays());</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.formatDate(monthEndDate);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获得本月天数</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@returns</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="title">getMonthDays</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> monthStartDate = <span class="keyword">new</span> <span class="built_in">Date</span>(nowYear, nowMonth, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">var</span> monthEndDate = <span class="keyword">new</span> <span class="built_in">Date</span>(nowYear, nowMonth + <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">var</span> days = (monthEndDate - monthStartDate) / (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span>);</span><br><span class="line">        <span class="keyword">return</span> days;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param </span>日期格式化</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@returns <span class="type">&#123;String&#125;</span></span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="title">formatDate</span>(<span class="params">date</span>)</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> myyear = date.getFullYear();</span><br><span class="line">        <span class="keyword">var</span> mymonth = date.getMonth() + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">var</span> myweekday = date.getDate();</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">if</span> (mymonth &lt; <span class="number">10</span>) &#123;</span><br><span class="line">            mymonth = <span class="string">&quot;0&quot;</span> + mymonth;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (myweekday &lt; <span class="number">10</span>) &#123;</span><br><span class="line">            myweekday = <span class="string">&quot;0&quot;</span> + myweekday;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (myyear + <span class="string">&quot;-&quot;</span> + mymonth + <span class="string">&quot;-&quot;</span> + myweekday);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">    DateUtil</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -3068,71 +3068,6 @@ catchtouchmove
       <tags>
         <tag>js</tag>
         <tag>worker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HTML5 drag拖拽</title>
-    <url>/20210630/8-HTML5-drag%E6%8B%96%E6%8B%BD/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="HTML5-Drag-amp-Drop"><a href="#HTML5-Drag-amp-Drop" class="headerlink" title="HTML5 : Drag &amp; Drop"></a>HTML5 : Drag &amp; Drop</h2><blockquote>
-<p>Drag &amp; Drop 是 HTML5 中的拖放，即抓取对象后拖放到指定的位置。</p>
-</blockquote>
-<h5 id="设置元素为可拖放-draggables"><a href="#设置元素为可拖放-draggables" class="headerlink" title="设置元素为可拖放 draggables"></a>设置元素为可拖放 draggables</h5><figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">&lt;div <span class="keyword">class</span>=&quot;<span class="symbol">drag</span>&quot; <span class="symbol">draggable</span>=&quot;<span class="symbol">true</span>&quot;&gt;&lt;/<span class="symbol">div</span>&gt;</span><br><span class="line">&lt;<span class="symbol">div</span> <span class="symbol">class</span>=&quot;<span class="symbol">wrapper</span>&quot;&gt;&lt;/<span class="symbol">div</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<h5 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h5><p><code>dragstart</code> <code>dragend</code> <code>dragenter</code> <code>dragover</code> <code>drop</code></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> oDrag = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&#x27;drag&#x27;</span>)[<span class="number">0</span>],</span><br><span class="line">    oWrapper = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&#x27;wrapper&#x27;</span>)[<span class="number">0</span>];</span><br><span class="line"><span class="comment">//当【元素】被抓取时</span></span><br><span class="line">oDrag.addEventListener(<span class="string">&#x27;dragstart&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;dragstart&#x27;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//当【元素】被放开时</span></span><br><span class="line">oDrag.addEventListener(<span class="string">&#x27;dragend&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;dragend&#x27;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//当鼠标进入【放置框】内（由鼠标位置决定）</span></span><br><span class="line">oWrapper.addEventListener(<span class="string">&#x27;dragenter&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;dragenter&#x27;</span>);</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//当元素在【放置框】上方移动时</span></span><br><span class="line">oWrapper.addEventListener(<span class="string">&#x27;dragover&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//触发 drop 事件必须先在 dragover 里面取消默认事件</span></span><br><span class="line">    e.preventDefault();</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;dragover&#x27;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//当元素被拖入【放置框】内时</span></span><br><span class="line">oWrapper.addEventListener(<span class="string">&#x27;drop&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//避免将文件拖入时，文件做为链接打开了</span></span><br><span class="line">    e.preventDefault();</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;drop&#x27;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//dragstart</span></span><br><span class="line"><span class="comment">//dragenter</span></span><br><span class="line"><span class="comment">//dragover</span></span><br><span class="line"><span class="comment">//drop</span></span><br><span class="line"><span class="comment">//dragend</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="设置数据-e-dataTransfer-setData"><a href="#设置数据-e-dataTransfer-setData" class="headerlink" title="设置数据 e.dataTransfer.setData()"></a>设置数据 e.dataTransfer.setData()</h5><h3 id="1-实战—将【1】和【2】放到【放置框】内"><a href="#1-实战—将【1】和【2】放到【放置框】内" class="headerlink" title="1.实战—将【1】和【2】放到【放置框】内"></a>1.实战—将【1】和【2】放到【放置框】内</h3><img title="html5拖拽效果" src="https://blog.img.wy1991.cn/static/images/js/drag.png-blogImg">
-
-<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line">&lt;div id=<span class="string">&quot;drag1&quot;</span> draggable=<span class="string">&quot;true&quot;</span>&gt;<span class="number">1</span>&lt;/div&gt;</span><br><span class="line">&lt;div id=<span class="string">&quot;drag2&quot;</span> draggable=<span class="string">&quot;true&quot;</span>&gt;<span class="number">2</span>&lt;/div&gt;</span><br><span class="line">&lt;div <span class="keyword">class</span>=<span class="string">&quot;wrapper&quot;</span>&gt;放置框&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">var oDrag1 = document.get<span class="constructor">ElementById(&#x27;<span class="params">drag1</span>&#x27;)</span>,</span><br><span class="line">    oDrag2 = document.get<span class="constructor">ElementById(&#x27;<span class="params">drag2</span>&#x27;)</span>,</span><br><span class="line">    oWrapper = document.get<span class="constructor">ElementsByClassName(&#x27;<span class="params">wrapper</span>&#x27;)</span><span class="literal">[<span class="number">0</span>]</span>;</span><br><span class="line">var child = oWrapper.childNodes;</span><br><span class="line">oDrag1.add<span class="constructor">EventListener(&#x27;<span class="params">dragstart</span>&#x27;,<span class="params">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//设置 数据</span></span><br><span class="line">    e.dataTransfer.set<span class="constructor">Data(&#x27;<span class="params">data</span>&#x27;,<span class="params">this</span>.<span class="params">id</span>)</span>;</span><br><span class="line">&#125;)</span><br><span class="line">oDrag2.add<span class="constructor">EventListener(&#x27;<span class="params">dragstart</span>&#x27;,<span class="params">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    e.dataTransfer.set<span class="constructor">Data(&#x27;<span class="params">data</span>&#x27;,<span class="params">this</span>.<span class="params">id</span>)</span>;</span><br><span class="line">&#125;)</span><br><span class="line">oWrapper.add<span class="constructor">EventListener(&#x27;<span class="params">dragenter</span>&#x27;,<span class="params">function</span>()</span>&#123;</span><br><span class="line">    <span class="comment">//删除文本节点&#x27;放置框&#x27;</span></span><br><span class="line">    <span class="keyword">for</span>(var i = <span class="number">0</span>; i &lt; child.length; i ++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(child<span class="literal">[<span class="identifier">i</span>]</span>.nodeType<span class="operator"> === </span><span class="number">3</span>)&#123;</span><br><span class="line">            console.log(child<span class="literal">[<span class="identifier">i</span>]</span>);</span><br><span class="line">            oWrapper.remove<span class="constructor">Child(<span class="params">child</span>[<span class="params">i</span>])</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line">oWrapper.add<span class="constructor">EventListener(&#x27;<span class="params">dragover</span>&#x27;,<span class="params">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//触发 drop 事件必须先在 dragover 里面取消默认事件</span></span><br><span class="line">    e.prevent<span class="constructor">Default()</span>;</span><br><span class="line">&#125;)</span><br><span class="line">oWrapper.add<span class="constructor">EventListener(&#x27;<span class="params">drop</span>&#x27;,<span class="params">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// console.log(e.dataTransfer);</span></span><br><span class="line">    <span class="comment">//获取 数据</span></span><br><span class="line">    var data = e.dataTransfer.get<span class="constructor">Data(&#x27;<span class="params">data</span>&#x27;)</span>;</span><br><span class="line">    oWrapper.append<span class="constructor">Child(<span class="params">document</span>.<span class="params">getElementById</span>(<span class="params">data</span>)</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-实战—拖住排序加拖拽删除"><a href="#2-实战—拖住排序加拖拽删除" class="headerlink" title="2.实战—拖住排序加拖拽删除"></a>2.实战—拖住排序加拖拽删除</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;wrapper&quot;</span>&gt;</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">draggable</span>=<span class="string">&quot;true&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">draggable</span>=<span class="string">&quot;true&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">draggable</span>=<span class="string">&quot;true&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">draggable</span>=<span class="string">&quot;true&quot;</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">draggable</span>=<span class="string">&quot;true&quot;</span>&gt;</span>5<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span>垃圾桶<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/div&gt;</span><br><span class="line"><span class="keyword">var</span> oUl = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;ul&#x27;</span>)[<span class="number">0</span>],</span><br><span class="line">    oBox = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&#x27;box&#x27;</span>)[<span class="number">0</span>],</span><br><span class="line">    oLi = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;li&#x27;</span>),</span><br><span class="line">    len = oLi.length;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bindLiEvent</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; len; i ++)&#123;</span><br><span class="line">        oLi[i].addEventListener(<span class="string">&#x27;dragstart&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> index = getIndex(<span class="built_in">this</span>);</span><br><span class="line">            e.dataTransfer.setData(<span class="string">&#x27;data&#x27;</span>, index);</span><br><span class="line">        &#125;);</span><br><span class="line">        oLi[i].addEventListener(<span class="string">&#x27;dragover&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">            e.preventDefault();</span><br><span class="line">        &#125;);</span><br><span class="line">        oLi[i].addEventListener(<span class="string">&#x27;drop&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> i = e.dataTransfer.getData(<span class="string">&#x27;data&#x27;</span>);</span><br><span class="line">            oUl.insertBefore(oLi[i], <span class="built_in">this</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//获取列表最新的索引值</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getIndex</span>(<span class="params">dom</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; len; i ++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(oLi[i] === dom)&#123;</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeLi</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    oBox.addEventListener(<span class="string">&#x27;dragover&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">        e.preventDefault();</span><br><span class="line">    &#125;)</span><br><span class="line">    oBox.addEventListener(<span class="string">&#x27;drop&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">        e.preventDefault();</span><br><span class="line">        <span class="keyword">var</span> index = e.dataTransfer.getData(<span class="string">&#x27;data&#x27;</span>);</span><br><span class="line">        oLi[index].remove();</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line">bindLiEvent();</span><br><span class="line">removeLi ();</span><br></pre></td></tr></table></figure>
-
-<h3 id="dataTransfer-有常用的属性"><a href="#dataTransfer-有常用的属性" class="headerlink" title="dataTransfer 有常用的属性:"></a>dataTransfer 有常用的属性:</h3><pre><code>  方法    含义
-  setData    设置字符串，并设置数据类型
-  getData    获取对应数据类型的字符串
-
-  （2）属性
-
-  在 dataTransfer对象 上还有两个比较常用的属性，如下表所示
-  属性    含义
-  dropEffect    被拖放元素的放置行为
-  effectAllowed    目标元素支持的放置行为
-
-  首先说一下，这个两个属性需要搭配使用，它们决定了被拖放元素 和 目标元素 之间的关系的，当设定好两者的关系后，在进行拖动操作的时候，鼠标会根据不同的关系显示不同的样式，除此之外，没有别的特别的作用。
-  dropEffect 可以设置以下几个属性
-  值    含义
-  none    默认值。不能把拖动的元素放在这里
-  move    应该把拖动的元素移动到该目标元素
-  copy    应该把拖动元素复制到该目标元素
-  link    表示目标元素会打开被拖放进来的元素对应的链接
-  【注意】：dropEffect 属性必须在 dragenter事件 中设置，否则无效
-  effectAllowed 可以设置以下几个属性
-  值    含义
-  uninitialized    被拖放元素没有设置放置性为
-  none    被拖放元素不能有放置性为
-  copy    只允许值为 &#39;copy&#39; 的 dropEffect 目标元素
-  link    只允许值为 &#39;link&#39; 的 dropEffect 目标元素
-  move    只允许值为 &#39;move&#39; 的 dropEffect 目标元素
-  copyLink    只允许值为 &#39;copy&#39; 和 &#39;link&#39; 的 dropEffect 目标元素
-  copymove    只允许值为 &#39;copy&#39; 和 &#39;move&#39; 的 dropEffect 目标元素
-  linkMove    只允许值为 &#39;link&#39; 和 &#39;move&#39; 的 dropEffect 目标元素
-  all    只允许任意值的 dropEffect 目标元素
-  【注意】：effectAllowed 属性必须在 dragstart事件 中设置，否则无效
-  上面也说了，这两个属性基本上只是用来改变鼠标样式的，所以如果想实现特定的功能还得我们自己来重写事件的处理函数。
-  下面来看一个拖放实例：
-  需求： 将一段文本拖放到一个元素中
-  因为文本是默认支持的拖放元素，所以我们可以不对其做任何的事件绑定。
-</code></pre>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">      <span class="selector-class">.location</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">1px</span> solid black;</span></span><br><span class="line"><span class="css">      &#125;</span></span><br><span class="line"><span class="css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span>我是一段测试文字<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;location&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> located = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.location&#x27;</span>)</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">      located.addEventListener(<span class="string">&#x27;dragenter&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        e.dataTransfer.dropEffect = <span class="string">&#x27;copy&#x27;</span></span></span><br><span class="line"><span class="javascript">        e.preventDefault()</span></span><br><span class="line"><span class="javascript">      &#125;)</span></span><br><span class="line"><span class="javascript">      located.addEventListener(<span class="string">&#x27;dragover&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        e.preventDefault()</span></span><br><span class="line"><span class="javascript">      &#125;)</span></span><br><span class="line"><span class="javascript">      located.addEventListener(<span class="string">&#x27;drop&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        e.target.innerHTML = e.dataTransfer.getData(<span class="string">&#x27;text/plain&#x27;</span>)</span></span><br><span class="line"><span class="javascript">      &#125;)</span></span><br><span class="line"><span class="javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>html</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-        <tag>html5</tag>
-        <tag>drag</tag>
-        <tag>拖拽</tag>
       </tags>
   </entry>
   <entry>
@@ -3266,6 +3201,71 @@ catchtouchmove
         <tag>node</tag>
         <tag>性能监控</tag>
         <tag>优化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTML5 drag拖拽</title>
+    <url>/20210630/8-HTML5-drag%E6%8B%96%E6%8B%BD/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="HTML5-Drag-amp-Drop"><a href="#HTML5-Drag-amp-Drop" class="headerlink" title="HTML5 : Drag &amp; Drop"></a>HTML5 : Drag &amp; Drop</h2><blockquote>
+<p>Drag &amp; Drop 是 HTML5 中的拖放，即抓取对象后拖放到指定的位置。</p>
+</blockquote>
+<h5 id="设置元素为可拖放-draggables"><a href="#设置元素为可拖放-draggables" class="headerlink" title="设置元素为可拖放 draggables"></a>设置元素为可拖放 draggables</h5><figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">&lt;div <span class="keyword">class</span>=&quot;<span class="symbol">drag</span>&quot; <span class="symbol">draggable</span>=&quot;<span class="symbol">true</span>&quot;&gt;&lt;/<span class="symbol">div</span>&gt;</span><br><span class="line">&lt;<span class="symbol">div</span> <span class="symbol">class</span>=&quot;<span class="symbol">wrapper</span>&quot;&gt;&lt;/<span class="symbol">div</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h5><p><code>dragstart</code> <code>dragend</code> <code>dragenter</code> <code>dragover</code> <code>drop</code></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> oDrag = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&#x27;drag&#x27;</span>)[<span class="number">0</span>],</span><br><span class="line">    oWrapper = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&#x27;wrapper&#x27;</span>)[<span class="number">0</span>];</span><br><span class="line"><span class="comment">//当【元素】被抓取时</span></span><br><span class="line">oDrag.addEventListener(<span class="string">&#x27;dragstart&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;dragstart&#x27;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//当【元素】被放开时</span></span><br><span class="line">oDrag.addEventListener(<span class="string">&#x27;dragend&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;dragend&#x27;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//当鼠标进入【放置框】内（由鼠标位置决定）</span></span><br><span class="line">oWrapper.addEventListener(<span class="string">&#x27;dragenter&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;dragenter&#x27;</span>);</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//当元素在【放置框】上方移动时</span></span><br><span class="line">oWrapper.addEventListener(<span class="string">&#x27;dragover&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//触发 drop 事件必须先在 dragover 里面取消默认事件</span></span><br><span class="line">    e.preventDefault();</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;dragover&#x27;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//当元素被拖入【放置框】内时</span></span><br><span class="line">oWrapper.addEventListener(<span class="string">&#x27;drop&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//避免将文件拖入时，文件做为链接打开了</span></span><br><span class="line">    e.preventDefault();</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;drop&#x27;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//dragstart</span></span><br><span class="line"><span class="comment">//dragenter</span></span><br><span class="line"><span class="comment">//dragover</span></span><br><span class="line"><span class="comment">//drop</span></span><br><span class="line"><span class="comment">//dragend</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="设置数据-e-dataTransfer-setData"><a href="#设置数据-e-dataTransfer-setData" class="headerlink" title="设置数据 e.dataTransfer.setData()"></a>设置数据 e.dataTransfer.setData()</h5><h3 id="1-实战—将【1】和【2】放到【放置框】内"><a href="#1-实战—将【1】和【2】放到【放置框】内" class="headerlink" title="1.实战—将【1】和【2】放到【放置框】内"></a>1.实战—将【1】和【2】放到【放置框】内</h3><img title="html5拖拽效果" src="https://blog.img.wy1991.cn/static/images/js/drag.png-blogImg">
+
+<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line">&lt;div id=<span class="string">&quot;drag1&quot;</span> draggable=<span class="string">&quot;true&quot;</span>&gt;<span class="number">1</span>&lt;/div&gt;</span><br><span class="line">&lt;div id=<span class="string">&quot;drag2&quot;</span> draggable=<span class="string">&quot;true&quot;</span>&gt;<span class="number">2</span>&lt;/div&gt;</span><br><span class="line">&lt;div <span class="keyword">class</span>=<span class="string">&quot;wrapper&quot;</span>&gt;放置框&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">var oDrag1 = document.get<span class="constructor">ElementById(&#x27;<span class="params">drag1</span>&#x27;)</span>,</span><br><span class="line">    oDrag2 = document.get<span class="constructor">ElementById(&#x27;<span class="params">drag2</span>&#x27;)</span>,</span><br><span class="line">    oWrapper = document.get<span class="constructor">ElementsByClassName(&#x27;<span class="params">wrapper</span>&#x27;)</span><span class="literal">[<span class="number">0</span>]</span>;</span><br><span class="line">var child = oWrapper.childNodes;</span><br><span class="line">oDrag1.add<span class="constructor">EventListener(&#x27;<span class="params">dragstart</span>&#x27;,<span class="params">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//设置 数据</span></span><br><span class="line">    e.dataTransfer.set<span class="constructor">Data(&#x27;<span class="params">data</span>&#x27;,<span class="params">this</span>.<span class="params">id</span>)</span>;</span><br><span class="line">&#125;)</span><br><span class="line">oDrag2.add<span class="constructor">EventListener(&#x27;<span class="params">dragstart</span>&#x27;,<span class="params">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    e.dataTransfer.set<span class="constructor">Data(&#x27;<span class="params">data</span>&#x27;,<span class="params">this</span>.<span class="params">id</span>)</span>;</span><br><span class="line">&#125;)</span><br><span class="line">oWrapper.add<span class="constructor">EventListener(&#x27;<span class="params">dragenter</span>&#x27;,<span class="params">function</span>()</span>&#123;</span><br><span class="line">    <span class="comment">//删除文本节点&#x27;放置框&#x27;</span></span><br><span class="line">    <span class="keyword">for</span>(var i = <span class="number">0</span>; i &lt; child.length; i ++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(child<span class="literal">[<span class="identifier">i</span>]</span>.nodeType<span class="operator"> === </span><span class="number">3</span>)&#123;</span><br><span class="line">            console.log(child<span class="literal">[<span class="identifier">i</span>]</span>);</span><br><span class="line">            oWrapper.remove<span class="constructor">Child(<span class="params">child</span>[<span class="params">i</span>])</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line">oWrapper.add<span class="constructor">EventListener(&#x27;<span class="params">dragover</span>&#x27;,<span class="params">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//触发 drop 事件必须先在 dragover 里面取消默认事件</span></span><br><span class="line">    e.prevent<span class="constructor">Default()</span>;</span><br><span class="line">&#125;)</span><br><span class="line">oWrapper.add<span class="constructor">EventListener(&#x27;<span class="params">drop</span>&#x27;,<span class="params">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// console.log(e.dataTransfer);</span></span><br><span class="line">    <span class="comment">//获取 数据</span></span><br><span class="line">    var data = e.dataTransfer.get<span class="constructor">Data(&#x27;<span class="params">data</span>&#x27;)</span>;</span><br><span class="line">    oWrapper.append<span class="constructor">Child(<span class="params">document</span>.<span class="params">getElementById</span>(<span class="params">data</span>)</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-实战—拖住排序加拖拽删除"><a href="#2-实战—拖住排序加拖拽删除" class="headerlink" title="2.实战—拖住排序加拖拽删除"></a>2.实战—拖住排序加拖拽删除</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;wrapper&quot;</span>&gt;</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">draggable</span>=<span class="string">&quot;true&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">draggable</span>=<span class="string">&quot;true&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">draggable</span>=<span class="string">&quot;true&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">draggable</span>=<span class="string">&quot;true&quot;</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">draggable</span>=<span class="string">&quot;true&quot;</span>&gt;</span>5<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span>垃圾桶<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/div&gt;</span><br><span class="line"><span class="keyword">var</span> oUl = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;ul&#x27;</span>)[<span class="number">0</span>],</span><br><span class="line">    oBox = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&#x27;box&#x27;</span>)[<span class="number">0</span>],</span><br><span class="line">    oLi = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;li&#x27;</span>),</span><br><span class="line">    len = oLi.length;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bindLiEvent</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; len; i ++)&#123;</span><br><span class="line">        oLi[i].addEventListener(<span class="string">&#x27;dragstart&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> index = getIndex(<span class="built_in">this</span>);</span><br><span class="line">            e.dataTransfer.setData(<span class="string">&#x27;data&#x27;</span>, index);</span><br><span class="line">        &#125;);</span><br><span class="line">        oLi[i].addEventListener(<span class="string">&#x27;dragover&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">            e.preventDefault();</span><br><span class="line">        &#125;);</span><br><span class="line">        oLi[i].addEventListener(<span class="string">&#x27;drop&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> i = e.dataTransfer.getData(<span class="string">&#x27;data&#x27;</span>);</span><br><span class="line">            oUl.insertBefore(oLi[i], <span class="built_in">this</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//获取列表最新的索引值</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getIndex</span>(<span class="params">dom</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; len; i ++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(oLi[i] === dom)&#123;</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeLi</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    oBox.addEventListener(<span class="string">&#x27;dragover&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">        e.preventDefault();</span><br><span class="line">    &#125;)</span><br><span class="line">    oBox.addEventListener(<span class="string">&#x27;drop&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">        e.preventDefault();</span><br><span class="line">        <span class="keyword">var</span> index = e.dataTransfer.getData(<span class="string">&#x27;data&#x27;</span>);</span><br><span class="line">        oLi[index].remove();</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line">bindLiEvent();</span><br><span class="line">removeLi ();</span><br></pre></td></tr></table></figure>
+
+<h3 id="dataTransfer-有常用的属性"><a href="#dataTransfer-有常用的属性" class="headerlink" title="dataTransfer 有常用的属性:"></a>dataTransfer 有常用的属性:</h3><pre><code>  方法    含义
+  setData    设置字符串，并设置数据类型
+  getData    获取对应数据类型的字符串
+
+  （2）属性
+
+  在 dataTransfer对象 上还有两个比较常用的属性，如下表所示
+  属性    含义
+  dropEffect    被拖放元素的放置行为
+  effectAllowed    目标元素支持的放置行为
+
+  首先说一下，这个两个属性需要搭配使用，它们决定了被拖放元素 和 目标元素 之间的关系的，当设定好两者的关系后，在进行拖动操作的时候，鼠标会根据不同的关系显示不同的样式，除此之外，没有别的特别的作用。
+  dropEffect 可以设置以下几个属性
+  值    含义
+  none    默认值。不能把拖动的元素放在这里
+  move    应该把拖动的元素移动到该目标元素
+  copy    应该把拖动元素复制到该目标元素
+  link    表示目标元素会打开被拖放进来的元素对应的链接
+  【注意】：dropEffect 属性必须在 dragenter事件 中设置，否则无效
+  effectAllowed 可以设置以下几个属性
+  值    含义
+  uninitialized    被拖放元素没有设置放置性为
+  none    被拖放元素不能有放置性为
+  copy    只允许值为 &#39;copy&#39; 的 dropEffect 目标元素
+  link    只允许值为 &#39;link&#39; 的 dropEffect 目标元素
+  move    只允许值为 &#39;move&#39; 的 dropEffect 目标元素
+  copyLink    只允许值为 &#39;copy&#39; 和 &#39;link&#39; 的 dropEffect 目标元素
+  copymove    只允许值为 &#39;copy&#39; 和 &#39;move&#39; 的 dropEffect 目标元素
+  linkMove    只允许值为 &#39;link&#39; 和 &#39;move&#39; 的 dropEffect 目标元素
+  all    只允许任意值的 dropEffect 目标元素
+  【注意】：effectAllowed 属性必须在 dragstart事件 中设置，否则无效
+  上面也说了，这两个属性基本上只是用来改变鼠标样式的，所以如果想实现特定的功能还得我们自己来重写事件的处理函数。
+  下面来看一个拖放实例：
+  需求： 将一段文本拖放到一个元素中
+  因为文本是默认支持的拖放元素，所以我们可以不对其做任何的事件绑定。
+</code></pre>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">      <span class="selector-class">.location</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">1px</span> solid black;</span></span><br><span class="line"><span class="css">      &#125;</span></span><br><span class="line"><span class="css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span>我是一段测试文字<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;location&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> located = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.location&#x27;</span>)</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">      located.addEventListener(<span class="string">&#x27;dragenter&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        e.dataTransfer.dropEffect = <span class="string">&#x27;copy&#x27;</span></span></span><br><span class="line"><span class="javascript">        e.preventDefault()</span></span><br><span class="line"><span class="javascript">      &#125;)</span></span><br><span class="line"><span class="javascript">      located.addEventListener(<span class="string">&#x27;dragover&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        e.preventDefault()</span></span><br><span class="line"><span class="javascript">      &#125;)</span></span><br><span class="line"><span class="javascript">      located.addEventListener(<span class="string">&#x27;drop&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        e.target.innerHTML = e.dataTransfer.getData(<span class="string">&#x27;text/plain&#x27;</span>)</span></span><br><span class="line"><span class="javascript">      &#125;)</span></span><br><span class="line"><span class="javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>html</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>html5</tag>
+        <tag>drag</tag>
+        <tag>拖拽</tag>
       </tags>
   </entry>
   <entry>
@@ -3741,6 +3741,33 @@ www.google.com =&gt; 404
       </tags>
   </entry>
   <entry>
+    <title>分库分表的那些事</title>
+    <url>/20210724/82-%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="分库分表的那些事"><a href="#分库分表的那些事" class="headerlink" title="分库分表的那些事"></a>分库分表的那些事</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在互联网公司中，上至大厂，下到普通的公司企业，随着业务的发展，数据量的日积月累，对于数据库和表的设计和优化，显得尤为重要。其中关于分表分库的问题，在实际场景或者是面试中，亦是老生常谈。当我们明白了来龙去脉时，也就没那么复杂。</p>
+<h2 id="为什么需要分库分表"><a href="#为什么需要分库分表" class="headerlink" title="为什么需要分库分表"></a>为什么需要分库分表</h2><p>最为直接便是机器性能的问题。性能的考虑都来源于数据量。当数据量大的时候，随着而来便是高性能，可拓展，稳定性。当是业务刚开始，数据量小，为了控制成本，单机器是足够用的。但是随着业务的发展。在单台机器中无论是CPU、IO等资源，都是极为有限的。正所谓人多势众，双拳难敌四手，都是围绕强调不要孤军作战。所以，分表分库，亦或是读写分离都是为了更好的提高性能，提供更为稳定的服务。对于分表分库。主要是围绕这垂直和水平的二种拆分相结合的方式。</p>
+<h2 id="垂直拆分"><a href="#垂直拆分" class="headerlink" title="垂直拆分"></a>垂直拆分</h2><h3 id="1、库的垂直拆分："><a href="#1、库的垂直拆分：" class="headerlink" title="1、库的垂直拆分："></a>1、库的垂直拆分：</h3><p>库的垂直拆分主要是针对系统的一些数据量较为大的业务进行分解。如常见业务的：用户数据（注册，登录的信息等），商品信息，订单等等，这些相对而言数据量和读写次数都是较多的。最好是进行分库，部署在不同的机器上面，突破单机器的限制。</p>
+<h3 id="2、表的垂直拆分："><a href="#2、表的垂直拆分：" class="headerlink" title="2、表的垂直拆分："></a>2、表的垂直拆分：</h3><p>也就是针对表的字段进行拆分，将一个大表拆分为多个小表，也就是数据库中的范式原则。也可以将字段按属性或使用频繁程度分类,拆分为多个表，比如一个主要的信息表和一个拓展信息表等等</p>
+<p>只采用垂直拆分的话，依旧会存在单表数据量过大的问题。所以需要结合水平拆分的方法。</p>
+<h2 id="水平拆分"><a href="#水平拆分" class="headerlink" title="水平拆分"></a>水平拆分</h2><h3 id="1、只水平分表"><a href="#1、只水平分表" class="headerlink" title="1、只水平分表"></a>1、只水平分表</h3><p>针对数据量巨大的单张表（比如用户表，订单表），按照某种规则（RANGE,HASH取模等），切分到多张表里面去，可以有效的解决了单一表数据量过大的问题。 但是这些表还是在同一个库中，所以库级别的数据库操作还是有IO瓶颈。例如：</p>
+<p>原本一千万的user表数据，可以拆分为（user_1,user_2,user_3,user_4）这样的话，数据就分摊到不同的表中</p>
+<h3 id="2、水平分库分表"><a href="#2、水平分库分表" class="headerlink" title="2、水平分库分表"></a>2、水平分库分表</h3><p>将单张表的数据切分到多个服务器上去，每个服务器具有相应的库与表，只是表中数据集合不同。 水平分库分表能够有效的缓解单机和单库的性能瓶颈和压力，突破IO、连接数、硬件资源等的瓶颈。但是随着而来的事务也就成了分布式事务了,联合查询的效率也会下降。</p>
+<h2 id="常见水平分表拆分手段"><a href="#常见水平分表拆分手段" class="headerlink" title="常见水平分表拆分手段"></a>常见水平分表拆分手段</h2><ol>
+<li>RANGE:从0到100一个表，101到200一个表；</li>
+<li>HASH取模：用户注册的时候，可以根据用户的名称，会在用户的id 进行hash取模，分配到不同的表上</li>
+<li>时间维度：比如用户的登录记录信息，可以安装年+月的结构分摊数据，如 login_202107、login_202103</li>
+</ol>
+<h2 id="分库分表产品"><a href="#分库分表产品" class="headerlink" title="分库分表产品"></a>分库分表产品</h2><p>如果不想自己实现分表分库的的问题，现在市场上也有一些比较成熟的产品可以使用，如360的（Atlas）、阿里的（TDDL）
+ </p>
+]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+        <tag>分库分表</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>package最全解析</title>
     <url>/20210726/83-package%E6%9C%80%E5%85%A8%E8%A7%A3%E6%9E%90/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你真的了解package.json吗？来看看吧，这可能是最全的package解析</p>
@@ -3823,8 +3850,8 @@ www.google.com =&gt; 404
 <h2 id="license字段"><a href="#license字段" class="headerlink" title="license字段"></a>license字段</h2><p>license是当前项目的协议，让用户知道他们有何权限来使用你的模块，以及使用该模块有哪些限制。</p>
 <pre><code>  &quot;license&quot; : &quot;BSD-3-Clause&quot;
 </code></pre>
-<h2 id="author字段-contributors字段"><a href="#author字段-contributors字段" class="headerlink" title="author字段 contributors字段"></a>author字段 contributors字段</h2><p>author是具体一个人，contributors表示一群人，他们都表示当前项目的共享者。同时每个人都是一个对象。具有name字段和可选的url及email字段。<br>      “author”: {<br>        “name” : “yindong”,<br>        “email” : “<span class="exturl" data-url="bWFpbHRvOiYjeDc5OyYjeDY5OyYjeDZlOyYjMTAwOyYjMTExOyYjMTEwOyYjMTAzOyYjNjQ7JiMxMjA7JiMxMjA7JiN4MmU7JiM5OTsmIzExMTsmI3g2ZDs=">&#x79;&#x69;&#x6e;&#100;&#111;&#110;&#103;&#64;&#120;&#120;&#x2e;&#99;&#111;&#x6d;<i class="fa fa-external-link-alt"></i></span>“,<br>        “url” : “<span class="exturl" data-url="aHR0cHM6Ly96aGlxaWFuZHVhbi5jb20vJnF1b3Q7">https://zhiqianduan.com/&quot;<i class="fa fa-external-link-alt"></i></span><br>      }</p>
-<p>也可以写成一个字符串<br>      “author”: “yindong <span class="exturl" data-url="bWFpbHRvOiYjeDc5OyYjeDY5OyYjeDZlOyYjMTAwOyYjMTExOyYjeDZlOyYjMTAzOyYjeDQwOyYjMTIwOyYjMTIwOyYjeDJlOyYjOTk7JiMxMTE7JiN4NmQ7">&#x79;&#x69;&#x6e;&#100;&#111;&#x6e;&#103;&#x40;&#120;&#120;&#x2e;&#99;&#111;&#x6d;<i class="fa fa-external-link-alt"></i></span> (<span class="exturl" data-url="aHR0cHM6Ly96aGlxaWFuZHVhbi5jb20vKSZxdW90Ow==">https://zhiqianduan.com/)&quot;<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="author字段-contributors字段"><a href="#author字段-contributors字段" class="headerlink" title="author字段 contributors字段"></a>author字段 contributors字段</h2><p>author是具体一个人，contributors表示一群人，他们都表示当前项目的共享者。同时每个人都是一个对象。具有name字段和可选的url及email字段。<br>      “author”: {<br>        “name” : “yindong”,<br>        “email” : “<span class="exturl" data-url="bWFpbHRvOiYjMTIxOyYjMTA1OyYjMTEwOyYjeDY0OyYjMTExOyYjMTEwOyYjeDY3OyYjeDQwOyYjeDc4OyYjMTIwOyYjeDJlOyYjOTk7JiMxMTE7JiMxMDk7">&#121;&#105;&#110;&#x64;&#111;&#110;&#x67;&#x40;&#x78;&#120;&#x2e;&#99;&#111;&#109;<i class="fa fa-external-link-alt"></i></span>“,<br>        “url” : “<span class="exturl" data-url="aHR0cHM6Ly96aGlxaWFuZHVhbi5jb20vJnF1b3Q7">https://zhiqianduan.com/&quot;<i class="fa fa-external-link-alt"></i></span><br>      }</p>
+<p>也可以写成一个字符串<br>      “author”: “yindong <span class="exturl" data-url="bWFpbHRvOiYjeDc5OyYjMTA1OyYjMTEwOyYjeDY0OyYjMTExOyYjeDZlOyYjeDY3OyYjNjQ7JiMxMjA7JiN4Nzg7JiM0NjsmI3g2MzsmI3g2ZjsmI3g2ZDs=">&#x79;&#105;&#110;&#x64;&#111;&#x6e;&#x67;&#64;&#120;&#x78;&#46;&#x63;&#x6f;&#x6d;<i class="fa fa-external-link-alt"></i></span> (<span class="exturl" data-url="aHR0cHM6Ly96aGlxaWFuZHVhbi5jb20vKSZxdW90Ow==">https://zhiqianduan.com/)&quot;<i class="fa fa-external-link-alt"></i></span></p>
 <h2 id="files字段"><a href="#files字段" class="headerlink" title="files字段"></a>files字段</h2><p>files属性的值是一个数组，内容是模块下文件名或者文件夹名，如果是文件夹名，则文件夹下所有的文件也会被包含进来（除非文件被另一些配置排除了）</p>
 <p>可以在模块根目录下创建一个.npmignore文件，写在这个文件里边的文件即便被写在files属性里边也会被排除在外，这个文件的写法与.gitignore类似。</p>
 <h2 id="main字段"><a href="#main字段" class="headerlink" title="main字段"></a>main字段</h2><p>main字段指定了加载的入口文件，require导入的时候就会加载这个文件。这个字段的默认值是模块根目录下面的index.js。</p>
@@ -4210,98 +4237,6 @@ www.google.com =&gt; 404
       </tags>
   </entry>
   <entry>
-    <title>分库分表的那些事</title>
-    <url>/20210724/82-%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="分库分表的那些事"><a href="#分库分表的那些事" class="headerlink" title="分库分表的那些事"></a>分库分表的那些事</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在互联网公司中，上至大厂，下到普通的公司企业，随着业务的发展，数据量的日积月累，对于数据库和表的设计和优化，显得尤为重要。其中关于分表分库的问题，在实际场景或者是面试中，亦是老生常谈。当我们明白了来龙去脉时，也就没那么复杂。</p>
-<h2 id="为什么需要分库分表"><a href="#为什么需要分库分表" class="headerlink" title="为什么需要分库分表"></a>为什么需要分库分表</h2><p>最为直接便是机器性能的问题。性能的考虑都来源于数据量。当数据量大的时候，随着而来便是高性能，可拓展，稳定性。当是业务刚开始，数据量小，为了控制成本，单机器是足够用的。但是随着业务的发展。在单台机器中无论是CPU、IO等资源，都是极为有限的。正所谓人多势众，双拳难敌四手，都是围绕强调不要孤军作战。所以，分表分库，亦或是读写分离都是为了更好的提高性能，提供更为稳定的服务。对于分表分库。主要是围绕这垂直和水平的二种拆分相结合的方式。</p>
-<h2 id="垂直拆分"><a href="#垂直拆分" class="headerlink" title="垂直拆分"></a>垂直拆分</h2><h3 id="1、库的垂直拆分："><a href="#1、库的垂直拆分：" class="headerlink" title="1、库的垂直拆分："></a>1、库的垂直拆分：</h3><p>库的垂直拆分主要是针对系统的一些数据量较为大的业务进行分解。如常见业务的：用户数据（注册，登录的信息等），商品信息，订单等等，这些相对而言数据量和读写次数都是较多的。最好是进行分库，部署在不同的机器上面，突破单机器的限制。</p>
-<h3 id="2、表的垂直拆分："><a href="#2、表的垂直拆分：" class="headerlink" title="2、表的垂直拆分："></a>2、表的垂直拆分：</h3><p>也就是针对表的字段进行拆分，将一个大表拆分为多个小表，也就是数据库中的范式原则。也可以将字段按属性或使用频繁程度分类,拆分为多个表，比如一个主要的信息表和一个拓展信息表等等</p>
-<p>只采用垂直拆分的话，依旧会存在单表数据量过大的问题。所以需要结合水平拆分的方法。</p>
-<h2 id="水平拆分"><a href="#水平拆分" class="headerlink" title="水平拆分"></a>水平拆分</h2><h3 id="1、只水平分表"><a href="#1、只水平分表" class="headerlink" title="1、只水平分表"></a>1、只水平分表</h3><p>针对数据量巨大的单张表（比如用户表，订单表），按照某种规则（RANGE,HASH取模等），切分到多张表里面去，可以有效的解决了单一表数据量过大的问题。 但是这些表还是在同一个库中，所以库级别的数据库操作还是有IO瓶颈。例如：</p>
-<p>原本一千万的user表数据，可以拆分为（user_1,user_2,user_3,user_4）这样的话，数据就分摊到不同的表中</p>
-<h3 id="2、水平分库分表"><a href="#2、水平分库分表" class="headerlink" title="2、水平分库分表"></a>2、水平分库分表</h3><p>将单张表的数据切分到多个服务器上去，每个服务器具有相应的库与表，只是表中数据集合不同。 水平分库分表能够有效的缓解单机和单库的性能瓶颈和压力，突破IO、连接数、硬件资源等的瓶颈。但是随着而来的事务也就成了分布式事务了,联合查询的效率也会下降。</p>
-<h2 id="常见水平分表拆分手段"><a href="#常见水平分表拆分手段" class="headerlink" title="常见水平分表拆分手段"></a>常见水平分表拆分手段</h2><ol>
-<li>RANGE:从0到100一个表，101到200一个表；</li>
-<li>HASH取模：用户注册的时候，可以根据用户的名称，会在用户的id 进行hash取模，分配到不同的表上</li>
-<li>时间维度：比如用户的登录记录信息，可以安装年+月的结构分摊数据，如 login_202107、login_202103</li>
-</ol>
-<h2 id="分库分表产品"><a href="#分库分表产品" class="headerlink" title="分库分表产品"></a>分库分表产品</h2><p>如果不想自己实现分表分库的的问题，现在市场上也有一些比较成熟的产品可以使用，如360的（Atlas）、阿里的（TDDL）
- </p>
-]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-        <tag>分库分表</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js解决超出精度数字问题</title>
-    <url>/20210728/86-js-%E8%A7%A3%E5%86%B3%E8%B6%85%E5%87%BA%E7%B2%BE%E5%BA%A6%E6%95%B0%E5%AD%97%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="JS-解决超出精度数字问题"><a href="#JS-解决超出精度数字问题" class="headerlink" title="JS 解决超出精度数字问题"></a>JS 解决超出精度数字问题</h1><ol>
-<li>js 最大安全数字是 Math.pow(2,53) - 1，超出这个数字相加会出现精度丢失问题，可通过将数字转换为字符串操作的思路处理，如下：</li>
-</ol>
-<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"><span class="comment">// js 最大安全数字： Math.pow(2, 53)-1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> a = &#x27;<span class="number">123456444565456.889</span>&#x27;</span><br><span class="line"><span class="keyword">let</span> b =       &#x27;<span class="number">121231456.32</span>&#x27;</span><br><span class="line"><span class="comment">// a + b = &#x27;123456565796913.209&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> add<span class="constructor">Two(<span class="params">a</span>, <span class="params">b</span>)</span> &#123;</span><br><span class="line">    <span class="comment">//1.比较两个数长度  然后短的一方前面补0</span></span><br><span class="line">    <span class="keyword">if</span> (a.length &gt; b.length) &#123;</span><br><span class="line">        <span class="keyword">let</span> arr = <span class="constructor">Array(<span class="params">a</span>.<span class="params">length</span> - <span class="params">b</span>.<span class="params">length</span>)</span>.fill(<span class="number">0</span>);</span><br><span class="line">        b = arr.join(&#x27;&#x27;) + b</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (a.length &lt; b.length) &#123;</span><br><span class="line">        <span class="keyword">let</span> arr = <span class="constructor">Array(<span class="params">b</span>.<span class="params">length</span> - <span class="params">a</span>.<span class="params">length</span>)</span>.fill(<span class="number">0</span>);</span><br><span class="line">        a = arr.join(&#x27;&#x27;) + a</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2.反转两个数 （这里是因为人习惯从左往右加 而数字相加是从右到左 因此反转一下比较好理解）</span></span><br><span class="line">    a = a.split(&#x27;&#x27;).reverse<span class="literal">()</span>;</span><br><span class="line">    b = b.split(&#x27;&#x27;).reverse<span class="literal">()</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//3.循环两个数组  并进行相加  如果和大于10 则 sign = 1,当前位置的值为(和%10)</span></span><br><span class="line">    <span class="keyword">let</span> sign = <span class="number">0</span>;<span class="comment">//标记 是否进位</span></span><br><span class="line">    <span class="keyword">let</span> newVal = <span class="literal">[]</span>;<span class="comment">//用于存储最后的结果</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; a.length; j++) &#123;</span><br><span class="line">        <span class="keyword">let</span> <span class="keyword">val</span> = a<span class="literal">[<span class="identifier">j</span>]</span><span class="operator"> / </span><span class="number">1</span> + b<span class="literal">[<span class="identifier">j</span>]</span><span class="operator"> / </span><span class="number">1</span> + sign; <span class="comment">//除1是保证都为数字 这里也可以用Number()</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">val</span> &gt;= <span class="number">10</span>) &#123;</span><br><span class="line">            sign = <span class="number">1</span>;</span><br><span class="line">            newVal.unshift(<span class="keyword">val</span> % <span class="number">10</span>) <span class="comment">//这里用unshift而不是push是因为可以省了使用reverse</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            sign = <span class="number">0</span>;</span><br><span class="line">            newVal.unshift(<span class="keyword">val</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 最后一次相加需要向前补充一位数字 ‘1’</span></span><br><span class="line">    return sign<span class="operator"> &amp;&amp; </span>newVal.unshift(sign)<span class="operator"> &amp;&amp; </span>newVal.join(&#x27;&#x27;)<span class="operator"> || </span>newVal.join(&#x27;&#x27;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">// 参考其他朋友的精简写法</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addTwo</span><span class="params">(a,b)</span> &#123;</span></span><br><span class="line">    <span class="keyword">let</span> temp = <span class="number">0</span></span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">res</span> = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">a</span> = <span class="keyword">a</span>.<span class="keyword">split</span>(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    <span class="keyword">b</span> = <span class="keyword">b</span>.<span class="keyword">split</span>(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    <span class="keyword">while</span>(<span class="keyword">a</span>.length || <span class="keyword">b</span>.length || temp) &#123;</span><br><span class="line">        temp += Number(<span class="keyword">a</span>.<span class="keyword">pop</span>() || <span class="number">0</span>) + Number(<span class="keyword">b</span>.<span class="keyword">pop</span>() || <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">res</span> = (temp%<span class="number">10</span>) + <span class="keyword">res</span></span><br><span class="line">        temp = temp &gt; <span class="number">9</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">res</span>.replace(/^<span class="number">0</span>+/g, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>当涉及到带有小数部分相加时，对上面方法进行一次封装，完整实现如下：</li>
-</ol>
-<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = &#x27;<span class="number">123456444565456.889</span>&#x27;</span><br><span class="line"><span class="keyword">let</span> b =       &#x27;<span class="number">121231456.32</span>&#x27;</span><br><span class="line"><span class="comment">// a + b = &#x27;123456565796913.209&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> add<span class="constructor">Two(<span class="params">a</span> = &#x27;0&#x27;,<span class="params">b</span> = &#x27;0&#x27;, <span class="params">isHasDecimal</span>=<span class="params">false</span>)</span> &#123;</span><br><span class="line">    <span class="comment">//1.比较两个数长度  然后短的一方前面补0</span></span><br><span class="line">    <span class="keyword">if</span> (a.length &gt; b.length) &#123;</span><br><span class="line">        <span class="keyword">let</span> arr = <span class="constructor">Array(<span class="params">a</span>.<span class="params">length</span> - <span class="params">b</span>.<span class="params">length</span>)</span>.fill(<span class="number">0</span>);</span><br><span class="line">        b = isHasDecimal<span class="operator"> &amp;&amp; </span>(b + arr.join(&#x27;&#x27;))<span class="operator"> || </span>arr.join(&#x27;&#x27;) + b</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (a.length &lt; b.length) &#123;</span><br><span class="line">        <span class="keyword">let</span> arr = <span class="constructor">Array(<span class="params">b</span>.<span class="params">length</span> - <span class="params">a</span>.<span class="params">length</span>)</span>.fill(<span class="number">0</span>);</span><br><span class="line">        a = isHasDecimal<span class="operator"> &amp;&amp; </span>(a + arr.join(&#x27;&#x27;))<span class="operator"> || </span>arr.join(&#x27;&#x27;) + a</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2.反转两个数 （这里是因为人习惯从左往右加 而数字相加是从右到左 因此反转一下比较好理解）</span></span><br><span class="line">    a = a.split(&#x27;&#x27;).reverse<span class="literal">()</span>;</span><br><span class="line">    b = b.split(&#x27;&#x27;).reverse<span class="literal">()</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//3.循环两个数组  并进行相加  如果和大于10 则 sign = 1,当前位置的值为(和%10)</span></span><br><span class="line">    <span class="keyword">let</span> sign = <span class="number">0</span>;<span class="comment">//标记 是否进位</span></span><br><span class="line">    <span class="keyword">let</span> newVal = <span class="literal">[]</span>;<span class="comment">//用于存储最后的结果</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; a.length; j++) &#123;</span><br><span class="line">        <span class="keyword">let</span> <span class="keyword">val</span> = a<span class="literal">[<span class="identifier">j</span>]</span><span class="operator"> / </span><span class="number">1</span> + b<span class="literal">[<span class="identifier">j</span>]</span><span class="operator"> / </span><span class="number">1</span> + sign; <span class="comment">//除1是保证都为数字 这里也可以用Number()</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">val</span> &gt;= <span class="number">10</span>) &#123;</span><br><span class="line">            sign = <span class="number">1</span>;</span><br><span class="line">            newVal.unshift(<span class="keyword">val</span> % <span class="number">10</span>) <span class="comment">//这里用unshift而不是push是因为可以省了使用reverse</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            sign = <span class="number">0</span>;</span><br><span class="line">            newVal.unshift(<span class="keyword">val</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 最后一次相加需要向前补充一位数字 ‘1’</span></span><br><span class="line">    return sign<span class="operator"> &amp;&amp; </span>newVal.unshift(sign)<span class="operator"> &amp;&amp; </span>newVal.join(&#x27;&#x27;)<span class="operator"> || </span>newVal.join(&#x27;&#x27;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> add(a,b) &#123;</span><br><span class="line">    <span class="keyword">let</span> num1 = <span class="constructor">String(<span class="params">a</span>)</span>.split(<span class="character">&#x27;.&#x27;</span>)</span><br><span class="line">    <span class="keyword">let</span> num2 = <span class="constructor">String(<span class="params">b</span>)</span>.split(<span class="character">&#x27;.&#x27;</span>)</span><br><span class="line">    <span class="keyword">let</span> intSum = add<span class="constructor">Two(<span class="params">num1</span>[0], <span class="params">num2</span>[0])</span></span><br><span class="line">    <span class="keyword">let</span> res = intSum</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (num1.length&gt;<span class="number">1</span><span class="operator"> || </span>num2.length &gt; <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> decimalSum = add<span class="constructor">Two(<span class="params">num1</span>[1], <span class="params">num2</span>[1], <span class="params">true</span>)</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (decimalSum.length &gt; (num1<span class="literal">[<span class="number">1</span>]</span><span class="pattern-match"><span class="operator">||</span>&#x27;0&#x27;).length <span class="operator">&amp;&amp;</span> decimal<span class="constructor">Sum</span>.length &gt; (num2[1]<span class="operator">||</span>&#x27;0&#x27;).length) &#123;</span></span><br><span class="line"><span class="pattern-match">            <span class="built_in">int</span><span class="constructor">Sum</span> = add<span class="constructor">Two(<span class="params">intSum</span>, <span class="params">decimalSum</span>[0])</span></span></span><br><span class="line"><span class="pattern-match">            decimal<span class="constructor">Sum</span> = decimal<span class="constructor">Sum</span>.slice(1)</span></span><br><span class="line"><span class="pattern-match">            res = <span class="constructor">`$</span>&#123;<span class="built_in">int</span><span class="constructor">Sum</span>&#125;.<span class="constructor">$</span>&#123;decimal<span class="constructor">Sum</span>&#125;`</span></span><br><span class="line"><span class="pattern-match">        &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="pattern-match">            res = <span class="constructor">`$</span>&#123;<span class="built_in">int</span><span class="constructor">Sum</span>&#125;.<span class="constructor">$</span>&#123;decimal<span class="constructor">Sum</span>&#125;`</span></span><br><span class="line"><span class="pattern-match">        &#125;</span></span><br><span class="line"><span class="pattern-match">    &#125;</span></span><br><span class="line"><span class="pattern-match">    return res</span></span><br><span class="line"><span class="pattern-match">&#125;</span></span><br><span class="line"><span class="pattern-match">console.log(add(a, b)) <span class="operator">/</span><span class="operator">/</span> 123456565796913.209</span></span><br><span class="line"><span class="pattern-match"><span class="operator">/</span><span class="operator">/</span> console.log(add(&#x27;325&#x27;, &#x27;988&#x27;)) <span class="operator">/</span><span class="operator">/</span> 1313</span></span><br><span class="line"><span class="pattern-match"></span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HTML media 媒体查询</title>
-    <url>/20210630/9-HTML-media-%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="media"><a href="#media" class="headerlink" title="media"></a>media</h3><ol>
-<li>最大宽度 max-width</li>
-<li>最小宽度 min-width</li>
-<li>多个媒体特性使用(and)</li>
-<li>设备屏幕的输出宽度 Device Width</li>
-</ol>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">299px</span>) &#123;</span><br><span class="line">  <span class="selector-tag">html</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: turquoise;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">min-width</span>: <span class="number">300px</span>) <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">500px</span>) &#123;</span><br><span class="line">  <span class="selector-tag">html</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: tomato;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="and"><a href="#and" class="headerlink" title="and"></a>and</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">min-width</span>: <span class="number">600px</span>) <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">900px</span>) &#123;</span><br><span class="line">  <span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#f5f5f5</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="最大"><a href="#最大" class="headerlink" title="最大"></a>最大</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">480px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.ads</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="根据不同得设备宽度引入不同的-css"><a href="#根据不同得设备宽度引入不同的-css" class="headerlink" title="根据不同得设备宽度引入不同的 css"></a>根据不同得设备宽度引入不同的 css</h3><blockquote>
-<p>在智能设备上，例如 iPhone、iPad 等，还可以根据屏幕设备的尺寸来设置相应的样式（或者调用相应的样式文件）。同样的，对于屏幕设备同样可以使用“min/max”对应参数，如“min-device-width”或者“max-device-width”。</p>
-</blockquote>
-<p>下面的代码指的是“iphone.css”样式适用于最大设备宽度为 480px，比如说 iPhone 上的显示，这里的“max-device-width”所指的是设备的实际分辨率，也就是指可视面积分辨率。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (max-device-<span class="attribute">width</span>:<span class="number">480px</span>)<span class="string">&quot; href=&quot;</span>iphone.css<span class="string">&quot; /&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="not-关键词"><a href="#not-关键词" class="headerlink" title="not 关键词"></a>not 关键词</h3><blockquote>
-<p>使用关键词“not”是用来排除某种制定的媒体类型，也就是用来排除符合表达式的设备。换句话说，not 关键词表示对后面的表达式执行取反操作，如</p>
-</blockquote>
-<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line">@<span class="function">media <span class="keyword">not</span> print <span class="title">and</span> <span class="params">(max-width: <span class="number">1200</span>px)</span></span>&#123;样式代码&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-only-关键词"><a href="#6-only-关键词" class="headerlink" title="6.only 关键词"></a>6.only 关键词</h3><blockquote>
-<p>only 用来指定某种特定的媒体类型，可以用来排除不支持媒体查询的浏览器。其实 only 很多时候是用来对那些不支持 Media Query 但却支持 Media Type 的设备隐藏样式表的。其主要有：支持媒体特性的设备，正常调用样式，此时就当 only 不存在；表示不支持媒体特性但又支持媒体类型的设备，这样就会不读样式，因为其先会读取 only 而不是 screen；另外不支持 Media Queries 的浏览器，不论是否支持 only，样式都不会被采用。如</p>
-</blockquote>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&lt;link <span class="attribute">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attribute">media</span>=<span class="string">&quot;only screen and (max-device-width:240px)&quot;</span> <span class="attribute">href</span>=<span class="string">&quot;android240.css&quot;</span> /&gt;</span><br></pre></td></tr></table></figure>
-
-<p>在 Media Query 中如果没有明确指定 Media Type，那么其默认为 all，如：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">media</span>=<span class="string">&quot;(min-width:701px) and (max-width:900px)&quot;</span> <span class="attr">href</span>=<span class="string">&quot;mediu.css&quot;</span> /&gt;</span><span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>html</category>
-      </categories>
-      <tags>
-        <tag>html</tag>
-        <tag>media</tag>
-        <tag>媒体查询</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CSS居中对齐终极指南</title>
     <url>/20210727/85-CSS%E5%B1%85%E4%B8%AD%E5%AF%B9%E9%BD%90%E7%BB%88%E6%9E%81%E6%8C%87%E5%8D%97/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="CSS-居中对齐终极指南"><a href="#CSS-居中对齐终极指南" class="headerlink" title="CSS 居中对齐终极指南"></a>CSS 居中对齐终极指南</h1><p>本文将讨论可用于居中对齐元素的 6 种 CSS 技术（按照最佳实践排序），以及每一种技术最适合应用的场景。这里，居中对齐指的是将元素放置在其父元素的水平和垂直中心。</p>
@@ -4443,6 +4378,71 @@ www.google.com =&gt; 404
       </tags>
   </entry>
   <entry>
+    <title>js解决超出精度数字问题</title>
+    <url>/20210728/86-js-%E8%A7%A3%E5%86%B3%E8%B6%85%E5%87%BA%E7%B2%BE%E5%BA%A6%E6%95%B0%E5%AD%97%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="JS-解决超出精度数字问题"><a href="#JS-解决超出精度数字问题" class="headerlink" title="JS 解决超出精度数字问题"></a>JS 解决超出精度数字问题</h1><ol>
+<li>js 最大安全数字是 Math.pow(2,53) - 1，超出这个数字相加会出现精度丢失问题，可通过将数字转换为字符串操作的思路处理，如下：</li>
+</ol>
+<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"><span class="comment">// js 最大安全数字： Math.pow(2, 53)-1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> a = &#x27;<span class="number">123456444565456.889</span>&#x27;</span><br><span class="line"><span class="keyword">let</span> b =       &#x27;<span class="number">121231456.32</span>&#x27;</span><br><span class="line"><span class="comment">// a + b = &#x27;123456565796913.209&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> add<span class="constructor">Two(<span class="params">a</span>, <span class="params">b</span>)</span> &#123;</span><br><span class="line">    <span class="comment">//1.比较两个数长度  然后短的一方前面补0</span></span><br><span class="line">    <span class="keyword">if</span> (a.length &gt; b.length) &#123;</span><br><span class="line">        <span class="keyword">let</span> arr = <span class="constructor">Array(<span class="params">a</span>.<span class="params">length</span> - <span class="params">b</span>.<span class="params">length</span>)</span>.fill(<span class="number">0</span>);</span><br><span class="line">        b = arr.join(&#x27;&#x27;) + b</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (a.length &lt; b.length) &#123;</span><br><span class="line">        <span class="keyword">let</span> arr = <span class="constructor">Array(<span class="params">b</span>.<span class="params">length</span> - <span class="params">a</span>.<span class="params">length</span>)</span>.fill(<span class="number">0</span>);</span><br><span class="line">        a = arr.join(&#x27;&#x27;) + a</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2.反转两个数 （这里是因为人习惯从左往右加 而数字相加是从右到左 因此反转一下比较好理解）</span></span><br><span class="line">    a = a.split(&#x27;&#x27;).reverse<span class="literal">()</span>;</span><br><span class="line">    b = b.split(&#x27;&#x27;).reverse<span class="literal">()</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//3.循环两个数组  并进行相加  如果和大于10 则 sign = 1,当前位置的值为(和%10)</span></span><br><span class="line">    <span class="keyword">let</span> sign = <span class="number">0</span>;<span class="comment">//标记 是否进位</span></span><br><span class="line">    <span class="keyword">let</span> newVal = <span class="literal">[]</span>;<span class="comment">//用于存储最后的结果</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; a.length; j++) &#123;</span><br><span class="line">        <span class="keyword">let</span> <span class="keyword">val</span> = a<span class="literal">[<span class="identifier">j</span>]</span><span class="operator"> / </span><span class="number">1</span> + b<span class="literal">[<span class="identifier">j</span>]</span><span class="operator"> / </span><span class="number">1</span> + sign; <span class="comment">//除1是保证都为数字 这里也可以用Number()</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">val</span> &gt;= <span class="number">10</span>) &#123;</span><br><span class="line">            sign = <span class="number">1</span>;</span><br><span class="line">            newVal.unshift(<span class="keyword">val</span> % <span class="number">10</span>) <span class="comment">//这里用unshift而不是push是因为可以省了使用reverse</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            sign = <span class="number">0</span>;</span><br><span class="line">            newVal.unshift(<span class="keyword">val</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 最后一次相加需要向前补充一位数字 ‘1’</span></span><br><span class="line">    return sign<span class="operator"> &amp;&amp; </span>newVal.unshift(sign)<span class="operator"> &amp;&amp; </span>newVal.join(&#x27;&#x27;)<span class="operator"> || </span>newVal.join(&#x27;&#x27;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">// 参考其他朋友的精简写法</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addTwo</span><span class="params">(a,b)</span> &#123;</span></span><br><span class="line">    <span class="keyword">let</span> temp = <span class="number">0</span></span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">res</span> = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">a</span> = <span class="keyword">a</span>.<span class="keyword">split</span>(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    <span class="keyword">b</span> = <span class="keyword">b</span>.<span class="keyword">split</span>(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    <span class="keyword">while</span>(<span class="keyword">a</span>.length || <span class="keyword">b</span>.length || temp) &#123;</span><br><span class="line">        temp += Number(<span class="keyword">a</span>.<span class="keyword">pop</span>() || <span class="number">0</span>) + Number(<span class="keyword">b</span>.<span class="keyword">pop</span>() || <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">res</span> = (temp%<span class="number">10</span>) + <span class="keyword">res</span></span><br><span class="line">        temp = temp &gt; <span class="number">9</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">res</span>.replace(/^<span class="number">0</span>+/g, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>当涉及到带有小数部分相加时，对上面方法进行一次封装，完整实现如下：</li>
+</ol>
+<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = &#x27;<span class="number">123456444565456.889</span>&#x27;</span><br><span class="line"><span class="keyword">let</span> b =       &#x27;<span class="number">121231456.32</span>&#x27;</span><br><span class="line"><span class="comment">// a + b = &#x27;123456565796913.209&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> add<span class="constructor">Two(<span class="params">a</span> = &#x27;0&#x27;,<span class="params">b</span> = &#x27;0&#x27;, <span class="params">isHasDecimal</span>=<span class="params">false</span>)</span> &#123;</span><br><span class="line">    <span class="comment">//1.比较两个数长度  然后短的一方前面补0</span></span><br><span class="line">    <span class="keyword">if</span> (a.length &gt; b.length) &#123;</span><br><span class="line">        <span class="keyword">let</span> arr = <span class="constructor">Array(<span class="params">a</span>.<span class="params">length</span> - <span class="params">b</span>.<span class="params">length</span>)</span>.fill(<span class="number">0</span>);</span><br><span class="line">        b = isHasDecimal<span class="operator"> &amp;&amp; </span>(b + arr.join(&#x27;&#x27;))<span class="operator"> || </span>arr.join(&#x27;&#x27;) + b</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (a.length &lt; b.length) &#123;</span><br><span class="line">        <span class="keyword">let</span> arr = <span class="constructor">Array(<span class="params">b</span>.<span class="params">length</span> - <span class="params">a</span>.<span class="params">length</span>)</span>.fill(<span class="number">0</span>);</span><br><span class="line">        a = isHasDecimal<span class="operator"> &amp;&amp; </span>(a + arr.join(&#x27;&#x27;))<span class="operator"> || </span>arr.join(&#x27;&#x27;) + a</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2.反转两个数 （这里是因为人习惯从左往右加 而数字相加是从右到左 因此反转一下比较好理解）</span></span><br><span class="line">    a = a.split(&#x27;&#x27;).reverse<span class="literal">()</span>;</span><br><span class="line">    b = b.split(&#x27;&#x27;).reverse<span class="literal">()</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//3.循环两个数组  并进行相加  如果和大于10 则 sign = 1,当前位置的值为(和%10)</span></span><br><span class="line">    <span class="keyword">let</span> sign = <span class="number">0</span>;<span class="comment">//标记 是否进位</span></span><br><span class="line">    <span class="keyword">let</span> newVal = <span class="literal">[]</span>;<span class="comment">//用于存储最后的结果</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; a.length; j++) &#123;</span><br><span class="line">        <span class="keyword">let</span> <span class="keyword">val</span> = a<span class="literal">[<span class="identifier">j</span>]</span><span class="operator"> / </span><span class="number">1</span> + b<span class="literal">[<span class="identifier">j</span>]</span><span class="operator"> / </span><span class="number">1</span> + sign; <span class="comment">//除1是保证都为数字 这里也可以用Number()</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">val</span> &gt;= <span class="number">10</span>) &#123;</span><br><span class="line">            sign = <span class="number">1</span>;</span><br><span class="line">            newVal.unshift(<span class="keyword">val</span> % <span class="number">10</span>) <span class="comment">//这里用unshift而不是push是因为可以省了使用reverse</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            sign = <span class="number">0</span>;</span><br><span class="line">            newVal.unshift(<span class="keyword">val</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 最后一次相加需要向前补充一位数字 ‘1’</span></span><br><span class="line">    return sign<span class="operator"> &amp;&amp; </span>newVal.unshift(sign)<span class="operator"> &amp;&amp; </span>newVal.join(&#x27;&#x27;)<span class="operator"> || </span>newVal.join(&#x27;&#x27;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> add(a,b) &#123;</span><br><span class="line">    <span class="keyword">let</span> num1 = <span class="constructor">String(<span class="params">a</span>)</span>.split(<span class="character">&#x27;.&#x27;</span>)</span><br><span class="line">    <span class="keyword">let</span> num2 = <span class="constructor">String(<span class="params">b</span>)</span>.split(<span class="character">&#x27;.&#x27;</span>)</span><br><span class="line">    <span class="keyword">let</span> intSum = add<span class="constructor">Two(<span class="params">num1</span>[0], <span class="params">num2</span>[0])</span></span><br><span class="line">    <span class="keyword">let</span> res = intSum</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (num1.length&gt;<span class="number">1</span><span class="operator"> || </span>num2.length &gt; <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> decimalSum = add<span class="constructor">Two(<span class="params">num1</span>[1], <span class="params">num2</span>[1], <span class="params">true</span>)</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (decimalSum.length &gt; (num1<span class="literal">[<span class="number">1</span>]</span><span class="pattern-match"><span class="operator">||</span>&#x27;0&#x27;).length <span class="operator">&amp;&amp;</span> decimal<span class="constructor">Sum</span>.length &gt; (num2[1]<span class="operator">||</span>&#x27;0&#x27;).length) &#123;</span></span><br><span class="line"><span class="pattern-match">            <span class="built_in">int</span><span class="constructor">Sum</span> = add<span class="constructor">Two(<span class="params">intSum</span>, <span class="params">decimalSum</span>[0])</span></span></span><br><span class="line"><span class="pattern-match">            decimal<span class="constructor">Sum</span> = decimal<span class="constructor">Sum</span>.slice(1)</span></span><br><span class="line"><span class="pattern-match">            res = <span class="constructor">`$</span>&#123;<span class="built_in">int</span><span class="constructor">Sum</span>&#125;.<span class="constructor">$</span>&#123;decimal<span class="constructor">Sum</span>&#125;`</span></span><br><span class="line"><span class="pattern-match">        &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="pattern-match">            res = <span class="constructor">`$</span>&#123;<span class="built_in">int</span><span class="constructor">Sum</span>&#125;.<span class="constructor">$</span>&#123;decimal<span class="constructor">Sum</span>&#125;`</span></span><br><span class="line"><span class="pattern-match">        &#125;</span></span><br><span class="line"><span class="pattern-match">    &#125;</span></span><br><span class="line"><span class="pattern-match">    return res</span></span><br><span class="line"><span class="pattern-match">&#125;</span></span><br><span class="line"><span class="pattern-match">console.log(add(a, b)) <span class="operator">/</span><span class="operator">/</span> 123456565796913.209</span></span><br><span class="line"><span class="pattern-match"><span class="operator">/</span><span class="operator">/</span> console.log(add(&#x27;325&#x27;, &#x27;988&#x27;)) <span class="operator">/</span><span class="operator">/</span> 1313</span></span><br><span class="line"><span class="pattern-match"></span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTML media 媒体查询</title>
+    <url>/20210630/9-HTML-media-%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="media"><a href="#media" class="headerlink" title="media"></a>media</h3><ol>
+<li>最大宽度 max-width</li>
+<li>最小宽度 min-width</li>
+<li>多个媒体特性使用(and)</li>
+<li>设备屏幕的输出宽度 Device Width</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">299px</span>) &#123;</span><br><span class="line">  <span class="selector-tag">html</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: turquoise;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">min-width</span>: <span class="number">300px</span>) <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">500px</span>) &#123;</span><br><span class="line">  <span class="selector-tag">html</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: tomato;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="and"><a href="#and" class="headerlink" title="and"></a>and</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">min-width</span>: <span class="number">600px</span>) <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">900px</span>) &#123;</span><br><span class="line">  <span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#f5f5f5</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="最大"><a href="#最大" class="headerlink" title="最大"></a>最大</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">480px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.ads</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="根据不同得设备宽度引入不同的-css"><a href="#根据不同得设备宽度引入不同的-css" class="headerlink" title="根据不同得设备宽度引入不同的 css"></a>根据不同得设备宽度引入不同的 css</h3><blockquote>
+<p>在智能设备上，例如 iPhone、iPad 等，还可以根据屏幕设备的尺寸来设置相应的样式（或者调用相应的样式文件）。同样的，对于屏幕设备同样可以使用“min/max”对应参数，如“min-device-width”或者“max-device-width”。</p>
+</blockquote>
+<p>下面的代码指的是“iphone.css”样式适用于最大设备宽度为 480px，比如说 iPhone 上的显示，这里的“max-device-width”所指的是设备的实际分辨率，也就是指可视面积分辨率。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (max-device-<span class="attribute">width</span>:<span class="number">480px</span>)<span class="string">&quot; href=&quot;</span>iphone.css<span class="string">&quot; /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="not-关键词"><a href="#not-关键词" class="headerlink" title="not 关键词"></a>not 关键词</h3><blockquote>
+<p>使用关键词“not”是用来排除某种制定的媒体类型，也就是用来排除符合表达式的设备。换句话说，not 关键词表示对后面的表达式执行取反操作，如</p>
+</blockquote>
+<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line">@<span class="function">media <span class="keyword">not</span> print <span class="title">and</span> <span class="params">(max-width: <span class="number">1200</span>px)</span></span>&#123;样式代码&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-only-关键词"><a href="#6-only-关键词" class="headerlink" title="6.only 关键词"></a>6.only 关键词</h3><blockquote>
+<p>only 用来指定某种特定的媒体类型，可以用来排除不支持媒体查询的浏览器。其实 only 很多时候是用来对那些不支持 Media Query 但却支持 Media Type 的设备隐藏样式表的。其主要有：支持媒体特性的设备，正常调用样式，此时就当 only 不存在；表示不支持媒体特性但又支持媒体类型的设备，这样就会不读样式，因为其先会读取 only 而不是 screen；另外不支持 Media Queries 的浏览器，不论是否支持 only，样式都不会被采用。如</p>
+</blockquote>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&lt;link <span class="attribute">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attribute">media</span>=<span class="string">&quot;only screen and (max-device-width:240px)&quot;</span> <span class="attribute">href</span>=<span class="string">&quot;android240.css&quot;</span> /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在 Media Query 中如果没有明确指定 Media Type，那么其默认为 all，如：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">media</span>=<span class="string">&quot;(min-width:701px) and (max-width:900px)&quot;</span> <span class="attr">href</span>=<span class="string">&quot;mediu.css&quot;</span> /&gt;</span><span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>html</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+        <tag>media</tag>
+        <tag>媒体查询</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>js 常用工具utils</title>
     <url>/20210629/16-js-%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7utils/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -4484,7 +4484,18 @@ www.google.com =&gt; 404
 
 <h3 id="获取差距多少天"><a href="#获取差距多少天" class="headerlink" title="获取差距多少天"></a>获取差距多少天</h3><figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="constructor">GetNumberOfDays(<span class="params">date1</span>,<span class="params">date2</span>)</span>&#123;<span class="comment">//获得天数</span></span><br><span class="line">    <span class="comment">//date1：开始日期，date2结束日期</span></span><br><span class="line">    var a1 = <span class="module-access"><span class="module"><span class="identifier">Date</span>.</span></span>parse(<span class="keyword">new</span> <span class="constructor">Date(<span class="params">date1</span>)</span>);</span><br><span class="line">    var a2 = <span class="module-access"><span class="module"><span class="identifier">Date</span>.</span></span>parse(<span class="keyword">new</span> <span class="constructor">Date(<span class="params">date2</span>)</span>);</span><br><span class="line">    var day = parse<span class="constructor">Int((<span class="params">a2</span>-<span class="params">a1</span>)</span>/ (<span class="number">1000</span><span class="operator"> * </span><span class="number">60</span><span class="operator"> * </span><span class="number">60</span><span class="operator"> * </span><span class="number">24</span>));<span class="comment">//核心：时间戳相减，然后除以天数</span></span><br><span class="line">    return day</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<h3 id="百度地图坐标转高德"><a href="#百度地图坐标转高德" class="headerlink" title="百度地图坐标转高德"></a>百度地图坐标转高德</h3><p>function baidu<em>to_gaode(bd_lng, bd_lat){<br>//百度坐标转高德（传入经度、纬度）<br>var X_PI = Math.PI * 3000.0 / 180.0;<br>var x = bd</em>lng - 0.0065;<br>var y = bd_lat - 0.006;<br>var z = Math.sqrt(x * x + y _ y) - 0.00002 _ Math.sin(y _ X_PI);<br>var theta = Math.atan2(y, x) - 0.000003 _ Math.cos(x _ X_PI);<br>var gg_lng = z _ Math.cos(theta);<br>var gg_lat = z * Math.sin(theta);<br>return {lng: gg_lng,lat: gg_lat}<br>}</p>
+<h3 id="百度地图坐标转高德"><a href="#百度地图坐标转高德" class="headerlink" title="百度地图坐标转高德"></a>百度地图坐标转高德</h3><pre><code>  function baidu*to_gaode(bd_lng, bd_lat)&#123;
+  //百度坐标转高德（传入经度、纬度）
+  var X_PI = Math.PI * 3000.0 / 180.0;
+  var x = bd*lng - 0.0065;
+  var y = bd_lat - 0.006;
+  var z = Math.sqrt(x * x + y _ y) - 0.00002 _ Math.sin(y _ X_PI);
+  var theta = Math.atan2(y, x) - 0.000003 _ Math.cos(x _ X_PI);
+  var gg_lng = z _ Math.cos(theta);
+  var gg_lat = z \* Math.sin(theta);
+  return &#123;lng: gg_lng,lat: gg_lat&#125;
+  &#125;
+</code></pre>
 <h3 id="获取最近-7-天"><a href="#获取最近-7-天" class="headerlink" title="获取最近 7 天"></a>获取最近 7 天</h3><figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"><span class="comment">//获取最近几天</span></span><br><span class="line"><span class="keyword">function</span> get<span class="constructor">LastDay(<span class="params">day</span>,<span class="params">start</span> = <span class="params">new</span> Date()</span>)&#123;</span><br><span class="line"></span><br><span class="line"> start.set<span class="constructor">Time(<span class="params">start</span>.<span class="params">getTime</span>()</span> - <span class="number">3600</span><span class="operator"> * </span><span class="number">1000</span><span class="operator"> * </span><span class="number">24</span><span class="operator"> * </span>day);</span><br><span class="line"> return start</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="日期变星期几"><a href="#日期变星期几" class="headerlink" title="日期变星期几"></a>日期变星期几</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//日期转变成周几</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getweekDay</span>(<span class="params">time</span>)</span>&#123;</span><br><span class="line"> <span class="keyword">var</span> a = [<span class="string">&quot;日&quot;</span>, <span class="string">&quot;一&quot;</span>, <span class="string">&quot;二&quot;</span>, <span class="string">&quot;三&quot;</span>, <span class="string">&quot;四&quot;</span>, <span class="string">&quot;五&quot;</span>, <span class="string">&quot;六&quot;</span>];</span><br><span class="line"> <span class="keyword">let</span> day = <span class="keyword">new</span> <span class="built_in">Date</span>(time).getDay()</span><br><span class="line"> <span class="keyword">return</span> <span class="string">`周<span class="subst">$&#123;a[day]&#125;</span>`</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
