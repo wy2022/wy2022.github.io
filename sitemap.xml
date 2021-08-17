@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.wy1991.cn/20210817/99-%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3js%E5%BC%95%E6%93%8E/</loc>
+    
+    <lastmod>2021-08-17</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.wy1991.cn/20210629/17-js-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</loc>
     
     <lastmod>2021-08-17</lastmod>
@@ -795,14 +802,14 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/js%E6%93%8D%E4%BD%9C%E7%AC%A6/</loc>
+    <loc>https://blog.wy1991.cn/tags/promise/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/promise/</loc>
+    <loc>https://blog.wy1991.cn/tags/js%E6%93%8D%E4%BD%9C%E7%AC%A6/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -830,14 +837,14 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/nodejs/</loc>
+    <loc>https://blog.wy1991.cn/tags/MarkDown/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/MarkDown/</loc>
+    <loc>https://blog.wy1991.cn/tags/nodejs/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -865,20 +872,6 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/TS/</loc>
-    <lastmod>2021-08-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.wy1991.cn/tags/%E6%B3%9B%E5%9E%8B/</loc>
-    <lastmod>2021-08-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.wy1991.cn/tags/uniapp/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
@@ -894,6 +887,20 @@
   
   <url>
     <loc>https://blog.wy1991.cn/tags/axios/</loc>
+    <lastmod>2021-08-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.wy1991.cn/tags/TS/</loc>
+    <lastmod>2021-08-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.wy1991.cn/tags/%E6%B3%9B%E5%9E%8B/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -935,6 +942,13 @@
   </url>
   
   <url>
+    <loc>https://blog.wy1991.cn/tags/miniVue/</loc>
+    <lastmod>2021-08-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.wy1991.cn/tags/vue/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
@@ -949,20 +963,6 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/miniVue/</loc>
-    <lastmod>2021-08-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.wy1991.cn/tags/rem/</loc>
-    <lastmod>2021-08-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.wy1991.cn/tags/nextTick/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
@@ -970,7 +970,21 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/VueRouter/</loc>
+    <loc>https://blog.wy1991.cn/tags/cors/</loc>
+    <lastmod>2021-08-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.wy1991.cn/tags/%E8%B7%A8%E5%9F%9F/</loc>
+    <lastmod>2021-08-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.wy1991.cn/tags/rem/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -991,14 +1005,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/cors/</loc>
-    <lastmod>2021-08-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.wy1991.cn/tags/%E8%B7%A8%E5%9F%9F/</loc>
+    <loc>https://blog.wy1991.cn/tags/VueRouter/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1061,14 +1068,14 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/WebStorage/</loc>
+    <loc>https://blog.wy1991.cn/tags/webpack/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/webpack/</loc>
+    <loc>https://blog.wy1991.cn/tags/WebStorage/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1110,14 +1117,14 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/</loc>
+    <loc>https://blog.wy1991.cn/tags/this/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/this/</loc>
+    <loc>https://blog.wy1991.cn/tags/%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1138,14 +1145,14 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/git/</loc>
+    <loc>https://blog.wy1991.cn/tags/%E6%9D%82%E8%B0%88/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/%E6%9D%82%E8%B0%88/</loc>
+    <loc>https://blog.wy1991.cn/tags/git/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1187,6 +1194,13 @@
   </url>
   
   <url>
+    <loc>https://blog.wy1991.cn/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2021-08-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.wy1991.cn/tags/print/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
@@ -1195,13 +1209,6 @@
   
   <url>
     <loc>https://blog.wy1991.cn/tags/web%E6%89%93%E5%8D%B0/</loc>
-    <lastmod>2021-08-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.wy1991.cn/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1299,14 +1306,14 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/electron/</loc>
+    <loc>https://blog.wy1991.cn/tags/UDP/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/tags/UDP/</loc>
+    <loc>https://blog.wy1991.cn/tags/electron/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1378,14 +1385,14 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/categories/nodejs/</loc>
+    <loc>https://blog.wy1991.cn/categories/MarkDown/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/categories/MarkDown/</loc>
+    <loc>https://blog.wy1991.cn/categories/nodejs/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1399,14 +1406,14 @@
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/categories/TS/</loc>
+    <loc>https://blog.wy1991.cn/categories/uniapp/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.wy1991.cn/categories/uniapp/</loc>
+    <loc>https://blog.wy1991.cn/categories/TS/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
