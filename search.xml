@@ -150,27 +150,6 @@
       </tags>
   </entry>
   <entry>
-    <title>导出excel表格的库ejsexcel</title>
-    <url>/20210830/103-%E5%AF%BC%E5%87%BAexcel%E8%A1%A8%E6%A0%BC%E7%9A%84%E5%BA%93ejsexcel/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="ejsexcel"><a href="#ejsexcel" class="headerlink" title="ejsexcel"></a>ejsexcel</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2UvZG9jeHRlbXBsYXRlcg==">docxtemplater<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2UveGxzeA==">xlsx<i class="fa fa-external-link-alt"></i></span><br>都有类型的功能，一个收费，另外一个比较复杂，不符合业务的需求，因为模版是固定的样式，只需要填充数据即可</p>
-<p>这里推荐 <code>ejsexcel</code></p>
-<p>注意：模版需要用 office 2007 以上版本，如果用 wps 制作的模版，需要用 office 打开，重新保存下</p>
-<p><span class="exturl" data-url="aHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2UvZWpzZXhjZWw=">ejsexcel<i class="fa fa-external-link-alt"></i></span></p>
-<blockquote>
-<p>npm install ejsexcel</p>
-</blockquote>
-<p>在 excel 中 用<em>data</em> 表示默认的 data ，内置对象</p>
-<p>下面为 electron demo</p>
-<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; getExtraResourcesPath &#125; <span class="keyword">from</span> <span class="string">&#x27;@/utils/helper&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> ejsexcel = <span class="built_in">require</span>(<span class="string">&quot;ejsexcel&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> util = <span class="built_in">require</span>(<span class="string">&quot;util&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> readFileAsync = util.promisify(fs.readFile);</span><br><span class="line"><span class="keyword">const</span> writeFileAsync = util.promisify(fs.writeFile)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> dialog = <span class="built_in">require</span>(<span class="string">&#x27;electron&#x27;</span>).remote.dialog;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> newExportExcel = <span class="keyword">async</span> (data: <span class="built_in">any</span>, <span class="attr">fileName</span>: <span class="built_in">string</span>) =&gt; &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> savePath: <span class="built_in">any</span> = dialog.showSaveDialogSync(&#123;</span><br><span class="line">    <span class="attr">title</span>: <span class="string">&#x27;保存&#x27;</span>,</span><br><span class="line">    <span class="attr">buttonLabel</span>: <span class="string">&#x27;确认保存&#x27;</span>,</span><br><span class="line">    <span class="attr">filters</span>: [</span><br><span class="line">      &#123; <span class="attr">name</span>: <span class="string">&#x27;xlsx&#x27;</span>, <span class="attr">extensions</span>: [<span class="string">&#x27;xlsx&#x27;</span>] &#125;,</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">defaultPath</span>: fileName</span><br><span class="line"></span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="comment">//如果保存路径为空，说明取消了，就直接返回</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;savePath&quot;</span>, savePath);</span><br><span class="line">  <span class="keyword">if</span> (!savePath) <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="comment">//获得Excel模板的buffer对象</span></span><br><span class="line">  <span class="keyword">const</span> exlBuf = <span class="keyword">await</span> readFileAsync(getExtraResourcesPath() + <span class="string">&#x27;/report/daily.xlsx&#x27;</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="comment">//用数据源(对象)data渲染Excel模板</span></span><br><span class="line">  <span class="comment">//cachePath 为编译缓存路径, 对于模板文件比较大的情况, 可显著提高运行效率, 绝对路径, 若不设置, 则无缓存</span></span><br><span class="line">  <span class="keyword">const</span> exlBuf2 = <span class="keyword">await</span> ejsexcel.renderExcel(exlBuf, data, &#123; <span class="attr">cachePath</span>: getExtraResourcesPath() + <span class="string">&quot;/report/cache/&quot;</span> &#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">await</span> writeFileAsync(savePath, exlBuf2);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;生成test2.xlsx&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>ejsexcel</category>
-      </categories>
-      <tags>
-        <tag>ejsexcel</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>nodejs中好用的npm包</title>
     <url>/20210901/104-nodejs%E4%B8%AD%E5%A5%BD%E7%94%A8%E7%9A%84npm%E5%8C%85/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="常用库"><a href="#常用库" class="headerlink" title="常用库"></a>常用库</h1><h2 id="qs"><a href="#qs" class="headerlink" title="qs"></a>qs</h2><blockquote>
@@ -333,12 +312,82 @@
       </tags>
   </entry>
   <entry>
+    <title>导出excel表格的库ejsexcel</title>
+    <url>/20210830/103-%E5%AF%BC%E5%87%BAexcel%E8%A1%A8%E6%A0%BC%E7%9A%84%E5%BA%93ejsexcel/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="ejsexcel"><a href="#ejsexcel" class="headerlink" title="ejsexcel"></a>ejsexcel</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2UvZG9jeHRlbXBsYXRlcg==">docxtemplater<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2UveGxzeA==">xlsx<i class="fa fa-external-link-alt"></i></span><br>都有类型的功能，一个收费，另外一个比较复杂，不符合业务的需求，因为模版是固定的样式，只需要填充数据即可</p>
+<p>这里推荐 <code>ejsexcel</code></p>
+<p>注意：模版需要用 office 2007 以上版本，如果用 wps 制作的模版，需要用 office 打开，重新保存下</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2UvZWpzZXhjZWw=">ejsexcel<i class="fa fa-external-link-alt"></i></span></p>
+<blockquote>
+<p>npm install ejsexcel</p>
+</blockquote>
+<p>在 excel 中 用<em>data</em> 表示默认的 data ，内置对象</p>
+<p>下面为 electron demo</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; getExtraResourcesPath &#125; <span class="keyword">from</span> <span class="string">&#x27;@/utils/helper&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> ejsexcel = <span class="built_in">require</span>(<span class="string">&quot;ejsexcel&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> util = <span class="built_in">require</span>(<span class="string">&quot;util&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> readFileAsync = util.promisify(fs.readFile);</span><br><span class="line"><span class="keyword">const</span> writeFileAsync = util.promisify(fs.writeFile)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> dialog = <span class="built_in">require</span>(<span class="string">&#x27;electron&#x27;</span>).remote.dialog;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> newExportExcel = <span class="keyword">async</span> (data: <span class="built_in">any</span>, <span class="attr">fileName</span>: <span class="built_in">string</span>) =&gt; &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> savePath: <span class="built_in">any</span> = dialog.showSaveDialogSync(&#123;</span><br><span class="line">    <span class="attr">title</span>: <span class="string">&#x27;保存&#x27;</span>,</span><br><span class="line">    <span class="attr">buttonLabel</span>: <span class="string">&#x27;确认保存&#x27;</span>,</span><br><span class="line">    <span class="attr">filters</span>: [</span><br><span class="line">      &#123; <span class="attr">name</span>: <span class="string">&#x27;xlsx&#x27;</span>, <span class="attr">extensions</span>: [<span class="string">&#x27;xlsx&#x27;</span>] &#125;,</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">defaultPath</span>: fileName</span><br><span class="line"></span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="comment">//如果保存路径为空，说明取消了，就直接返回</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;savePath&quot;</span>, savePath);</span><br><span class="line">  <span class="keyword">if</span> (!savePath) <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="comment">//获得Excel模板的buffer对象</span></span><br><span class="line">  <span class="keyword">const</span> exlBuf = <span class="keyword">await</span> readFileAsync(getExtraResourcesPath() + <span class="string">&#x27;/report/daily.xlsx&#x27;</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="comment">//用数据源(对象)data渲染Excel模板</span></span><br><span class="line">  <span class="comment">//cachePath 为编译缓存路径, 对于模板文件比较大的情况, 可显著提高运行效率, 绝对路径, 若不设置, 则无缓存</span></span><br><span class="line">  <span class="keyword">const</span> exlBuf2 = <span class="keyword">await</span> ejsexcel.renderExcel(exlBuf, data, &#123; <span class="attr">cachePath</span>: getExtraResourcesPath() + <span class="string">&quot;/report/cache/&quot;</span> &#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">await</span> writeFileAsync(savePath, exlBuf2);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;生成test2.xlsx&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>ejsexcel</category>
+      </categories>
+      <tags>
+        <tag>ejsexcel</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Promise 被玩出 48 种花样，深度解析10个常用模块</title>
     <url>/20210902/105-Promise-%E8%A2%AB%E7%8E%A9%E5%87%BA-48-%E7%A7%8D%E8%8A%B1%E6%A0%B7%EF%BC%8C%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%9010%E4%B8%AA%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="promise-fun"><a href="#promise-fun" class="headerlink" title="promise-fun"></a>promise-fun</h2><p>包含模块有</p>
 <p>promise-fun 项目共收录了 50 个与 Promise 有关的模块，该项目的作者 sindresorhus 个人就开发了 48 个模块，不愧是全职做开源的大牛。其实该项目还包含一些挺不错的模块，比如 p-queue、p-any、p-some、p-debounce、p-throttle 和 p-timeout 等。感兴趣的小伙伴，可以自行了解一下其他的模块。</p>
 <p>推荐仔细反复阅读，深入理解</p>
 <p>具体看文章 👇 <span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82OTk5ODA0NjE3MzIwMDM4NDA4">链接<i class="fa fa-external-link-alt"></i></span></p>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>递归在javascript中的应用 (递归处理数组和对象)</title>
+    <url>/20210902/106-%E9%80%92%E5%BD%92%E5%9C%A8javascript%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8-%E9%80%92%E5%BD%92%E5%A4%84%E7%90%86%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p><span class="exturl" data-url="aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3Mvc245dk0xa1l1NGY2NGJMNmxjUlNIdw==">设计递归函数竟然这么简单！<i class="fa fa-external-link-alt"></i></span></p>
+<p>本文主要从数组和对象两个方面来讲解递归在工作中的一些应用。 我一般处理递归的思路主要注意以下两点</p>
+<ul>
+<li>先处理一小步（先处理最简情况）,然后自己调自己</li>
+<li>找到退出条件</li>
+</ul>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="数组求最大值"><a href="#数组求最大值" class="headerlink" title="数组求最大值"></a>数组求最大值</h3><p>最简单的情况：数组中长度为 1 时，直接返回；数组中长度为 2，求最大值</p>
+<p>解决方案：把数组切成两半，求左边的最大值，求右边的最大值。</p>
+<figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line"><span class="built_in">var</span> arr=[<span class="number">1</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">90</span>,<span class="number">189</span>,<span class="number">20</span>,<span class="number">1</span>,<span class="number">23</span>,<span class="number">3</span>,<span class="number">10</span>]</span><br><span class="line">//分成两半，求<span class="built_in">max</span>左和<span class="built_in">max</span>右</span><br><span class="line">//</span><br><span class="line">function findMax(arr)&#123;</span><br><span class="line">    <span class="keyword">if</span>(arr.<span class="built_in">length</span>==<span class="number">0</span>)<span class="built_in">return</span> null</span><br><span class="line">    <span class="keyword">if</span>(arr.<span class="built_in">length</span>==<span class="number">1</span>)<span class="built_in">return</span> arr[<span class="number">0</span>]</span><br><span class="line">    // 此处可以再优化一下</span><br><span class="line">    <span class="keyword">if</span>(arr.<span class="built_in">length</span>==<span class="number">2</span>)&#123;</span><br><span class="line">        <span class="built_in">return</span> arr[<span class="number">0</span>]&gt;=arr[<span class="number">1</span>]? arr[<span class="number">0</span>]:arr[<span class="number">1</span>]</span><br><span class="line">    &#125;</span><br><span class="line">    const <span class="built_in">center</span>= Math.<span class="built_in">floor</span>(arr.<span class="built_in">length</span>/<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">    const maxLeft=findMax(arr.slice(<span class="number">0</span>,<span class="built_in">center</span>))</span><br><span class="line">    const maxRight=findMax(arr.slice(<span class="built_in">center</span>))</span><br><span class="line">    <span class="built_in">return</span> maxLeft&gt;=maxRight?maxLeft:maxRight</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const <span class="built_in">max</span>=findMax(arr)</span><br><span class="line">console.<span class="built_in">log</span>(<span class="string">&quot;max&quot;</span>, <span class="built_in">max</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="遍历数组"><a href="#遍历数组" class="headerlink" title="遍历数组"></a>遍历数组</h3><ul>
+<li>最简单的情况：先打印一个数</li>
+<li>解决方案：先打印一个数，然后其他的数交给“自己”打印</li>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="comment">//数组遍历，使用递归实现</span></span><br><span class="line"><span class="selector-tag">var</span> arr=<span class="selector-attr">[1,2,3,4,5]</span></span><br><span class="line"></span><br><span class="line">function iteration(arr)&#123;</span><br><span class="line">    <span class="keyword">if</span>(arr.length==<span class="number">0</span>)return</span><br><span class="line">    <span class="keyword">if</span>(arr.length==<span class="number">1</span>)&#123;</span><br><span class="line">        console<span class="selector-class">.log</span>(arr<span class="selector-attr">[0]</span>)</span><br><span class="line">        return</span><br><span class="line">    &#125;</span><br><span class="line">    console<span class="selector-class">.log</span>(arr<span class="selector-attr">[0]</span>)</span><br><span class="line">    iteration(arr<span class="selector-class">.slice</span>(<span class="number">1</span>))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1 iteration([2,3,4,5])</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">iteration</span><span class="params">(arr)</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="数组倒置"><a href="#数组倒置" class="headerlink" title="数组倒置"></a>数组倒置</h3><p>解决思路：假设其他元素都已经处理了，只剩下最后一个元素了,然后把 reverse(2,3,4,5)和 arr[0]拼成一个数组即可</p>
+<figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line">//数组<span class="built_in">reverse</span>，使用递归实现</span><br><span class="line"><span class="built_in">var</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">//<span class="built_in">reverse</span>(<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>) arr[<span class="number">0</span>]</span><br><span class="line">function <span class="built_in">reverse</span>(arr)&#123;</span><br><span class="line">    <span class="keyword">if</span>(arr.<span class="built_in">length</span>==<span class="number">0</span> || arr.<span class="built_in">length</span>==<span class="number">1</span>)<span class="built_in">return</span> arr</span><br><span class="line">    <span class="built_in">return</span> [...<span class="built_in">reverse</span>(arr.slice(<span class="number">1</span>)),arr[<span class="number">0</span>]]</span><br><span class="line">&#125;</span><br><span class="line">const res=<span class="built_in">reverse</span>(arr)</span><br><span class="line">console.<span class="built_in">log</span>(<span class="string">&quot;res&quot;</span>, res)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><p>对对象的处理可以看做是对树的处理，因为对象的嵌套结构和树很类似。</p>
+<h3 id="对象属性遍历"><a href="#对象属性遍历" class="headerlink" title="对象属性遍历"></a>对象属性遍历</h3><p>思路：使用 for-in 遍历对象的属性，如果属性的值还是对象，递归遍历</p>
+<figure class="highlight qml"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj=&#123;</span><br><span class="line">    <span class="attribute">id:</span><span class="string">1,</span></span><br><span class="line"><span class="string">    value</span>:<span class="string">&#x27;parent&#x27;</span>,</span><br><span class="line">    <span class="attribute">child</span>:&#123;</span><br><span class="line">        <span class="attribute">id:</span><span class="string">11,</span></span><br><span class="line"><span class="string">        value</span>:<span class="string">&#x27;child&#x27;</span>,</span><br><span class="line">        <span class="attribute">child</span>:&#123;</span><br><span class="line">            <span class="attribute">id:</span><span class="string">111,</span></span><br><span class="line"><span class="string">            value</span>:<span class="string">&#x27;child-child&#x27;</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 遍历打印</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">recursiveObj</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> k <span class="keyword">in</span> obj)&#123;</span><br><span class="line">        <span class="keyword">if</span>(obj.hasOwnProperty(k))&#123;</span><br><span class="line">            <span class="keyword">if</span>(<span class="keyword">typeof</span> obj[k] ==<span class="string">&#x27;object&#x27;</span>)&#123;</span><br><span class="line">                recursiveObj(obj[k])</span><br><span class="line">            &#125;<span class="title">else</span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;k&#125;</span>:<span class="subst">$&#123;obj[k]&#125;</span>`</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">recursiveObj(obj)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="对象扁平化"><a href="#对象扁平化" class="headerlink" title="对象扁平化"></a>对象扁平化</h3><p>我有一个对象长下面这样：</p>
+<figure class="highlight actionscript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> oldObject = &#123;</span><br><span class="line">    <span class="string">&quot;KeyA&quot;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">&quot;KeyB&quot;</span>:&#123;</span><br><span class="line">        <span class="string">&quot;c&quot;</span>: <span class="number">2</span>,</span><br><span class="line">        <span class="string">&quot;d&quot;</span>: <span class="number">3</span>,</span><br><span class="line">        <span class="string">&quot;e&quot;</span>:&#123;</span><br><span class="line">            <span class="string">&quot;f&quot;</span>: <span class="number">7</span>,</span><br><span class="line">            <span class="string">&quot;&quot;</span> : <span class="number">2</span></span><br><span class="line">         &#125;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>我要得到输出是这样子的：</p>
+<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">output</span>=&#123;</span><br><span class="line">    <span class="string">&quot;KeyA&quot;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">&quot;KeyB.c&quot;</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="string">&quot;KeyB.d&quot;</span>: <span class="number">3</span>,</span><br><span class="line">    <span class="string">&quot;KeyB.e.f&quot;</span>: <span class="number">7</span>,</span><br><span class="line">    <span class="string">&quot;KeyB.e&quot;</span>: <span class="number">2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>处理逻辑如下：</p>
+<ul>
+<li>使用一个 flattenHelper 函数递归处理对象</li>
+<li>核心逻辑同上，使用 for-in 遍历对象的属性，如果属性的值还是对象，递归遍历</li>
+</ul>
+<figure class="highlight haxe"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">flattenObject</span></span>(oldObject) &#123;</span><br><span class="line">    const <span class="keyword">new</span><span class="type">Object</span> = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    flattenHelper(oldObject, <span class="keyword">new</span><span class="type">Object</span>, <span class="string">&#x27;&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span><span class="type">Object</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">flattenHelper</span></span>(currentObject, <span class="keyword">new</span><span class="type">Object</span>, previousKeyName) &#123;</span><br><span class="line">      <span class="keyword">for</span> (let key <span class="keyword">in</span> currentObject) &#123;</span><br><span class="line">        let value = currentObject[key];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (value.constructor !== Object) &#123;</span><br><span class="line">          <span class="keyword">if</span> (previousKeyName == <span class="literal">null</span> || previousKeyName == <span class="string">&#x27;&#x27;</span>) &#123;</span><br><span class="line">            <span class="keyword">new</span><span class="type">Object</span>[key] = value;</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (key == <span class="literal">null</span> || key == <span class="string">&#x27;&#x27;</span>) &#123;</span><br><span class="line">              <span class="keyword">new</span><span class="type">Object</span>[previousKeyName] = value;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">              <span class="keyword">new</span><span class="type">Object</span>[previousKeyName + <span class="string">&#x27;.&#x27;</span> + key] = value;</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">if</span> (previousKeyName == <span class="literal">null</span> || previousKeyName == <span class="string">&#x27;&#x27;</span>) &#123;</span><br><span class="line">            flattenHelper(value, <span class="keyword">new</span><span class="type">Object</span>, key);</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            flattenHelper(value, <span class="keyword">new</span><span class="type">Object</span>, previousKeyName + <span class="string">&#x27;.&#x27;</span> + key);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">const result=flattenObject(oldObject)</span><br><span class="line">console.log(<span class="string">&quot;result&quot;</span>, result)</span><br></pre></td></tr></table></figure>
+
+<h3 id="递归应用-递归读取文件"><a href="#递归应用-递归读取文件" class="headerlink" title="递归应用-递归读取文件"></a>递归应用-递归读取文件</h3><p>思路很简单：判断当前读取的是文件还是文件夹，如果是文件夹，递归读取</p>
+<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line">const fs = require(&#x27;fs&#x27;);</span><br><span class="line">const path=require(&#x27;path&#x27;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> walk<span class="constructor">Sync(<span class="params">currentDirPath</span>, <span class="params">callback</span>)</span> &#123;</span><br><span class="line">    fs.readdir<span class="constructor">Sync(<span class="params">currentDirPath</span>)</span>.<span class="keyword">for</span><span class="constructor">Each(<span class="params">function</span> (<span class="params">name</span>)</span> &#123;</span><br><span class="line">        var filePath = path.join(currentDirPath, name);</span><br><span class="line">        var stat = fs.stat<span class="constructor">Sync(<span class="params">filePath</span>)</span>;</span><br><span class="line">        <span class="keyword">if</span> (stat.is<span class="constructor">File()</span>) &#123;</span><br><span class="line">            callback(filePath, stat);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (stat.is<span class="constructor">Directory()</span>) &#123;</span><br><span class="line">            walk<span class="constructor">Sync(<span class="params">filePath</span>, <span class="params">callback</span>)</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>js</category>
@@ -439,55 +488,6 @@
 <figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line">var channel = <span class="keyword">new</span> <span class="constructor">MessageChannel()</span>;</span><br><span class="line">var para = document.query<span class="constructor">Selector(&#x27;<span class="params">p</span>&#x27;)</span>;</span><br><span class="line"></span><br><span class="line">var ifr = document.query<span class="constructor">Selector(&#x27;<span class="params">iframe</span>&#x27;)</span>;</span><br><span class="line">var otherWindow = ifr.contentWindow;</span><br><span class="line"></span><br><span class="line">ifr.add<span class="constructor">EventListener(<span class="string">&quot;load&quot;</span>, <span class="params">iframeLoaded</span>, <span class="params">false</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> iframe<span class="constructor">Loaded()</span> &#123;</span><br><span class="line">  otherWindow.post<span class="constructor">Message(&#x27;Hello <span class="params">from</span> <span class="params">the</span> <span class="params">main</span> <span class="params">page</span>!&#x27;, &#x27;<span class="operator">*</span>&#x27;, [<span class="params">channel</span>.<span class="params">port2</span>])</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">channel.port1.onmessage = handleMessage;</span><br><span class="line"><span class="keyword">function</span> handle<span class="constructor">Message(<span class="params">e</span>)</span> &#123;</span><br><span class="line">  para.innerHTML = e.data;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>至于在线的例子，MDN 官方有一个版本 <span class="exturl" data-url="aHR0cHM6Ly9tZG4uZ2l0aHViLmlvL2RvbS1leGFtcGxlcy9jaGFubmVsLW1lc3NhZ2luZy1iYXNpYy8=">MessageChannel 通讯<i class="fa fa-external-link-alt"></i></span></p>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>递归在javascript中的应用 (递归处理数组和对象)</title>
-    <url>/20210902/106-%E9%80%92%E5%BD%92%E5%9C%A8javascript%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8-%E9%80%92%E5%BD%92%E5%A4%84%E7%90%86%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p><span class="exturl" data-url="aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3Mvc245dk0xa1l1NGY2NGJMNmxjUlNIdw==">设计递归函数竟然这么简单！<i class="fa fa-external-link-alt"></i></span></p>
-<p>本文主要从数组和对象两个方面来讲解递归在工作中的一些应用。 我一般处理递归的思路主要注意以下两点</p>
-<ul>
-<li>先处理一小步（先处理最简情况）,然后自己调自己</li>
-<li>找到退出条件</li>
-</ul>
-<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="数组求最大值"><a href="#数组求最大值" class="headerlink" title="数组求最大值"></a>数组求最大值</h3><p>最简单的情况：数组中长度为 1 时，直接返回；数组中长度为 2，求最大值</p>
-<p>解决方案：把数组切成两半，求左边的最大值，求右边的最大值。</p>
-<figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line"><span class="built_in">var</span> arr=[<span class="number">1</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">90</span>,<span class="number">189</span>,<span class="number">20</span>,<span class="number">1</span>,<span class="number">23</span>,<span class="number">3</span>,<span class="number">10</span>]</span><br><span class="line">//分成两半，求<span class="built_in">max</span>左和<span class="built_in">max</span>右</span><br><span class="line">//</span><br><span class="line">function findMax(arr)&#123;</span><br><span class="line">    <span class="keyword">if</span>(arr.<span class="built_in">length</span>==<span class="number">0</span>)<span class="built_in">return</span> null</span><br><span class="line">    <span class="keyword">if</span>(arr.<span class="built_in">length</span>==<span class="number">1</span>)<span class="built_in">return</span> arr[<span class="number">0</span>]</span><br><span class="line">    // 此处可以再优化一下</span><br><span class="line">    <span class="keyword">if</span>(arr.<span class="built_in">length</span>==<span class="number">2</span>)&#123;</span><br><span class="line">        <span class="built_in">return</span> arr[<span class="number">0</span>]&gt;=arr[<span class="number">1</span>]? arr[<span class="number">0</span>]:arr[<span class="number">1</span>]</span><br><span class="line">    &#125;</span><br><span class="line">    const <span class="built_in">center</span>= Math.<span class="built_in">floor</span>(arr.<span class="built_in">length</span>/<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">    const maxLeft=findMax(arr.slice(<span class="number">0</span>,<span class="built_in">center</span>))</span><br><span class="line">    const maxRight=findMax(arr.slice(<span class="built_in">center</span>))</span><br><span class="line">    <span class="built_in">return</span> maxLeft&gt;=maxRight?maxLeft:maxRight</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const <span class="built_in">max</span>=findMax(arr)</span><br><span class="line">console.<span class="built_in">log</span>(<span class="string">&quot;max&quot;</span>, <span class="built_in">max</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="遍历数组"><a href="#遍历数组" class="headerlink" title="遍历数组"></a>遍历数组</h3><ul>
-<li>最简单的情况：先打印一个数</li>
-<li>解决方案：先打印一个数，然后其他的数交给“自己”打印</li>
-</ul>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="comment">//数组遍历，使用递归实现</span></span><br><span class="line"><span class="selector-tag">var</span> arr=<span class="selector-attr">[1,2,3,4,5]</span></span><br><span class="line"></span><br><span class="line">function iteration(arr)&#123;</span><br><span class="line">    <span class="keyword">if</span>(arr.length==<span class="number">0</span>)return</span><br><span class="line">    <span class="keyword">if</span>(arr.length==<span class="number">1</span>)&#123;</span><br><span class="line">        console<span class="selector-class">.log</span>(arr<span class="selector-attr">[0]</span>)</span><br><span class="line">        return</span><br><span class="line">    &#125;</span><br><span class="line">    console<span class="selector-class">.log</span>(arr<span class="selector-attr">[0]</span>)</span><br><span class="line">    iteration(arr<span class="selector-class">.slice</span>(<span class="number">1</span>))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1 iteration([2,3,4,5])</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">iteration</span><span class="params">(arr)</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="数组倒置"><a href="#数组倒置" class="headerlink" title="数组倒置"></a>数组倒置</h3><p>解决思路：假设其他元素都已经处理了，只剩下最后一个元素了,然后把 reverse(2,3,4,5)和 arr[0]拼成一个数组即可</p>
-<figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line">//数组<span class="built_in">reverse</span>，使用递归实现</span><br><span class="line"><span class="built_in">var</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">//<span class="built_in">reverse</span>(<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>) arr[<span class="number">0</span>]</span><br><span class="line">function <span class="built_in">reverse</span>(arr)&#123;</span><br><span class="line">    <span class="keyword">if</span>(arr.<span class="built_in">length</span>==<span class="number">0</span> || arr.<span class="built_in">length</span>==<span class="number">1</span>)<span class="built_in">return</span> arr</span><br><span class="line">    <span class="built_in">return</span> [...<span class="built_in">reverse</span>(arr.slice(<span class="number">1</span>)),arr[<span class="number">0</span>]]</span><br><span class="line">&#125;</span><br><span class="line">const res=<span class="built_in">reverse</span>(arr)</span><br><span class="line">console.<span class="built_in">log</span>(<span class="string">&quot;res&quot;</span>, res)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><p>对对象的处理可以看做是对树的处理，因为对象的嵌套结构和树很类似。</p>
-<h3 id="对象属性遍历"><a href="#对象属性遍历" class="headerlink" title="对象属性遍历"></a>对象属性遍历</h3><p>思路：使用 for-in 遍历对象的属性，如果属性的值还是对象，递归遍历</p>
-<figure class="highlight qml"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj=&#123;</span><br><span class="line">    <span class="attribute">id:</span><span class="string">1,</span></span><br><span class="line"><span class="string">    value</span>:<span class="string">&#x27;parent&#x27;</span>,</span><br><span class="line">    <span class="attribute">child</span>:&#123;</span><br><span class="line">        <span class="attribute">id:</span><span class="string">11,</span></span><br><span class="line"><span class="string">        value</span>:<span class="string">&#x27;child&#x27;</span>,</span><br><span class="line">        <span class="attribute">child</span>:&#123;</span><br><span class="line">            <span class="attribute">id:</span><span class="string">111,</span></span><br><span class="line"><span class="string">            value</span>:<span class="string">&#x27;child-child&#x27;</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 遍历打印</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">recursiveObj</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> k <span class="keyword">in</span> obj)&#123;</span><br><span class="line">        <span class="keyword">if</span>(obj.hasOwnProperty(k))&#123;</span><br><span class="line">            <span class="keyword">if</span>(<span class="keyword">typeof</span> obj[k] ==<span class="string">&#x27;object&#x27;</span>)&#123;</span><br><span class="line">                recursiveObj(obj[k])</span><br><span class="line">            &#125;<span class="title">else</span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;k&#125;</span>:<span class="subst">$&#123;obj[k]&#125;</span>`</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">recursiveObj(obj)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="对象扁平化"><a href="#对象扁平化" class="headerlink" title="对象扁平化"></a>对象扁平化</h3><p>我有一个对象长下面这样：</p>
-<figure class="highlight actionscript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> oldObject = &#123;</span><br><span class="line">    <span class="string">&quot;KeyA&quot;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">&quot;KeyB&quot;</span>:&#123;</span><br><span class="line">        <span class="string">&quot;c&quot;</span>: <span class="number">2</span>,</span><br><span class="line">        <span class="string">&quot;d&quot;</span>: <span class="number">3</span>,</span><br><span class="line">        <span class="string">&quot;e&quot;</span>:&#123;</span><br><span class="line">            <span class="string">&quot;f&quot;</span>: <span class="number">7</span>,</span><br><span class="line">            <span class="string">&quot;&quot;</span> : <span class="number">2</span></span><br><span class="line">         &#125;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>我要得到输出是这样子的：</p>
-<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">output</span>=&#123;</span><br><span class="line">    <span class="string">&quot;KeyA&quot;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">&quot;KeyB.c&quot;</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="string">&quot;KeyB.d&quot;</span>: <span class="number">3</span>,</span><br><span class="line">    <span class="string">&quot;KeyB.e.f&quot;</span>: <span class="number">7</span>,</span><br><span class="line">    <span class="string">&quot;KeyB.e&quot;</span>: <span class="number">2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>处理逻辑如下：</p>
-<ul>
-<li>使用一个 flattenHelper 函数递归处理对象</li>
-<li>核心逻辑同上，使用 for-in 遍历对象的属性，如果属性的值还是对象，递归遍历</li>
-</ul>
-<figure class="highlight haxe"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">flattenObject</span></span>(oldObject) &#123;</span><br><span class="line">    const <span class="keyword">new</span><span class="type">Object</span> = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    flattenHelper(oldObject, <span class="keyword">new</span><span class="type">Object</span>, <span class="string">&#x27;&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span><span class="type">Object</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">flattenHelper</span></span>(currentObject, <span class="keyword">new</span><span class="type">Object</span>, previousKeyName) &#123;</span><br><span class="line">      <span class="keyword">for</span> (let key <span class="keyword">in</span> currentObject) &#123;</span><br><span class="line">        let value = currentObject[key];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (value.constructor !== Object) &#123;</span><br><span class="line">          <span class="keyword">if</span> (previousKeyName == <span class="literal">null</span> || previousKeyName == <span class="string">&#x27;&#x27;</span>) &#123;</span><br><span class="line">            <span class="keyword">new</span><span class="type">Object</span>[key] = value;</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (key == <span class="literal">null</span> || key == <span class="string">&#x27;&#x27;</span>) &#123;</span><br><span class="line">              <span class="keyword">new</span><span class="type">Object</span>[previousKeyName] = value;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">              <span class="keyword">new</span><span class="type">Object</span>[previousKeyName + <span class="string">&#x27;.&#x27;</span> + key] = value;</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">if</span> (previousKeyName == <span class="literal">null</span> || previousKeyName == <span class="string">&#x27;&#x27;</span>) &#123;</span><br><span class="line">            flattenHelper(value, <span class="keyword">new</span><span class="type">Object</span>, key);</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            flattenHelper(value, <span class="keyword">new</span><span class="type">Object</span>, previousKeyName + <span class="string">&#x27;.&#x27;</span> + key);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">const result=flattenObject(oldObject)</span><br><span class="line">console.log(<span class="string">&quot;result&quot;</span>, result)</span><br></pre></td></tr></table></figure>
-
-<h3 id="递归应用-递归读取文件"><a href="#递归应用-递归读取文件" class="headerlink" title="递归应用-递归读取文件"></a>递归应用-递归读取文件</h3><p>思路很简单：判断当前读取的是文件还是文件夹，如果是文件夹，递归读取</p>
-<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line">const fs = require(&#x27;fs&#x27;);</span><br><span class="line">const path=require(&#x27;path&#x27;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> walk<span class="constructor">Sync(<span class="params">currentDirPath</span>, <span class="params">callback</span>)</span> &#123;</span><br><span class="line">    fs.readdir<span class="constructor">Sync(<span class="params">currentDirPath</span>)</span>.<span class="keyword">for</span><span class="constructor">Each(<span class="params">function</span> (<span class="params">name</span>)</span> &#123;</span><br><span class="line">        var filePath = path.join(currentDirPath, name);</span><br><span class="line">        var stat = fs.stat<span class="constructor">Sync(<span class="params">filePath</span>)</span>;</span><br><span class="line">        <span class="keyword">if</span> (stat.is<span class="constructor">File()</span>) &#123;</span><br><span class="line">            callback(filePath, stat);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (stat.is<span class="constructor">Directory()</span>) &#123;</span><br><span class="line">            walk<span class="constructor">Sync(<span class="params">filePath</span>, <span class="params">callback</span>)</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>js</category>
@@ -691,7 +691,7 @@
   <entry>
     <title>113-20分钟吃透Diff核心原理</title>
     <url>/20210914/113-20%E5%88%86%E9%92%9F%E5%90%83%E9%80%8FDiff%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="diff"><a href="#diff" class="headerlink" title="diff"></a>diff</h2><p>(直接看原文)[<span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82OTk0OTU5OTk4MjgzOTA3MTAyXQ==">https://juejin.cn/post/6994959998283907102]<i class="fa fa-external-link-alt"></i></span></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="diff"><a href="#diff" class="headerlink" title="diff"></a>diff</h2><p><span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82OTk0OTU5OTk4MjgzOTA3MTAy">直接看原文<i class="fa fa-external-link-alt"></i></span></p>
 <p>20 分钟吃透 Diff 算法核心原理</p>
 <p>为什么用了 id 来当做 key 就实现了我们的理想效果呢，因为这么做的话，a，b，c 节点的 key 就会是永远不变的，更新前后 key 都是一样的，并且又由于 a，b，c 节点的内容本来就没变，所以就算是进行了 patchVnode，也不会执行里面复杂的更新操作，节省了性能，而林三心节点，由于更新前没有他的 key 所对应的节点，所以他被当做新的节点，增加到真实 DOM 上去了。</p>
 <p>虚拟 DOM 比真实 DOM 快这句话其实是错的，或者说是不严谨的。那正确的说法是什么呢？虚拟 DOM 算法操作真实 DOM，性能高于直接操作真实 DOM，虚拟 DOM 和虚拟 DOM 算法是两种概念。虚拟 DOM 算法 = 虚拟 DOM + Diff 算法</p>
@@ -745,33 +745,6 @@
         <tag>js</tag>
         <tag>html5</tag>
         <tag>Recorder</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>01-js中操作符</title>
-    <url>/20210629/15-js-%E6%93%8D%E4%BD%9C%E7%AC%A6/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="amp-amp-与"><a href="#amp-amp-与" class="headerlink" title="&amp;&amp;与|| ?? ?."></a>&amp;&amp;与|| ?? ?.</h2><blockquote>
-<p>总结： || 一个值为 true 则为真</p>
-</blockquote>
-<blockquote>
-<p>?? 左边为 undefined 和 null 返回右边</p>
-</blockquote>
-<blockquote>
-<p>|| 左边为假，返回右边</p>
-</blockquote>
-<blockquote>
-<p>?. 主要是用于对象没有这个属性，导致报错问题</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">a &amp;&amp; b  <span class="comment">//如果a为true 则执行b</span></span><br><span class="line"></span><br><span class="line">a || b <span class="comment">//    左侧操作数为假值时返回右侧操作数。   如果这里0是0 就返回b了</span></span><br><span class="line"><span class="comment">// 区别</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> a = <span class="literal">null</span> ? <span class="string">&#x27;aa&#x27;</span>   <span class="comment">// aa  　只有当左侧为null和undefined时，才会返回右侧的数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> baz = <span class="number">0</span> ?? <span class="number">42</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(baz);</span><br><span class="line"><span class="comment">// expected output: 0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> adventurer = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;Alice&#x27;</span>,</span><br><span class="line">  <span class="attr">cat</span>: &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;Dinah&#x27;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> dogName = adventurer.dog?.name</span><br><span class="line"><span class="built_in">console</span>.log(dogName)</span><br><span class="line"><span class="comment">// expected output: undefined</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(adventurer.someNonExistentMethod?.())</span><br><span class="line"><span class="comment">// expected output: undefined</span></span><br><span class="line"></span><br><span class="line">不会报错而已</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-        <tag>js操作符</tag>
       </tags>
   </entry>
   <entry>
@@ -909,6 +882,33 @@
       <tags>
         <tag>js</tag>
         <tag>promise</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>01-js中操作符</title>
+    <url>/20210629/15-js-%E6%93%8D%E4%BD%9C%E7%AC%A6/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="amp-amp-与"><a href="#amp-amp-与" class="headerlink" title="&amp;&amp;与|| ?? ?."></a>&amp;&amp;与|| ?? ?.</h2><blockquote>
+<p>总结： || 一个值为 true 则为真</p>
+</blockquote>
+<blockquote>
+<p>?? 左边为 undefined 和 null 返回右边</p>
+</blockquote>
+<blockquote>
+<p>|| 左边为假，返回右边</p>
+</blockquote>
+<blockquote>
+<p>?. 主要是用于对象没有这个属性，导致报错问题</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">a &amp;&amp; b  <span class="comment">//如果a为true 则执行b</span></span><br><span class="line"></span><br><span class="line">a || b <span class="comment">//    左侧操作数为假值时返回右侧操作数。   如果这里0是0 就返回b了</span></span><br><span class="line"><span class="comment">// 区别</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> a = <span class="literal">null</span> ? <span class="string">&#x27;aa&#x27;</span>   <span class="comment">// aa  　只有当左侧为null和undefined时，才会返回右侧的数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> baz = <span class="number">0</span> ?? <span class="number">42</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(baz);</span><br><span class="line"><span class="comment">// expected output: 0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> adventurer = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;Alice&#x27;</span>,</span><br><span class="line">  <span class="attr">cat</span>: &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;Dinah&#x27;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> dogName = adventurer.dog?.name</span><br><span class="line"><span class="built_in">console</span>.log(dogName)</span><br><span class="line"><span class="comment">// expected output: undefined</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(adventurer.someNonExistentMethod?.())</span><br><span class="line"><span class="comment">// expected output: undefined</span></span><br><span class="line"></span><br><span class="line">不会报错而已</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>js操作符</tag>
       </tags>
   </entry>
   <entry>
@@ -1339,6 +1339,110 @@
       </tags>
   </entry>
   <entry>
+    <title>MarkDown 语法学习</title>
+    <url>/20210627/24-MarkDown-%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><p>默认没有标题<br>正文直接深入即可。</p>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="行内代码块"><a href="#行内代码块" class="headerlink" title="行内代码块"></a>行内代码块</h3><p>正文中插入代码<code>function()&#123;&#125;</code></p>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>(数字后面加点，空格，输入完成后回车)</p>
+<ol>
+<li>huawei</li>
+<li>xiaomi</li>
+<li>oppo</li>
+<li>apple</li>
+<li>lenevo</li>
+</ol>
+<hr>
+<ol>
+<li>系统</li>
+<li>用户<ol>
+<li>机器</li>
+<li>测试</li>
+</ol>
+</li>
+</ol>
+<h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><ul>
+<li><p>huawei</p>
+</li>
+<li><p>lianxiang</p>
+</li>
+<li><p>xiaomi</p>
+</li>
+<li><p>apple</p>
+</li>
+<li><p>oppo</p>
+</li>
+<li><p>123</p>
+<ul>
+<li>4444<ul>
+<li>1111<ul>
+<li>5555<ul>
+<li>4444</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h2><p><strong>我是加粗</strong></p>
+<p><em>斜体</em> (* 斜体字 *)</p>
+<hr>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote>
+<p>1、如果可以找到 key 对应的节点，再对比类型，如果类型不同，就删除旧节点重新创建，<br>2、类型相同，对比 lastPlacedIndex 与 oldIndex，lastPlacedIndex &lt;= oldIndex 不需要移动，否则就需要移动位置，并且更新属性</p>
+</blockquote>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><ul>
+<li>链接</li>
+</ul>
+<p><a href="https://blog.wy1991.cn/">官网博客</a></p>
+<h2 id="删除线xx"><a href="#删除线xx" class="headerlink" title="删除线xx"></a>删除线<del>xx</del></h2><p><del>删除线</del></p>
+<h2 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h2><p>Markdown 语法会忽略首行开头的空格，如果要体现出首行开头空两个的效果，可以使用 全角符号下的空格 ，windows 下使用 shift+空格 切换。</p>
+<h2 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h2><p><span class="exturl" data-url="bWFpbHRvOiYjOTc7JiN4NjQ7JiN4NmQ7JiN4Njk7JiN4NmU7JiM2NDsmIzExOTsmIzEyMTsmI3gzMTsmIzU3OyYjeDM5OyYjNDk7JiM0NjsmI3g2MzsmI3g2ZTs=">&#97;&#x64;&#x6d;&#x69;&#x6e;&#64;&#119;&#121;&#x31;&#57;&#x39;&#49;&#46;&#x63;&#x6e;<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>我们可以设置表格的对齐方式：</p>
+<ul>
+<li><p>-: 设置内容和标题栏居右对齐。</p>
+</li>
+<li><p>:- 设置内容和标题栏居左对齐。</p>
+</li>
+<li><p>:-: 设置内容和标题栏居中对齐。</p>
+<pre><code>| 表头 | 表头 | 表头 |
+| :--: | :--- | ---: |
+| 数据 | 数据 | 数据 |
+| 数据 | 数据 | 数据 |
+</code></pre>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">表头</th>
+<th align="left">表头</th>
+<th align="right">表头</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">数数据数据据</td>
+<td align="left">数数据数据数据据</td>
+<td align="right">数数据数据数据数据据</td>
+</tr>
+<tr>
+<td align="center">数数据数据数据据</td>
+<td align="left">数据数据数据数据</td>
+<td align="right">数数据数据数据数据据</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>MarkDown</category>
+      </categories>
+      <tags>
+        <tag>MarkDown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>nodejs 编写bash脚本</title>
     <url>/20210702/25-nodejs-%E7%BC%96%E5%86%99bash%E8%84%9A%E6%9C%AC/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="👏-nodejs-写-bash-脚本终极方案！"><a href="#👏-nodejs-写-bash-脚本终极方案！" class="headerlink" title="👏 nodejs 写 bash 脚本终极方案！"></a>👏 nodejs 写 bash 脚本终极方案！</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在学习 bash 脚本语法，但是如果对 bash 语法不是熟手的话，感觉非常容易出错，比如说：显示未定义的变量 shell 中变量没有定义，仍然是可以使用的，但是它的结果可能不是你所预期的。举个例子：</p>
@@ -1522,110 +1626,6 @@ console.log(`Files count: $&#123;count&#125;`)
       </categories>
       <tags>
         <tag>nodejs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MarkDown 语法学习</title>
-    <url>/20210627/24-MarkDown-%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><p>默认没有标题<br>正文直接深入即可。</p>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="行内代码块"><a href="#行内代码块" class="headerlink" title="行内代码块"></a>行内代码块</h3><p>正文中插入代码<code>function()&#123;&#125;</code></p>
-<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>(数字后面加点，空格，输入完成后回车)</p>
-<ol>
-<li>huawei</li>
-<li>xiaomi</li>
-<li>oppo</li>
-<li>apple</li>
-<li>lenevo</li>
-</ol>
-<hr>
-<ol>
-<li>系统</li>
-<li>用户<ol>
-<li>机器</li>
-<li>测试</li>
-</ol>
-</li>
-</ol>
-<h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><ul>
-<li><p>huawei</p>
-</li>
-<li><p>lianxiang</p>
-</li>
-<li><p>xiaomi</p>
-</li>
-<li><p>apple</p>
-</li>
-<li><p>oppo</p>
-</li>
-<li><p>123</p>
-<ul>
-<li>4444<ul>
-<li>1111<ul>
-<li>5555<ul>
-<li>4444</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h2><p><strong>我是加粗</strong></p>
-<p><em>斜体</em> (* 斜体字 *)</p>
-<hr>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote>
-<p>1、如果可以找到 key 对应的节点，再对比类型，如果类型不同，就删除旧节点重新创建，<br>2、类型相同，对比 lastPlacedIndex 与 oldIndex，lastPlacedIndex &lt;= oldIndex 不需要移动，否则就需要移动位置，并且更新属性</p>
-</blockquote>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><ul>
-<li>链接</li>
-</ul>
-<p><a href="https://blog.wy1991.cn/">官网博客</a></p>
-<h2 id="删除线xx"><a href="#删除线xx" class="headerlink" title="删除线xx"></a>删除线<del>xx</del></h2><p><del>删除线</del></p>
-<h2 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h2><p>Markdown 语法会忽略首行开头的空格，如果要体现出首行开头空两个的效果，可以使用 全角符号下的空格 ，windows 下使用 shift+空格 切换。</p>
-<h2 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h2><p><span class="exturl" data-url="bWFpbHRvOiYjeDYxOyYjMTAwOyYjMTA5OyYjeDY5OyYjMTEwOyYjeDQwOyYjMTE5OyYjeDc5OyYjeDMxOyYjeDM5OyYjeDM5OyYjeDMxOyYjeDJlOyYjOTk7JiMxMTA7">&#x61;&#100;&#109;&#x69;&#110;&#x40;&#119;&#x79;&#x31;&#x39;&#x39;&#x31;&#x2e;&#99;&#110;<i class="fa fa-external-link-alt"></i></span></p>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>我们可以设置表格的对齐方式：</p>
-<ul>
-<li><p>-: 设置内容和标题栏居右对齐。</p>
-</li>
-<li><p>:- 设置内容和标题栏居左对齐。</p>
-</li>
-<li><p>:-: 设置内容和标题栏居中对齐。</p>
-<pre><code>| 表头 | 表头 | 表头 |
-| :--: | :--- | ---: |
-| 数据 | 数据 | 数据 |
-| 数据 | 数据 | 数据 |
-</code></pre>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="center">表头</th>
-<th align="left">表头</th>
-<th align="right">表头</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">数数据数据据</td>
-<td align="left">数数据数据数据据</td>
-<td align="right">数数据数据数据数据据</td>
-</tr>
-<tr>
-<td align="center">数数据数据数据据</td>
-<td align="left">数据数据数据数据</td>
-<td align="right">数数据数据数据数据据</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>MarkDown</category>
-      </categories>
-      <tags>
-        <tag>MarkDown</tag>
       </tags>
   </entry>
   <entry>
@@ -2645,23 +2645,6 @@ console.log(`Files count: $&#123;count&#125;`)
       </tags>
   </entry>
   <entry>
-    <title>Vue 保存vuex到sessionStorage</title>
-    <url>/20210629/52-Vue-%E4%BF%9D%E5%AD%98vuex%E5%88%B0sessionStorage/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>Vuex 中刷新页面数据将丢失，所以可以在 app.vue 中搞这个</p>
-</blockquote>
-<h3 id="app-vue"><a href="#app-vue" class="headerlink" title="app.vue"></a>app.vue</h3><figure class="highlight pf"><table><tr><td class="code"><pre><span class="line">created () &#123;</span><br><span class="line">  //在页面加载时读取sessionStorage里的状态信息</span><br><span class="line">  if (sessionStorage.getItem(<span class="string">&quot;store&quot;</span>) ) &#123;</span><br><span class="line">    this.<span class="variable">$store</span>.replaceState(Object.assign(&#123;&#125;, this.<span class="variable">$store</span>.<span class="keyword">state</span>,JSON.parse(sessionStorage.getItem(<span class="string">&quot;store&quot;</span>))))</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  //在页面刷新时将vuex里的信息保存到sessionStorage里</span><br><span class="line">  window.addEventListener(<span class="string">&quot;beforeunload&quot;</span>,()=&gt;&#123;</span><br><span class="line">    sessionStorage.<span class="built_in">set</span>Item(<span class="string">&quot;store&quot;</span>,JSON.stringify(this.<span class="variable">$store</span>.<span class="keyword">state</span>))</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-        <tag>Vuex</tag>
-        <tag>sessionStorage</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vuex-mapState在compositionApi使用</title>
     <url>/20210709/51-Vuex-mapState%E5%9C%A8compositionApi%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -2687,6 +2670,23 @@ console.log(`Files count: $&#123;count&#125;`)
       </categories>
       <tags>
         <tag>Vuex</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue 保存vuex到sessionStorage</title>
+    <url>/20210629/52-Vue-%E4%BF%9D%E5%AD%98vuex%E5%88%B0sessionStorage/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>Vuex 中刷新页面数据将丢失，所以可以在 app.vue 中搞这个</p>
+</blockquote>
+<h3 id="app-vue"><a href="#app-vue" class="headerlink" title="app.vue"></a>app.vue</h3><figure class="highlight pf"><table><tr><td class="code"><pre><span class="line">created () &#123;</span><br><span class="line">  //在页面加载时读取sessionStorage里的状态信息</span><br><span class="line">  if (sessionStorage.getItem(<span class="string">&quot;store&quot;</span>) ) &#123;</span><br><span class="line">    this.<span class="variable">$store</span>.replaceState(Object.assign(&#123;&#125;, this.<span class="variable">$store</span>.<span class="keyword">state</span>,JSON.parse(sessionStorage.getItem(<span class="string">&quot;store&quot;</span>))))</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  //在页面刷新时将vuex里的信息保存到sessionStorage里</span><br><span class="line">  window.addEventListener(<span class="string">&quot;beforeunload&quot;</span>,()=&gt;&#123;</span><br><span class="line">    sessionStorage.<span class="built_in">set</span>Item(<span class="string">&quot;store&quot;</span>,JSON.stringify(this.<span class="variable">$store</span>.<span class="keyword">state</span>))</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+        <tag>Vuex</tag>
+        <tag>sessionStorage</tag>
       </tags>
   </entry>
   <entry>
@@ -2829,6 +2829,74 @@ console.log(`Files count: $&#123;count&#125;`)
       </tags>
   </entry>
   <entry>
+    <title>css 学会这些CSS技巧让你写样式更加丝滑</title>
+    <url>/20210712/6-css-%E5%AD%A6%E4%BC%9A%E8%BF%99%E4%BA%9BCSS%E6%8A%80%E5%B7%A7%E8%AE%A9%E4%BD%A0%E5%86%99%E6%A0%B7%E5%BC%8F%E6%9B%B4%E5%8A%A0%E4%B8%9D%E6%BB%91/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="calc"><a href="#calc" class="headerlink" title="calc"></a>calc</h2><p>calc()函数用于动态计算长度值，任何长度值都可以使用calc()函数进行计算，需要注意的是，运算符前后都需要保留一个空格，例如：</p>
+<pre><code>  .box&#123;
+    width: calc(100% - 10px)
+    height: calc(100% - 2rem)
+  &#125;
+</code></pre>
+<h2 id="min"><a href="#min" class="headerlink" title="min"></a>min</h2><p>min()函数允许你从逗号分隔符表达式中选择一个最小值作为css的属性值，例如：</p>
+<pre><code>  .box&#123;
+    width: min(1vw, 4em, 80px)
+  &#125;
+</code></pre>
+<p>在上面的例子中，宽度最多是80px。如果视口的宽度小于800px，或者一个em的宽度小于20px，则会更窄。换句话说，最大宽度是80px。</p>
+<p>当min() 用于控制文本大小时，要保证文本足够大以便于阅读。建议把 min() 方法嵌入到 max() 中</p>
+<pre><code>  p&#123;
+    font-size: max(min(0.5vw, 0.5em), 1rem)
+  &#125;
+</code></pre>
+<h2 id="max"><a href="#max" class="headerlink" title="max"></a>max</h2><p>max()函数让你可以从一个逗号分隔的表达式列表中选择最大（正方向）的值作为属性的值</p>
+<pre><code>.box&#123;
+  width: max(10vw, 4em, 80px)
+&#125;
+</code></pre>
+<p>在上面这个例子中，宽度最小会是80px，除非视图宽度大于800px或者是一个em比20px宽。简单来说，最小宽度是80px。你也可以认为max()的值提供了一个属性最小可能的值。</p>
+<p>当max()用于控制文本大小时，确保文本总是足够大以供阅读。一个建议是使用min()嵌套在 max()中的函数，该函数的第二个值是一个相对长度单位，该单位总是足够大以读取</p>
+<pre><code>  p&#123;
+    font-size: max(min(0.5vw, 0.5em), 1rem)
+  &#125;
+</code></pre>
+<p>这确保了1rem的最小大小，如果页面缩放，文本大小会缩放</p>
+<h2 id="clamp"><a href="#clamp" class="headerlink" title="clamp"></a>clamp</h2><p>clamp() 函数的作用是把一个值限制在一个上限和下限之间，当这个值超过最小值和最大值的范围时，在最小值和最大值之间选择一个值使用。它接收三个参数：最小值、首选值、最大值clamp(MIN, VAL, MAX)，当首选值比最小值要小时，则使用最小值，当首选值介于最小值和最大值之间时，用首选值，当首选值比最大值要大时，则使用最大值，表达式中的每一个值都可以用不同的单位。</p>
+<pre><code>  .box&#123;
+    width: clamp(200px, 50vw, 600px)
+  &#125;
+</code></pre>
+<h2 id="gap"><a href="#gap" class="headerlink" title="gap"></a>gap</h2><p>gap属性是用来设置网格行与列之间的间隙，该属性是row-gap和column-gap的简写形式，适用于Flex，Grid和multi-column布局的元素</p>
+<pre><code>  #flex &#123;
+    width: 300px;
+    display: flex;
+    gap: 20px 5px;
+  &#125;
+  #grid &#123;
+    height: 200px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 20px 5px;
+  &#125;
+</code></pre>
+<h2 id="writing-mode"><a href="#writing-mode" class="headerlink" title="writing-mode"></a>writing-mode</h2><p>writing-mode 属性定义了文本在水平或垂直方向上如何排布。</p>
+<p>语法格式如下：</p>
+<blockquote>
+<p>writing-mode: horizontal-tb | vertical-rl | vertical-lr | sideways-rl | sideways-lr</p>
+</blockquote>
+<p>horizontal-tb：水平方向自上而下的书写方式。即 left-right-top-bottom</p>
+<p>vertical-rl：垂直方向自右而左的书写方式。即 top-bottom-right-left</p>
+<p>vertical-lr：垂直方向内内容从上到下，水平方向从左到右</p>
+<p>sideways-rl：内容垂直方向从上到下排列</p>
+<p>sideways-lr：内容垂直方向从下到上排列</p>
+]]></content>
+      <categories>
+        <category>css</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>web多文件下载</title>
     <url>/20210629/60-web%E5%A4%9A%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><h3 id="1-延迟发起多个下载请求"><a href="#1-延迟发起多个下载请求" class="headerlink" title="1. 延迟发起多个下载请求"></a>1. 延迟发起多个下载请求</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sleep</span>(<span class="params">time = <span class="number">1000</span></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(resolve, time)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> files = [<span class="string">&#x27;1m.zip&#x27;</span>, <span class="string">&#x27;2m.zip&#x27;</span>, <span class="string">&#x27;3m.zip&#x27;</span>]</span><br><span class="line"><span class="keyword">const</span> download1 = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  files.forEach(<span class="keyword">async</span> (file, i) =&gt; &#123;</span><br><span class="line">    <span class="comment">// 延迟下载</span></span><br><span class="line">    <span class="keyword">await</span> sleep(i * <span class="number">1000</span>)</span><br><span class="line">    <span class="keyword">const</span> a = <span class="built_in">document</span>.createElement(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line">    a.href = <span class="string">`path/<span class="subst">$&#123;file&#125;</span>`</span></span><br><span class="line">    a.download = file</span><br><span class="line">    a.click()</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2900,74 +2968,6 @@ console.log(`Files count: $&#123;count&#125;`)
         <tag>js</tag>
         <tag>html</tag>
         <tag>多文件下载</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>css 学会这些CSS技巧让你写样式更加丝滑</title>
-    <url>/20210712/6-css-%E5%AD%A6%E4%BC%9A%E8%BF%99%E4%BA%9BCSS%E6%8A%80%E5%B7%A7%E8%AE%A9%E4%BD%A0%E5%86%99%E6%A0%B7%E5%BC%8F%E6%9B%B4%E5%8A%A0%E4%B8%9D%E6%BB%91/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="calc"><a href="#calc" class="headerlink" title="calc"></a>calc</h2><p>calc()函数用于动态计算长度值，任何长度值都可以使用calc()函数进行计算，需要注意的是，运算符前后都需要保留一个空格，例如：</p>
-<pre><code>  .box&#123;
-    width: calc(100% - 10px)
-    height: calc(100% - 2rem)
-  &#125;
-</code></pre>
-<h2 id="min"><a href="#min" class="headerlink" title="min"></a>min</h2><p>min()函数允许你从逗号分隔符表达式中选择一个最小值作为css的属性值，例如：</p>
-<pre><code>  .box&#123;
-    width: min(1vw, 4em, 80px)
-  &#125;
-</code></pre>
-<p>在上面的例子中，宽度最多是80px。如果视口的宽度小于800px，或者一个em的宽度小于20px，则会更窄。换句话说，最大宽度是80px。</p>
-<p>当min() 用于控制文本大小时，要保证文本足够大以便于阅读。建议把 min() 方法嵌入到 max() 中</p>
-<pre><code>  p&#123;
-    font-size: max(min(0.5vw, 0.5em), 1rem)
-  &#125;
-</code></pre>
-<h2 id="max"><a href="#max" class="headerlink" title="max"></a>max</h2><p>max()函数让你可以从一个逗号分隔的表达式列表中选择最大（正方向）的值作为属性的值</p>
-<pre><code>.box&#123;
-  width: max(10vw, 4em, 80px)
-&#125;
-</code></pre>
-<p>在上面这个例子中，宽度最小会是80px，除非视图宽度大于800px或者是一个em比20px宽。简单来说，最小宽度是80px。你也可以认为max()的值提供了一个属性最小可能的值。</p>
-<p>当max()用于控制文本大小时，确保文本总是足够大以供阅读。一个建议是使用min()嵌套在 max()中的函数，该函数的第二个值是一个相对长度单位，该单位总是足够大以读取</p>
-<pre><code>  p&#123;
-    font-size: max(min(0.5vw, 0.5em), 1rem)
-  &#125;
-</code></pre>
-<p>这确保了1rem的最小大小，如果页面缩放，文本大小会缩放</p>
-<h2 id="clamp"><a href="#clamp" class="headerlink" title="clamp"></a>clamp</h2><p>clamp() 函数的作用是把一个值限制在一个上限和下限之间，当这个值超过最小值和最大值的范围时，在最小值和最大值之间选择一个值使用。它接收三个参数：最小值、首选值、最大值clamp(MIN, VAL, MAX)，当首选值比最小值要小时，则使用最小值，当首选值介于最小值和最大值之间时，用首选值，当首选值比最大值要大时，则使用最大值，表达式中的每一个值都可以用不同的单位。</p>
-<pre><code>  .box&#123;
-    width: clamp(200px, 50vw, 600px)
-  &#125;
-</code></pre>
-<h2 id="gap"><a href="#gap" class="headerlink" title="gap"></a>gap</h2><p>gap属性是用来设置网格行与列之间的间隙，该属性是row-gap和column-gap的简写形式，适用于Flex，Grid和multi-column布局的元素</p>
-<pre><code>  #flex &#123;
-    width: 300px;
-    display: flex;
-    gap: 20px 5px;
-  &#125;
-  #grid &#123;
-    height: 200px;
-    display: grid;
-    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-    gap: 20px 5px;
-  &#125;
-</code></pre>
-<h2 id="writing-mode"><a href="#writing-mode" class="headerlink" title="writing-mode"></a>writing-mode</h2><p>writing-mode 属性定义了文本在水平或垂直方向上如何排布。</p>
-<p>语法格式如下：</p>
-<blockquote>
-<p>writing-mode: horizontal-tb | vertical-rl | vertical-lr | sideways-rl | sideways-lr</p>
-</blockquote>
-<p>horizontal-tb：水平方向自上而下的书写方式。即 left-right-top-bottom</p>
-<p>vertical-rl：垂直方向自右而左的书写方式。即 top-bottom-right-left</p>
-<p>vertical-lr：垂直方向内内容从上到下，水平方向从左到右</p>
-<p>sideways-rl：内容垂直方向从上到下排列</p>
-<p>sideways-lr：内容垂直方向从下到上排列</p>
-]]></content>
-      <categories>
-        <category>css</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -4390,6 +4390,202 @@ www.google.com =&gt; 404
       </tags>
   </entry>
   <entry>
+    <title>package最全解析</title>
+    <url>/20210726/83-package%E6%9C%80%E5%85%A8%E8%A7%A3%E6%9E%90/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你真的了解package.json吗？来看看吧，这可能是最全的package解析</p>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>从我们接触前端开始，每个项目的根目录下一般都会有一个package.json文件，这个文件定义了当前项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等）。<br>当运行npm install命令的时候，会根据package.json文件中的配置自动下载所需的模块，也就是配置项目所需的运行和开发环境。</p>
+<p>比如下面这个文件，只存在简单的项目名称和版本号。</p>
+<pre><code>  &#123;
+    &quot;name&quot; : &quot;yindong&quot;,
+    &quot;version&quot; : &quot;1.0.0&quot;,
+  &#125;
+</code></pre>
+<p>package.json文件是一个JSON对象，这从他的后缀名.json就可以看出来，该对象的每一个成员就是当前项目的一项设置。比如name就是项目名称，version是版本号。</p>
+<p>当然很多人其实并不关心package.json的配置，他们应用的更多的是dependencies或devDependencies配置。</p>
+<p>下面是一个更完整的package.json文件，详细解释一下每个字段的真实含义。</p>
+<pre><code>  &#123;
+      &quot;name&quot;: &quot;yindong&quot;,
+      &quot;version&quot;:&quot;0.0.1&quot;,
+      &quot;description&quot;: &quot;antd-theme&quot;,
+      &quot;keywords&quot;:[&quot;node.js&quot;,&quot;antd&quot;, &quot;theme&quot;],
+      &quot;homepage&quot;: &quot;https://zhiqianduan.com&quot;,
+      &quot;bugs&quot;:&#123;&quot;url&quot;:&quot;http://path/to/bug&quot;,&quot;email&quot;:&quot;yindong@xxxx.com&quot;&#125;,
+      &quot;license&quot;: &quot;ISC&quot;,
+      &quot;author&quot;: &quot;yindong&quot;,
+      &quot;contributors&quot;:[&#123;&quot;name&quot;:&quot;yindong&quot;,&quot;email&quot;:&quot;yindong@xxxx.com&quot;&#125;],
+      &quot;files&quot;: &quot;&quot;,
+      &quot;main&quot;: &quot;./dist/default.js&quot;,
+      &quot;bin&quot;: &quot;&quot;,
+      &quot;man&quot;: &quot;&quot;,
+      &quot;directories&quot;: &quot;&quot;,
+      &quot;repository&quot;: &#123;
+      &quot;type&quot;: &quot;git&quot;,
+      &quot;url&quot;: &quot;https://path/to/url&quot;
+    &#125;,
+      &quot;scripts&quot;: &#123;
+        &quot;start&quot;: &quot;webpack serve --config webpack.config.dev.js --progress&quot;
+      &#125;,
+      &quot;config&quot;: &#123; &quot;port&quot; : &quot;8080&quot; &#125;,
+      &quot;dependencies&quot;: &#123;&#125;,
+      &quot;devDependencies&quot;: &#123;
+          &quot;@babel/core&quot;: &quot;^7.14.3&quot;,
+          &quot;@babel/preset-env&quot;: &quot;^7.14.4&quot;,
+          &quot;@babel/preset-react&quot;: &quot;^7.13.13&quot;,
+          &quot;babel-loader&quot;: &quot;^8.2.2&quot;,
+          &quot;babel-plugin-import&quot;: &quot;^1.13.3&quot;,
+          &quot;glob&quot;: &quot;^7.1.7&quot;,
+          &quot;less&quot;: &quot;^3.9.0&quot;,
+          &quot;less-loader&quot;: &quot;^9.0.0&quot;,
+          &quot;style-loader&quot;: &quot;^2.0.0&quot;,
+          &quot;webpack&quot;: &quot;^5.38.1&quot;,
+          &quot;webpack-cli&quot;: &quot;^4.7.0&quot;,
+          &quot;webpack-dev-server&quot;: &quot;^3.11.2&quot;
+      &#125;,
+      &quot;peerDependencies&quot;: &#123;
+          &quot;tea&quot;: &quot;2.x&quot;
+      &#125;,
+      &quot;bundledDependencies&quot;: [
+          &quot;renderized&quot;, &quot;super-streams&quot;
+      ],
+      &quot;engines&quot;: &#123;&quot;node&quot;: &quot;0.10.x&quot;&#125;,
+      &quot;os&quot; : [ &quot;win32&quot;, &quot;darwin&quot;, &quot;linux&quot; ],
+      &quot;cpu&quot; : [ &quot;x64&quot;, &quot;ia32&quot; ],
+      &quot;private&quot;: false,
+      &quot;publishConfig&quot;: &#123;&#125;
+    &#125;
+    
+</code></pre>
+<h2 id="name字段"><a href="#name字段" class="headerlink" title="name字段"></a>name字段</h2><p>package.json文件中最重要的就是name和version字段，这两项是必填的。名称和版本一起构成一个标识符，该标识符被认为是完全唯一的。对包的更改应该与对版本的更改一起进行。<br>name必须小于等于214个字符，不能以.或_开头，不能有大写字母，因为名称最终成为URL的一部分因此不能包含任何非URL安全字符。</p>
+<p>npm官方建议我们不要使用与核心节点模块相同的名称。不要在名称中加js或node。如果需要可以使用engines来指定运行环境。</p>
+<p>该名称会作为参数传递给require，因此它应该是简短的，但也需要具有合理的描述性。</p>
+<h2 id="version字段"><a href="#version字段" class="headerlink" title="version字段"></a>version字段</h2><p>version一般的格式是x.x.x, 并且需要遵循该规则。</p>
+<p>package.json文件中最重要的就是name和version字段，这两项是必填的。名称和版本一起构成一个标识符，该标识符被认为是完全唯一的。每次发布时version不能与已存在的一致。</p>
+<h2 id="description字段"><a href="#description字段" class="headerlink" title="description字段"></a>description字段</h2><p>description是一个字符串，用于编写描述信息。有助于人们在npm库中搜索的时候发现你的模块。</p>
+<h2 id="keywords字段"><a href="#keywords字段" class="headerlink" title="keywords字段"></a>keywords字段</h2><p>keywords是一个字符串组成的数组，有助于人们在npm库中搜索的时候发现你的模块。</p>
+<h2 id="homepage字段"><a href="#homepage字段" class="headerlink" title="homepage字段"></a>homepage字段</h2><p>homepage项目的主页地址。</p>
+<h2 id="bugs字段"><a href="#bugs字段" class="headerlink" title="bugs字段"></a>bugs字段</h2><p>bugs用于项目问题的反馈issue地址或者一个邮箱。</p>
+<pre><code>  &quot;bugs&quot;: &#123; 
+    &quot;url&quot; : &quot;https://github.com/owner/project/issues&quot;,
+    &quot;email&quot; : &quot;project@hostname.com&quot;
+  &#125;
+</code></pre>
+<h2 id="license字段"><a href="#license字段" class="headerlink" title="license字段"></a>license字段</h2><p>license是当前项目的协议，让用户知道他们有何权限来使用你的模块，以及使用该模块有哪些限制。</p>
+<pre><code>  &quot;license&quot; : &quot;BSD-3-Clause&quot;
+</code></pre>
+<h2 id="author字段-contributors字段"><a href="#author字段-contributors字段" class="headerlink" title="author字段 contributors字段"></a>author字段 contributors字段</h2><p>author是具体一个人，contributors表示一群人，他们都表示当前项目的共享者。同时每个人都是一个对象。具有name字段和可选的url及email字段。<br>      “author”: {<br>        “name” : “yindong”,<br>        “email” : “<span class="exturl" data-url="bWFpbHRvOiYjeDc5OyYjMTA1OyYjeDZlOyYjeDY0OyYjeDZmOyYjMTEwOyYjMTAzOyYjeDQwOyYjeDc4OyYjeDc4OyYjeDJlOyYjOTk7JiMxMTE7JiN4NmQ7">&#x79;&#105;&#x6e;&#x64;&#x6f;&#110;&#103;&#x40;&#x78;&#x78;&#x2e;&#99;&#111;&#x6d;<i class="fa fa-external-link-alt"></i></span>“,<br>        “url” : “<span class="exturl" data-url="aHR0cHM6Ly96aGlxaWFuZHVhbi5jb20vJnF1b3Q7">https://zhiqianduan.com/&quot;<i class="fa fa-external-link-alt"></i></span><br>      }</p>
+<p>也可以写成一个字符串<br>      “author”: “yindong <span class="exturl" data-url="bWFpbHRvOiYjeDc5OyYjMTA1OyYjMTEwOyYjeDY0OyYjeDZmOyYjeDZlOyYjeDY3OyYjeDQwOyYjeDc4OyYjeDc4OyYjeDJlOyYjeDYzOyYjeDZmOyYjMTA5Ow==">&#x79;&#105;&#110;&#x64;&#x6f;&#x6e;&#x67;&#x40;&#x78;&#x78;&#x2e;&#x63;&#x6f;&#109;<i class="fa fa-external-link-alt"></i></span> (<span class="exturl" data-url="aHR0cHM6Ly96aGlxaWFuZHVhbi5jb20vKSZxdW90Ow==">https://zhiqianduan.com/)&quot;<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="files字段"><a href="#files字段" class="headerlink" title="files字段"></a>files字段</h2><p>files属性的值是一个数组，内容是模块下文件名或者文件夹名，如果是文件夹名，则文件夹下所有的文件也会被包含进来（除非文件被另一些配置排除了）</p>
+<p>可以在模块根目录下创建一个.npmignore文件，写在这个文件里边的文件即便被写在files属性里边也会被排除在外，这个文件的写法与.gitignore类似。</p>
+<h2 id="main字段"><a href="#main字段" class="headerlink" title="main字段"></a>main字段</h2><p>main字段指定了加载的入口文件，require导入的时候就会加载这个文件。这个字段的默认值是模块根目录下面的index.js。</p>
+<h2 id="bin字段"><a href="#bin字段" class="headerlink" title="bin字段"></a>bin字段</h2><p>bin项用来指定每个内部命令对应的可执行文件的位置。如果你编写的是一个node工具的时候一定会用到bin字段。</p>
+<p>当我们编写一个cli工具的时候，需要指定工具的运行命令，比如常用的webpack模块，他的运行命令就是webpack。</p>
+<pre><code>  &quot;bin&quot;: &#123;
+    &quot;webpack&quot;: &quot;bin/index.js&quot;,
+  &#125;
+</code></pre>
+<p>当我们执行webpack命令的时候就会执行bin/index.js文件中的代码。</p>
+<p>在模块以依赖的方式被安装，如果存在bin选项。在node_modules/.bin/生成对应的文件，<br>Npm会寻找这个文件，在node_modules/.bin/目录下建立符号链接。由于node_modules/.bin/目录会在运行时加入系统的PATH变量，因此在运行npm时，就可以不带路径，直接通过命令来调用这些脚本。</p>
+<p>所有node_modules/.bin/目录下的命令，都可以用npm run [命令]的格式运行。在命令行下，键入npm run，然后按tab键，就会显示所有可以使用的命令。</p>
+<h2 id="man字段"><a href="#man字段" class="headerlink" title="man字段"></a>man字段</h2><p>man用来指定当前模块的man文档的位置。</p>
+<pre><code>  &quot;man&quot; :[ &quot;./doc/calc.1&quot; ]
+</code></pre>
+<h2 id="directories字段"><a href="#directories字段" class="headerlink" title="directories字段"></a>directories字段</h2><p>directories制定一些方法来描述模块的结构, 用于告诉用户每个目录在什么位置。</p>
+<h2 id="repository字段"><a href="#repository字段" class="headerlink" title="repository字段"></a>repository字段</h2><p>指定一个代码存放地址，对想要为你的项目贡献代码的人有帮助</p>
+<pre><code>  &quot;repository&quot; : &#123;
+    &quot;type&quot; : &quot;git&quot;, 
+    &quot;url&quot; : &quot;https://github.com/npm/npm.git&quot;
+  &#125;
+</code></pre>
+<h2 id="scripts字段"><a href="#scripts字段" class="headerlink" title="scripts字段"></a>scripts字段</h2><p>scripts指定了运行脚本命令的npm命令行缩写，比如start指定了运行npm run start时，所要执行的命令。</p>
+<pre><code>  &quot;scripts&quot;: &#123;
+    &quot;start&quot;: &quot;node ./start.js&quot;
+  &#125;
+</code></pre>
+<p>使用scripts字段可以快速的执行shell命令，可以理解为alias。</p>
+<p>scripts可以直接使用node_modules中安装的模块，这区别于直接运行需要使用npx命令。</p>
+<pre><code>  &quot;scripts&quot;: &#123;
+    &quot;build&quot;: &quot;webpack&quot;
+  &#125;
+
+  // npm run build
+  // npx webpack
+</code></pre>
+<h2 id="config字段"><a href="#config字段" class="headerlink" title="config字段"></a>config字段</h2><p>config字段用于添加命令行的环境变量。</p>
+<pre><code>  &#123;
+    &quot;name&quot; : &quot;yindong&quot;,
+    &quot;config&quot; : &#123; &quot;port&quot; : &quot;8080&quot; &#125;,
+    &quot;scripts&quot; : &#123; &quot;start&quot; : &quot;node server.js&quot; &#125;
+  &#125;
+</code></pre>
+<p>然后，在server.js脚本就可以引用config字段的值。</p>
+<pre><code>  console.log(process.env.npm_package_config_port); // 8080
+</code></pre>
+<p>用户可以通过npm config set来修改这个值。</p>
+<pre><code>  npm config set yindong:port 8000
+</code></pre>
+<h2 id="dependencies字段-devDependencies字段"><a href="#dependencies字段-devDependencies字段" class="headerlink" title="dependencies字段, devDependencies字段"></a>dependencies字段, devDependencies字段</h2><p>dependencies字段指定了项目运行所依赖的模块，devDependencies指定项目开发所需要的模块。</p>
+<p>它们的值都是一个对象。该对象的各个成员，分别由模块名和对应的版本要求组成，表示依赖的模块及其版本范围。</p>
+<p>当安装依赖的时候使用–save参数表示将该模块写入dependencies属性，–save-dev表示将该模块写入devDependencies属性。</p>
+<pre><code>  &quot;devDependencies&quot;: &#123;
+          &quot;webpack&quot;: &quot;^5.38.1&quot;,
+  &#125;
+</code></pre>
+<p>对象的每一项通过一个键值对表示，前面是模块名称，后面是对应模块的版本号。版本号遵循“大版本.次要版本.小版本”的格式规定。</p>
+<p>版本说明</p>
+<p>固定版本: 比如5.38.1，安装时只安装指定版本。</p>
+<p>波浪号: 比如~5.38.1, 表示安装5.38.x的最新版本（不低于5.38.1），但是不安装5.39.x，也就是说安装时不改变大版本号和次要版本号。</p>
+<p>插入号: 比如ˆ5.38.1, ，表示安装5.x.x的最新版本（不低于5.38.1），但是不安装6.x.x，也就是说安装时不改变大版本号。需要注意的是，如果大版本号为0，则插入号的行为与波浪号相同，这是因为此时处于开发阶段，即使是次要版本号变动，也可能带来程序的不兼容。</p>
+<p>latest: 安装最新版本。</p>
+<h2 id="peerDependencies字段"><a href="#peerDependencies字段" class="headerlink" title="peerDependencies字段"></a>peerDependencies字段</h2><p>当我们开发一个模块的时候，如果当前模块与所依赖的模块同时依赖一个第三方模块，并且依赖的是两个不兼容的版本时就会出现问题。</p>
+<p>比如，你的项目依赖A模块和B模块的1.0版，而A模块本身又依赖B模块的2.0版。</p>
+<p>大多数情况下，这不构成问题，B模块的两个版本可以并存，同时运行。但是，有一种情况，会出现问题，就是这种依赖关系将暴露给用户。</p>
+<p>最典型的场景就是插件，比如A模块是B模块的插件。用户安装的B模块是1.0版本，但是A插件只能和2.0版本的B模块一起使用。这时，用户要是将1.0版本的B的实例传给A，就会出现问题。因此，需要一种机制，在模板安装的时候提醒用户，如果A和B一起安装，那么B必须是2.0模块。</p>
+<p>peerDependencies字段，就是用来供插件指定其所需要的主工具的版本。可以通过peerDependencies字段来限制，使用myless模块必须依赖less模块的3.9.x版本.</p>
+<pre><code>  &#123;
+    &quot;name&quot;: &quot;myless&quot;,
+    &quot;peerDependencies&quot;: &#123;
+      &quot;less&quot;: &quot;3.9.x&quot;
+    &#125;
+  &#125;
+</code></pre>
+<p>注意，从npm 3.0版开始，peerDependencies不再会默认安装了。<br>就是初始化的时候不会默认带出。</p>
+<h2 id="bundledDependencies字段"><a href="#bundledDependencies字段" class="headerlink" title="bundledDependencies字段"></a>bundledDependencies字段</h2><p>bundledDependencies指定发布的时候会被一起打包的模块.</p>
+<h2 id="optionalDependencies字段"><a href="#optionalDependencies字段" class="headerlink" title="optionalDependencies字段"></a>optionalDependencies字段</h2><p>如果一个依赖模块可以被使用， 同时你也希望在该模块找不到或无法获取时npm继续运行，你可以把这个模块依赖放到optionalDependencies配置中。</p>
+<p>这个配置的写法和dependencies的写法一样，不同的是这里边写的模块安装失败不会导致npm install失败。</p>
+<h2 id="engines字段"><a href="#engines字段" class="headerlink" title="engines字段"></a>engines字段</h2><p>engines字段指明了该模块运行的平台，比如Node或者npm的某个版本或者浏览器。</p>
+<pre><code>  &#123; &quot;engines&quot; : &#123; &quot;node&quot; : &quot;&gt;=0.10.3 &lt;0.12&quot;, &quot;npm&quot; : &quot;~1.0.20&quot; &#125; &#125;
+</code></pre>
+<h2 id="os字段"><a href="#os字段" class="headerlink" title="os字段"></a>os字段</h2><p>可以指定你的模块只能在哪个操作系统上运行<br>      “os” : [ “darwin”, “linux”, “win32” ]</p>
+<h2 id="cpu字段"><a href="#cpu字段" class="headerlink" title="cpu字段"></a>cpu字段</h2><p>限制模块只能在某种架构的cpu下运行<br>      “cpu” : [ “x64”, “ia32” ]</p>
+<h2 id="private字段"><a href="#private字段" class="headerlink" title="private字段"></a>private字段</h2><p>如果这个属性被设置为true，npm将拒绝发布它，这是为了防止一个私有模块被无意间发布出去。<br>      “private”: true</p>
+<h2 id="publishConfig字段"><a href="#publishConfig字段" class="headerlink" title="publishConfig字段"></a>publishConfig字段</h2><p>这个配置是会在模块发布时生效，用于设置发布用到的一些值的集合。如果你不想模块被默认标记为最新的，或者默认发布到公共仓库，可以在这里配置tag或仓库地址。</p>
+<p>通常publishConfig会配合private来使用，如果你只想让模块被发布到一个特定的npm仓库，如一个内部的仓库。</p>
+<pre><code>  &quot;private&quot;: true,
+  &quot;publishConfig&quot;: &#123;
+    &quot;tag&quot;: &quot;1.0.0&quot;,
+    &quot;registry&quot;: &quot;https://registry.npmjs.org/&quot;,
+    &quot;access&quot;: &quot;public&quot;
+  &#125;
+</code></pre>
+<h2 id="preferGlobal字段"><a href="#preferGlobal字段" class="headerlink" title="preferGlobal字段"></a>preferGlobal字段</h2><p>preferGlobal的值是布尔值，表示当用户不将该模块安装为全局模块时（即不用–global参数），要不要显示警告，表示该模块的本意就是安装为全局模块。</p>
+<pre><code>  &quot;preferGlobal&quot;: false
+</code></pre>
+<h2 id="browser字段"><a href="#browser字段" class="headerlink" title="browser字段"></a>browser字段</h2><p>browser指定该模板供浏览器使用的版本。Browserify这样的浏览器打包工具，通过它就知道该打包那个文件。</p>
+<pre><code>  &quot;browser&quot;: &#123;
+    &quot;tipso&quot;: &quot;./node_modules/tipso/src/tipso.js&quot;
+  &#125;,
+</code></pre>
+<p><span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82OTg3MTc5Mzk1NzE0NjQ2MDI0">转载自掘金(隐冬)<i class="fa fa-external-link-alt"></i></span>
+ </p>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>手把手教你创建Vue3项目开发环境</title>
     <url>/20210726/84-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E5%88%9B%E5%BB%BAVue3%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="项目搭建规范"><a href="#项目搭建规范" class="headerlink" title="项目搭建规范"></a>项目搭建规范</h1><h2 id="一-代码规范"><a href="#一-代码规范" class="headerlink" title="一. 代码规范"></a>一. 代码规范</h2><h3 id="1-1-集成-editorconfig-配置"><a href="#1-1-集成-editorconfig-配置" class="headerlink" title="1.1. 集成 editorconfig 配置"></a>1.1. 集成 editorconfig 配置</h3><p>EditorConfig 有助于为不同 IDE 编辑器上处理同一项目的多个开发人员维护一致的编码风格。</p>
@@ -4660,202 +4856,6 @@ www.google.com =&gt; 404
         <tag>TS</tag>
         <tag>vue</tag>
         <tag>脚手架</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>package最全解析</title>
-    <url>/20210726/83-package%E6%9C%80%E5%85%A8%E8%A7%A3%E6%9E%90/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你真的了解package.json吗？来看看吧，这可能是最全的package解析</p>
-<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>从我们接触前端开始，每个项目的根目录下一般都会有一个package.json文件，这个文件定义了当前项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等）。<br>当运行npm install命令的时候，会根据package.json文件中的配置自动下载所需的模块，也就是配置项目所需的运行和开发环境。</p>
-<p>比如下面这个文件，只存在简单的项目名称和版本号。</p>
-<pre><code>  &#123;
-    &quot;name&quot; : &quot;yindong&quot;,
-    &quot;version&quot; : &quot;1.0.0&quot;,
-  &#125;
-</code></pre>
-<p>package.json文件是一个JSON对象，这从他的后缀名.json就可以看出来，该对象的每一个成员就是当前项目的一项设置。比如name就是项目名称，version是版本号。</p>
-<p>当然很多人其实并不关心package.json的配置，他们应用的更多的是dependencies或devDependencies配置。</p>
-<p>下面是一个更完整的package.json文件，详细解释一下每个字段的真实含义。</p>
-<pre><code>  &#123;
-      &quot;name&quot;: &quot;yindong&quot;,
-      &quot;version&quot;:&quot;0.0.1&quot;,
-      &quot;description&quot;: &quot;antd-theme&quot;,
-      &quot;keywords&quot;:[&quot;node.js&quot;,&quot;antd&quot;, &quot;theme&quot;],
-      &quot;homepage&quot;: &quot;https://zhiqianduan.com&quot;,
-      &quot;bugs&quot;:&#123;&quot;url&quot;:&quot;http://path/to/bug&quot;,&quot;email&quot;:&quot;yindong@xxxx.com&quot;&#125;,
-      &quot;license&quot;: &quot;ISC&quot;,
-      &quot;author&quot;: &quot;yindong&quot;,
-      &quot;contributors&quot;:[&#123;&quot;name&quot;:&quot;yindong&quot;,&quot;email&quot;:&quot;yindong@xxxx.com&quot;&#125;],
-      &quot;files&quot;: &quot;&quot;,
-      &quot;main&quot;: &quot;./dist/default.js&quot;,
-      &quot;bin&quot;: &quot;&quot;,
-      &quot;man&quot;: &quot;&quot;,
-      &quot;directories&quot;: &quot;&quot;,
-      &quot;repository&quot;: &#123;
-      &quot;type&quot;: &quot;git&quot;,
-      &quot;url&quot;: &quot;https://path/to/url&quot;
-    &#125;,
-      &quot;scripts&quot;: &#123;
-        &quot;start&quot;: &quot;webpack serve --config webpack.config.dev.js --progress&quot;
-      &#125;,
-      &quot;config&quot;: &#123; &quot;port&quot; : &quot;8080&quot; &#125;,
-      &quot;dependencies&quot;: &#123;&#125;,
-      &quot;devDependencies&quot;: &#123;
-          &quot;@babel/core&quot;: &quot;^7.14.3&quot;,
-          &quot;@babel/preset-env&quot;: &quot;^7.14.4&quot;,
-          &quot;@babel/preset-react&quot;: &quot;^7.13.13&quot;,
-          &quot;babel-loader&quot;: &quot;^8.2.2&quot;,
-          &quot;babel-plugin-import&quot;: &quot;^1.13.3&quot;,
-          &quot;glob&quot;: &quot;^7.1.7&quot;,
-          &quot;less&quot;: &quot;^3.9.0&quot;,
-          &quot;less-loader&quot;: &quot;^9.0.0&quot;,
-          &quot;style-loader&quot;: &quot;^2.0.0&quot;,
-          &quot;webpack&quot;: &quot;^5.38.1&quot;,
-          &quot;webpack-cli&quot;: &quot;^4.7.0&quot;,
-          &quot;webpack-dev-server&quot;: &quot;^3.11.2&quot;
-      &#125;,
-      &quot;peerDependencies&quot;: &#123;
-          &quot;tea&quot;: &quot;2.x&quot;
-      &#125;,
-      &quot;bundledDependencies&quot;: [
-          &quot;renderized&quot;, &quot;super-streams&quot;
-      ],
-      &quot;engines&quot;: &#123;&quot;node&quot;: &quot;0.10.x&quot;&#125;,
-      &quot;os&quot; : [ &quot;win32&quot;, &quot;darwin&quot;, &quot;linux&quot; ],
-      &quot;cpu&quot; : [ &quot;x64&quot;, &quot;ia32&quot; ],
-      &quot;private&quot;: false,
-      &quot;publishConfig&quot;: &#123;&#125;
-    &#125;
-    
-</code></pre>
-<h2 id="name字段"><a href="#name字段" class="headerlink" title="name字段"></a>name字段</h2><p>package.json文件中最重要的就是name和version字段，这两项是必填的。名称和版本一起构成一个标识符，该标识符被认为是完全唯一的。对包的更改应该与对版本的更改一起进行。<br>name必须小于等于214个字符，不能以.或_开头，不能有大写字母，因为名称最终成为URL的一部分因此不能包含任何非URL安全字符。</p>
-<p>npm官方建议我们不要使用与核心节点模块相同的名称。不要在名称中加js或node。如果需要可以使用engines来指定运行环境。</p>
-<p>该名称会作为参数传递给require，因此它应该是简短的，但也需要具有合理的描述性。</p>
-<h2 id="version字段"><a href="#version字段" class="headerlink" title="version字段"></a>version字段</h2><p>version一般的格式是x.x.x, 并且需要遵循该规则。</p>
-<p>package.json文件中最重要的就是name和version字段，这两项是必填的。名称和版本一起构成一个标识符，该标识符被认为是完全唯一的。每次发布时version不能与已存在的一致。</p>
-<h2 id="description字段"><a href="#description字段" class="headerlink" title="description字段"></a>description字段</h2><p>description是一个字符串，用于编写描述信息。有助于人们在npm库中搜索的时候发现你的模块。</p>
-<h2 id="keywords字段"><a href="#keywords字段" class="headerlink" title="keywords字段"></a>keywords字段</h2><p>keywords是一个字符串组成的数组，有助于人们在npm库中搜索的时候发现你的模块。</p>
-<h2 id="homepage字段"><a href="#homepage字段" class="headerlink" title="homepage字段"></a>homepage字段</h2><p>homepage项目的主页地址。</p>
-<h2 id="bugs字段"><a href="#bugs字段" class="headerlink" title="bugs字段"></a>bugs字段</h2><p>bugs用于项目问题的反馈issue地址或者一个邮箱。</p>
-<pre><code>  &quot;bugs&quot;: &#123; 
-    &quot;url&quot; : &quot;https://github.com/owner/project/issues&quot;,
-    &quot;email&quot; : &quot;project@hostname.com&quot;
-  &#125;
-</code></pre>
-<h2 id="license字段"><a href="#license字段" class="headerlink" title="license字段"></a>license字段</h2><p>license是当前项目的协议，让用户知道他们有何权限来使用你的模块，以及使用该模块有哪些限制。</p>
-<pre><code>  &quot;license&quot; : &quot;BSD-3-Clause&quot;
-</code></pre>
-<h2 id="author字段-contributors字段"><a href="#author字段-contributors字段" class="headerlink" title="author字段 contributors字段"></a>author字段 contributors字段</h2><p>author是具体一个人，contributors表示一群人，他们都表示当前项目的共享者。同时每个人都是一个对象。具有name字段和可选的url及email字段。<br>      “author”: {<br>        “name” : “yindong”,<br>        “email” : “<span class="exturl" data-url="bWFpbHRvOiYjeDc5OyYjMTA1OyYjMTEwOyYjeDY0OyYjeDZmOyYjMTEwOyYjMTAzOyYjNjQ7JiN4Nzg7JiMxMjA7JiN4MmU7JiN4NjM7JiN4NmY7JiN4NmQ7">&#x79;&#105;&#110;&#x64;&#x6f;&#110;&#103;&#64;&#x78;&#120;&#x2e;&#x63;&#x6f;&#x6d;<i class="fa fa-external-link-alt"></i></span>“,<br>        “url” : “<span class="exturl" data-url="aHR0cHM6Ly96aGlxaWFuZHVhbi5jb20vJnF1b3Q7">https://zhiqianduan.com/&quot;<i class="fa fa-external-link-alt"></i></span><br>      }</p>
-<p>也可以写成一个字符串<br>      “author”: “yindong <span class="exturl" data-url="bWFpbHRvOiYjMTIxOyYjMTA1OyYjMTEwOyYjeDY0OyYjMTExOyYjMTEwOyYjeDY3OyYjNjQ7JiMxMjA7JiMxMjA7JiM0NjsmI3g2MzsmIzExMTsmIzEwOTs=">&#121;&#105;&#110;&#x64;&#111;&#110;&#x67;&#64;&#120;&#120;&#46;&#x63;&#111;&#109;<i class="fa fa-external-link-alt"></i></span> (<span class="exturl" data-url="aHR0cHM6Ly96aGlxaWFuZHVhbi5jb20vKSZxdW90Ow==">https://zhiqianduan.com/)&quot;<i class="fa fa-external-link-alt"></i></span></p>
-<h2 id="files字段"><a href="#files字段" class="headerlink" title="files字段"></a>files字段</h2><p>files属性的值是一个数组，内容是模块下文件名或者文件夹名，如果是文件夹名，则文件夹下所有的文件也会被包含进来（除非文件被另一些配置排除了）</p>
-<p>可以在模块根目录下创建一个.npmignore文件，写在这个文件里边的文件即便被写在files属性里边也会被排除在外，这个文件的写法与.gitignore类似。</p>
-<h2 id="main字段"><a href="#main字段" class="headerlink" title="main字段"></a>main字段</h2><p>main字段指定了加载的入口文件，require导入的时候就会加载这个文件。这个字段的默认值是模块根目录下面的index.js。</p>
-<h2 id="bin字段"><a href="#bin字段" class="headerlink" title="bin字段"></a>bin字段</h2><p>bin项用来指定每个内部命令对应的可执行文件的位置。如果你编写的是一个node工具的时候一定会用到bin字段。</p>
-<p>当我们编写一个cli工具的时候，需要指定工具的运行命令，比如常用的webpack模块，他的运行命令就是webpack。</p>
-<pre><code>  &quot;bin&quot;: &#123;
-    &quot;webpack&quot;: &quot;bin/index.js&quot;,
-  &#125;
-</code></pre>
-<p>当我们执行webpack命令的时候就会执行bin/index.js文件中的代码。</p>
-<p>在模块以依赖的方式被安装，如果存在bin选项。在node_modules/.bin/生成对应的文件，<br>Npm会寻找这个文件，在node_modules/.bin/目录下建立符号链接。由于node_modules/.bin/目录会在运行时加入系统的PATH变量，因此在运行npm时，就可以不带路径，直接通过命令来调用这些脚本。</p>
-<p>所有node_modules/.bin/目录下的命令，都可以用npm run [命令]的格式运行。在命令行下，键入npm run，然后按tab键，就会显示所有可以使用的命令。</p>
-<h2 id="man字段"><a href="#man字段" class="headerlink" title="man字段"></a>man字段</h2><p>man用来指定当前模块的man文档的位置。</p>
-<pre><code>  &quot;man&quot; :[ &quot;./doc/calc.1&quot; ]
-</code></pre>
-<h2 id="directories字段"><a href="#directories字段" class="headerlink" title="directories字段"></a>directories字段</h2><p>directories制定一些方法来描述模块的结构, 用于告诉用户每个目录在什么位置。</p>
-<h2 id="repository字段"><a href="#repository字段" class="headerlink" title="repository字段"></a>repository字段</h2><p>指定一个代码存放地址，对想要为你的项目贡献代码的人有帮助</p>
-<pre><code>  &quot;repository&quot; : &#123;
-    &quot;type&quot; : &quot;git&quot;, 
-    &quot;url&quot; : &quot;https://github.com/npm/npm.git&quot;
-  &#125;
-</code></pre>
-<h2 id="scripts字段"><a href="#scripts字段" class="headerlink" title="scripts字段"></a>scripts字段</h2><p>scripts指定了运行脚本命令的npm命令行缩写，比如start指定了运行npm run start时，所要执行的命令。</p>
-<pre><code>  &quot;scripts&quot;: &#123;
-    &quot;start&quot;: &quot;node ./start.js&quot;
-  &#125;
-</code></pre>
-<p>使用scripts字段可以快速的执行shell命令，可以理解为alias。</p>
-<p>scripts可以直接使用node_modules中安装的模块，这区别于直接运行需要使用npx命令。</p>
-<pre><code>  &quot;scripts&quot;: &#123;
-    &quot;build&quot;: &quot;webpack&quot;
-  &#125;
-
-  // npm run build
-  // npx webpack
-</code></pre>
-<h2 id="config字段"><a href="#config字段" class="headerlink" title="config字段"></a>config字段</h2><p>config字段用于添加命令行的环境变量。</p>
-<pre><code>  &#123;
-    &quot;name&quot; : &quot;yindong&quot;,
-    &quot;config&quot; : &#123; &quot;port&quot; : &quot;8080&quot; &#125;,
-    &quot;scripts&quot; : &#123; &quot;start&quot; : &quot;node server.js&quot; &#125;
-  &#125;
-</code></pre>
-<p>然后，在server.js脚本就可以引用config字段的值。</p>
-<pre><code>  console.log(process.env.npm_package_config_port); // 8080
-</code></pre>
-<p>用户可以通过npm config set来修改这个值。</p>
-<pre><code>  npm config set yindong:port 8000
-</code></pre>
-<h2 id="dependencies字段-devDependencies字段"><a href="#dependencies字段-devDependencies字段" class="headerlink" title="dependencies字段, devDependencies字段"></a>dependencies字段, devDependencies字段</h2><p>dependencies字段指定了项目运行所依赖的模块，devDependencies指定项目开发所需要的模块。</p>
-<p>它们的值都是一个对象。该对象的各个成员，分别由模块名和对应的版本要求组成，表示依赖的模块及其版本范围。</p>
-<p>当安装依赖的时候使用–save参数表示将该模块写入dependencies属性，–save-dev表示将该模块写入devDependencies属性。</p>
-<pre><code>  &quot;devDependencies&quot;: &#123;
-          &quot;webpack&quot;: &quot;^5.38.1&quot;,
-  &#125;
-</code></pre>
-<p>对象的每一项通过一个键值对表示，前面是模块名称，后面是对应模块的版本号。版本号遵循“大版本.次要版本.小版本”的格式规定。</p>
-<p>版本说明</p>
-<p>固定版本: 比如5.38.1，安装时只安装指定版本。</p>
-<p>波浪号: 比如~5.38.1, 表示安装5.38.x的最新版本（不低于5.38.1），但是不安装5.39.x，也就是说安装时不改变大版本号和次要版本号。</p>
-<p>插入号: 比如ˆ5.38.1, ，表示安装5.x.x的最新版本（不低于5.38.1），但是不安装6.x.x，也就是说安装时不改变大版本号。需要注意的是，如果大版本号为0，则插入号的行为与波浪号相同，这是因为此时处于开发阶段，即使是次要版本号变动，也可能带来程序的不兼容。</p>
-<p>latest: 安装最新版本。</p>
-<h2 id="peerDependencies字段"><a href="#peerDependencies字段" class="headerlink" title="peerDependencies字段"></a>peerDependencies字段</h2><p>当我们开发一个模块的时候，如果当前模块与所依赖的模块同时依赖一个第三方模块，并且依赖的是两个不兼容的版本时就会出现问题。</p>
-<p>比如，你的项目依赖A模块和B模块的1.0版，而A模块本身又依赖B模块的2.0版。</p>
-<p>大多数情况下，这不构成问题，B模块的两个版本可以并存，同时运行。但是，有一种情况，会出现问题，就是这种依赖关系将暴露给用户。</p>
-<p>最典型的场景就是插件，比如A模块是B模块的插件。用户安装的B模块是1.0版本，但是A插件只能和2.0版本的B模块一起使用。这时，用户要是将1.0版本的B的实例传给A，就会出现问题。因此，需要一种机制，在模板安装的时候提醒用户，如果A和B一起安装，那么B必须是2.0模块。</p>
-<p>peerDependencies字段，就是用来供插件指定其所需要的主工具的版本。可以通过peerDependencies字段来限制，使用myless模块必须依赖less模块的3.9.x版本.</p>
-<pre><code>  &#123;
-    &quot;name&quot;: &quot;myless&quot;,
-    &quot;peerDependencies&quot;: &#123;
-      &quot;less&quot;: &quot;3.9.x&quot;
-    &#125;
-  &#125;
-</code></pre>
-<p>注意，从npm 3.0版开始，peerDependencies不再会默认安装了。<br>就是初始化的时候不会默认带出。</p>
-<h2 id="bundledDependencies字段"><a href="#bundledDependencies字段" class="headerlink" title="bundledDependencies字段"></a>bundledDependencies字段</h2><p>bundledDependencies指定发布的时候会被一起打包的模块.</p>
-<h2 id="optionalDependencies字段"><a href="#optionalDependencies字段" class="headerlink" title="optionalDependencies字段"></a>optionalDependencies字段</h2><p>如果一个依赖模块可以被使用， 同时你也希望在该模块找不到或无法获取时npm继续运行，你可以把这个模块依赖放到optionalDependencies配置中。</p>
-<p>这个配置的写法和dependencies的写法一样，不同的是这里边写的模块安装失败不会导致npm install失败。</p>
-<h2 id="engines字段"><a href="#engines字段" class="headerlink" title="engines字段"></a>engines字段</h2><p>engines字段指明了该模块运行的平台，比如Node或者npm的某个版本或者浏览器。</p>
-<pre><code>  &#123; &quot;engines&quot; : &#123; &quot;node&quot; : &quot;&gt;=0.10.3 &lt;0.12&quot;, &quot;npm&quot; : &quot;~1.0.20&quot; &#125; &#125;
-</code></pre>
-<h2 id="os字段"><a href="#os字段" class="headerlink" title="os字段"></a>os字段</h2><p>可以指定你的模块只能在哪个操作系统上运行<br>      “os” : [ “darwin”, “linux”, “win32” ]</p>
-<h2 id="cpu字段"><a href="#cpu字段" class="headerlink" title="cpu字段"></a>cpu字段</h2><p>限制模块只能在某种架构的cpu下运行<br>      “cpu” : [ “x64”, “ia32” ]</p>
-<h2 id="private字段"><a href="#private字段" class="headerlink" title="private字段"></a>private字段</h2><p>如果这个属性被设置为true，npm将拒绝发布它，这是为了防止一个私有模块被无意间发布出去。<br>      “private”: true</p>
-<h2 id="publishConfig字段"><a href="#publishConfig字段" class="headerlink" title="publishConfig字段"></a>publishConfig字段</h2><p>这个配置是会在模块发布时生效，用于设置发布用到的一些值的集合。如果你不想模块被默认标记为最新的，或者默认发布到公共仓库，可以在这里配置tag或仓库地址。</p>
-<p>通常publishConfig会配合private来使用，如果你只想让模块被发布到一个特定的npm仓库，如一个内部的仓库。</p>
-<pre><code>  &quot;private&quot;: true,
-  &quot;publishConfig&quot;: &#123;
-    &quot;tag&quot;: &quot;1.0.0&quot;,
-    &quot;registry&quot;: &quot;https://registry.npmjs.org/&quot;,
-    &quot;access&quot;: &quot;public&quot;
-  &#125;
-</code></pre>
-<h2 id="preferGlobal字段"><a href="#preferGlobal字段" class="headerlink" title="preferGlobal字段"></a>preferGlobal字段</h2><p>preferGlobal的值是布尔值，表示当用户不将该模块安装为全局模块时（即不用–global参数），要不要显示警告，表示该模块的本意就是安装为全局模块。</p>
-<pre><code>  &quot;preferGlobal&quot;: false
-</code></pre>
-<h2 id="browser字段"><a href="#browser字段" class="headerlink" title="browser字段"></a>browser字段</h2><p>browser指定该模板供浏览器使用的版本。Browserify这样的浏览器打包工具，通过它就知道该打包那个文件。</p>
-<pre><code>  &quot;browser&quot;: &#123;
-    &quot;tipso&quot;: &quot;./node_modules/tipso/src/tipso.js&quot;
-  &#125;,
-</code></pre>
-<p><span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82OTg3MTc5Mzk1NzE0NjQ2MDI0">转载自掘金(隐冬)<i class="fa fa-external-link-alt"></i></span>
- </p>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
       </tags>
   </entry>
   <entry>
