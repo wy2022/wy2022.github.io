@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.0"><meta name="keywords" data-name="fire" content="JavaScript,Vue.js,小程序,WebPack,ECMAScript 6,vue,php,js,JavaScript,typescirpt,node,egg,很帅很愁人,web前端,全栈,网页,博客，前端博客,JavaScript,html5,css3,Jquery,NodeJs
+"><meta name="360-site-verification" content="178e3a7a27a16a1253976882a4d99509"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png"><link rel="icon" type="image/png" sizes="32x32" href="/images/fly-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/images/fly-16.png"><link rel="mask-icon" href="/images/logo.svg" color="#222"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="google-site-verification" content="iy8yHMd-90Qb6NAJqgoij_Cz3i3Jh9FRGRxrWJbRrOw"><meta name="msvalidate.01" content="92E59C28288B8049A45C6288AD39DFA0"><meta name="baidu-site-verification" content="code-etAIIwOVpZ"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css"><script id="hexo-configurations">var NexT=window.NexT||{},CONFIG={hostname:"blog.wy1991.cn",root:"/",scheme:"Gemini",version:"7.8.0",exturl:!0,sidebar:{position:"left",display:"hide",padding:18,offset:12,onmobile:!1},copycode:{enable:!0,show_result:!0,style:"mac"},back2top:{enable:!0,sidebar:!1,scrollpercent:!1},bookmark:{enable:!1,color:"#222",save:"auto"},fancybox:!0,mediumzoom:!1,lazyload:!1,pangu:!1,comments:{style:"tabs",active:null,storage:!0,lazyload:!1,nav:null},algolia:{hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}},localsearch:{enable:!0,trigger:"auto",top_n_per_article:1,unescape:!1,preload:!1},motion:{enable:!0,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},path:"search.xml"}</script><meta name="description" content="在 ES6 中，我们知道 import、export 取代了 require、module.exports 用来引入和导出模块，但是如果不了解 ES6 模块特性的话，代码可能就会运行出一些匪夷所思的结果，下面我将通过这篇文章为你揭开 ES6 模块机制特点。"><meta property="og:type" content="article"><meta property="og:title" content="js 深入理解 ES6 模块机制"><meta property="og:url" content="https://blog.wy1991.cn/20210714/18-js-%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3-ES6-%E6%A8%A1%E5%9D%97%E6%9C%BA%E5%88%B6/index.html"><meta property="og:site_name" content="很帅很愁人~"><meta property="og:description" content="在 ES6 中，我们知道 import、export 取代了 require、module.exports 用来引入和导出模块，但是如果不了解 ES6 模块特性的话，代码可能就会运行出一些匪夷所思的结果，下面我将通过这篇文章为你揭开 ES6 模块机制特点。"><meta property="og:locale" content="zh_CN"><meta property="article:published_time" content="2021-07-14T01:53:02.000Z"><meta property="article:modified_time" content="2021-11-02T07:17:02.768Z"><meta property="article:author" content="很帅很愁人~"><meta property="article:tag" content="es6"><meta name="twitter:card" content="summary"><link rel="canonical" href="https://blog.wy1991.cn/20210714/18-js-%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3-ES6-%E6%A8%A1%E5%9D%97%E6%9C%BA%E5%88%B6/"><script id="page-configurations">CONFIG.page={sidebar:"",isHome:!1,isPost:!0,lang:"zh-CN"}</script><title>js 深入理解 ES6 模块机制 | 很帅很愁人~</title><noscript><style>.sidebar-inner,.use-motion .brand,.use-motion .collection-header,.use-motion .comments,.use-motion .menu-item,.use-motion .pagination,.use-motion .post-block,.use-motion .post-body,.use-motion .post-header{opacity:initial}.use-motion .site-subtitle,.use-motion .site-title{opacity:initial;top:initial}.use-motion .logo-line-before i{left:initial}.use-motion .logo-line-after i{right:initial}</style></noscript><script src="/js/fairyDustCursor.js"></script><script src="/js/clickLove.js"></script></head><body itemscope itemtype="http://schema.org/WebPage"><div class="container use-motion"><div class="headband"></div><header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-container"><div class="site-nav-toggle"><div class="toggle" aria-label="切换导航栏"><span class="toggle-line toggle-line-first"></span> <span class="toggle-line toggle-line-middle"></span> <span class="toggle-line toggle-line-last"></span></div></div><div class="site-meta"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span><h1 class="site-title">很帅很愁人~</h1><span class="logo-line-after"><i></i></span></a><p class="site-subtitle" itemprop="description">迷茫是因为才华配不上梦想の，所以你必须非常努力，才能显得毫不费力！</p></div><div class="site-nav-right"><div class="toggle popup-trigger"><i class="fa fa-search fa-fw fa-lg"></i></div></div></div><nav class="site-nav"><ul id="menu" class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-相册"><a href="/20210707/0-%E6%A2%A6%E7%91%B6(%E4%B8%80%E4%B8%80)%E5%92%8C%E5%B0%8F%E6%B2%AB%E6%B2%AB/" rel="section"><i class="fa fa-user fa-fw"></i>相册</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>地图</a></li><li class="menu-item menu-item-commonweal"><a href="/404.html" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益</a></li><li class="menu-item menu-item-search"><a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索</a></li></ul></nav><div class="search-pop-overlay"><div class="popup search-popup"><div class="search-header"><span class="search-icon"><i class="fa fa-search"></i></span><div class="search-input-container"><input autocomplete="off" autocapitalize="off" placeholder="搜索..." spellcheck="false" type="search" class="search-input"></div><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span></div><div id="search-result"><div id="no-result"><i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i></div></div></div></div></div></header><div class="back-to-top"><i class="fa fa-arrow-up"></i> <span>0%</span></div><div class="reading-progress-bar"></div><main class="main"><div class="main-inner"><div class="content-wrap"><div class="content post posts-expand"><article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://blog.wy1991.cn/20210714/18-js-%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3-ES6-%E6%A8%A1%E5%9D%97%E6%9C%BA%E5%88%B6/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="image" content="/images/my.jpg"><meta itemprop="name" content="很帅很愁人~"><meta itemprop="description" content="梦是一种欲望, 想是一种行动。梦想是梦与想的结晶，加油打工人~~"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="很帅很愁人~"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">js 深入理解 ES6 模块机制</h1><div class="post-meta"><span class="post-meta-item"><span class="post-meta-item-icon"><i class="far fa-calendar"></i> </span><span class="post-meta-item-text">发表于</span> <time title="创建时间：2021-07-14 09:53:02" itemprop="dateCreated datePublished" datetime="2021-07-14T09:53:02+08:00">2021-07-14</time> </span><span class="post-meta-item"><span class="post-meta-item-icon"><i class="far fa-calendar-check"></i> </span><span class="post-meta-item-text">更新于</span> <time title="修改时间：2021-11-02 15:17:02" itemprop="dateModified" datetime="2021-11-02T15:17:02+08:00">2021-11-02</time> </span><span class="post-meta-item"><span class="post-meta-item-icon"><i class="far fa-folder"></i> </span><span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a> </span></span><span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display:none"><span class="post-meta-item-icon"><i class="fa fa-eye"></i> </span><span class="post-meta-item-text">阅读次数：</span> <span id="busuanzi_value_page_pv"></span></span><div class="post-description" style="opacity:0">在 ES6 中，我们知道 import、export 取代了 require、module.exports 用来引入和导出模块，但是如果不了解 ES6 模块特性的话，代码可能就会运行出一些匪夷所思的结果，下面我将通过这篇文章为你揭开 ES6 模块机制特点。</div></div></header><div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在 ES6 中，我们知道 import、export 取代了 require、module.exports 用来引入和导出模块，但是如果不了解 ES6 模块特性的话，代码可能就会运行出一些匪夷所思的结果，下面我将通过这篇文章为你揭开 ES6 模块机制特点。</p><h3 id="ES6-模块特性"><a href="#ES6-模块特性" class="headerlink" title="ES6 模块特性"></a>ES6 模块特性</h3><p>基础的 ES6 模块用法我就不介绍了，如果你还没使用过 ES6 模块的话，推荐看：ECMAScript 6 入门 - Module 的语法</p><p>说起 ES6 模块特性，那么就先说说 ES6 模块跟 CommonJS 模块的不同之处。</p><p>ES6 模块跟 CommonJS 模块的不同，主要有以下两个方面：</p><p>ES6 模块输出的是值的引用，输出接口动态绑定，而 CommonJS 输出的是值的拷贝<br>ES6 模块编译时执行，而 CommonJS 模块总是在运行时加载<br>这个怎么理解呢？我们一步步来看：</p><h3 id="CommonJS-输出值的拷贝"><a href="#CommonJS-输出值的拷贝" class="headerlink" title="CommonJS 输出值的拷贝"></a>CommonJS 输出值的拷贝</h3><p>CommonJS 模块输出的是值的拷贝(原始值的拷贝)，也就是说，一旦输出一个值，模块内部的变化就影响不到这个值。</p><pre><code>  // a.js
+  var b = require(&#39;./b&#39;);
+  console.log(b.foo);
+  setTimeout(() =&gt; &#123;
+    console.log(b.foo);
+    console.log(require(&#39;./b&#39;).foo);
+  &#125;, 1000);
+
+  // b.js
+  let foo = 1;
+  setTimeout(() =&gt; &#123;
+    foo = 2;
+  &#125;, 500);
+  module.exports = &#123;
+    foo: foo,
+  &#125;;
+  // 执行：node a.js
+  // 执行结果：
+  // 1
+  // 1
+  // 1
+</code></pre><p>上面代码说明，b 模块加载以后，它的内部 foo 变化就影响不到输出的 exports.foo 了。这是因为 foo 是一个原始类型的值，会被缓存。所以如果你想要在 CommonJS 中动态获取模块中的值，那么就需要借助于函数延时执行的特性。</p><pre><code>  // a.js
+  var b = require(&#39;./b&#39;);
+  console.log(b.foo());
+  setTimeout(() =&gt; &#123;
+    console.log(b.foo());
+    console.log(require(&#39;./b&#39;).foo());
+  &#125;, 1000);
+
+  // b.js
+  let foo = 1;
+  setTimeout(() =&gt; &#123;
+    foo = 2;
+  &#125;, 500);
+  module.exports = &#123;
+    foo: () =&gt; &#123;
+      return foo;
+    &#125;,
+  &#125;;
+  // 执行：node a.js
+  // 执行结果：
+  // 1
+  // 2
+  // 2
+</code></pre><p>所以我们可以总结一下：</p><ol><li>CommonJS 模块重复引入的模块并不会重复执行，再次获取模块直接获得暴露的 module.exports 对象</li><li>如果你要处处获取到模块内的最新值的话，也可以你每次更新数据的时候每次都要去更新 module.exports 上的值</li><li>如果你暴露的 module.exports 的属性是个对象，那就不存在这个问题了</li></ol><p>所以如果你要处处获取到模块内的最新值的话，也可以你每次更新数据的时候每次都要去更新 module.exports 上的值，比如：</p><pre><code>  // a.js
+  var b = require(&#39;./b&#39;);
+  console.log(b.foo);
+  setTimeout(() =&gt; &#123;
+    console.log(b.foo);
+    console.log(require(&#39;./b&#39;).foo);
+  &#125;, 1000);
+
+  // b.js
+  module.exports.foo = 1;   // 同 exports.foo = 1 
+  setTimeout(() =&gt; &#123;
+    module.exports.foo = 2;
+  &#125;, 500);
+
+  // 执行：node a.js
+  // 执行结果：
+  // 1
+  // 2
+  // 2
+</code></pre><h3 id="ES6-输出值的引用"><a href="#ES6-输出值的引用" class="headerlink" title="ES6 输出值的引用"></a>ES6 输出值的引用</h3><p>然而在 ES6 模块中就不再是生成输出对象的拷贝，而是动态关联模块中的值。</p><pre><code>  // a.js
+  import &#123; foo &#125; from &#39;./b&#39;;
+  console.log(foo);
+  setTimeout(() =&gt; &#123;
+    console.log(foo);
+    import(&#39;./b&#39;).then((&#123; foo &#125;) =&gt; &#123;
+      console.log(foo);
+    &#125;);
+  &#125;, 1000);
+
+  // b.js
+  export let foo = 1;
+  setTimeout(() =&gt; &#123;
+    foo = 2;
+  &#125;, 500);
+  // 执行：babel-node a.js
+  // 执行结果：
+  // 1
+  // 2
+  // 2
+</code></pre><h3 id="ES6-静态编译，CommonJS-运行时加载"><a href="#ES6-静态编译，CommonJS-运行时加载" class="headerlink" title="ES6 静态编译，CommonJS 运行时加载"></a>ES6 静态编译，CommonJS 运行时加载</h3><p>关于第二点，ES6 模块编译时执行会导致有以下两个特点：</p><ol><li>import 命令会被 JavaScript 引擎静态分析，优先于模块内的其他内容执行。</li><li>export 命令会有变量声明提前的效果。</li></ol><p>import 优先执行:</p><p>从第一条来看，在文件中的任何位置引入 import 模块都会被提前到文件顶部。</p><pre><code>  // a.js
+  console.log(&#39;a.js&#39;)
+  import &#123; foo &#125; from &#39;./b&#39;;
+
+  // b.js
+  export let foo = 1;
+  console.log(&#39;b.js 先执行&#39;);
+
+  // 执行结果:
+  // b.js 先执行
+  // a.js
+</code></pre><p>从执行结果我们可以很直观地看出，虽然 a 模块中 import 引入晚于 console.log(‘a’)，但是它被 JS 引擎通过静态分析，提到模块执行的最前面，优于模块中的其他部分的执行。</p><p>由于 import 是静态执行，所以 import 具有提升效果即 import 命令在模块中的位置并不影响程序的输出。</p><p>export 变量声明提升:</p><p>正常的引入模块是没办法看出变量声明提升的特性，需要通过循环依赖加载才能看出。</p><pre><code>  // a.js
+  import &#123; foo &#125; from &#39;./b&#39;;
+  console.log(&#39;a.js&#39;);
+  export const bar = 1;
+  export const bar2 = () =&gt; &#123;
+    console.log(&#39;bar2&#39;);
+  &#125;
+  export function bar3() &#123;
+    console.log(&#39;bar3&#39;);
+  &#125;
+
+  // b.js
+  export let foo = 1;
+  import * as a from &#39;./a&#39;;
+  console.log(a);
+
+  // 执行结果:
+  // &#123; bar: undefined, bar2: undefined, bar3: [Function: bar3] &#125;
+  // a.js
+</code></pre><p>从上面的例子可以很直观地看出，a 模块引用了 b 模块，b 模块也引用了 a 模块，export 声明的变量也是优于模块其它内容的执行的，但是具体对变量赋值需要等到执行到相应代码的时候。(当然函数声明和表达式声明不一样，这一点跟 JS 函数性质一样，这里就不过多解释)</p><p>好了，讲完了 ES6 模块和 CommonJS 模块的不同点之后，接下来就讲讲相同点：</p><h3 id="模块不会重复执行"><a href="#模块不会重复执行" class="headerlink" title="模块不会重复执行"></a>模块不会重复执行</h3><p>这个很好理解，无论是 ES6 模块还是 CommonJS 模块，当你重复引入某个相同的模块时，模块只会执行一次。</p><pre><code>  // a.js
+  import &#39;./b&#39;;
+  import &#39;./b&#39;;
+
+  // b.js
+  console.log(&#39;只会执行一次&#39;);
+
+  // 执行结果：
+  // 只会执行一次
+</code></pre><p>结合上面说的特性，我们来看一个比较经典的例子，循环依赖，当你理解了上面所讲的特性之后，下次遇到模块循环依赖代码的执行结果就很容易理解了。</p><h3 id="CommonJS-模块循环依赖"><a href="#CommonJS-模块循环依赖" class="headerlink" title="CommonJS 模块循环依赖"></a>CommonJS 模块循环依赖</h3><p>先来看看下面的例子：</p><pre><code>  // a.js
+  console.log(&#39;a starting&#39;);
+  exports.done = false;
+  const b = require(&#39;./b&#39;);
+  console.log(&#39;in a, b.done =&#39;, b.done);
+  exports.done = true;
+  console.log(&#39;a done&#39;);
+
+  // b.js
+  console.log(&#39;b starting&#39;);
+  exports.done = false;
+  const a = require(&#39;./a&#39;);
+  console.log(&#39;in b, a.done =&#39;, a.done);
+  exports.done = true;
+  console.log(&#39;b done&#39;);
+
+  // node a.js
+  // 执行结果：
+  // a starting
+  // b starting
+  // in b, a.done = false
+  // b done
+  // in a, b.done = true
+  // a done
+</code></pre><p>结合之前讲的特性很好理解，当你从 b 中想引入 a 模块的时候，因为 node 之前已经加载过 a 模块了，所以它不会再去重复执行 a 模块，而是直接去生成当前 a 模块吐出的 module.exports 对象，因为 a 模块引入 b 模块先于给 done 重新赋值，所以当前 a 模块中输出的 module.exports 中 done 的值仍为 false。而当 a 模块中输出 b 模块的 done 值的时候 b 模块已经执行完毕，所以 b 模块中的 done 值为 true。</p><p>从上面的执行过程中，我们可以看到，在 CommonJS 规范中，当遇到 require() 语句时，会执行 require 模块中的代码，并缓存执行的结果，当下次再次加载时不会重复执行，而是直接取缓存的结果。正因为此，出现循环依赖时才不会出现无限循环调用的情况。虽然这种模块加载机制可以避免出现循环依赖时报错的情况，但稍不注意就很可能使得代码并不是像我们想象的那样去执行。因此在写代码时还是需要仔细的规划，以保证循环模块的依赖能正确工作。</p><p>所以有什么办法可以出现循环依赖的时候避免自己出现混乱呢？一种解决方式便是将每个模块先写 exports 语法，再写 requre 语句，利用 CommonJS 的缓存机制，在 require() 其他模块之前先把自身要导出的内容导出，这样就能保证其他模块在使用时可以取到正确的值。比如：</p><pre><code>  // a.js
+  exports.done = true;
+  let b = require(&#39;./b&#39;);
+  console.log(b.done)
+
+  // b.js
+  exports.done = true;
+  let a = require(&#39;./a&#39;);
+  console.log(a.done)
+</code></pre><p>这种写法简单明了，缺点是要改变每个模块的写法，而且大部分同学都习惯了在文件开头先写 require 语句。</p><h3 id="ES6-模块循环依赖"><a href="#ES6-模块循环依赖" class="headerlink" title="ES6 模块循环依赖"></a>ES6 模块循环依赖</h3><p>跟 CommonJS 模块一样，ES6 不会再去执行重复加载的模块，又由于 ES6 动态输出绑定的特性，能保证 ES6 在任何时候都能获取其它模块当前的最新值。</p><pre><code>  // a.js
+  console.log(&#39;a starting&#39;)
+  import &#123;foo&#125; from &#39;./b&#39;;
+  console.log(&#39;in b, foo:&#39;, foo);
+  export const bar = 2;
+  console.log(&#39;a done&#39;);
+
+  // b.js
+  console.log(&#39;b starting&#39;);
+  import &#123;bar&#125; from &#39;./a&#39;;
+  export const foo = &#39;foo&#39;;
+  console.log(&#39;in a, bar:&#39;, bar);
+  setTimeout(() =&gt; &#123;
+    console.log(&#39;in a, setTimeout bar:&#39;, bar);
+  &#125;)
+  console.log(&#39;b done&#39;);
+
+  // babel-node a.js
+  // 执行结果：
+  // b starting
+  // in a, bar: undefined
+  // b done
+  // a starting
+  // in b, foo: foo
+  // a done
+  // in a, setTimeout bar: 2
+</code></pre><p>如果没看懂执行结果的话，那说明没理解前面说的 ES6 模块特性，麻烦重新再看一遍吧！</p><h3 id="动态-import"><a href="#动态-import" class="headerlink" title="动态 import()"></a>动态 import()</h3><p>ES6 模块在编译时就会静态分析，优先于模块内的其他内容执行，所以导致了我们无法写出像下面这样的代码：</p><pre><code>  if(some condition) &#123;
+    import a from &#39;./a&#39;;
+  &#125;else &#123;
+    import b from &#39;./b&#39;;
+  &#125;
+
+  // or 
+  import a from (str + &#39;b&#39;);
+</code></pre><p>因为编译时静态分析，导致了我们无法在条件语句或者拼接字符串模块，因为这些都是需要在运行时才能确定的结果在 ES6 模块是不被允许的，所以 动态引入 import() 应运而生。</p><p>import() 允许你在运行时动态地引入 ES6 模块，想到这，你可能也想起了 require.ensure 这个语法，但是它们的用途却截然不同的。</p><ol><li>require.ensure 的出现是 webpack 的产物，它是因为浏览器需要一种异步的机制可以用来异步加载模块，从而减少初始的加载文件的体积，所以如果在服务端的话 require.ensure 就无用武之地了，因为服务端不存在异步加载模块的情况，模块同步进行加载就可以满足使用场景了。 CommonJS 模块可以在运行时确认模块加载。</li><li>而 import() 则不同，它主要是为了解决 ES6 模块无法在运行时确定模块的引用关系，所以需要引入 import()</li></ol><p>我们先来看下它的用法：</p><ol><li>动态的 import() 提供一个基于 Promise 的 API</li><li>动态的import() 可以在脚本的任何地方使用</li><li>import() 接受字符串文字，你可以根据你的需要构造说明符</li></ol><p>举个简单的使用例子：</p><pre><code>  // a.js
+  const str = &#39;./b&#39;;
+  const flag = true;
+  if(flag) &#123;
+    import(&#39;./b&#39;).then((&#123;foo&#125;) =&gt; &#123;
+      console.log(foo);
+    &#125;)
+  &#125;
+  import(str).then((&#123;foo&#125;) =&gt; &#123;
+    console.log(foo);
+  &#125;)
+
+  // b.js
+  export const foo = &#39;foo&#39;;
+
+  // babel-node a.js
+  // 执行结果
+  // foo
+  // foo
+</code></pre><p>当然，如果在浏览器端的 import() 的用途就会变得更广泛，比如 按需异步加载模块，那么就和 require.ensure 功能类似了。</p><p>因为是基于 Promise 的，所以如果你想要同时加载多个模块的话，可以是 Promise.all 进行并行异步加载。</p><pre><code>  Promise.all([
+    import(&#39;./a.js&#39;),
+    import(&#39;./b.js&#39;),
+    import(&#39;./c.js&#39;),
+  ]).then(([a, &#123;default: b&#125;, &#123;c&#125;]) =&gt; &#123;
+      console.log(&#39;a.js is loaded dynamically&#39;);
+      console.log(&#39;b.js is loaded dynamically&#39;);
+      console.log(&#39;c.js is loaded dynamically&#39;);
+  &#125;);
+</code></pre><p>还有 Promise.race 方法，它检查哪个 Promise 被首先 resolved 或 reject。我们可以使用import()来检查哪个CDN速度更快：</p><pre><code>  const CDNs = [
+    &#123;
+      name: &#39;jQuery.com&#39;,
+      url: &#39;https://code.jquery.com/jquery-3.1.1.min.js&#39;
+    &#125;,
+    &#123;
+      name: &#39;googleapis.com&#39;,
+      url: &#39;https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js&#39;
+    &#125;
+  ];
+
+  console.log(`------`);
+  console.log(`jQuery is: $&#123;window.jQuery&#125;`);
+
+  Promise.race([
+    import(CDNs[0].url).then(()=&gt;console.log(CDNs[0].name, &#39;loaded&#39;)),
+    import(CDNs[1].url).then(()=&gt;console.log(CDNs[1].name, &#39;loaded&#39;))
+  ]).then(()=&gt; &#123;
+    console.log(`jQuery version: $&#123;window.jQuery.fn.jquery&#125;`);
+  &#125;);
+</code></pre><p>当然，如果你觉得这样写还不够优雅，也可以结合 async/await 语法糖来使用。</p><pre><code>  async function main() &#123;
+    const myModule = await import(&#39;./myModule.js&#39;);
+    const &#123;export1, export2&#125; = await import(&#39;./myModule.js&#39;);
+    const [module1, module2, module3] =
+      await Promise.all([
+        import(&#39;./module1.js&#39;),
+        import(&#39;./module2.js&#39;),
+        import(&#39;./module3.js&#39;),
+      ]);
+  &#125;
+</code></pre><p>动态 import() 为我们提供了以异步方式使用 ES 模块的额外功能。 根据我们的需求动态或有条件地加载它们，这使我们能够更快，更好地创建更多优势应用程序。</p><h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>讲到这，我们从 ES6、CommonJS 模块加载机制到动态模块 import() 导入，读完本文相信你能够更加理解 ES6 模块加载机制，对一些奇怪的输出也会有自己的判断，希望本文对你有所帮助！</p></div><div class="reward-container"><div>如果觉得文章有帮助，就请吃个雪糕吧~</div><button onclick='var qr=document.getElementById("qr");qr.style.display="none"===qr.style.display?"block":"none"'>打赏</button><div id="qr" style="display:none"><div style="display:inline-block"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/images/wechatpay.png" alt="很帅很愁人~ 微信支付"><p>微信支付</p></div></div></div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者： </strong>很帅很愁人~</li><li class="post-copyright-link"><strong>本文链接：</strong> <a href="https://blog.wy1991.cn/20210714/18-js-%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3-ES6-%E6%A8%A1%E5%9D%97%E6%9C%BA%E5%88%B6/" title="js 深入理解 ES6 模块机制">https://blog.wy1991.cn/20210714/18-js-深入理解-ES6-模块机制/</a></li><li class="post-copyright-license"><strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li><li class="post-copyright-license"><strong>联系方式： </strong>如文章有错误，请联系qq：598204996 谢谢~</li></ul></div><footer class="post-footer"><div class="post-tags"><a href="/tags/es6/" rel="tag"># es6</a></div><div class="post-nav"><div class="post-nav-item"><a href="/20210714/64-%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%AE%80%E5%8D%95%E7%90%86%E8%A7%A3/" rel="prev" title="进程和线程的简单理解"><i class="fa fa-chevron-left"></i> 进程和线程的简单理解</a></div><div class="post-nav-item"><a href="/20210715/38-Vue-nextTick%E5%8E%9F%E7%90%86%E5%8F%8A%E7%94%A8%E9%80%94/" rel="next" title="Vue nextTick原理及用途">Vue nextTick原理及用途 <i class="fa fa-chevron-right"></i></a></div></div></footer></article></div><script>window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }</script></div><div class="toggle sidebar-toggle"><span class="toggle-line toggle-line-first"></span> <span class="toggle-line toggle-line-middle"></span> <span class="toggle-line toggle-line-last"></span></div><aside class="sidebar"><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc">文章目录</li><li class="sidebar-nav-overview">站点概览</li></ul><div class="post-toc-wrap sidebar-panel"><div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6-%E6%A8%A1%E5%9D%97%E7%89%B9%E6%80%A7"><span class="nav-number">1.1.</span> <span class="nav-text">ES6 模块特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CommonJS-%E8%BE%93%E5%87%BA%E5%80%BC%E7%9A%84%E6%8B%B7%E8%B4%9D"><span class="nav-number">1.2.</span> <span class="nav-text">CommonJS 输出值的拷贝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6-%E8%BE%93%E5%87%BA%E5%80%BC%E7%9A%84%E5%BC%95%E7%94%A8"><span class="nav-number">1.3.</span> <span class="nav-text">ES6 输出值的引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6-%E9%9D%99%E6%80%81%E7%BC%96%E8%AF%91%EF%BC%8CCommonJS-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8A%A0%E8%BD%BD"><span class="nav-number">1.4.</span> <span class="nav-text">ES6 静态编译，CommonJS 运行时加载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E4%B8%8D%E4%BC%9A%E9%87%8D%E5%A4%8D%E6%89%A7%E8%A1%8C"><span class="nav-number">1.5.</span> <span class="nav-text">模块不会重复执行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CommonJS-%E6%A8%A1%E5%9D%97%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96"><span class="nav-number">1.6.</span> <span class="nav-text">CommonJS 模块循环依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6-%E6%A8%A1%E5%9D%97%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96"><span class="nav-number">1.7.</span> <span class="nav-text">ES6 模块循环依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81-import"><span class="nav-number">1.8.</span> <span class="nav-text">动态 import()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E5%B0%BE"><span class="nav-number">2.</span> <span class="nav-text">结尾</span></a></li></ol></div></div><div class="site-overview-wrap sidebar-panel"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="site-author-image" itemprop="image" alt="很帅很愁人~" src="/images/my.jpg"><p class="site-author-name" itemprop="name">很帅很愁人~</p><div class="site-description" itemprop="description">梦是一种欲望, 想是一种行动。梦想是梦与想的结晶，加油打工人~~</div></div><div class="site-state-wrap motion-element"><nav class="site-state"><div class="site-state-item site-state-posts"><a href="/archives/"><span class="site-state-item-count">129</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"><a href="/categories/"><span class="site-state-item-count">38</span> <span class="site-state-item-name">分类</span></a></div><div class="site-state-item site-state-tags"><a href="/tags/"><span class="site-state-item-count">102</span> <span class="site-state-item-name">标签</span></a></div></nav></div></div><script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script><script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script><div class="widget-wrap"><div id="myCanvasContainer" class="widget tagcloud"><canvas width="250" height="250" id="resCanvas"><ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArryaBuffer/" rel="tag">ArryaBuffer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Promise/" rel="tag">Promise</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Recorder/" rel="tag">Recorder</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TS/" rel="tag">TS</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UDP/" rel="tag">UDP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/V8/" rel="tag">V8</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a><span class="tag-list-count">23</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VueRouter/" rel="tag">VueRouter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vuex/" rel="tag">Vuex</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WebStorage/" rel="tag">WebStorage</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/api%E9%9B%86%E4%B8%AD%E7%AE%A1%E7%90%86/" rel="tag">api集中管理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apply/" rel="tag">apply</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/axios/" rel="tag">axios</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bind/" rel="tag">bind</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/call/" rel="tag">call</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cors/" rel="tag">cors</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css3/" rel="tag">css3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/drag/" rel="tag">drag</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ejsexcel/" rel="tag">ejsexcel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/electron/" rel="tag">electron</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/element/" rel="tag">element</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/es6/" rel="tag">es6</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/filter/" rel="tag">filter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flex/" rel="tag">flex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/getters/" rel="tag">getters</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grid/" rel="tag">grid</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/host/" rel="tag">host</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5/" rel="tag">html5</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jenkins/" rel="tag">jenkins</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a><span class="tag-list-count">49</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" rel="tag">js基础语法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js%E6%93%8D%E4%BD%9C%E7%AC%A6/" rel="tag">js操作符</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lottie/" rel="tag">lottie</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/media/" rel="tag">media</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/miniVue/" rel="tag">miniVue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mitt/" rel="tag">mitt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nextTick/" rel="tag">nextTick</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/" rel="tag">node</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/" rel="tag">npm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/print/" rel="tag">print</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise/" rel="tag">promise</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ref/" rel="tag">ref</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rem/" rel="tag">rem</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/require-context/" rel="tag">require.context</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reuqest/" rel="tag">reuqest</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/router/" rel="tag">router</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sessionStorage/" rel="tag">sessionStorage</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slot/" rel="tag">slot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stackoverflow/" rel="tag">stackoverflow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tailwind/" rel="tag">tailwind</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/this/" rel="tag">this</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/three/" rel="tag">three</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ts/" rel="tag">ts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/uniapp/" rel="tag">uniapp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/utils/" rel="tag">utils</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/" rel="tag">vscode</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/" rel="tag">vue</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vueRouter/" rel="tag">vueRouter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vuex/" rel="tag">vuex</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vw/" rel="tag">vw</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/" rel="tag">webpack</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/websocket/" rel="tag">websocket</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web%E6%89%93%E5%8D%B0/" rel="tag">web打印</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/worker/" rel="tag">worker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xlsx/" rel="tag">xlsx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BC%98%E5%8C%96/" rel="tag">优化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/" rel="tag">分库分表</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%9D%E5%BF%83/" rel="tag">初心</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A8%E7%94%BB%E5%BA%93/" rel="tag">动画库</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/" rel="tag">原型与原型链</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="tag">可视化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/" rel="tag">多文件下载</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E5%B1%8F/" rel="tag">大屏</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/" rel="tag">媒体查询</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%97%E8%8A%82%E5%BA%8F/" rel="tag">字节序</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%81%E8%A3%85%E8%AF%B7%E6%B1%82/" rel="tag">封装请求</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">小程序</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B1%85%E4%B8%AD%E5%AF%B9%E9%BD%90/" rel="tag">居中对齐</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">微信小程序</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7/" rel="tag">性能监控</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8B%96%E6%8B%BD/" rel="tag">拖拽</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8F%92%E6%A7%BD/" rel="tag">插槽</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/" rel="tag">文件下载</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%9B%E5%9E%8B/" rel="tag">泛型</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%B8%E5%86%8C/" rel="tag">相册</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" rel="tag">移动端常见问题</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%84%9A%E6%89%8B%E6%9E%B6/" rel="tag">脚手架</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/" rel="tag">自动化部署</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%87%AA%E9%80%82%E5%BA%94/" rel="tag">自适应</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B7%A8%E5%9F%9F/" rel="tag">跨域</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7/" rel="tag">辅助工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/" rel="tag">进程和线程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%82%A3%E4%BA%9B%E5%B9%B4%E5%81%9A%E8%BF%87%E7%9A%84%E9%A1%B9%E7%9B%AE/" rel="tag">那些年做过的项目</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag">面试</a><span class="tag-list-count">1</span></li></ul></canvas></div></div></div></aside><div id="sidebar-dimmer"></div></div></main><footer class="footer"><div class="footer-inner"><div class="beian"><span class="exturl" data-url="aHR0cHM6Ly9iZWlhbi5taWl0Lmdvdi5jbg==">豫ICP备19017003号-1 </span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://blog.img.wy1991.cn/static/images/ga.png" style="display:inline-block"></div><div class="copyright">&copy; <span itemprop="copyrightYear">2021</span> <span class="with-love"><i class="fa fa-heart"></i> </span><span class="author" itemprop="copyrightHolder">很帅很愁人~</span></div><div class="busuanzi-count"><script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span class="post-meta-item" id="busuanzi_container_site_uv" style="display:none"><span class="post-meta-item-icon"><i class="fa fa-user"></i> </span><span class="site-uv" title="总访客量"><span id="busuanzi_value_site_uv"></span> </span></span><span class="post-meta-divider">|</span> <span class="post-meta-item" id="busuanzi_container_site_pv" style="display:none"><span class="post-meta-item-icon"><i class="fa fa-eye"></i> </span><span class="site-pv" title="总访问量"><span id="busuanzi_value_site_pv"></span></span></span></div></div></footer></div><script src="/lib/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script><script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script><script src="/lib/velocity/velocity.min.js"></script><script src="/lib/velocity/velocity.ui.min.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/pisces.js"></script><script src="/js/next-boot.js"></script><script>!function(){var e,t,o,n,r,a=document.getElementsByTagName("link");if(0<a.length)for(i=0;i<a.length;i++)"canonical"==a[i].rel.toLowerCase()&&a[i].href&&(e=a[i].href);t=e?e.split(":")[0]:window.location.protocol.split(":")[0],e=e||window.location.href,window,n=e,r=document.referrer,/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi.test(n)||(o="https"===String(t).toLowerCase()?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif",r?(o+="?r="+encodeURIComponent(document.referrer),n&&(o+="&l="+n)):n&&(o+="?l="+n),(new Image).src=o)}()</script><script src="/js/local-search.js"></script><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?f65cb40e9a5d20342ae8b58def42ea5f";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js",t.name="baidu_tongji";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)}()</script><script>window.imageLazyLoadSetting={isSPA:!1,preloadRatio:3,processImages:null}</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})})</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=r[a].getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var e=r[a],t=e,n=function(){r=r.filter(function(t){return e!==t})},i=new Image,o=t.getAttribute("data-original");i.onload=function(){t.src=o,n()},t.src!==o&&(i.src=o)}()}o(),n.addEventListener("scroll",function(){var t=o,e=n;clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this)</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({pluginRootPath:"live2dw/",pluginJsPath:"lib/",pluginModelPath:"assets/",tagMode:!1,model:null,display:{position:"left",width:150,height:300},mobile:{show:!1},log:!1})</script></body></html>
