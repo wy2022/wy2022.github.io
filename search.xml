@@ -56,31 +56,6 @@
       </tags>
   </entry>
   <entry>
-    <title>node-定时调度</title>
-    <url>/20210828/100-node-%E5%AE%9A%E6%97%B6%E8%B0%83%E5%BA%A6/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="setImmediate"><a href="#setImmediate" class="headerlink" title="setImmediate"></a>setImmediate</h2><p>node.js 中的定时器是一种会在一段时间后调用给定的函数的内部构造。何时调用定时器函数取决于用来创建定时器的方法，以及 node.js 时间循环正在执行的其他工作。</p>
-<blockquote>
-<p>node.js 定义了 setImmediate(callback[, …args])方法，用于设定定时器为立即执行定时器。其中参数：callback<function>指在当前回合的 Node.js 事件循环结束时调用的函数；…args<any>指当调用 callback 时传入的可选参数。</p>
-</blockquote>
-<p>当多次调用 setImmediate()时，callback 函数将按照创建它们的顺序排队等待执行。每次事件循环迭代都会处理整个回调队列。如果立即(immediate)定时器是从正在执行的回调排入队列，则直到下一次事件循环迭代才会触发。</p>
-<p>如果 callback 不是函数，则抛出 typeError</p>
-<p>此方法具有使用 util.promisify()的用于 Promise 的自定义变体。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> util = <span class="built_in">require</span>(<span class="string">&quot;util&quot;</span>)</span><br><span class="line"><span class="keyword">const</span> setImmediatePromise = util.promisify(setImmediate)</span><br><span class="line"></span><br><span class="line">setImmediatePromise(<span class="string">&quot;foobar&quot;</span>).then(<span class="function">(<span class="params">valur</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// value === &quot;foobar&quot;(传值是可选的)</span></span><br><span class="line">    <span class="comment">// 在所有I/O回调之后执行</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 或使用异步功能</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">timerExample</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;在I/o回调之前&quot;</span>)</span><br><span class="line">    <span class="keyword">await</span> setImmediatePromise()</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;在I/O回调之后&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line">timerExample()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="setInterval"><a href="#setInterval" class="headerlink" title="setInterval"></a>setInterval</h2><p>setInterval(callback, delay[, …args])方法，用于设定定时器执行的周期，定时器每隔 delay 毫秒重复执行一次。其中参数: callback<function>指在当前回合的 Node.js 事件循环结束时调用的函数；delay<number>指调用 callback 之前等待的毫秒数；…args<any>指当前调用 callback 时传入的可选参数。</p>
-<ul>
-<li>如果当 delay 大于 2 147 483 647（即 32 位整型的最大值）或小于 1 时，delay 将设置位 1</li>
-<li>如果 callback 不是函数，则抛出 typeError 异常。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>node</category>
-      </categories>
-      <tags>
-        <tag>node</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>梦瑶(一一)和小沫沫相册合集~</title>
     <url>/20210707/0-%E6%A2%A6%E7%91%B6(%E4%B8%80%E4%B8%80)%E5%92%8C%E5%B0%8F%E6%B2%AB%E6%B2%AB/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="小一一-梦瑶-和小沫沫"><a href="#小一一-梦瑶-和小沫沫" class="headerlink" title="小一一(梦瑶)和小沫沫"></a>小一一(梦瑶)和小沫沫</h1><blockquote>
@@ -730,6 +705,31 @@
       </categories>
       <tags>
         <tag>相册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>node-定时调度</title>
+    <url>/20210828/100-node-%E5%AE%9A%E6%97%B6%E8%B0%83%E5%BA%A6/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="setImmediate"><a href="#setImmediate" class="headerlink" title="setImmediate"></a>setImmediate</h2><p>node.js 中的定时器是一种会在一段时间后调用给定的函数的内部构造。何时调用定时器函数取决于用来创建定时器的方法，以及 node.js 时间循环正在执行的其他工作。</p>
+<blockquote>
+<p>node.js 定义了 setImmediate(callback[, …args])方法，用于设定定时器为立即执行定时器。其中参数：callback<function>指在当前回合的 Node.js 事件循环结束时调用的函数；…args<any>指当调用 callback 时传入的可选参数。</p>
+</blockquote>
+<p>当多次调用 setImmediate()时，callback 函数将按照创建它们的顺序排队等待执行。每次事件循环迭代都会处理整个回调队列。如果立即(immediate)定时器是从正在执行的回调排入队列，则直到下一次事件循环迭代才会触发。</p>
+<p>如果 callback 不是函数，则抛出 typeError</p>
+<p>此方法具有使用 util.promisify()的用于 Promise 的自定义变体。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> util = <span class="built_in">require</span>(<span class="string">&quot;util&quot;</span>)</span><br><span class="line"><span class="keyword">const</span> setImmediatePromise = util.promisify(setImmediate)</span><br><span class="line"></span><br><span class="line">setImmediatePromise(<span class="string">&quot;foobar&quot;</span>).then(<span class="function">(<span class="params">valur</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// value === &quot;foobar&quot;(传值是可选的)</span></span><br><span class="line">    <span class="comment">// 在所有I/O回调之后执行</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 或使用异步功能</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">timerExample</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;在I/o回调之前&quot;</span>)</span><br><span class="line">    <span class="keyword">await</span> setImmediatePromise()</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;在I/O回调之后&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line">timerExample()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="setInterval"><a href="#setInterval" class="headerlink" title="setInterval"></a>setInterval</h2><p>setInterval(callback, delay[, …args])方法，用于设定定时器执行的周期，定时器每隔 delay 毫秒重复执行一次。其中参数: callback<function>指在当前回合的 Node.js 事件循环结束时调用的函数；delay<number>指调用 callback 之前等待的毫秒数；…args<any>指当前调用 callback 时传入的可选参数。</p>
+<ul>
+<li>如果当 delay 大于 2 147 483 647（即 32 位整型的最大值）或小于 1 时，delay 将设置位 1</li>
+<li>如果 callback 不是函数，则抛出 typeError 异常。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>node</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
       </tags>
   </entry>
   <entry>
@@ -3166,7 +3166,7 @@
   <entry>
     <title>158-react-hook实现useKeyPress</title>
     <url>/20220210/158-react-hook%E5%AE%9E%E7%8E%B0useKeyPress/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; useEffect, useState &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> useKeyPress = <span class="function">(<span class="params">target: <span class="built_in">string</span></span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> [keyPressed, setKeyPressed] = useState(<span class="literal">false</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> downHandle = <span class="function">(<span class="params">&#123; key &#125;: &#123; key: <span class="built_in">string</span> &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (key === target) setKeyPressed(<span class="literal">true</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> upHandle = <span class="function">(<span class="params">&#123; key &#125;: &#123; key: <span class="built_in">string</span> &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (key === target) setKeyPressed(<span class="literal">false</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  useEffect(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">window</span>.addEventListener(<span class="string">&#x27;keydown&#x27;</span>, downHandle)</span><br><span class="line">    <span class="built_in">window</span>.addEventListener(<span class="string">&#x27;keyup&#x27;</span>, upHandle)</span><br><span class="line">    <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">window</span>.removeEventListener(<span class="string">&#x27;keydown&#x27;</span>, downHandle)</span><br><span class="line">      <span class="built_in">window</span>.removeEventListener(<span class="string">&#x27;keyup&#x27;</span>, upHandle)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, [])</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> keyPressed</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Test13 = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> status = useKeyPress(<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">      test13</span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">br</span> /&gt;</span></span></span><br><span class="line"><span class="xml">      &#123;status ? &#x27;输入中...&#x27; : &#x27;停止输入&#x27;&#125;</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Test13</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; useEffect, useState &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> useKeyPress = <span class="function">(<span class="params">target: <span class="built_in">string</span></span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> [keyPressed, setKeyPressed] = useState(<span class="literal">false</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> downHandle = <span class="function">(<span class="params">&#123; key &#125;: &#123; key: <span class="built_in">string</span> &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (key === target) setKeyPressed(<span class="literal">true</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> upHandle = <span class="function">(<span class="params">&#123; key &#125;: &#123; key: <span class="built_in">string</span> &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (key === target) setKeyPressed(<span class="literal">false</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  useEffect(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">window</span>.addEventListener(<span class="string">&#x27;keydown&#x27;</span>, downHandle)</span><br><span class="line">    <span class="built_in">window</span>.addEventListener(<span class="string">&#x27;keyup&#x27;</span>, upHandle)</span><br><span class="line">    <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">window</span>.removeEventListener(<span class="string">&#x27;keydown&#x27;</span>, downHandle)</span><br><span class="line">      <span class="built_in">window</span>.removeEventListener(<span class="string">&#x27;keyup&#x27;</span>, upHandle)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, [])</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> keyPressed</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Test13 = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> status = useKeyPress(<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">      test13</span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">br</span> /&gt;</span></span></span><br><span class="line"><span class="xml">      &#123;status ? &#x27;输入中...&#x27; : &#x27;停止输入&#x27;&#125;</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Test13</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>react</category>
@@ -4520,7 +4520,7 @@ requestData().then(res =&gt; &#123;
 <p><a href="https://blog.wy1991.cn/">官网博客</a></p>
 <h2 id="删除线xx"><a href="#删除线xx" class="headerlink" title="删除线xx"></a>删除线<del>xx</del></h2><p><del>删除线</del></p>
 <h2 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h2><p>Markdown 语法会忽略首行开头的空格，如果要体现出首行开头空两个的效果，可以使用 全角符号下的空格 ，windows 下使用 shift+空格 切换。</p>
-<h2 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h2><p><span class="exturl" data-url="bWFpbHRvOiYjOTc7JiMxMDA7JiMxMDk7JiMxMDU7JiMxMTA7JiM2NDsmIzExOTsmIzEyMTsmIzQ5OyYjeDM5OyYjNTc7JiM0OTsmIzQ2OyYjeDYzOyYjeDZlOw==">&#97;&#100;&#109;&#105;&#110;&#64;&#119;&#121;&#49;&#x39;&#57;&#49;&#46;&#x63;&#x6e;<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h2><p><span class="exturl" data-url="bWFpbHRvOiYjOTc7JiN4NjQ7JiN4NmQ7JiMxMDU7JiN4NmU7JiN4NDA7JiN4Nzc7JiMxMjE7JiN4MzE7JiM1NzsmI3gzOTsmI3gzMTsmI3gyZTsmIzk5OyYjeDZlOw==">&#97;&#x64;&#x6d;&#105;&#x6e;&#x40;&#x77;&#121;&#x31;&#57;&#x39;&#x31;&#x2e;&#99;&#x6e;<i class="fa fa-external-link-alt"></i></span></p>
 <h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>我们可以设置表格的对齐方式：</p>
 <ul>
 <li><p>-: 设置内容和标题栏居右对齐。</p>
@@ -5793,23 +5793,6 @@ console.log(`Files count: $&#123;count&#125;`)
       </tags>
   </entry>
   <entry>
-    <title>Vue 保存vuex到sessionStorage</title>
-    <url>/20210629/52-Vue-%E4%BF%9D%E5%AD%98vuex%E5%88%B0sessionStorage/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>Vuex 中刷新页面数据将丢失，所以可以在 app.vue 中搞这个</p>
-</blockquote>
-<h3 id="app-vue"><a href="#app-vue" class="headerlink" title="app.vue"></a>app.vue</h3><figure class="highlight pf"><table><tr><td class="code"><pre><span class="line">created () &#123;</span><br><span class="line">  //在页面加载时读取sessionStorage里的状态信息</span><br><span class="line">  if (sessionStorage.getItem(<span class="string">&quot;store&quot;</span>) ) &#123;</span><br><span class="line">    this.<span class="variable">$store</span>.replaceState(Object.assign(&#123;&#125;, this.<span class="variable">$store</span>.<span class="keyword">state</span>,JSON.parse(sessionStorage.getItem(<span class="string">&quot;store&quot;</span>))))</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  //在页面刷新时将vuex里的信息保存到sessionStorage里</span><br><span class="line">  window.addEventListener(<span class="string">&quot;beforeunload&quot;</span>,()=&gt;&#123;</span><br><span class="line">    sessionStorage.<span class="built_in">set</span>Item(<span class="string">&quot;store&quot;</span>,JSON.stringify(this.<span class="variable">$store</span>.<span class="keyword">state</span>))</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-        <tag>Vuex</tag>
-        <tag>sessionStorage</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vue基础-Ref</title>
     <url>/20210628/53-Vue%E5%9F%BA%E7%A1%80-Ref/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref</h2><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">创建一个响应式数据，支持基础类型</span><br><span class="line"><span class="keyword">let</span> a = <span class="keyword">ref</span>(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">let</span> b = <span class="keyword">ref</span>(<span class="literal">null</span>)</span><br><span class="line"><span class="keyword">let</span> c = <span class="keyword">ref</span>(<span class="string">&#x27;1&#x27;</span>)</span><br><span class="line"><span class="keyword">let</span> d = <span class="keyword">ref</span>([])</span><br><span class="line"></span><br><span class="line">a.<span class="keyword">value</span></span><br></pre></td></tr></table></figure>
@@ -5949,6 +5932,74 @@ console.log(`Files count: $&#123;count&#125;`)
       </tags>
   </entry>
   <entry>
+    <title>css 学会这些CSS技巧让你写样式更加丝滑</title>
+    <url>/20210712/6-css-%E5%AD%A6%E4%BC%9A%E8%BF%99%E4%BA%9BCSS%E6%8A%80%E5%B7%A7%E8%AE%A9%E4%BD%A0%E5%86%99%E6%A0%B7%E5%BC%8F%E6%9B%B4%E5%8A%A0%E4%B8%9D%E6%BB%91/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="calc"><a href="#calc" class="headerlink" title="calc"></a>calc</h2><p>calc()函数用于动态计算长度值，任何长度值都可以使用calc()函数进行计算，需要注意的是，运算符前后都需要保留一个空格，例如：</p>
+<pre><code>  .box&#123;
+    width: calc(100% - 10px)
+    height: calc(100% - 2rem)
+  &#125;
+</code></pre>
+<h2 id="min"><a href="#min" class="headerlink" title="min"></a>min</h2><p>min()函数允许你从逗号分隔符表达式中选择一个最小值作为css的属性值，例如：</p>
+<pre><code>  .box&#123;
+    width: min(1vw, 4em, 80px)
+  &#125;
+</code></pre>
+<p>在上面的例子中，宽度最多是80px。如果视口的宽度小于800px，或者一个em的宽度小于20px，则会更窄。换句话说，最大宽度是80px。</p>
+<p>当min() 用于控制文本大小时，要保证文本足够大以便于阅读。建议把 min() 方法嵌入到 max() 中</p>
+<pre><code>  p&#123;
+    font-size: max(min(0.5vw, 0.5em), 1rem)
+  &#125;
+</code></pre>
+<h2 id="max"><a href="#max" class="headerlink" title="max"></a>max</h2><p>max()函数让你可以从一个逗号分隔的表达式列表中选择最大（正方向）的值作为属性的值</p>
+<pre><code>.box&#123;
+  width: max(10vw, 4em, 80px)
+&#125;
+</code></pre>
+<p>在上面这个例子中，宽度最小会是80px，除非视图宽度大于800px或者是一个em比20px宽。简单来说，最小宽度是80px。你也可以认为max()的值提供了一个属性最小可能的值。</p>
+<p>当max()用于控制文本大小时，确保文本总是足够大以供阅读。一个建议是使用min()嵌套在 max()中的函数，该函数的第二个值是一个相对长度单位，该单位总是足够大以读取</p>
+<pre><code>  p&#123;
+    font-size: max(min(0.5vw, 0.5em), 1rem)
+  &#125;
+</code></pre>
+<p>这确保了1rem的最小大小，如果页面缩放，文本大小会缩放</p>
+<h2 id="clamp"><a href="#clamp" class="headerlink" title="clamp"></a>clamp</h2><p>clamp() 函数的作用是把一个值限制在一个上限和下限之间，当这个值超过最小值和最大值的范围时，在最小值和最大值之间选择一个值使用。它接收三个参数：最小值、首选值、最大值clamp(MIN, VAL, MAX)，当首选值比最小值要小时，则使用最小值，当首选值介于最小值和最大值之间时，用首选值，当首选值比最大值要大时，则使用最大值，表达式中的每一个值都可以用不同的单位。</p>
+<pre><code>  .box&#123;
+    width: clamp(200px, 50vw, 600px)
+  &#125;
+</code></pre>
+<h2 id="gap"><a href="#gap" class="headerlink" title="gap"></a>gap</h2><p>gap属性是用来设置网格行与列之间的间隙，该属性是row-gap和column-gap的简写形式，适用于Flex，Grid和multi-column布局的元素</p>
+<pre><code>  #flex &#123;
+    width: 300px;
+    display: flex;
+    gap: 20px 5px;
+  &#125;
+  #grid &#123;
+    height: 200px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 20px 5px;
+  &#125;
+</code></pre>
+<h2 id="writing-mode"><a href="#writing-mode" class="headerlink" title="writing-mode"></a>writing-mode</h2><p>writing-mode 属性定义了文本在水平或垂直方向上如何排布。</p>
+<p>语法格式如下：</p>
+<blockquote>
+<p>writing-mode: horizontal-tb | vertical-rl | vertical-lr | sideways-rl | sideways-lr</p>
+</blockquote>
+<p>horizontal-tb：水平方向自上而下的书写方式。即 left-right-top-bottom</p>
+<p>vertical-rl：垂直方向自右而左的书写方式。即 top-bottom-right-left</p>
+<p>vertical-lr：垂直方向内内容从上到下，水平方向从左到右</p>
+<p>sideways-rl：内容垂直方向从上到下排列</p>
+<p>sideways-lr：内容垂直方向从下到上排列</p>
+]]></content>
+      <categories>
+        <category>css</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>web多文件下载</title>
     <url>/20210629/60-web%E5%A4%9A%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><h3 id="1-延迟发起多个下载请求"><a href="#1-延迟发起多个下载请求" class="headerlink" title="1. 延迟发起多个下载请求"></a>1. 延迟发起多个下载请求</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sleep</span>(<span class="params">time = <span class="number">1000</span></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(resolve, time)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> files = [<span class="string">&#x27;1m.zip&#x27;</span>, <span class="string">&#x27;2m.zip&#x27;</span>, <span class="string">&#x27;3m.zip&#x27;</span>]</span><br><span class="line"><span class="keyword">const</span> download1 = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  files.forEach(<span class="keyword">async</span> (file, i) =&gt; &#123;</span><br><span class="line">    <span class="comment">// 延迟下载</span></span><br><span class="line">    <span class="keyword">await</span> sleep(i * <span class="number">1000</span>)</span><br><span class="line">    <span class="keyword">const</span> a = <span class="built_in">document</span>.createElement(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line">    a.href = <span class="string">`path/<span class="subst">$&#123;file&#125;</span>`</span></span><br><span class="line">    a.download = file</span><br><span class="line">    a.click()</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -6023,74 +6074,6 @@ console.log(`Files count: $&#123;count&#125;`)
       </tags>
   </entry>
   <entry>
-    <title>css 学会这些CSS技巧让你写样式更加丝滑</title>
-    <url>/20210712/6-css-%E5%AD%A6%E4%BC%9A%E8%BF%99%E4%BA%9BCSS%E6%8A%80%E5%B7%A7%E8%AE%A9%E4%BD%A0%E5%86%99%E6%A0%B7%E5%BC%8F%E6%9B%B4%E5%8A%A0%E4%B8%9D%E6%BB%91/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="calc"><a href="#calc" class="headerlink" title="calc"></a>calc</h2><p>calc()函数用于动态计算长度值，任何长度值都可以使用calc()函数进行计算，需要注意的是，运算符前后都需要保留一个空格，例如：</p>
-<pre><code>  .box&#123;
-    width: calc(100% - 10px)
-    height: calc(100% - 2rem)
-  &#125;
-</code></pre>
-<h2 id="min"><a href="#min" class="headerlink" title="min"></a>min</h2><p>min()函数允许你从逗号分隔符表达式中选择一个最小值作为css的属性值，例如：</p>
-<pre><code>  .box&#123;
-    width: min(1vw, 4em, 80px)
-  &#125;
-</code></pre>
-<p>在上面的例子中，宽度最多是80px。如果视口的宽度小于800px，或者一个em的宽度小于20px，则会更窄。换句话说，最大宽度是80px。</p>
-<p>当min() 用于控制文本大小时，要保证文本足够大以便于阅读。建议把 min() 方法嵌入到 max() 中</p>
-<pre><code>  p&#123;
-    font-size: max(min(0.5vw, 0.5em), 1rem)
-  &#125;
-</code></pre>
-<h2 id="max"><a href="#max" class="headerlink" title="max"></a>max</h2><p>max()函数让你可以从一个逗号分隔的表达式列表中选择最大（正方向）的值作为属性的值</p>
-<pre><code>.box&#123;
-  width: max(10vw, 4em, 80px)
-&#125;
-</code></pre>
-<p>在上面这个例子中，宽度最小会是80px，除非视图宽度大于800px或者是一个em比20px宽。简单来说，最小宽度是80px。你也可以认为max()的值提供了一个属性最小可能的值。</p>
-<p>当max()用于控制文本大小时，确保文本总是足够大以供阅读。一个建议是使用min()嵌套在 max()中的函数，该函数的第二个值是一个相对长度单位，该单位总是足够大以读取</p>
-<pre><code>  p&#123;
-    font-size: max(min(0.5vw, 0.5em), 1rem)
-  &#125;
-</code></pre>
-<p>这确保了1rem的最小大小，如果页面缩放，文本大小会缩放</p>
-<h2 id="clamp"><a href="#clamp" class="headerlink" title="clamp"></a>clamp</h2><p>clamp() 函数的作用是把一个值限制在一个上限和下限之间，当这个值超过最小值和最大值的范围时，在最小值和最大值之间选择一个值使用。它接收三个参数：最小值、首选值、最大值clamp(MIN, VAL, MAX)，当首选值比最小值要小时，则使用最小值，当首选值介于最小值和最大值之间时，用首选值，当首选值比最大值要大时，则使用最大值，表达式中的每一个值都可以用不同的单位。</p>
-<pre><code>  .box&#123;
-    width: clamp(200px, 50vw, 600px)
-  &#125;
-</code></pre>
-<h2 id="gap"><a href="#gap" class="headerlink" title="gap"></a>gap</h2><p>gap属性是用来设置网格行与列之间的间隙，该属性是row-gap和column-gap的简写形式，适用于Flex，Grid和multi-column布局的元素</p>
-<pre><code>  #flex &#123;
-    width: 300px;
-    display: flex;
-    gap: 20px 5px;
-  &#125;
-  #grid &#123;
-    height: 200px;
-    display: grid;
-    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-    gap: 20px 5px;
-  &#125;
-</code></pre>
-<h2 id="writing-mode"><a href="#writing-mode" class="headerlink" title="writing-mode"></a>writing-mode</h2><p>writing-mode 属性定义了文本在水平或垂直方向上如何排布。</p>
-<p>语法格式如下：</p>
-<blockquote>
-<p>writing-mode: horizontal-tb | vertical-rl | vertical-lr | sideways-rl | sideways-lr</p>
-</blockquote>
-<p>horizontal-tb：水平方向自上而下的书写方式。即 left-right-top-bottom</p>
-<p>vertical-rl：垂直方向自右而左的书写方式。即 top-bottom-right-left</p>
-<p>vertical-lr：垂直方向内内容从上到下，水平方向从左到右</p>
-<p>sideways-rl：内容垂直方向从上到下排列</p>
-<p>sideways-lr：内容垂直方向从下到上排列</p>
-]]></content>
-      <categories>
-        <category>css</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>大屏可视化利用scale实现自适应</title>
     <url>/20210628/61-%E5%A4%A7%E5%B1%8F%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%A9%E7%94%A8scale%E5%AE%9E%E7%8E%B0%E8%87%AA%E9%80%82%E5%BA%94/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在高分屏中，修改浏览器的缩放比例，其实就是修改浏览器的 DPI，即单位面积内可用的像素点数，从而在屏幕尺寸保持不变的情况下，达到了改变视窗宽高的效果(用像素计量)，简单来说，放大比例会减少 DPI，宽高变小，减少比例会增加 DPI，宽高变大。</p>
@@ -6162,45 +6145,6 @@ console.log(`Files count: $&#123;count&#125;`)
       <tags>
         <tag>js</tag>
         <tag>this</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>进程和线程的简单理解</title>
-    <url>/20210714/64-%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%AE%80%E5%8D%95%E7%90%86%E8%A7%A3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="进程和线程的简单理解"><a href="#进程和线程的简单理解" class="headerlink" title="进程和线程的简单理解"></a>进程和线程的简单理解</h2><p>进程，是指在系统中正在运行的一个应用程序，程序一旦运行就是进程。比如打开一个QQ音乐就是启动了一个QQ音乐进程，打开一个 Word 就启动了一个 Word 进程。进程是操作系统分配资源的最小单位。如下图，每一个进程都拥有独立的内存单元。</p>
-<img src="https://blog.img.wy1991.cn/static/images/js/neicun.png-blogImg"> 
-
-
-<p>在一个进程内部，可以同时运行多个“子任务”，也就是多个线程。如上所示，在一个进程中，而多个线程共享内存。线程是进程之内程序执行的最小单位。</p>
-<p>可以将进程理解为工厂中的一条流水线，其中的线程就是这个流水线上的工人。</p>
-<img src="https://blog.img.wy1991.cn/static/images/js/liushuixian.png-blogImg"> 
-
-
-<p>假如我们需要完成一批药品出厂前的一系列的认证检验，我们就可以开启一条流水线（进程），并分配需要的资源，如工作台、检验工具、药品等等，有了这些资源，就可以安排工人（线程），工人拿着这些资源进行产品检验，也就相当于线程执行程序。</p>
-<p>如上图所示，完成检验需要四个步骤：原料检验、生产过程检验、GMP认证、药品监督管理。当需要检验的药品数量较少时，可以由一个工人完成这四个步骤，也就是单线程处理。</p>
-<p>而当药品数量变得很多时，一个工人就太慢了，这时，可以为每一种检验安排一个工人，这四个工人在同一条生产线工作，共享工作台等资源，并行处理各自的任务，这就相当于多线程处理。</p>
-<p>简而言之，进程和线程之间的关系有以下几个特点：</p>
-<ol>
-<li>线程必须存在于进程中，一个进程至少有一个线程 —- 工人需要在流水线上处理工作，完成检验至少需要一个工人。</li>
-</ol>
-<ol start="2">
-<li>进程中的任意一线程执行出错，都会导致整个进程的崩溃 —- 流水线中任何一处电路短路，整个流水线就会停电。</li>
-</ol>
-<ol start="3">
-<li>线程之间共享进程中的数据 —- 工人共享流水线上的工具、资源等。</li>
-</ol>
-<ol start="4">
-<li>当一个进程关闭之后，操作系统会回收进程所占用的内存 —- 一次检验完成，工厂可以关闭这条流水线，将流水线的资源收回分配给其他流水线。</li>
-</ol>
-<ol start="5">
-<li>进程之间的内容相互隔离 —- 两条流水线的资源和任务是相互独立的。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>进程和线程</category>
-      </categories>
-      <tags>
-        <tag>进程和线程</tag>
       </tags>
   </entry>
   <entry>
@@ -6523,41 +6467,6 @@ $ git commit --amend [file1] [file2] ...
       </tags>
   </entry>
   <entry>
-    <title>小程序 API集中管理</title>
-    <url>/20210701/73-%E5%B0%8F%E7%A8%8B%E5%BA%8F-API%E9%9B%86%E4%B8%AD%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><blockquote>
-<p>因为小程序好像不支持 es6 的 export 所以导出用 es5 的 cmd 的 module.exports</p>
-</blockquote>
-<ol>
-<li>根目录下创建文件夹 http</li>
-<li>创建基础请求文件 request.js</li>
-<li>创建集中导出接口 api.js</li>
-<li>创建测试接口模块 login.js goods.js</li>
-</ol>
-<h3 id="request-js"><a href="#request-js" class="headerlink" title="request.js"></a>request.js</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> app = getApp()</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(app)</span><br><span class="line"><span class="keyword">const</span> baseUrl = <span class="string">&#x27;https://www.wy1991.cn/&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建统一调用函数</span></span><br><span class="line"><span class="comment">// lodingTime 请求时间超过后显示 loding</span></span><br><span class="line"><span class="keyword">const</span> request = <span class="function">(<span class="params">&#123; url, data = &#123;&#125;, method = <span class="string">&#x27;get&#x27;</span>, loadingTime = <span class="number">500</span> &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    wx.showLoading(&#123;</span><br><span class="line">      <span class="attr">title</span>: <span class="string">&#x27;请求中...&#x27;</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;, loadingTime)</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    wx.request(&#123;</span><br><span class="line">      <span class="attr">url</span>: baseUrl + url,</span><br><span class="line">      data,</span><br><span class="line">      <span class="attr">method</span>: method,</span><br><span class="line">      <span class="attr">header</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;content-type&#x27;</span>: <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>,</span><br><span class="line">        <span class="attr">authorization</span>: app?.globalData.token ?? <span class="string">&#x27;token&#x27;</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">timeout</span>: <span class="number">15000</span>,</span><br><span class="line">      <span class="attr">success</span>: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">//在这里写自己的逻辑，比如code 401 代表需要重新登录</span></span><br><span class="line">        <span class="comment">//演示代码</span></span><br><span class="line">        <span class="keyword">if</span> (res.data.code === <span class="number">401</span>) &#123;</span><br><span class="line">          wx.redirectTo(&#123;</span><br><span class="line">            <span class="attr">url</span>: <span class="string">&#x27;/pages/logs/logs&#x27;</span>,</span><br><span class="line">          &#125;)</span><br><span class="line">          <span class="keyword">return</span></span><br><span class="line">        &#125;</span><br><span class="line">        resolve(res.data)</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">fail</span>: <span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">//失败的时候，可以</span></span><br><span class="line">        reject(err)</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">complete</span>: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">clearTimeout</span>(timer)</span><br><span class="line">        timer = <span class="literal">null</span></span><br><span class="line">        wx.hideLoading(&#123;&#125;)</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = request</span><br></pre></td></tr></table></figure>
-
-<h3 id="api-js"><a href="#api-js" class="headerlink" title="api.js"></a>api.js</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> login = <span class="built_in">require</span>(<span class="string">&#x27;./login&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> goods = <span class="built_in">require</span>(<span class="string">&#x27;./goods&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  login,</span><br><span class="line">  goods,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="goods-js"><a href="#goods-js" class="headerlink" title="goods.js"></a>goods.js</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> request = <span class="built_in">require</span>(<span class="string">&#x27;./request&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getGoodsList</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> request(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;api/index/index&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;post&#x27;</span>,</span><br><span class="line">    data,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getGoodsInfo</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> request(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;api/index/sleep3&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;post&#x27;</span>,</span><br><span class="line">    data,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  getGoodsList,</span><br><span class="line">  getGoodsInfo,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="login-js"><a href="#login-js" class="headerlink" title="login.js"></a>login.js</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> request = <span class="built_in">require</span>(<span class="string">&#x27;./request.js&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">userlogin</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> request(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;api/index/index&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">    data,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">usersleep</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> request(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;api/index/sleep3&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  userlogin,</span><br><span class="line">  usersleep,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="试用方法"><a href="#试用方法" class="headerlink" title="试用方法:"></a>试用方法:</h3><p>可以挂载到 app.js globalData 中了，当然你可以不挂载直接引用</p>
-<p>例如：pages/index/index.js</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> $api = <span class="built_in">require</span>(<span class="string">&#x27;../../http/api&#x27;</span>)</span><br><span class="line"></span><br><span class="line">Page(&#123;</span><br><span class="line">  <span class="function"><span class="title">onLoad</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">//例子1:</span></span><br><span class="line">    $api.login</span><br><span class="line">      .userlogin(&#123; <span class="attr">name</span>: <span class="string">&#x27;123&#x27;</span> &#125;)</span><br><span class="line">      .then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(res)</span><br><span class="line">      &#125;)</span><br><span class="line">      .catch(<span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(err)</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 也可以用async await</span></span><br><span class="line">  <span class="keyword">async</span> <span class="function"><span class="title">click</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> result = <span class="keyword">await</span> $api.login()</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结:"></a>总结:</h3><p>统一请求处理，可以在 request 中写一个函数，请求 api 接口报错可以给远程日志服务器发数据<br>具体好处自己摸索。也可以根据环境动态请求 baseUrl,还可以接口高度复用,还封装了一个请求 1 秒后加载 loding</p>
-]]></content>
-      <categories>
-        <category>小程序</category>
-      </categories>
-      <tags>
-        <tag>小程序</tag>
-        <tag>reuqest</tag>
-        <tag>api集中管理</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>项目-那些年做过的项目</title>
     <url>/20210708/71-%E9%82%A3%E4%BA%9B%E5%B9%B4%E5%81%9A%E8%BF%87%E7%9A%84%E9%A1%B9%E7%9B%AE/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="智慧消防"><a href="#智慧消防" class="headerlink" title="智慧消防"></a>智慧消防</h2><p>结合物联网网关开发的一套后台，搭配 app 使用。PC 端 Vue+element 移动端 uniapp + uview，给小区，学校，单位，管理部门提供一体化服务。包含（消防设备，灭火器，烟感，用电，积水，液位，监控，闸机，水压，燃气，地图报警，应急广播（实时喊话,FM,音乐播放,定时任务）,设备档案，隐患管理，安全巡检，通知公告，安全课堂(阿里云视频直传),车牌识别，环境监测，实时推送等。大数据中心，可视化大屏等</p>
@@ -6662,6 +6571,41 @@ $ git commit --amend [file1] [file2] ...
       </categories>
       <tags>
         <tag>那些年做过的项目</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>小程序 API集中管理</title>
+    <url>/20210701/73-%E5%B0%8F%E7%A8%8B%E5%BA%8F-API%E9%9B%86%E4%B8%AD%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><blockquote>
+<p>因为小程序好像不支持 es6 的 export 所以导出用 es5 的 cmd 的 module.exports</p>
+</blockquote>
+<ol>
+<li>根目录下创建文件夹 http</li>
+<li>创建基础请求文件 request.js</li>
+<li>创建集中导出接口 api.js</li>
+<li>创建测试接口模块 login.js goods.js</li>
+</ol>
+<h3 id="request-js"><a href="#request-js" class="headerlink" title="request.js"></a>request.js</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> app = getApp()</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(app)</span><br><span class="line"><span class="keyword">const</span> baseUrl = <span class="string">&#x27;https://www.wy1991.cn/&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建统一调用函数</span></span><br><span class="line"><span class="comment">// lodingTime 请求时间超过后显示 loding</span></span><br><span class="line"><span class="keyword">const</span> request = <span class="function">(<span class="params">&#123; url, data = &#123;&#125;, method = <span class="string">&#x27;get&#x27;</span>, loadingTime = <span class="number">500</span> &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    wx.showLoading(&#123;</span><br><span class="line">      <span class="attr">title</span>: <span class="string">&#x27;请求中...&#x27;</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;, loadingTime)</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    wx.request(&#123;</span><br><span class="line">      <span class="attr">url</span>: baseUrl + url,</span><br><span class="line">      data,</span><br><span class="line">      <span class="attr">method</span>: method,</span><br><span class="line">      <span class="attr">header</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;content-type&#x27;</span>: <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>,</span><br><span class="line">        <span class="attr">authorization</span>: app?.globalData.token ?? <span class="string">&#x27;token&#x27;</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">timeout</span>: <span class="number">15000</span>,</span><br><span class="line">      <span class="attr">success</span>: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">//在这里写自己的逻辑，比如code 401 代表需要重新登录</span></span><br><span class="line">        <span class="comment">//演示代码</span></span><br><span class="line">        <span class="keyword">if</span> (res.data.code === <span class="number">401</span>) &#123;</span><br><span class="line">          wx.redirectTo(&#123;</span><br><span class="line">            <span class="attr">url</span>: <span class="string">&#x27;/pages/logs/logs&#x27;</span>,</span><br><span class="line">          &#125;)</span><br><span class="line">          <span class="keyword">return</span></span><br><span class="line">        &#125;</span><br><span class="line">        resolve(res.data)</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">fail</span>: <span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">//失败的时候，可以</span></span><br><span class="line">        reject(err)</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">complete</span>: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">clearTimeout</span>(timer)</span><br><span class="line">        timer = <span class="literal">null</span></span><br><span class="line">        wx.hideLoading(&#123;&#125;)</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = request</span><br></pre></td></tr></table></figure>
+
+<h3 id="api-js"><a href="#api-js" class="headerlink" title="api.js"></a>api.js</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> login = <span class="built_in">require</span>(<span class="string">&#x27;./login&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> goods = <span class="built_in">require</span>(<span class="string">&#x27;./goods&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  login,</span><br><span class="line">  goods,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="goods-js"><a href="#goods-js" class="headerlink" title="goods.js"></a>goods.js</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> request = <span class="built_in">require</span>(<span class="string">&#x27;./request&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getGoodsList</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> request(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;api/index/index&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;post&#x27;</span>,</span><br><span class="line">    data,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getGoodsInfo</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> request(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;api/index/sleep3&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;post&#x27;</span>,</span><br><span class="line">    data,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  getGoodsList,</span><br><span class="line">  getGoodsInfo,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="login-js"><a href="#login-js" class="headerlink" title="login.js"></a>login.js</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> request = <span class="built_in">require</span>(<span class="string">&#x27;./request.js&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">userlogin</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> request(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;api/index/index&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">    data,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">usersleep</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> request(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;api/index/sleep3&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  userlogin,</span><br><span class="line">  usersleep,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="试用方法"><a href="#试用方法" class="headerlink" title="试用方法:"></a>试用方法:</h3><p>可以挂载到 app.js globalData 中了，当然你可以不挂载直接引用</p>
+<p>例如：pages/index/index.js</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> $api = <span class="built_in">require</span>(<span class="string">&#x27;../../http/api&#x27;</span>)</span><br><span class="line"></span><br><span class="line">Page(&#123;</span><br><span class="line">  <span class="function"><span class="title">onLoad</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">//例子1:</span></span><br><span class="line">    $api.login</span><br><span class="line">      .userlogin(&#123; <span class="attr">name</span>: <span class="string">&#x27;123&#x27;</span> &#125;)</span><br><span class="line">      .then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(res)</span><br><span class="line">      &#125;)</span><br><span class="line">      .catch(<span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(err)</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 也可以用async await</span></span><br><span class="line">  <span class="keyword">async</span> <span class="function"><span class="title">click</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> result = <span class="keyword">await</span> $api.login()</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结:"></a>总结:</h3><p>统一请求处理，可以在 request 中写一个函数，请求 api 接口报错可以给远程日志服务器发数据<br>具体好处自己摸索。也可以根据环境动态请求 baseUrl,还可以接口高度复用,还封装了一个请求 1 秒后加载 loding</p>
+]]></content>
+      <categories>
+        <category>小程序</category>
+      </categories>
+      <tags>
+        <tag>小程序</tag>
+        <tag>reuqest</tag>
+        <tag>api集中管理</tag>
       </tags>
   </entry>
   <entry>
@@ -7505,6 +7449,33 @@ www.google.com =&gt; 404
       </tags>
   </entry>
   <entry>
+    <title>分库分表的那些事</title>
+    <url>/20210724/82-%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="分库分表的那些事"><a href="#分库分表的那些事" class="headerlink" title="分库分表的那些事"></a>分库分表的那些事</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在互联网公司中，上至大厂，下到普通的公司企业，随着业务的发展，数据量的日积月累，对于数据库和表的设计和优化，显得尤为重要。其中关于分表分库的问题，在实际场景或者是面试中，亦是老生常谈。当我们明白了来龙去脉时，也就没那么复杂。</p>
+<h2 id="为什么需要分库分表"><a href="#为什么需要分库分表" class="headerlink" title="为什么需要分库分表"></a>为什么需要分库分表</h2><p>最为直接便是机器性能的问题。性能的考虑都来源于数据量。当数据量大的时候，随着而来便是高性能，可拓展，稳定性。当是业务刚开始，数据量小，为了控制成本，单机器是足够用的。但是随着业务的发展。在单台机器中无论是CPU、IO等资源，都是极为有限的。正所谓人多势众，双拳难敌四手，都是围绕强调不要孤军作战。所以，分表分库，亦或是读写分离都是为了更好的提高性能，提供更为稳定的服务。对于分表分库。主要是围绕这垂直和水平的二种拆分相结合的方式。</p>
+<h2 id="垂直拆分"><a href="#垂直拆分" class="headerlink" title="垂直拆分"></a>垂直拆分</h2><h3 id="1、库的垂直拆分："><a href="#1、库的垂直拆分：" class="headerlink" title="1、库的垂直拆分："></a>1、库的垂直拆分：</h3><p>库的垂直拆分主要是针对系统的一些数据量较为大的业务进行分解。如常见业务的：用户数据（注册，登录的信息等），商品信息，订单等等，这些相对而言数据量和读写次数都是较多的。最好是进行分库，部署在不同的机器上面，突破单机器的限制。</p>
+<h3 id="2、表的垂直拆分："><a href="#2、表的垂直拆分：" class="headerlink" title="2、表的垂直拆分："></a>2、表的垂直拆分：</h3><p>也就是针对表的字段进行拆分，将一个大表拆分为多个小表，也就是数据库中的范式原则。也可以将字段按属性或使用频繁程度分类,拆分为多个表，比如一个主要的信息表和一个拓展信息表等等</p>
+<p>只采用垂直拆分的话，依旧会存在单表数据量过大的问题。所以需要结合水平拆分的方法。</p>
+<h2 id="水平拆分"><a href="#水平拆分" class="headerlink" title="水平拆分"></a>水平拆分</h2><h3 id="1、只水平分表"><a href="#1、只水平分表" class="headerlink" title="1、只水平分表"></a>1、只水平分表</h3><p>针对数据量巨大的单张表（比如用户表，订单表），按照某种规则（RANGE,HASH取模等），切分到多张表里面去，可以有效的解决了单一表数据量过大的问题。 但是这些表还是在同一个库中，所以库级别的数据库操作还是有IO瓶颈。例如：</p>
+<p>原本一千万的user表数据，可以拆分为（user_1,user_2,user_3,user_4）这样的话，数据就分摊到不同的表中</p>
+<h3 id="2、水平分库分表"><a href="#2、水平分库分表" class="headerlink" title="2、水平分库分表"></a>2、水平分库分表</h3><p>将单张表的数据切分到多个服务器上去，每个服务器具有相应的库与表，只是表中数据集合不同。 水平分库分表能够有效的缓解单机和单库的性能瓶颈和压力，突破IO、连接数、硬件资源等的瓶颈。但是随着而来的事务也就成了分布式事务了,联合查询的效率也会下降。</p>
+<h2 id="常见水平分表拆分手段"><a href="#常见水平分表拆分手段" class="headerlink" title="常见水平分表拆分手段"></a>常见水平分表拆分手段</h2><ol>
+<li>RANGE:从0到100一个表，101到200一个表；</li>
+<li>HASH取模：用户注册的时候，可以根据用户的名称，会在用户的id 进行hash取模，分配到不同的表上</li>
+<li>时间维度：比如用户的登录记录信息，可以安装年+月的结构分摊数据，如 login_202107、login_202103</li>
+</ol>
+<h2 id="分库分表产品"><a href="#分库分表产品" class="headerlink" title="分库分表产品"></a>分库分表产品</h2><p>如果不想自己实现分表分库的的问题，现在市场上也有一些比较成熟的产品可以使用，如360的（Atlas）、阿里的（TDDL）
+ </p>
+]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+        <tag>分库分表</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>package最全解析</title>
     <url>/20210726/83-package%E6%9C%80%E5%85%A8%E8%A7%A3%E6%9E%90/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你真的了解package.json吗？来看看吧，这可能是最全的package解析</p>
@@ -7587,8 +7558,8 @@ www.google.com =&gt; 404
 <h2 id="license字段"><a href="#license字段" class="headerlink" title="license字段"></a>license字段</h2><p>license是当前项目的协议，让用户知道他们有何权限来使用你的模块，以及使用该模块有哪些限制。</p>
 <pre><code>  &quot;license&quot; : &quot;BSD-3-Clause&quot;
 </code></pre>
-<h2 id="author字段-contributors字段"><a href="#author字段-contributors字段" class="headerlink" title="author字段 contributors字段"></a>author字段 contributors字段</h2><p>author是具体一个人，contributors表示一群人，他们都表示当前项目的共享者。同时每个人都是一个对象。具有name字段和可选的url及email字段。<br>      “author”: {<br>        “name” : “yindong”,<br>        “email” : “<span class="exturl" data-url="bWFpbHRvOiYjeDc5OyYjMTA1OyYjeDZlOyYjMTAwOyYjMTExOyYjMTEwOyYjMTAzOyYjeDQwOyYjeDc4OyYjMTIwOyYjNDY7JiM5OTsmI3g2ZjsmI3g2ZDs=">&#x79;&#105;&#x6e;&#100;&#111;&#110;&#103;&#x40;&#x78;&#120;&#46;&#99;&#x6f;&#x6d;<i class="fa fa-external-link-alt"></i></span>“,<br>        “url” : “<span class="exturl" data-url="aHR0cHM6Ly96aGlxaWFuZHVhbi5jb20vJnF1b3Q7">https://zhiqianduan.com/&quot;<i class="fa fa-external-link-alt"></i></span><br>      }</p>
-<p>也可以写成一个字符串<br>      “author”: “yindong <span class="exturl" data-url="bWFpbHRvOiYjMTIxOyYjeDY5OyYjMTEwOyYjeDY0OyYjeDZmOyYjMTEwOyYjMTAzOyYjNjQ7JiN4Nzg7JiN4Nzg7JiN4MmU7JiN4NjM7JiMxMTE7JiN4NmQ7">&#121;&#x69;&#110;&#x64;&#x6f;&#110;&#103;&#64;&#x78;&#x78;&#x2e;&#x63;&#111;&#x6d;<i class="fa fa-external-link-alt"></i></span> (<span class="exturl" data-url="aHR0cHM6Ly96aGlxaWFuZHVhbi5jb20vKSZxdW90Ow==">https://zhiqianduan.com/)&quot;<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="author字段-contributors字段"><a href="#author字段-contributors字段" class="headerlink" title="author字段 contributors字段"></a>author字段 contributors字段</h2><p>author是具体一个人，contributors表示一群人，他们都表示当前项目的共享者。同时每个人都是一个对象。具有name字段和可选的url及email字段。<br>      “author”: {<br>        “name” : “yindong”,<br>        “email” : “<span class="exturl" data-url="bWFpbHRvOiYjMTIxOyYjMTA1OyYjeDZlOyYjeDY0OyYjMTExOyYjeDZlOyYjMTAzOyYjeDQwOyYjeDc4OyYjeDc4OyYjNDY7JiN4NjM7JiMxMTE7JiMxMDk7">&#121;&#105;&#x6e;&#x64;&#111;&#x6e;&#103;&#x40;&#x78;&#x78;&#46;&#x63;&#111;&#109;<i class="fa fa-external-link-alt"></i></span>“,<br>        “url” : “<span class="exturl" data-url="aHR0cHM6Ly96aGlxaWFuZHVhbi5jb20vJnF1b3Q7">https://zhiqianduan.com/&quot;<i class="fa fa-external-link-alt"></i></span><br>      }</p>
+<p>也可以写成一个字符串<br>      “author”: “yindong <span class="exturl" data-url="bWFpbHRvOiYjMTIxOyYjeDY5OyYjMTEwOyYjMTAwOyYjeDZmOyYjeDZlOyYjeDY3OyYjeDQwOyYjeDc4OyYjeDc4OyYjNDY7JiN4NjM7JiMxMTE7JiN4NmQ7">&#121;&#x69;&#110;&#100;&#x6f;&#x6e;&#x67;&#x40;&#x78;&#x78;&#46;&#x63;&#111;&#x6d;<i class="fa fa-external-link-alt"></i></span> (<span class="exturl" data-url="aHR0cHM6Ly96aGlxaWFuZHVhbi5jb20vKSZxdW90Ow==">https://zhiqianduan.com/)&quot;<i class="fa fa-external-link-alt"></i></span></p>
 <h2 id="files字段"><a href="#files字段" class="headerlink" title="files字段"></a>files字段</h2><p>files属性的值是一个数组，内容是模块下文件名或者文件夹名，如果是文件夹名，则文件夹下所有的文件也会被包含进来（除非文件被另一些配置排除了）</p>
 <p>可以在模块根目录下创建一个.npmignore文件，写在这个文件里边的文件即便被写在files属性里边也会被排除在外，这个文件的写法与.gitignore类似。</p>
 <h2 id="main字段"><a href="#main字段" class="headerlink" title="main字段"></a>main字段</h2><p>main字段指定了加载的入口文件，require导入的时候就会加载这个文件。这个字段的默认值是模块根目录下面的index.js。</p>
@@ -7698,33 +7669,6 @@ www.google.com =&gt; 404
       </categories>
       <tags>
         <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>分库分表的那些事</title>
-    <url>/20210724/82-%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="分库分表的那些事"><a href="#分库分表的那些事" class="headerlink" title="分库分表的那些事"></a>分库分表的那些事</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在互联网公司中，上至大厂，下到普通的公司企业，随着业务的发展，数据量的日积月累，对于数据库和表的设计和优化，显得尤为重要。其中关于分表分库的问题，在实际场景或者是面试中，亦是老生常谈。当我们明白了来龙去脉时，也就没那么复杂。</p>
-<h2 id="为什么需要分库分表"><a href="#为什么需要分库分表" class="headerlink" title="为什么需要分库分表"></a>为什么需要分库分表</h2><p>最为直接便是机器性能的问题。性能的考虑都来源于数据量。当数据量大的时候，随着而来便是高性能，可拓展，稳定性。当是业务刚开始，数据量小，为了控制成本，单机器是足够用的。但是随着业务的发展。在单台机器中无论是CPU、IO等资源，都是极为有限的。正所谓人多势众，双拳难敌四手，都是围绕强调不要孤军作战。所以，分表分库，亦或是读写分离都是为了更好的提高性能，提供更为稳定的服务。对于分表分库。主要是围绕这垂直和水平的二种拆分相结合的方式。</p>
-<h2 id="垂直拆分"><a href="#垂直拆分" class="headerlink" title="垂直拆分"></a>垂直拆分</h2><h3 id="1、库的垂直拆分："><a href="#1、库的垂直拆分：" class="headerlink" title="1、库的垂直拆分："></a>1、库的垂直拆分：</h3><p>库的垂直拆分主要是针对系统的一些数据量较为大的业务进行分解。如常见业务的：用户数据（注册，登录的信息等），商品信息，订单等等，这些相对而言数据量和读写次数都是较多的。最好是进行分库，部署在不同的机器上面，突破单机器的限制。</p>
-<h3 id="2、表的垂直拆分："><a href="#2、表的垂直拆分：" class="headerlink" title="2、表的垂直拆分："></a>2、表的垂直拆分：</h3><p>也就是针对表的字段进行拆分，将一个大表拆分为多个小表，也就是数据库中的范式原则。也可以将字段按属性或使用频繁程度分类,拆分为多个表，比如一个主要的信息表和一个拓展信息表等等</p>
-<p>只采用垂直拆分的话，依旧会存在单表数据量过大的问题。所以需要结合水平拆分的方法。</p>
-<h2 id="水平拆分"><a href="#水平拆分" class="headerlink" title="水平拆分"></a>水平拆分</h2><h3 id="1、只水平分表"><a href="#1、只水平分表" class="headerlink" title="1、只水平分表"></a>1、只水平分表</h3><p>针对数据量巨大的单张表（比如用户表，订单表），按照某种规则（RANGE,HASH取模等），切分到多张表里面去，可以有效的解决了单一表数据量过大的问题。 但是这些表还是在同一个库中，所以库级别的数据库操作还是有IO瓶颈。例如：</p>
-<p>原本一千万的user表数据，可以拆分为（user_1,user_2,user_3,user_4）这样的话，数据就分摊到不同的表中</p>
-<h3 id="2、水平分库分表"><a href="#2、水平分库分表" class="headerlink" title="2、水平分库分表"></a>2、水平分库分表</h3><p>将单张表的数据切分到多个服务器上去，每个服务器具有相应的库与表，只是表中数据集合不同。 水平分库分表能够有效的缓解单机和单库的性能瓶颈和压力，突破IO、连接数、硬件资源等的瓶颈。但是随着而来的事务也就成了分布式事务了,联合查询的效率也会下降。</p>
-<h2 id="常见水平分表拆分手段"><a href="#常见水平分表拆分手段" class="headerlink" title="常见水平分表拆分手段"></a>常见水平分表拆分手段</h2><ol>
-<li>RANGE:从0到100一个表，101到200一个表；</li>
-<li>HASH取模：用户注册的时候，可以根据用户的名称，会在用户的id 进行hash取模，分配到不同的表上</li>
-<li>时间维度：比如用户的登录记录信息，可以安装年+月的结构分摊数据，如 login_202107、login_202103</li>
-</ol>
-<h2 id="分库分表产品"><a href="#分库分表产品" class="headerlink" title="分库分表产品"></a>分库分表产品</h2><p>如果不想自己实现分表分库的的问题，现在市场上也有一些比较成熟的产品可以使用，如360的（Atlas）、阿里的（TDDL）
- </p>
-]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-        <tag>分库分表</tag>
       </tags>
   </entry>
   <entry>
@@ -8142,25 +8086,6 @@ www.google.com =&gt; 404
       </tags>
   </entry>
   <entry>
-    <title>Node-UDP一试</title>
-    <url>/20210729/87-Node-UDP%E4%B8%80%E8%AF%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h2><p>玩过 node 的同学并不陌生，可以直接用 <code>dgram</code> 模块 ，直接开搞</p>
-<h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> dgram = <span class="built_in">require</span>(<span class="string">&quot;dgram&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> udp_client = dgram.createSocket(<span class="string">&quot;udp4&quot;</span>);</span><br><span class="line"></span><br><span class="line">udp_client.on(<span class="string">&quot;close&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;udp client closed.&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//错误处理</span></span><br><span class="line">udp_client.on(<span class="string">&quot;error&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;some error on udp client.&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 接收消息</span></span><br><span class="line">udp_client.on(<span class="string">&quot;message&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">msg, rinfo</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(</span><br><span class="line">    <span class="string">`receive message from <span class="subst">$&#123;rinfo.address&#125;</span>:<span class="subst">$&#123;rinfo.port&#125;</span>：<span class="subst">$&#123;msg&#125;</span>`</span></span><br><span class="line">  );</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//定时向服务器发送消息</span></span><br><span class="line"><span class="built_in">setInterval</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> SendBuff = <span class="string">&quot;hello 123.&quot;</span>;</span><br><span class="line">  <span class="keyword">var</span> SendLen = SendBuff.length;</span><br><span class="line">  udp_client.send(SendBuff, <span class="number">0</span>, SendLen, <span class="number">5678</span>, <span class="string">&quot;255.255.255.255&quot;</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;send msg&quot;</span>);</span><br><span class="line">&#125;, <span class="number">3000</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> dgram = <span class="built_in">require</span>(<span class="string">&#x27;dgram&#x27;</span>);</span><br><span class="line"><span class="comment">//创建 udp server</span></span><br><span class="line"><span class="keyword">var</span> udp_server = dgram.createSocket(<span class="string">&#x27;udp4&#x27;</span>);</span><br><span class="line">udp_server.bind(<span class="number">5678</span>); <span class="comment">// 绑定端口</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 监听端口</span></span><br><span class="line">udp_server.on(<span class="string">&#x27;listening&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;udp server linstening 5678.&#x27;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//接收消息</span></span><br><span class="line">udp_server.on(<span class="string">&#x27;message&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">msg, rinfo</span>) </span>&#123;</span><br><span class="line">  strmsg = msg.toString();</span><br><span class="line">  udp_server.send(strmsg, <span class="number">0</span>, strmsg.length, rinfo.port, rinfo.address); <span class="comment">//将接收到的消息返回给客户端</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`udp server received data: <span class="subst">$&#123;strmsg&#125;</span> from <span class="subst">$&#123;rinfo.address&#125;</span>:<span class="subst">$&#123;rinfo.port&#125;</span>`</span>)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//错误处理</span></span><br><span class="line">udp_server.on(<span class="string">&#x27;error&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;some error on udp server.&#x27;</span>)</span><br><span class="line">  udp_server.close();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>总结</p>
-<p>nodejs 还是挺好玩的，对于前端同学来说，可以学一学，尝试尝试~~~</p>
-]]></content>
-      <categories>
-        <category>node</category>
-      </categories>
-      <tags>
-        <tag>node</tag>
-        <tag>UDP</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>js解决超出精度数字问题</title>
     <url>/20210728/86-js-%E8%A7%A3%E5%86%B3%E8%B6%85%E5%87%BA%E7%B2%BE%E5%BA%A6%E6%95%B0%E5%AD%97%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="JS-解决超出精度数字问题"><a href="#JS-解决超出精度数字问题" class="headerlink" title="JS 解决超出精度数字问题"></a>JS 解决超出精度数字问题</h1><ol>
@@ -8180,6 +8105,25 @@ www.google.com =&gt; 404
       </categories>
       <tags>
         <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Node-UDP一试</title>
+    <url>/20210729/87-Node-UDP%E4%B8%80%E8%AF%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h2><p>玩过 node 的同学并不陌生，可以直接用 <code>dgram</code> 模块 ，直接开搞</p>
+<h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> dgram = <span class="built_in">require</span>(<span class="string">&quot;dgram&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> udp_client = dgram.createSocket(<span class="string">&quot;udp4&quot;</span>);</span><br><span class="line"></span><br><span class="line">udp_client.on(<span class="string">&quot;close&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;udp client closed.&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//错误处理</span></span><br><span class="line">udp_client.on(<span class="string">&quot;error&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;some error on udp client.&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 接收消息</span></span><br><span class="line">udp_client.on(<span class="string">&quot;message&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">msg, rinfo</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(</span><br><span class="line">    <span class="string">`receive message from <span class="subst">$&#123;rinfo.address&#125;</span>:<span class="subst">$&#123;rinfo.port&#125;</span>：<span class="subst">$&#123;msg&#125;</span>`</span></span><br><span class="line">  );</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//定时向服务器发送消息</span></span><br><span class="line"><span class="built_in">setInterval</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> SendBuff = <span class="string">&quot;hello 123.&quot;</span>;</span><br><span class="line">  <span class="keyword">var</span> SendLen = SendBuff.length;</span><br><span class="line">  udp_client.send(SendBuff, <span class="number">0</span>, SendLen, <span class="number">5678</span>, <span class="string">&quot;255.255.255.255&quot;</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;send msg&quot;</span>);</span><br><span class="line">&#125;, <span class="number">3000</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> dgram = <span class="built_in">require</span>(<span class="string">&#x27;dgram&#x27;</span>);</span><br><span class="line"><span class="comment">//创建 udp server</span></span><br><span class="line"><span class="keyword">var</span> udp_server = dgram.createSocket(<span class="string">&#x27;udp4&#x27;</span>);</span><br><span class="line">udp_server.bind(<span class="number">5678</span>); <span class="comment">// 绑定端口</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 监听端口</span></span><br><span class="line">udp_server.on(<span class="string">&#x27;listening&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;udp server linstening 5678.&#x27;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//接收消息</span></span><br><span class="line">udp_server.on(<span class="string">&#x27;message&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">msg, rinfo</span>) </span>&#123;</span><br><span class="line">  strmsg = msg.toString();</span><br><span class="line">  udp_server.send(strmsg, <span class="number">0</span>, strmsg.length, rinfo.port, rinfo.address); <span class="comment">//将接收到的消息返回给客户端</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`udp server received data: <span class="subst">$&#123;strmsg&#125;</span> from <span class="subst">$&#123;rinfo.address&#125;</span>:<span class="subst">$&#123;rinfo.port&#125;</span>`</span>)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//错误处理</span></span><br><span class="line">udp_server.on(<span class="string">&#x27;error&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;some error on udp server.&#x27;</span>)</span><br><span class="line">  udp_server.close();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>总结</p>
+<p>nodejs 还是挺好玩的，对于前端同学来说，可以学一学，尝试尝试~~~</p>
+]]></content>
+      <categories>
+        <category>node</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
+        <tag>UDP</tag>
       </tags>
   </entry>
   <entry>
@@ -8327,6 +8271,62 @@ www.google.com =&gt; 404
       </tags>
   </entry>
   <entry>
+    <title>Vue 保存vuex到sessionStorage</title>
+    <url>/20210629/52-Vue-%E4%BF%9D%E5%AD%98vuex%E5%88%B0sessionStorage/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>Vuex 中刷新页面数据将丢失，所以可以在 app.vue 中搞这个</p>
+</blockquote>
+<h3 id="app-vue"><a href="#app-vue" class="headerlink" title="app.vue"></a>app.vue</h3><figure class="highlight pf"><table><tr><td class="code"><pre><span class="line">created () &#123;</span><br><span class="line">  //在页面加载时读取sessionStorage里的状态信息</span><br><span class="line">  if (sessionStorage.getItem(<span class="string">&quot;store&quot;</span>) ) &#123;</span><br><span class="line">    this.<span class="variable">$store</span>.replaceState(Object.assign(&#123;&#125;, this.<span class="variable">$store</span>.<span class="keyword">state</span>,JSON.parse(sessionStorage.getItem(<span class="string">&quot;store&quot;</span>))))</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  //在页面刷新时将vuex里的信息保存到sessionStorage里</span><br><span class="line">  window.addEventListener(<span class="string">&quot;beforeunload&quot;</span>,()=&gt;&#123;</span><br><span class="line">    sessionStorage.<span class="built_in">set</span>Item(<span class="string">&quot;store&quot;</span>,JSON.stringify(this.<span class="variable">$store</span>.<span class="keyword">state</span>))</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+        <tag>Vuex</tag>
+        <tag>sessionStorage</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>进程和线程的简单理解</title>
+    <url>/20210714/64-%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%AE%80%E5%8D%95%E7%90%86%E8%A7%A3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="进程和线程的简单理解"><a href="#进程和线程的简单理解" class="headerlink" title="进程和线程的简单理解"></a>进程和线程的简单理解</h2><p>进程，是指在系统中正在运行的一个应用程序，程序一旦运行就是进程。比如打开一个QQ音乐就是启动了一个QQ音乐进程，打开一个 Word 就启动了一个 Word 进程。进程是操作系统分配资源的最小单位。如下图，每一个进程都拥有独立的内存单元。</p>
+<img src="https://blog.img.wy1991.cn/static/images/js/neicun.png-blogImg"> 
+
+
+<p>在一个进程内部，可以同时运行多个“子任务”，也就是多个线程。如上所示，在一个进程中，而多个线程共享内存。线程是进程之内程序执行的最小单位。</p>
+<p>可以将进程理解为工厂中的一条流水线，其中的线程就是这个流水线上的工人。</p>
+<img src="https://blog.img.wy1991.cn/static/images/js/liushuixian.png-blogImg"> 
+
+
+<p>假如我们需要完成一批药品出厂前的一系列的认证检验，我们就可以开启一条流水线（进程），并分配需要的资源，如工作台、检验工具、药品等等，有了这些资源，就可以安排工人（线程），工人拿着这些资源进行产品检验，也就相当于线程执行程序。</p>
+<p>如上图所示，完成检验需要四个步骤：原料检验、生产过程检验、GMP认证、药品监督管理。当需要检验的药品数量较少时，可以由一个工人完成这四个步骤，也就是单线程处理。</p>
+<p>而当药品数量变得很多时，一个工人就太慢了，这时，可以为每一种检验安排一个工人，这四个工人在同一条生产线工作，共享工作台等资源，并行处理各自的任务，这就相当于多线程处理。</p>
+<p>简而言之，进程和线程之间的关系有以下几个特点：</p>
+<ol>
+<li>线程必须存在于进程中，一个进程至少有一个线程 —- 工人需要在流水线上处理工作，完成检验至少需要一个工人。</li>
+</ol>
+<ol start="2">
+<li>进程中的任意一线程执行出错，都会导致整个进程的崩溃 —- 流水线中任何一处电路短路，整个流水线就会停电。</li>
+</ol>
+<ol start="3">
+<li>线程之间共享进程中的数据 —- 工人共享流水线上的工具、资源等。</li>
+</ol>
+<ol start="4">
+<li>当一个进程关闭之后，操作系统会回收进程所占用的内存 —- 一次检验完成，工厂可以关闭这条流水线，将流水线的资源收回分配给其他流水线。</li>
+</ol>
+<ol start="5">
+<li>进程之间的内容相互隔离 —- 两条流水线的资源和任务是相互独立的。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>进程和线程</category>
+      </categories>
+      <tags>
+        <tag>进程和线程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>stream API详解</title>
     <url>/20210804/90-stream-API%E8%AF%A6%E8%A7%A3/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="stream-API-详解"><a href="#stream-API-详解" class="headerlink" title="stream API 详解"></a>stream API 详解</h1><p>Streams API 能够让我们直接处理通过网络接收的数据流或通过本地任何方式创建的数据流。以往我们请求媒体资源的时候，得到的都是二进制流，浏览器会自动转换成相应的编码格式然后再呈现出来，如果要处理它的话一般使用 Blob 对象包装后再进行操作。现在使用 Streams API 我们可以直接处理它，下面列举了一些可以实现的功能：</p>
@@ -8334,6 +8334,26 @@ www.google.com =&gt; 404
 <p>上述功能以往需要服务端配合才能实现，现在网页也能轻松搞定。<br>Stream 在 nodejs 中应用非常广泛，服务器的请求和响应分别就是可读流和可写流，熟悉 node 开发的朋友更容易理解本篇文章所讲的概念，即使未曾用过 node 或使用过其中的流操作，阅读本篇文章后，相信上手也会非常容易,毕竟理念是相通的。</p>
 <p>具体看文章分享，掘金地址~</p>
 <p><span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82OTkyMDA3MTU2MzIwOTYwNTQyP3V0bV9zb3VyY2U9Z29sZF9icm93c2VyX2V4dGVuc2lvbg==">掘金链接<i class="fa fa-external-link-alt"></i></span></p>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>92-postman小技巧</title>
+    <url>/20210806/92-postman%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="postman"><a href="#postman" class="headerlink" title="postman"></a>postman</h2><p>在登录接口后有个 Tests 模块</p>
+<pre><code>  const res = pm.response.json();
+  pm.globals.set(&#39;token&#39;,res.data.token)
+</code></pre>
+<p>然后在需要加 token 的地方用 </p>
+<h2 id="baseURL"><a href="#baseURL" class="headerlink" title="baseURL"></a>baseURL</h2><p>可以在右上角 设置图标添加 环境 设置 baseURL,方便根据环境切换请求地址</p>
+
+
+<img title="postman1.png" src="https://blog.img.wy1991.cn/static/images/js/postman1-blogImg">
 ]]></content>
       <categories>
         <category>js</category>
@@ -8385,26 +8405,6 @@ www.google.com =&gt; 404
       <tags>
         <tag>Vue</tag>
         <tag>TS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>92-postman小技巧</title>
-    <url>/20210806/92-postman%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="postman"><a href="#postman" class="headerlink" title="postman"></a>postman</h2><p>在登录接口后有个 Tests 模块</p>
-<pre><code>  const res = pm.response.json();
-  pm.globals.set(&#39;token&#39;,res.data.token)
-</code></pre>
-<p>然后在需要加 token 的地方用 </p>
-<h2 id="baseURL"><a href="#baseURL" class="headerlink" title="baseURL"></a>baseURL</h2><p>可以在右上角 设置图标添加 环境 设置 baseURL,方便根据环境切换请求地址</p>
-
-
-<img title="postman1.png" src="https://blog.img.wy1991.cn/static/images/js/postman1-blogImg">
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
       </tags>
   </entry>
   <entry>
@@ -8510,29 +8510,6 @@ www.google.com =&gt; 404
       </tags>
   </entry>
   <entry>
-    <title>96-说一说glTF文件压缩</title>
-    <url>/20210813/96-%E8%AF%B4%E4%B8%80%E8%AF%B4glTF%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="glTF-文件"><a href="#glTF-文件" class="headerlink" title="glTF 文件"></a>glTF 文件</h1><p>最近做 T 级互动，需要使用到 3D 模型。相信大家和我一样，在开始着手的时候，一定会有这么些问题：</p>
-<ol>
-<li>如何选择 3D 模型的导出格式</li>
-<li>如何对模型文件进行优化</li>
-<li>在大流量的项目中兼容性怎么样</li>
-</ol>
-<p>让我们通过这篇文章，进行细致的探索、调研与沉淀。</p>
-<p>glTF 全称 Graphics Language Transmission Format，是三维场景和模型的标准文件格式。</p>
-<p>glTF 核心是 JSON 文件，描述了 3D 场景的整个内容。它由场景结构本身的描述组成，其由定义场景图的节点的层次提供。</p>
-<p>场景中出现的 3D 对象是使用连接到节点的 meshes(网格)定义的。Materials(材料)定义对象的外观。Animations(动画)描述 3D 对象如何随着时间的推移转换 3D 对象，并且 Skins(蒙皮)定义了对物体的几何形状的方式基于骨架姿势变形。Cameras(相机)描述了渲染器的视图配置。</p>
-<p>详情请看原文~👇</p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82OTk1NDg0MDg5MjMwODM1NzI2">原文链接<i class="fa fa-external-link-alt"></i></span></p>
-]]></content>
-      <categories>
-        <category>three</category>
-      </categories>
-      <tags>
-        <tag>three</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>95-理解异步</title>
     <url>/20210813/95-%E7%90%86%E8%A7%A3%E5%BC%82%E6%AD%A5/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>理解异步</p>
@@ -8555,6 +8532,29 @@ www.google.com =&gt; 404
       </categories>
       <tags>
         <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>96-说一说glTF文件压缩</title>
+    <url>/20210813/96-%E8%AF%B4%E4%B8%80%E8%AF%B4glTF%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="glTF-文件"><a href="#glTF-文件" class="headerlink" title="glTF 文件"></a>glTF 文件</h1><p>最近做 T 级互动，需要使用到 3D 模型。相信大家和我一样，在开始着手的时候，一定会有这么些问题：</p>
+<ol>
+<li>如何选择 3D 模型的导出格式</li>
+<li>如何对模型文件进行优化</li>
+<li>在大流量的项目中兼容性怎么样</li>
+</ol>
+<p>让我们通过这篇文章，进行细致的探索、调研与沉淀。</p>
+<p>glTF 全称 Graphics Language Transmission Format，是三维场景和模型的标准文件格式。</p>
+<p>glTF 核心是 JSON 文件，描述了 3D 场景的整个内容。它由场景结构本身的描述组成，其由定义场景图的节点的层次提供。</p>
+<p>场景中出现的 3D 对象是使用连接到节点的 meshes(网格)定义的。Materials(材料)定义对象的外观。Animations(动画)描述 3D 对象如何随着时间的推移转换 3D 对象，并且 Skins(蒙皮)定义了对物体的几何形状的方式基于骨架姿势变形。Cameras(相机)描述了渲染器的视图配置。</p>
+<p>详情请看原文~👇</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82OTk1NDg0MDg5MjMwODM1NzI2">原文链接<i class="fa fa-external-link-alt"></i></span></p>
+]]></content>
+      <categories>
+        <category>three</category>
+      </categories>
+      <tags>
+        <tag>three</tag>
       </tags>
   </entry>
   <entry>
@@ -8610,6 +8610,35 @@ www.google.com =&gt; 404
       </tags>
   </entry>
   <entry>
+    <title>深入浅出 Commonjs 和 Es Module</title>
+    <url>/20210816/98-%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA-Commonjs-%E5%92%8C-Es-Module/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>今天我们来深度分析一下 Commonjs 和 Es Module，希望通过本文的学习，能够让大家彻底明白 Commonjs 和 Es Module 原理，能够一次性搞定面试中遇到的大部分有关 Commonjs 和 Es Module 的问题。<br>老规矩我们带上疑问开始今天的分析 🤔🤔🤔：</p>
+<ol>
+<li>Commonjs 和 Es Module 有什么区别 ？</li>
+<li>Commonjs 如何解决的循环引用问题 ？</li>
+<li>既然有了 exports，为何又出了 module.exports ? 既生瑜，何生亮 ？</li>
+<li>require 模块查找机制 ？</li>
+<li>Es Module 如何解决循环引用问题 ？</li>
+<li>exports = {} 这种写法为何无效 ？</li>
+<li>关于 import() 的动态引入 ？</li>
+<li>Es Module 如何改变模块下的私有变量 ？</li>
+<li>…</li>
+</ol>
+<h2 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h2><p>早期 JavaScript 开发很容易存在全局污染和依赖管理混乱问题。这些问题在多人开发前端应用的情况下变得更加棘手。我这里例举一个很常见的场景：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./index.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./home.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./list.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>如上在没有模块化的前提下，如果在 html 中这么写，那么就会暴露一系列问题。</p>
+<p>建议好好看看原文，👇</p>
+<p>高赞文章(链接)[<span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82OTk0MjI0NTQxMzEyNDgzMzM2P3V0bV9zb3VyY2U9Z29sZF9icm93c2VyX2V4dGVuc2lvbiU1RA==">https://juejin.cn/post/6994224541312483336?utm_source=gold_browser_extension]<i class="fa fa-external-link-alt"></i></span></p>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>深入理解js引擎</title>
     <url>/20210817/99-%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3js%E5%BC%95%E6%93%8E/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="宏观视角看-V8"><a href="#宏观视角看-V8" class="headerlink" title="宏观视角看 V8"></a>宏观视角看 V8</h2><p>具体看掘金文章 👇</p>
@@ -8631,35 +8660,6 @@ www.google.com =&gt; 404
 </ul>
 <p>2008 年 9 月 2 日，V8 与 Chrome 在同一天开源，最初的代码提交日期可追溯到 2008 年 6 月 30 日，你可以通过下面的链接查看 V8 代码库的可视化演化进程。</p>
 <p>CPU 的指令集就是机器语言，CPU 只能识别二进制的指令。但是对人类来说，二进制难以阅读和记忆，所以人们将二进制转换为可以识别、记忆的语言，也就是汇编语言，通过汇编编译器可以将汇编指令转换为机器指令。<br>不同的 CPU 有不同的指令集，使用汇编语言编程需要兼容不同的 CPU 架构，如 ARM、MIPS 等，学习成本比较高。汇编语言这层抽象还远远不够，所以高级语言应运而生，高级语言屏蔽了计算机架构的细节，兼容多种不同的 CPU 架构。</p>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>深入浅出 Commonjs 和 Es Module</title>
-    <url>/20210816/98-%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA-Commonjs-%E5%92%8C-Es-Module/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>今天我们来深度分析一下 Commonjs 和 Es Module，希望通过本文的学习，能够让大家彻底明白 Commonjs 和 Es Module 原理，能够一次性搞定面试中遇到的大部分有关 Commonjs 和 Es Module 的问题。<br>老规矩我们带上疑问开始今天的分析 🤔🤔🤔：</p>
-<ol>
-<li>Commonjs 和 Es Module 有什么区别 ？</li>
-<li>Commonjs 如何解决的循环引用问题 ？</li>
-<li>既然有了 exports，为何又出了 module.exports ? 既生瑜，何生亮 ？</li>
-<li>require 模块查找机制 ？</li>
-<li>Es Module 如何解决循环引用问题 ？</li>
-<li>exports = {} 这种写法为何无效 ？</li>
-<li>关于 import() 的动态引入 ？</li>
-<li>Es Module 如何改变模块下的私有变量 ？</li>
-<li>…</li>
-</ol>
-<h2 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h2><p>早期 JavaScript 开发很容易存在全局污染和依赖管理混乱问题。这些问题在多人开发前端应用的情况下变得更加棘手。我这里例举一个很常见的场景：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./index.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./home.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./list.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>如上在没有模块化的前提下，如果在 html 中这么写，那么就会暴露一系列问题。</p>
-<p>建议好好看看原文，👇</p>
-<p>高赞文章(链接)[<span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82OTk0MjI0NTQxMzEyNDgzMzM2P3V0bV9zb3VyY2U9Z29sZF9icm93c2VyX2V4dGVuc2lvbiU1RA==">https://juejin.cn/post/6994224541312483336?utm_source=gold_browser_extension]<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
       <categories>
         <category>js</category>
